@@ -1,9 +1,6 @@
--- Survival Script v1 Aeon
--- Created by Jammer
+-- Created by Jammer and Entropy
 -- Based on Survival Extreme V3FA script
 
--- import
---------------------------------------------------------------------------
 local ScenarioUtils = import('/lua/sim/ScenarioUtilities.lua')
 local ScenarioFramework = import('/lua/ScenarioFramework.lua')
 
