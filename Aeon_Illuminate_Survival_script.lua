@@ -6,9 +6,7 @@
 --------------------------------------------------------------------------
 local ScenarioUtils = import('/lua/sim/ScenarioUtilities.lua');
 local ScenarioFramework = import('/lua/ScenarioFramework.lua');
-local Utilities = import('/lua/utilities.lua');
 local Weather = import('/lua/weather.lua')
-local Cinematics = import('/lua/cinematics.lua');
 
 -- class variables
 --------------------------------------------------------------------------
@@ -26,12 +24,6 @@ local Survival_UnitCountPerMinute = 0; -- how many units to spawn per minute (ta
 local Survival_UnitCountPerWave = 0; -- how many units to spawn with each wave (taking into consideration player count)
 
 local Survival_MinWarnTime = 0;
-
-local Survival_HealthBuffLand = 1.00;
-local Survival_HealthBuffAir = 1.00;
-local Survival_HealthBuffSea = 1.00;
-local Survival_HealthBuffGate = 1.00;
-local Survival_HealthBuffDefObject = 1.00;
 
 local Survival_DefUnit = nil;
 local Survival_DefCheckHP = 0.0;
@@ -13365,14 +13357,7 @@ Survival_InitGame = function()
 			ScenarioInfo.Options.opt_Survival_WaveFrequency = 10;
 		end
 
-		-- opt_Survival_Difficulty
---		if (ScenarioInfo.Options.opt_Survival_Difficulty == nil) then
---			ScenarioInfo.Options.opt_Survival_Difficulty = 1.00;
---		end
-
 	ScenarioInfo.Options.Victory = 'sandbox'; -- force sandbox in order to implement our own rules
-
-	--Utilities.UserConRequest("ui_ForceLifbarsOnEnemy"); -- force drawing of enemy life bars
 
 	local Armies = ListArmies();
 	Survival_PlayerCount = table.getn(Armies) - 2; -- save player count, subtracting the 2 AI "players"
@@ -13412,8 +13397,6 @@ Survival_InitGame = function()
 
 	Survival_CalcWaveCounts(); -- calculate how many units per wave
 	Survival_CalcNukeFrequency(); -- calculate how frequently to launch nukes at the players (once launchers are spawned)
-
---	Survival_ObjectiveTime = Survival_ObjectiveTime * 60;
 
 end
 
@@ -13544,12 +13527,6 @@ Survival_SpawnDef = function()
             ShieldVerticalOffset = -10,
         };
 
---	Survival_DefUnitBP.Defense.Shield = ShieldSpecs;
-
---	Survival_DefUnitBP.General.UnitName = 'Acen Accelerator';
---	Survival_DefUnitBP.Interface.HelpText = 'Special Operations Support';
-
--- when the def object dies
 	Survival_DefUnit.OldOnKilled = Survival_DefUnit.OnKilled;
 
 	Survival_DefUnit.OnKilled = function(self, instigator, type, overkillRatio)
@@ -13569,16 +13546,6 @@ Survival_SpawnDef = function()
 	end
 
 	Survival_DefLastHP = Survival_DefUnit:GetHealth();
-
---	ScenarioFramework.CreateUnitDamagedTrigger(Survival_DefDamage, Survival_DefUnit);
-
---### Single Line unit damaged trigger creation
---# When <unit> is damaged it will call the <callbackFunction> provided
---# If <percent> provided, will check if damaged percent EXCEEDS number provided before callback
---# function repeats up to repeatNum ... or once if not declared
---function CreateUnitDamagedTrigger( callbackFunction, unit, amount, repeatNum )
---    TriggerFile.CreateUnitDamagedTrigger( callbackFunction, unit, amount, repeatNum )
---end
 
 end
 
@@ -13620,16 +13587,6 @@ Survival_SpawnPrebuild = function()
 	end
 end
 
--- warns players about damage to defense object
---------------------------------------------------------------------------
---Survival_DefDamage = function()
---	BroadcastMSG("The Black Sun is taking damage!");
---	LOG("----- Survival MOD: DefDamage()");
---	Survival_DefCheckHP = 0;
---	Survival_DefLastHP
---end
-
-
 
 -- loops every TickInterval to progress main game logic
 --------------------------------------------------------------------------
@@ -13642,10 +13599,6 @@ Survival_Tick = function(self)
 		Survival_CurrentTime = GetGameTimeSeconds();
 
 		Survival_UpdateWaves(Survival_CurrentTime);
-
---		LOG("----- Survival MOD: -LOOP- GameState: " .. Survival_GameState .. "     NextSpawnTime: " .. SecondsToTime(Survival_NextSpawnTime) .. " (" .. Survival_NextSpawnTime .. ")     Clock:" .. SecondsToTime(Survival_CurrentTime) .. " (" .. Survival_CurrentTime .. ")");
-
---		Survival_DefUnit:UpdateShieldRatio(0.5); --Survival_CurrentTime / Survival_ObjectiveTime);
 
 		if (Survival_CurrentTime >= Survival_ObjectiveTime) then
 
@@ -13766,8 +13719,6 @@ end
 --------------------------------------------------------------------------
 Survival_SpawnWave = function(SpawnTime)
 
---	LOG("----- Survival MOD: Performing a wave spawn at " .. SecondsToTime(SpawnTime));
-
 	local WaveTable = nil;
 	local UnitTable = nil;
 
@@ -13779,8 +13730,6 @@ Survival_SpawnWave = function(SpawnTime)
 	-- check the wave table times vs the wave spawn time to see which waves we spawn
 	-- START AT TABLE 2 BECAUSE TABLE 1 IS SPECIAL UNITS (ARTY/NUKE)
 	for x = 2, table.getn(Survival_WaveTables) do -- loop through each of the wavetable entries (ground/air/sea...)
-
---		LOG("----- Survival MOD: Category(" .. x .. ")     Wave Set (" .. Survival_WaveTables[x][1] - 1 .. ")   (ID: " .. Survival_WaveTables[x][1] .. ");
 
 		-- for the amount of units we spawn in per wave
 		if (table.getn(Survival_WaveTables[x][Survival_WaveTables[x][1]]) > 1) then -- only do a wave spawn if there is a wave table available
@@ -13810,12 +13759,6 @@ Survival_SpawnUnit = function(UnitID, ArmyID, POS, OrderID) -- blueprint, army, 
 	local PlatoonList = {};
 
 	local NewUnit = CreateUnitHPR(UnitID, ArmyID, POS[1], POS[2], POS[3], 0,0,0);
-
-	-- prevent wreckage from enemy units
---	local BP = NewUnit:GetBlueprint();
---	if (BP ~= nil) then
---		BP.Wreckage = nil;
---	end
 
 	NewUnit:SetProductionPerSecondEnergy(1000000);
 	NewUnit:SetProductionPerSecondMass(1000000);
@@ -13960,24 +13903,6 @@ Survival_GetPOS = function(MarkerType, Randomization)
  		table.remove(Survival_MarkerRefs[5], RandID);
  	end
  
---	if (MarkerType == 1) then
---		MarkerName = "SURVIVAL_CENTER_" .. RandID;
---	elseif (MarkerType == 2) then
---		MarkerName = "SURVIVAL_PATH_" .. RandID;
---	elseif (MarkerType == 3) then
---		MarkerName = "SURVIVAL_SPAWN_" .. RandID;
---	elseif (MarkerType == 4) then
---		MarkerName = "SURVIVAL_ARTY_" .. RandID;
---		table.remove(Survival_MarkerRefs[4]);
---	elseif (MarkerType == 5) then
---		MarkerName = "SURVIVAL_NUKE_" .. RandID;
---		table.remove(Survival_MarkerRefs[5]);
---	else
---		return nil;
---	end
-
---	local POS = Survival_RandomizePOS(ScenarioUtils.MarkerToPosition(MarkerName), Randomization);
-
 	return POS;
 
 end
@@ -14114,25 +14039,3 @@ function GetMarker(MarkerName)
 	return Scenario.MasterChain._MASTERCHAIN_.Markers[MarkerName]
 end
 
-
---function OverrideDoDamage(self, instigator, amount, vector, damageType)
---    local preAdjHealth = self:GetHealth()
---    self:AdjustHealth(instigator, -amount)
---    local health = self:GetHealth()
---    if (( health <= 0 ) or ( amount > preAdjHealth )) and not self.KilledFlag then
---        self.KilledFlag = true
---        if( damageType == 'Reclaimed' ) then
---            self:Destroy()
---        else
---            local excessDamageRatio = 0.0
---            # Calculate the excess damage amount
---            local excess = preAdjHealth - amount
---            local maxHealth = self:GetMaxHealth()
---            if(excess < 0 and maxHealth > 0) then
---                excessDamageRatio = -excess / maxHealth
---            end
---            IssueClearCommands({self})
---            ForkThread( UnlockAndKillUnitThread, self, instigator, damageType, excessDamageRatio )
---        end
---    end
---end
