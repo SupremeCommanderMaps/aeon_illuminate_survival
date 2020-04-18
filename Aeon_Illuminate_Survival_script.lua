@@ -4,9 +4,10 @@
 
 -- import
 --------------------------------------------------------------------------
-local ScenarioUtils = import('/lua/sim/ScenarioUtilities.lua');
+local ScenarioUtils = import('/lua/sim/ScenarioUtilities.lua')
+local ScenarioFramework = import('/lua/ScenarioFramework.lua')
+
 ScenarioUtils.CreateResources = function() end
-local ScenarioFramework = import('/lua/ScenarioFramework.lua');
 
 local function localImport(fileName)
 	return import('/maps/aeon_illuminate_survival.v0002/src/' .. fileName)
@@ -17,6 +18,7 @@ local function entropyLibImport(fileName)
 end
 
 local entropyLib = entropyLibImport('EntropyLib.lua').newInstance('/maps/aeon_illuminate_survival.v0002/vendor/EntropyLib/')
+local unitCreator = entropyLib.newUnitCreator()
 
 -- class variables
 --------------------------------------------------------------------------
@@ -448,21 +450,29 @@ Survival_UpdateWaves = function(GameTime)
 end
 
 
+local function createSurvivalUnit(blueprint, x, z, y)
+	local unit = unitCreator.create({
+		isSurvivalSpawned = true,
+		blueprintName = blueprint,
+		armyName = "ARMY_SURVIVAL_ENEMY",
+		x = x,
+		z = z,
+		y = y
+	})
 
+	return unit
+end
 
 Survival_SpawnUnit = function(UnitID, ArmyID, POS, OrderID) -- blueprint, army, position, order
-
-	--	LOG("----- Survival MOD: SPAWNUNIT: Start function...");
 	local PlatoonList = {};
 
-	local NewUnit = CreateUnitHPR(UnitID, ArmyID, POS[1], POS[2], POS[3], 0,0,0);
+	local NewUnit = createSurvivalUnit(UnitID, POS[1], POS[2], POS[3])
 
 	NewUnit:SetProductionPerSecondEnergy(1000000);
 	NewUnit:SetProductionPerSecondMass(1000000);
 
-	table.insert(PlatoonList, NewUnit); -- add unit to a platoon
-	Survival_PlatoonOrder(ArmyID, PlatoonList, OrderID); -- give the unit orders
-
+	table.insert(PlatoonList, NewUnit)
+	Survival_PlatoonOrder(ArmyID, PlatoonList, OrderID)
 end
 
 Survival_SpawnWave = function(SpawnTime)
