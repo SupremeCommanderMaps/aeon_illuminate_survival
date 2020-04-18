@@ -6,7 +6,6 @@
 --------------------------------------------------------------------------
 local ScenarioUtils = import('/lua/sim/ScenarioUtilities.lua');
 local ScenarioFramework = import('/lua/ScenarioFramework.lua');
-local Weather = import('/lua/weather.lua')
 
 local function localImport(fileName)
 	return import('/maps/aeon_illuminate_survival.v0002/src/' .. fileName)
@@ -53,18 +52,13 @@ local Survival_ObjectiveTime = 3000; --2160 --2160;
 -- called at start to read various settings
 --------------------------------------------------------------------------
 function OnPopulate()
-
-	LOG("----- Survival MOD: OnPopulate()");
-
-	-- start the armies
 	ScenarioUtils.InitializeArmies();
 
-	-- prepare all the survival stuff
 	Survival_InitGame();
 
     ScenarioFramework.SetPlayableArea('AREA_2' , false)
-	
-	Weather.CreateWeather()
+
+	import('/lua/weather.lua').CreateWeather()
 end
 
 local Survival_WaveTables = localImport('WaveTables.lua').tables
