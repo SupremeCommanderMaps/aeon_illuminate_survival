@@ -5,6 +5,7 @@
 -- import
 --------------------------------------------------------------------------
 local ScenarioUtils = import('/lua/sim/ScenarioUtilities.lua');
+ScenarioUtils.CreateResources = function() end
 local ScenarioFramework = import('/lua/ScenarioFramework.lua');
 
 local function localImport(fileName)
@@ -14,6 +15,8 @@ end
 local function entropyLibImport(fileName)
 	return import('/maps/aeon_illuminate_survival.v0002/vendor/EntropyLib/src/' .. fileName)
 end
+
+local entropyLib = entropyLibImport('EntropyLib.lua').newInstance('/maps/aeon_illuminate_survival.v0002/vendor/EntropyLib/')
 
 -- class variables
 --------------------------------------------------------------------------
@@ -48,11 +51,18 @@ local Survival_NukeFrequency = 135;
 local Survival_ObjectiveTime = 3000; --2160 --2160;
 
 
+local function setupResourceDeposits()
+	entropyLib.spawnAdaptiveResources(
+		localImport('../Aeon_Illuminate_Survival_tables.lua')
+	)
+end
 
 -- called at start to read various settings
 --------------------------------------------------------------------------
 function OnPopulate()
 	ScenarioUtils.InitializeArmies();
+
+	setupResourceDeposits()
 
 	Survival_InitGame();
 
@@ -62,77 +72,6 @@ function OnPopulate()
 end
 
 local Survival_WaveTables = localImport('WaveTables.lua').tables
-
-
--- eco adjust based on who is playing
--- taken from original survival/Jotto
---------------------------------------------------------------------------
-function ScenarioUtils.CreateResources()
-
-
-	local Markers = ScenarioUtils.GetMarkers();
-
-	for i, tblData in pairs(Markers) do -- loop marker list
-
-		local SpawnThisResource = false; -- default to no
-
-		if (tblData.resource and not tblData.SpawnWithArmy) then -- if this is a regular resource
-			SpawnThisResource = true;
-		elseif (tblData.resource and tblData.SpawnWithArmy) then -- if this is an army-specific resource
-
-			if (tblData.SpawnWithArmy == "ARMY_0") then
-				SpawnThisResource = true;
-			else
-				for x, army in ListArmies() do -- loop through army list
-
-					if (tblData.SpawnWithArmy == army) then -- if this army is present
-						SpawnThisResource = true; -- spawn this resource
-						break;
-					end
-				end
-			end
-		end
-
-		if (SpawnThisResource) then -- if we can spawn the resource do it
-
-			local bp, albedo, sx, sz, lod;
-
-			if (tblData.type == "Mass") then
-				albedo = "/env/common/splats/mass_marker.dds";
-				bp = "/env/common/props/massDeposit01_prop.bp";
-				sx = 2;
-				sz = 2;
-				lod = 100;
-			else
-				albedo = "/env/common/splats/hydrocarbon_marker.dds";
-				bp = "/env/common/props/hydrocarbonDeposit01_prop.bp";
-				sx = 6;
-				sz = 6;
-				lod = 200;
-			end
-
-			-- create the resource
-			CreateResourceDeposit(tblData.type,	tblData.position[1], tblData.position[2], tblData.position[3], tblData.size);
-
-			-- create the resource graphic on the map
-			CreatePropHPR(bp, tblData.position[1], tblData.position[2], tblData.position[3], Random(0,360), 0, 0);
-
-			-- create the resource icon on the map
-			CreateSplat(
-				tblData.position,
-				0,               
-				albedo,          
-				sx, sz,          
-				lod,             
-				0,               
-				-1,              
-				0				
-			);
-		end
-	end
-end
-
-
 
 -- called at start of game
 --------------------------------------------------------------------------
