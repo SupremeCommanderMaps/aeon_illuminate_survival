@@ -19,6 +19,8 @@ end
 
 local entropyLib = entropyLibImport('EntropyLib.lua').newInstance('/maps/aeon_illuminate_survival.v0002/vendor/EntropyLib/')
 local unitCreator = entropyLib.newUnitCreator()
+local textPrinter = entropyLib.newTextPrinter()
+local formatter = entropyLib.newFormatter()
 
 -- class variables
 --------------------------------------------------------------------------
@@ -59,16 +61,101 @@ local function setupResourceDeposits()
 	)
 end
 
+local function setupAutoReclaim()
+	local percentage = ScenarioInfo.Options.opt_Survival_AutoReclaim
+
+	if percentage > 0 then
+		unitCreator.onUnitCreated(function(unit, unitInfo)
+			if unitInfo.isSurvivalSpawned then
+				unit.CreateWreckage = function() end
+			end
+		end)
+
+		ForkThread(
+			entropyLib.autoReclaimThreadFunction,
+			percentage / 100,
+			percentage / 100
+		)
+	end
+end
+
+local function setupHealthMultiplier()
+	local multiplier = ScenarioInfo.Options.opt_Survival_HealthMultiplier
+
+	if multiplier ~= 1 then
+		unitCreator.onUnitCreated(function(unit, unitInfo)
+			if unitInfo.isSurvivalSpawned then
+				unit:SetVeterancy(5)
+				unit:SetMaxHealth(unit:GetMaxHealth() * multiplier)
+				unit:SetHealth(unit, unit:GetMaxHealth())
+			end
+		end)
+	end
+end
+
+local function setupDamageMultiplier()
+	local buffUnitDamage = entropyLib.newUnitBuffer().buffDamage
+
+	unitCreator.onUnitCreated(function(unit, unitInfo)
+		if unitInfo.isSurvivalSpawned then
+			buffUnitDamage(unit, ScenarioInfo.Options.opt_Survival_DamageMultiplier)
+		end
+	end)
+end
+
+local welcomeMessages = localImport('WelcomeMessages.lua').newInstance(
+	textPrinter,
+	formatter,
+	ScenarioInfo.Options,
+	ScenarioInfo.map_version
+)
+
+local function showWelcomeMessages()
+	welcomeMessages.startDisplay()
+end
+
+local function defaultOptions()
+	if (ScenarioInfo.Options.opt_Survival_BuildTime == nil) then
+		ScenarioInfo.Options.opt_Survival_BuildTime = 120
+	end
+
+	if (ScenarioInfo.Options.opt_Survival_EnemiesPerMinute == nil) then
+		ScenarioInfo.Options.opt_Survival_EnemiesPerMinute = 32
+	end
+
+	if (ScenarioInfo.Options.opt_Survival_WaveFrequency == nil) then
+		ScenarioInfo.Options.opt_Survival_WaveFrequency = 10
+	end
+
+	if (ScenarioInfo.Options.opt_Survival_HealthMultiplier == nil) then
+		ScenarioInfo.Options.opt_Survival_HealthMultiplier = 1
+	end
+
+	if (ScenarioInfo.Options.opt_Survival_DamageMultiplier == nil) then
+		ScenarioInfo.Options.opt_Survival_DamageMultiplier = 1
+	end
+
+	if (ScenarioInfo.Options.opt_Survival_AutoReclaim == nil) then
+		ScenarioInfo.Options.opt_Survival_AutoReclaim = 0
+	end
+end
+
 function OnPopulate()
 	ScenarioUtils.InitializeArmies()
+	defaultOptions()
 
 	setupResourceDeposits()
+	setupHealthMultiplier()
+	setupDamageMultiplier()
+	setupAutoReclaim()
 
 	Survival_InitGame()
 
     ScenarioFramework.SetPlayableArea('AREA_2' , false)
 
 	import('/lua/weather.lua').CreateWeather()
+
+	showWelcomeMessages()
 end
 
 local Survival_WaveTables = localImport('WaveTables.lua').tables
@@ -80,20 +167,8 @@ end
 
 
 Survival_InitGame = function()
-	if (ScenarioInfo.Options.opt_Survival_BuildTime == nil) then
-		ScenarioInfo.Options.opt_Survival_BuildTime = 120
-	end
-
 	Survival_NextSpawnTime = ScenarioInfo.Options.opt_Survival_BuildTime
 	Survival_MinWarnTime = Survival_NextSpawnTime - 60 -- set time for minute warning
-
-	if (ScenarioInfo.Options.opt_Survival_EnemiesPerMinute == nil) then
-		ScenarioInfo.Options.opt_Survival_EnemiesPerMinute = 32
-	end
-
-	if (ScenarioInfo.Options.opt_Survival_WaveFrequency == nil) then
-		ScenarioInfo.Options.opt_Survival_WaveFrequency = 10
-	end
 
 	ScenarioInfo.Options.Victory = 'sandbox'
 
@@ -780,3 +855,26 @@ function GetMarker(MarkerName)
 	return Scenario.MasterChain._MASTERCHAIN_.Markers[MarkerName]
 end
 
+function printDamageMultiplierChange(message)
+	textPrinter.print(
+		string.rep(" ", 20) .. message .. " " .. formatter.formatMultiplier(ScenarioInfo.Options.opt_Survival_DamageMultiplier),
+		{duration = 3, location = "leftcenter"}
+	)
+end
+
+function OnShiftF3()
+	if ScenarioInfo.Options.opt_Survival_DamageMultiplier > 0.1 then
+		ScenarioInfo.Options.opt_Survival_DamageMultiplier = ScenarioInfo.Options.opt_Survival_DamageMultiplier - 0.1
+	end
+
+	printDamageMultiplierChange("Damage multiplier decreased to")
+end
+
+function OnShiftF4()
+	ScenarioInfo.Options.opt_Survival_DamageMultiplier = ScenarioInfo.Options.opt_Survival_DamageMultiplier + 0.1
+	printDamageMultiplierChange("Damage multiplier increased to")
+end
+
+function OnShiftF5()
+	welcomeMessages.displaySettings()
+end
