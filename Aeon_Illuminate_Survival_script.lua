@@ -137,8 +137,6 @@ Survival_InitGame = function()
 end
 
 
-
-
 -- spawns a specified unit
 --------------------------------------------------------------------------
 Survival_InitMarkers = function()
@@ -451,8 +449,22 @@ end
 
 
 
--- spawns a wave of units
---------------------------------------------------------------------------
+
+Survival_SpawnUnit = function(UnitID, ArmyID, POS, OrderID) -- blueprint, army, position, order
+
+	--	LOG("----- Survival MOD: SPAWNUNIT: Start function...");
+	local PlatoonList = {};
+
+	local NewUnit = CreateUnitHPR(UnitID, ArmyID, POS[1], POS[2], POS[3], 0,0,0);
+
+	NewUnit:SetProductionPerSecondEnergy(1000000);
+	NewUnit:SetProductionPerSecondMass(1000000);
+
+	table.insert(PlatoonList, NewUnit); -- add unit to a platoon
+	Survival_PlatoonOrder(ArmyID, PlatoonList, OrderID); -- give the unit orders
+
+end
+
 Survival_SpawnWave = function(SpawnTime)
 
 	local WaveTable = nil;
@@ -486,23 +498,6 @@ Survival_SpawnWave = function(SpawnTime)
 end
 
 
-
--- spawns a specified unit
---------------------------------------------------------------------------
-Survival_SpawnUnit = function(UnitID, ArmyID, POS, OrderID) -- blueprint, army, position, order
-
---	LOG("----- Survival MOD: SPAWNUNIT: Start function...");
-	local PlatoonList = {};
-
-	local NewUnit = CreateUnitHPR(UnitID, ArmyID, POS[1], POS[2], POS[3], 0,0,0);
-
-	NewUnit:SetProductionPerSecondEnergy(1000000);
-	NewUnit:SetProductionPerSecondMass(1000000);
-	
-	table.insert(PlatoonList, NewUnit); -- add unit to a platoon
-	Survival_PlatoonOrder(ArmyID, PlatoonList, OrderID); -- give the unit orders
-
-end
 
 
 
