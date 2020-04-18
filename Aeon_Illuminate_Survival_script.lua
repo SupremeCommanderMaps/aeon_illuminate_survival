@@ -57,14 +57,12 @@ local function setupResourceDeposits()
 	)
 end
 
--- called at start to read various settings
---------------------------------------------------------------------------
 function OnPopulate()
-	ScenarioUtils.InitializeArmies();
+	ScenarioUtils.InitializeArmies()
 
 	setupResourceDeposits()
 
-	Survival_InitGame();
+	Survival_InitGame()
 
     ScenarioFramework.SetPlayableArea('AREA_2' , false)
 
@@ -73,46 +71,29 @@ end
 
 local Survival_WaveTables = localImport('WaveTables.lua').tables
 
--- called at start of game
---------------------------------------------------------------------------
 function OnStart(self)
-
-	LOG("----- Survival MOD: Initializing game start sequence...");
-
-	-- start the survival tick
-	ForkThread(Survival_Tick);
-
+	ForkThread(Survival_Tick)
 end
 
 
 
--- initializes the game settings
---------------------------------------------------------------------------
 Survival_InitGame = function()
+	if (ScenarioInfo.Options.opt_Survival_BuildTime == nil) then
+		ScenarioInfo.Options.opt_Survival_BuildTime = 120
+	end
 
-	LOG("----- Survival MOD: Configuring match settings...");
+	Survival_NextSpawnTime = ScenarioInfo.Options.opt_Survival_BuildTime
+	Survival_MinWarnTime = Survival_NextSpawnTime - 60 -- set time for minute warning
 
-	-- check game configuration
-	
-		-- build time
-		if (ScenarioInfo.Options.opt_Survival_BuildTime == nil) then
-			ScenarioInfo.Options.opt_Survival_BuildTime = 120;
-		end
+	if (ScenarioInfo.Options.opt_Survival_EnemiesPerMinute == nil) then
+		ScenarioInfo.Options.opt_Survival_EnemiesPerMinute = 32
+	end
 
-			Survival_NextSpawnTime = ScenarioInfo.Options.opt_Survival_BuildTime; -- set first wave time to build time
-			Survival_MinWarnTime = Survival_NextSpawnTime - 60; -- set time for minute warning
+	if (ScenarioInfo.Options.opt_Survival_WaveFrequency == nil) then
+		ScenarioInfo.Options.opt_Survival_WaveFrequency = 10
+	end
 
-		-- opt_Survival_EnemiesPerMinute
-		if (ScenarioInfo.Options.opt_Survival_EnemiesPerMinute == nil) then
-			ScenarioInfo.Options.opt_Survival_EnemiesPerMinute = 32;
-		end
-
-		-- opt_Survival_WaveFrequency
-		if (ScenarioInfo.Options.opt_Survival_WaveFrequency == nil) then
-			ScenarioInfo.Options.opt_Survival_WaveFrequency = 10;
-		end
-
-	ScenarioInfo.Options.Victory = 'sandbox'; -- force sandbox in order to implement our own rules
+	ScenarioInfo.Options.Victory = 'sandbox'
 
 	local Armies = ListArmies();
 	Survival_PlayerCount = table.getn(Armies) - 2; -- save player count, subtracting the 2 AI "players"
