@@ -10,18 +10,14 @@ local function localImport(fileName)
 	return import('/maps/aeon_illuminate_survival.v0003/src/' .. fileName)
 end
 
-local function entropyLibImport(fileName)
-	return import('/maps/aeon_illuminate_survival.v0003/vendor/EntropyLib/src/' .. fileName)
-end
+local survivalGame = localImport('SurvivalGame.lua')
+local entropyLib = survivalGame.getEntropyLib()
 
-local entropyLib = entropyLibImport('EntropyLib.lua').newInstance('/maps/aeon_illuminate_survival.v0003/vendor/EntropyLib/')
 local unitCreator = entropyLib.newUnitCreator()
 local textPrinter = entropyLib.newTextPrinter()
 local formatter = entropyLib.newFormatter()
 
-local survivalGame = localImport('SurvivalGame.lua')
-survivalGame.localImport = localImport
-survivalGame.entropyLib = entropyLib
+
 
 -- class variables
 --------------------------------------------------------------------------
