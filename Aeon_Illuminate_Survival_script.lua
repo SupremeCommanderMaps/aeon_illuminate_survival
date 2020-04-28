@@ -6,18 +6,7 @@ local ScenarioFramework = import('/lua/ScenarioFramework.lua')
 
 ScenarioUtils.CreateResources = function() end
 
-local function localImport(fileName)
-	return import('/maps/aeon_illuminate_survival.v0003/src/' .. fileName)
-end
-
-local survivalGame = localImport('SurvivalGame.lua')
-local entropyLib = survivalGame.getEntropyLib()
-
-local unitCreator = entropyLib.newUnitCreator()
-local textPrinter = entropyLib.newTextPrinter()
-local formatter = entropyLib.newFormatter()
-
-
+local survivalGame = import('/maps/aeon_illuminate_survival.v0003/src/SurvivalGame.lua')
 
 -- class variables
 --------------------------------------------------------------------------
@@ -52,49 +41,6 @@ local Survival_NukeFrequency = 135;
 local Survival_ObjectiveTime = 3000; --2160 --2160;
 
 
-local function setupResourceDeposits()
-	entropyLib.spawnAdaptiveResources(
-		localImport('../Aeon_Illuminate_Survival_tables.lua')
-	)
-end
-
-local function setupAutoReclaim()
-	local percentage = ScenarioInfo.Options.opt_Survival_AutoReclaim
-
-	if percentage > 0 then
-		unitCreator.onUnitCreated(function(unit, unitInfo)
-			if unitInfo.isSurvivalSpawned then
-				unit.CreateWreckage = function() end
-			end
-		end)
-
-		ForkThread(
-			entropyLib.autoReclaimThreadFunction,
-			percentage / 100,
-			percentage / 100
-		)
-	end
-end
-
-local function setupHealthMultiplier()
-	unitCreator.onUnitCreated(function(unit, unitInfo)
-		if ScenarioInfo.Options.opt_Survival_HealthMultiplier ~= 1 and unitInfo.isSurvivalSpawned then
-			unit:SetVeterancy(5)
-			unit:SetMaxHealth(unit:GetMaxHealth() * ScenarioInfo.Options.opt_Survival_HealthMultiplier)
-			unit:SetHealth(unit, unit:GetMaxHealth())
-		end
-	end)
-end
-
-local function setupDamageMultiplier()
-	local buffUnitDamage = entropyLib.newUnitBuffer().buffDamage
-
-	unitCreator.onUnitCreated(function(unit, unitInfo)
-		if unitInfo.isSurvivalSpawned then
-			buffUnitDamage(unit, ScenarioInfo.Options.opt_Survival_DamageMultiplier)
-		end
-	end)
-end
 
 local function showWelcomeMessages()
 	survivalGame.getWelcomeMessages().startDisplay()
@@ -130,10 +76,7 @@ function OnPopulate()
 	ScenarioUtils.InitializeArmies()
 	defaultOptions()
 
-	setupResourceDeposits()
-	setupHealthMultiplier()
-	setupDamageMultiplier()
-	setupAutoReclaim()
+	survivalGame.setup()
 
 	Survival_InitGame()
 
@@ -144,7 +87,7 @@ function OnPopulate()
 	showWelcomeMessages()
 end
 
-local Survival_WaveTables = localImport('WaveTables.lua').tables
+local Survival_WaveTables = survivalGame.getWaveTables()
 
 function OnStart(self)
 	ForkThread(Survival_Tick)
@@ -512,7 +455,7 @@ end
 
 
 local function createSurvivalUnit(blueprint, x, z, y)
-	local unit = unitCreator.create({
+	local unit = survivalGame.getUnitCreator().create({
 		isSurvivalSpawned = true,
 		blueprintName = blueprint,
 		armyName = "ARMY_SURVIVAL_ENEMY",
@@ -842,8 +785,8 @@ function GetMarker(MarkerName)
 end
 
 function printMultiplierChange(message, newMultiplier)
-	textPrinter.print(
-		string.rep(" ", 20) .. message .. " " .. formatter.formatMultiplier(newMultiplier),
+	survivalGame.getTextPrinter().print(
+		string.rep(" ", 20) .. message .. " " .. survivalGame.getFormatter().formatMultiplier(newMultiplier),
 		{duration = 3, location = "leftcenter"}
 	)
 end
@@ -879,7 +822,7 @@ function OnShiftF5()
 end
 
 function OnCtrlF5()
-	textPrinter.print(
+	survivalGame.getTextPrinter().print(
 		survivalGame.getTeam().calculateWealth(),
 		{duration = 3, location = "leftcenter"}
 	)

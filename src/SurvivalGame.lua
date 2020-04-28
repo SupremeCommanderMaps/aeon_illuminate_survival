@@ -5,6 +5,7 @@ local mapPath = '/maps/aeon_illuminate_survival.v0003/'
 local entropyLib
 local team
 local textPrinter
+local unitCreator
 local formatter
 local welcomeMessages
 
@@ -20,6 +21,14 @@ function getEntropyLib()
     return entropyLib
 end
 
+function setup()
+    return localImport('Setup.lua').setup(
+        getEntropyLib(),
+        localImport,
+        getUnitCreator()
+    )
+end
+
 function getTeam()
     if team == nil then
         team = localImport('Team.lua').newTeam(
@@ -31,6 +40,14 @@ function getTeam()
     return team
 end
 
+function getUnitCreator()
+    if unitCreator == nil then
+        unitCreator = entropyLib.newUnitCreator()
+    end
+
+    return unitCreator
+end
+
 function getTextPrinter()
     if textPrinter == nil then
         textPrinter = entropyLib.newTextPrinter()
@@ -39,7 +56,7 @@ function getTextPrinter()
     return textPrinter
 end
 
-local function getFormatter()
+function getFormatter()
     if formatter == nil then
         formatter = entropyLib.newFormatter()
     end
@@ -58,6 +75,10 @@ function getWelcomeMessages()
     end
 
     return welcomeMessages
+end
+
+function getWaveTables()
+    return localImport('WaveTables.lua').tables
 end
 
 function getFoo()

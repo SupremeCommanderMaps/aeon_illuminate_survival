@@ -8,6 +8,7 @@ local function getUnitsOfArmyName(armyName)
         return {}
     end
 
+    -- FIXME: need to restrict to fully build units only
     return armyBrain:GetListOfUnits(categories.ALLUNITS, CAN_BE_IDLE)
 end
 
