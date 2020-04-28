@@ -884,3 +884,7 @@ end
 function OnShiftF5()
 	welcomeMessages.displaySettings()
 end
+
+function OnCtrlF5()
+	textPrinter.print(localImport('ArmyWealth.lua').calculateArmyWealth('ARMY_1'))
+end
