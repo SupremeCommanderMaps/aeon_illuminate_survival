@@ -96,15 +96,8 @@ local function setupDamageMultiplier()
 	end)
 end
 
-local welcomeMessages = localImport('WelcomeMessages.lua').newInstance(
-	textPrinter,
-	formatter,
-	ScenarioInfo.Options,
-	ScenarioInfo.map_version
-)
-
 local function showWelcomeMessages()
-	welcomeMessages.startDisplay()
+	survivalGame.getWelcomeMessages().startDisplay()
 end
 
 local function defaultOptions()
@@ -882,7 +875,7 @@ function OnCtrlF4()
 end
 
 function OnShiftF5()
-	welcomeMessages.displaySettings()
+	survivalGame.getWelcomeMessages().displaySettings()
 end
 
 function OnCtrlF5()
