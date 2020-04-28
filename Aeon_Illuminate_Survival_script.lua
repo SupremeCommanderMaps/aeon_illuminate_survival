@@ -19,6 +19,10 @@ local unitCreator = entropyLib.newUnitCreator()
 local textPrinter = entropyLib.newTextPrinter()
 local formatter = entropyLib.newFormatter()
 
+local survivalGame = localImport('SurvivalGame.lua')
+survivalGame.localImport = localImport
+survivalGame.entropyLib = entropyLib
+
 -- class variables
 --------------------------------------------------------------------------
 local Survival_TickInterval = 0.50; -- how much delay between each script iteration
@@ -886,5 +890,8 @@ function OnShiftF5()
 end
 
 function OnCtrlF5()
-	textPrinter.print(localImport('ArmyWealth.lua').calculateArmyWealth('ARMY_1'))
+	textPrinter.print(
+		survivalGame.getTeam().calculateWealth(),
+		{duration = 3, location = "leftcenter"}
+	)
 end

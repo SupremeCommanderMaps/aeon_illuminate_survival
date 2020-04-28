@@ -2,7 +2,13 @@
 
 local function getUnitsOfArmyName(armyName)
     local CAN_BE_IDLE = true
-    return GetArmyBrain(armyName):GetListOfUnits(categories.ALLUNITS, CAN_BE_IDLE)
+    local armyBrain = GetArmyBrain(armyName)
+
+    if armyBrain == nil then
+        return {}
+    end
+
+    return armyBrain:GetListOfUnits(categories.ALLUNITS, CAN_BE_IDLE)
 end
 
 local function getUnitWealth(unit)
