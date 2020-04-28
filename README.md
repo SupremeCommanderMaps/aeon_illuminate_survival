@@ -12,6 +12,8 @@ You can find the latest version of the map [on GitHub][GitHub].
 
 Under development
 
+* Added Health Multiplier hotkeys
+
 ### Version 2
 
 Released on 2020-04-27
@@ -20,6 +22,8 @@ Released on 2020-04-27
 * Added Auto Reclaim lobby option
 * Added Health Multiplier lobby option
 * Added Damage Multiplier lobby option
+* Added Damage Multiplier hotkeys
+* Added print map settings hotkey
 * Put the map into git version control
 
 ### Version 1

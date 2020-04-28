@@ -77,17 +77,13 @@ local function setupAutoReclaim()
 end
 
 local function setupHealthMultiplier()
-	local multiplier = ScenarioInfo.Options.opt_Survival_HealthMultiplier
-
-	if multiplier ~= 1 then
-		unitCreator.onUnitCreated(function(unit, unitInfo)
-			if unitInfo.isSurvivalSpawned then
-				unit:SetVeterancy(5)
-				unit:SetMaxHealth(unit:GetMaxHealth() * multiplier)
-				unit:SetHealth(unit, unit:GetMaxHealth())
-			end
-		end)
-	end
+	unitCreator.onUnitCreated(function(unit, unitInfo)
+		if ScenarioInfo.Options.opt_Survival_HealthMultiplier ~= 1 and unitInfo.isSurvivalSpawned then
+			unit:SetVeterancy(5)
+			unit:SetMaxHealth(unit:GetMaxHealth() * ScenarioInfo.Options.opt_Survival_HealthMultiplier)
+			unit:SetHealth(unit, unit:GetMaxHealth())
+		end
+	end)
 end
 
 local function setupDamageMultiplier()
@@ -852,9 +848,9 @@ function GetMarker(MarkerName)
 	return Scenario.MasterChain._MASTERCHAIN_.Markers[MarkerName]
 end
 
-function printDamageMultiplierChange(message)
+function printMultiplierChange(message, newMultiplier)
 	textPrinter.print(
-		string.rep(" ", 20) .. message .. " " .. formatter.formatMultiplier(ScenarioInfo.Options.opt_Survival_DamageMultiplier),
+		string.rep(" ", 20) .. message .. " " .. formatter.formatMultiplier(newMultiplier),
 		{duration = 3, location = "leftcenter"}
 	)
 end
@@ -864,12 +860,25 @@ function OnShiftF3()
 		ScenarioInfo.Options.opt_Survival_DamageMultiplier = ScenarioInfo.Options.opt_Survival_DamageMultiplier - 0.1
 	end
 
-	printDamageMultiplierChange("Damage multiplier decreased to")
+	printMultiplierChange("Damage multiplier decreased to", ScenarioInfo.Options.opt_Survival_DamageMultiplier)
 end
 
 function OnShiftF4()
 	ScenarioInfo.Options.opt_Survival_DamageMultiplier = ScenarioInfo.Options.opt_Survival_DamageMultiplier + 0.1
-	printDamageMultiplierChange("Damage multiplier increased to")
+	printMultiplierChange("Damage multiplier increased to", ScenarioInfo.Options.opt_Survival_DamageMultiplier)
+end
+
+function OnCtrlF3()
+	if ScenarioInfo.Options.opt_Survival_HealthMultiplier > 0.1 then
+		ScenarioInfo.Options.opt_Survival_HealthMultiplier = ScenarioInfo.Options.opt_Survival_HealthMultiplier - 0.1
+	end
+
+	printMultiplierChange("Health multiplier decreased to", ScenarioInfo.Options.opt_Survival_HealthMultiplier)
+end
+
+function OnCtrlF4()
+	ScenarioInfo.Options.opt_Survival_HealthMultiplier = ScenarioInfo.Options.opt_Survival_HealthMultiplier + 0.1
+	printMultiplierChange("Health multiplier increased to", ScenarioInfo.Options.opt_Survival_HealthMultiplier)
 end
 
 function OnShiftF5()
