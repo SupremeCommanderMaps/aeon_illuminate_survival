@@ -10,7 +10,7 @@ You can find the latest version of the map [on GitHub][GitHub].
 
 ### Version 3
 
-Under development
+Released on 2020-04-28
 
 * Added Health Multiplier hotkeys
 
