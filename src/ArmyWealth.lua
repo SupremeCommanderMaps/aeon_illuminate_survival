@@ -1,19 +1,27 @@
 
 
 local function getUnitsOfArmyName(armyName)
-    local CAN_BE_IDLE = true
     local armyBrain = GetArmyBrain(armyName)
 
     if armyBrain == nil then
         return {}
     end
 
-    -- FIXME: need to restrict to fully build units only
-    return armyBrain:GetListOfUnits(categories.ALLUNITS, CAN_BE_IDLE)
+    local CAN_BE_IDLE = true
+    local NEEDS_TO_BE_BUILD = true
+
+    -- categories.ECONOMIC + categories.COMMAND (misses SACUs)
+    return armyBrain:GetListOfUnits(categories.ALLUNITS, CAN_BE_IDLE, NEEDS_TO_BE_BUILD)
 end
 
 local function getUnitWealth(unit)
-    return unit:GetBlueprint().Economy.BuildCostMass
+    --return unit:GetBlueprint().Economy.BuildCostMass
+
+    if unit:IsBeingBuilt() then
+        return 0
+    end
+
+    return unit:GetProductionPerSecondMass()
 end
 
 function calculateArmyWealth(armyName)

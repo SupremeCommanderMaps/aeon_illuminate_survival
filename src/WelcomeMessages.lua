@@ -25,7 +25,7 @@ newInstance = function(textPrinter, formatter, options, mapVersion)
     local function displayWelcome()
         textPrinter.print(string.rep(" ", 20) .. "Welcome to", headerOptions)
         textPrinter.print(string.rep(" ", 12) .. "Aeon Illuminate Survival", titleOptions)
-        textPrinter.print(string.rep(" ", 25) .. "Version " .. mapVersion, headerOptions)
+        textPrinter.print(string.rep(" ", 66) .. "Version " .. mapVersion, headerOptions)
 
         textPrinter.printBlankLine(textOptions)
         textPrinter.printBlankLine(textOptions)

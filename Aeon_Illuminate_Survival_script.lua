@@ -821,9 +821,20 @@ function OnShiftF5()
 	survivalGame.getWelcomeMessages().displaySettings()
 end
 
+local wealths = {}
+
 function OnCtrlF5()
+	LOG(repr(wealths))
+
 	survivalGame.getTextPrinter().print(
-		survivalGame.getTeam().calculateWealth(),
-		{duration = 3, location = "leftcenter"}
+			survivalGame.getTeam().calculateWealth(),
+			{duration = 3, location = "leftcenter"}
 	)
 end
+
+ForkThread(function()
+	while true do
+		wealths[math.floor(GetGameTimeSeconds())] = survivalGame.getTeam().calculateWealth()
+		WaitSeconds(1)
+	end
+end)
