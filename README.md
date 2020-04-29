@@ -8,6 +8,10 @@ You can find the latest version of the map [on GitHub][GitHub].
 
 ## Version History
 
+### Version 4
+
+* Added All Factions lobby option
+
 ### Version 3
 
 Released on 2020-04-28

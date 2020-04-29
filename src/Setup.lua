@@ -1,11 +1,11 @@
 
-local function setupResourceDeposits(entropyLib, localImport)
+function setupResourceDeposits(entropyLib, localImport)
     entropyLib.spawnAdaptiveResources(
         localImport('../Aeon_Illuminate_Survival_tables.lua')
     )
 end
 
-local function setupAutoReclaim(entropyLib)
+function setupAutoReclaim(entropyLib)
     local percentage = ScenarioInfo.Options.opt_Survival_AutoReclaim
 
     if percentage > 0 then
@@ -23,7 +23,7 @@ local function setupAutoReclaim(entropyLib)
     end
 end
 
-local function setupHealthMultiplier(unitCreator)
+function setupHealthMultiplier(unitCreator)
     unitCreator.onUnitCreated(function(unit, unitInfo)
         if ScenarioInfo.Options.opt_Survival_HealthMultiplier ~= 1 and unitInfo.isSurvivalSpawned then
             unit:SetVeterancy(5)
@@ -33,7 +33,7 @@ local function setupHealthMultiplier(unitCreator)
     end)
 end
 
-local function setupDamageMultiplier(entropyLib, unitCreator)
+function setupDamageMultiplier(entropyLib, unitCreator)
     local buffUnitDamage = entropyLib.newUnitBuffer().buffDamage
 
     unitCreator.onUnitCreated(function(unit, unitInfo)
@@ -43,9 +43,14 @@ local function setupDamageMultiplier(entropyLib, unitCreator)
     end)
 end
 
-function setup(entropyLib, localImport, unitCreator)
-    setupResourceDeposits(entropyLib, localImport)
-    setupHealthMultiplier(unitCreator)
-    setupDamageMultiplier(entropyLib, unitCreator)
-    setupAutoReclaim(entropyLib)
+function setupAllFactions(allFactions, team)
+    if ScenarioInfo.Options.opt_SurvivalAllFactions ~= 0 then
+        for armyIndex in team.getArmies() do
+            if ScenarioInfo.Options.opt_SurvivalAllFactions == 1 then
+                allFactions.spawnExtraEngineers(ArmyBrains[armyIndex])
+            else
+                allFactions.spawnExtraAcus(ArmyBrains[armyIndex])
+            end
+        end
+    end
 end

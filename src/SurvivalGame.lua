@@ -22,11 +22,13 @@ function getEntropyLib()
 end
 
 function setup()
-    return localImport('Setup.lua').setup(
-        getEntropyLib(),
-        localImport,
-        getUnitCreator()
-    )
+    local setup = localImport('Setup.lua')
+
+    setup.setupResourceDeposits(getEntropyLib(), localImport)
+    setup.setupHealthMultiplier(getUnitCreator())
+    setup.setupDamageMultiplier(getEntropyLib(), getUnitCreator())
+    setup.setupAutoReclaim(getEntropyLib())
+    setup.setupAllFactions(newAllFactions(), getTeam())
 end
 
 function getTeam()
@@ -79,6 +81,10 @@ end
 
 function getWaveTables()
     return localImport('WaveTables.lua').tables
+end
+
+function newAllFactions()
+    return entropyLib.newAllFactions()
 end
 
 function getFoo()

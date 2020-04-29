@@ -8,6 +8,9 @@ function newTeam(armies, calculateArmyWealth)
             end
 
             return wealth
+        end,
+        getArmies = function()
+            return armies
         end
     }
 end

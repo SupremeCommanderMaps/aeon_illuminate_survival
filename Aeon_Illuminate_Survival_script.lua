@@ -70,6 +70,10 @@ local function defaultOptions()
 	if (ScenarioInfo.Options.opt_Survival_AutoReclaim == nil) then
 		ScenarioInfo.Options.opt_Survival_AutoReclaim = 0
 	end
+
+	if (ScenarioInfo.Options.opt_SurvivalAllFactions == nil) then
+		ScenarioInfo.Options.opt_SurvivalAllFactions = 0
+	end
 end
 
 function OnPopulate()
