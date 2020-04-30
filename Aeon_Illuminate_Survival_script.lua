@@ -826,19 +826,31 @@ function OnShiftF5()
 end
 
 local wealths = {}
+local incomes = {}
 
 function OnCtrlF5()
 	LOG(repr(wealths))
+	LOG(repr(incomes))
+
+	local team = survivalGame.getTeam()
 
 	survivalGame.getTextPrinter().print(
-			survivalGame.getTeam().calculateWealth(),
-			{duration = 3, location = "leftcenter"}
+		team.calculateWealth(),
+		{duration = 3, location = "leftcenter"}
+	)
+
+	survivalGame.getTextPrinter().print(
+		team.calculateMassIncomeFromEcoUnits(),
+		{duration = 3, location = "leftcenter"}
 	)
 end
 
 ForkThread(function()
+	local team = survivalGame.getTeam()
+
 	while true do
-		wealths[math.floor(GetGameTimeSeconds())] = survivalGame.getTeam().calculateWealth()
+		wealths[math.floor(GetGameTimeSeconds()) + 1] = team.calculateWealth()
+		incomes[math.floor(GetGameTimeSeconds()) + 1] = team.calculateMassIncomeFromEcoUnits()
 		WaitSeconds(1)
 	end
 end)

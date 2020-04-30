@@ -35,7 +35,7 @@ function getTeam()
     if team == nil then
         team = localImport('Team.lua').newTeam(
             localImport('PlayerArmies.lua').getPresentPlayerArmies(),
-            localImport('ArmyWealth.lua').calculateArmyWealth
+            localImport('ArmyWealth.lua')
         )
     end
 

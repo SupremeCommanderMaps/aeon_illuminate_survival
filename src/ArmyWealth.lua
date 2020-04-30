@@ -15,8 +15,10 @@ local function getUnitsOfArmyName(armyName)
 end
 
 local function getUnitWealth(unit)
-    --return unit:GetBlueprint().Economy.BuildCostMass
+    return unit:GetBlueprint().Economy.BuildCostMass
+end
 
+local function getMassIncome(unit)
     if unit:IsBeingBuilt() then
         return 0
     end
@@ -29,6 +31,16 @@ function calculateArmyWealth(armyName)
 
     for _, unit in getUnitsOfArmyName(armyName) do
         wealth = wealth + getUnitWealth(unit)
+    end
+
+    return wealth
+end
+
+function calculateMassIncome(armyName)
+    local wealth = 0
+
+    for _, unit in getUnitsOfArmyName(armyName) do
+        wealth = wealth + getMassIncome(unit)
     end
 
     return wealth
