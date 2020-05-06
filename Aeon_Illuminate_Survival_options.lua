@@ -18,7 +18,7 @@ options =
 		}, 
 	},
 	{ 
-		default = 9,
+		default = 11,
 		label = "Survival: Unit Count",
 		help = "How many enemies attack each minute (per player).", 
 		key = 'opt_Survival_EnemiesPerMinute', 
@@ -45,6 +45,8 @@ options =
 			{text = "96",help = "", key = 96, },
 			{text = "112",help = "", key = 112, },
 			{text = "128",help = "", key = 128, },
+			{text = "144",help = "Just dont", key = 144, },
+			{text = "160",help = "Laggfest", key = 160, },
 		}, 
 	},
 	{ 

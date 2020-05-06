@@ -6,7 +6,7 @@ local ScenarioFramework = import('/lua/ScenarioFramework.lua')
 
 ScenarioUtils.CreateResources = function() end
 
-local survivalGame = import('/maps/aeon_illuminate_survival.v0004/src/SurvivalGame.lua')
+local survivalGame = import('/maps/aeon_illuminate_survival.v0005/src/SurvivalGame.lua')
 
 -- class variables
 --------------------------------------------------------------------------
@@ -38,7 +38,7 @@ local Survival_NukeSpots = {};
 local Survival_NextNukeTime = 10000; --2040;
 local Survival_NukeFrequency = 135;
 
-local Survival_ObjectiveTime = 3000; --2160 --2160;
+local Survival_ObjectiveTime = 3120; --2160 --2160;
 
 
 
@@ -52,7 +52,7 @@ local function defaultOptions()
 	end
 
 	if (ScenarioInfo.Options.opt_Survival_EnemiesPerMinute == nil) then
-		ScenarioInfo.Options.opt_Survival_EnemiesPerMinute = 32
+		ScenarioInfo.Options.opt_Survival_EnemiesPerMinute = 36
 	end
 
 	if (ScenarioInfo.Options.opt_Survival_WaveFrequency == nil) then
@@ -566,7 +566,7 @@ Survival_SpawnSpecialUnit = function(UnitID, ArmyID, POS) -- blueprint, army, po
 
 	NewUnit:SetMaxHealth(150000);
 	NewUnit:SetHealth(nil, 150000);
-	NewUnit:SetRegenRate(250);
+	NewUnit:SetRegenRate(100);
 
 	table.insert(PlatoonList, NewUnit); -- add unit to a platoon
 

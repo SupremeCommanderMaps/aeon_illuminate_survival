@@ -1,6 +1,6 @@
 -- Top level factory / state holder for the survival game
 
-local mapPath = '/maps/aeon_illuminate_survival.v0004/'
+local mapPath = '/maps/aeon_illuminate_survival.v0005/'
 
 local entropyLib
 local team
