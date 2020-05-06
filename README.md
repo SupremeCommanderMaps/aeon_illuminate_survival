@@ -8,6 +8,12 @@ You can find the latest version of the map [on GitHub][GitHub].
 
 ## Version History
 
+### Version 5
+
+* Changed wave table
+* Replaced T3 Arty for T4 Rapid fire Arty
+* Small fixes on map
+
 ### Version 4
 
 * Added All Factions lobby option
