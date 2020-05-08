@@ -11,8 +11,9 @@ You can find the latest version of the map [on GitHub][GitHub].
 ### Version 5
 
 * Changed wave table
+* Removed scout and spyplanes
 * Replaced T3 Arty for T4 Rapid fire Arty
-* Small fixes on map
+* Made changes to map appearance
 
 ### Version 4
 

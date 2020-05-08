@@ -38,7 +38,7 @@ local Survival_NukeSpots = {};
 local Survival_NextNukeTime = 10000; --2040;
 local Survival_NukeFrequency = 135;
 
-local Survival_ObjectiveTime = 3120; --2160 --2160;
+local Survival_ObjectiveTime = 3180; --2160 --2160;
 
 
 
@@ -564,9 +564,9 @@ Survival_SpawnSpecialUnit = function(UnitID, ArmyID, POS) -- blueprint, army, po
 	NewUnit:SetConsumptionPerSecondEnergy(0);
 	NewUnit:SetProductionPerSecondMass(1000);
 
-	NewUnit:SetMaxHealth(150000);
-	NewUnit:SetHealth(nil, 150000);
-	NewUnit:SetRegenRate(100);
+	NewUnit:SetMaxHealth(15000);
+	NewUnit:SetHealth(nil, 15000);
+	NewUnit:SetRegenRate(50);
 
 	table.insert(PlatoonList, NewUnit); -- add unit to a platoon
 
