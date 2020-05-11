@@ -8,6 +8,10 @@ You can find the latest version of the map [on GitHub][GitHub].
 
 ## Version History
 
+### Version 6
+
+* Fixed Auto Reclaim lobby option (broken since version 4)
+
 ### Version 5
 
 * Changed wave table
