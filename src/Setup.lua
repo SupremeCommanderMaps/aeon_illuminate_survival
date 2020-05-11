@@ -16,7 +16,7 @@ function setupAutoReclaim(entropyLib, unitCreator)
         end)
 
         ForkThread(
-            entropyLib.autoReclaimThreadFunction,
+            entropyLib.autoReclaimThreadFunction(),
             percentage / 100,
             percentage / 100
         )
