@@ -5,7 +5,7 @@ function setupResourceDeposits(entropyLib, localImport)
     )
 end
 
-function setupAutoReclaim(entropyLib)
+function setupAutoReclaim(entropyLib, unitCreator)
     local percentage = ScenarioInfo.Options.opt_Survival_AutoReclaim
 
     if percentage > 0 then

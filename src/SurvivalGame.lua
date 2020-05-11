@@ -27,7 +27,7 @@ function setup()
     setup.setupResourceDeposits(getEntropyLib(), localImport)
     setup.setupHealthMultiplier(getUnitCreator())
     setup.setupDamageMultiplier(getEntropyLib(), getUnitCreator())
-    setup.setupAutoReclaim(getEntropyLib())
+    setup.setupAutoReclaim(getEntropyLib(), getUnitCreator())
     setup.setupAllFactions(newAllFactions(), getTeam())
 end
 
