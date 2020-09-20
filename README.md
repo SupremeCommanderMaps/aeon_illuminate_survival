@@ -8,6 +8,11 @@ You can find the latest version of the map [on GitHub][GitHub].
 
 ## Version History
 
+### Version 7
+
+* Wave changes
+* Lower hp mobile shields
+
 ### Version 6
 
 * Added Paragon Lobby option

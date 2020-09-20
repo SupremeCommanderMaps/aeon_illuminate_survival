@@ -7,7 +7,7 @@ local Utilities = import('/lua/utilities.lua')
 
 ScenarioUtils.CreateResources = function() end
 
-local survivalGame = import('/maps/aeon_illuminate_survival.v0006/src/SurvivalGame.lua')
+local survivalGame = import('/maps/aeon_illuminate_survival.v0007/src/SurvivalGame.lua')
 
 -- class variables
 --------------------------------------------------------------------------
@@ -539,7 +539,7 @@ Survival_SpawnUnit = function(UnitID, ArmyID, POS, OrderID) -- blueprint, army, 
 			MeshZ = '/effects/entities/Shield01/Shield01z_mesh',
 			RegenAssistMult = 60,
 			ShieldEnergyDrainRechargeTime = 60,
-			ShieldMaxHealth = 4000,
+			ShieldMaxHealth = 2300,
 			ShieldRechargeTime = 20,
 			ShieldRegenRate = 60,
 			ShieldRegenStartTime = 1,
@@ -554,9 +554,9 @@ Survival_SpawnUnit = function(UnitID, ArmyID, POS, OrderID) -- blueprint, army, 
 			MeshZ = '/effects/entities/Shield01/Shield01z_mesh',
 			RegenAssistMult = 60,
 			ShieldEnergyDrainRechargeTime = 60,
-			ShieldMaxHealth = 14000,
+			ShieldMaxHealth = 6000,
 			ShieldRechargeTime = 20,
-			ShieldRegenRate = 210,
+			ShieldRegenRate = 190,
 			ShieldRegenStartTime = 1,
 			ShieldSize = 22,
 			ShieldVerticalOffset = -4,
