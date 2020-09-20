@@ -18,12 +18,16 @@ options =
 		}, 
 	},
 	{ 
-		default = 11,
+		default = 15,
 		label = "Survival: Unit Count",
 		help = "How many enemies attack each minute (per player).", 
 		key = 'opt_Survival_EnemiesPerMinute', 
 		pref = 'opt_Survival_EnemiesPerMinute', 
 		values = {
+			{text = "4",help = "", key = 4, },
+			{text = "6",help = "", key = 6, },
+			{text = "8",help = "", key = 8, },
+			{text = "10",help = "", key = 10, },
 			{text = "12",help = "", key = 12, },
 			{text = "16",help = "", key = 16, },
 			{text = "20",help = "", key = 20, },
@@ -197,6 +201,17 @@ options =
 			{ text = "Disabled", help = "No extra units", key = 0, },
 			{ text = "Enabled - engineers", help = "Each player gets 3 extra T1 engineers", key = 1, },
 			{ text = "Enabled - ACUs", help = "Each player gets 3 extra ACUs", key = 2, },
-		}
-	}
+		},
+	},
+	{
+		default = 1,
+		label = "Survival: Paragon",
+		help = "Disable or Enable Paragon",
+		key = 'opt_Paragon',
+		pref = 'opt_Paragon',
+		values = {
+			{ text = "Disabled", help = "No Paragon", key = 0, },
+			{ text = "Gamebreaker active", help = "Paragon is buildable", key = 1, },
+		},
+	},
 };

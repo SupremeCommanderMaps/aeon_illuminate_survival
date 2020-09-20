@@ -10,6 +10,10 @@ You can find the latest version of the map [on GitHub][GitHub].
 
 ### Version 6
 
+* Added Paragon Lobby option
+* Added shields to Mobile AA
+* Changes in wave table
+* Map changes and apperance
 * Fixed Auto Reclaim lobby option (broken since version 4)
 
 ### Version 5

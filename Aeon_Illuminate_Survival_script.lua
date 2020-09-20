@@ -3,6 +3,7 @@
 
 local ScenarioUtils = import('/lua/sim/ScenarioUtilities.lua')
 local ScenarioFramework = import('/lua/ScenarioFramework.lua')
+local Utilities = import('/lua/utilities.lua')
 
 ScenarioUtils.CreateResources = function() end
 
@@ -40,8 +41,6 @@ local Survival_NukeFrequency = 135;
 
 local Survival_ObjectiveTime = 3180; --2160 --2160;
 
-
-
 local function showWelcomeMessages()
 	survivalGame.getWelcomeMessages().startDisplay()
 end
@@ -74,21 +73,29 @@ local function defaultOptions()
 	if (ScenarioInfo.Options.opt_SurvivalAllFactions == nil) then
 		ScenarioInfo.Options.opt_SurvivalAllFactions = 0
 	end
+
+	if (ScenarioInfo.Options.opt_Paragon == nil) then
+		ScenarioInfo.Options.opt_Paragon = 0
+	end
 end
 
 function OnPopulate()
 	ScenarioUtils.InitializeArmies()
+
 	defaultOptions()
 
 	survivalGame.setup()
 
 	Survival_InitGame()
 
+	Survival_Units()
+
     ScenarioFramework.SetPlayableArea('AREA_2' , false)
 
 	import('/lua/weather.lua').CreateWeather()
 
 	showWelcomeMessages()
+
 end
 
 local Survival_WaveTables = survivalGame.getWaveTables()
@@ -114,6 +121,10 @@ Survival_InitGame = function()
 		if (Army == "ARMY_1" or Army == "ARMY_2" or Army == "ARMY_3" or Army == "ARMY_4" or Army == "ARMY_5" or Army == "ARMY_6" or Army == "ARMY_7" or Army == "ARMY_8") then 
 
 			ScenarioFramework.AddRestriction(Army, categories.WALL); -- don't allow them to build walls
+
+			if ScenarioInfo.Options.opt_Paragon == 0 then
+				ScenarioFramework.AddRestriction(Army, categories.xab1401)
+			end
 
 			-- loop through other armies to ally with other human armies
 			for x, ArmyX in ListArmies() do
@@ -144,6 +155,44 @@ Survival_InitGame = function()
 	Survival_CalcWaveCounts(); -- calculate how many units per wave
 	Survival_CalcNukeFrequency(); -- calculate how frequently to launch nukes at the players (once launchers are spawned)
 
+end
+
+Survival_Units = function() ---Random unit stuff on map
+	--- Survival Resource\HP multiplier
+		local Armies = ListArmies()
+		
+		local POS = ScenarioUtils.MarkerToPosition("SURVIVAL_CENTER_1");
+			CenterShield = CreateUnitHPR('UEB4301', "ARMY_SURVIVAL_ALLY", POS[1], POS[2], POS[3], 0,0,0);
+			CenterShield:SetReclaimable(false);
+			CenterShield:SetCapturable(false);
+			CenterShield:SetProductionPerSecondEnergy(2500)
+			CenterShield:CreateShield({
+				ImpactEffects = 'SeraphimShieldHit01',
+				ImpactMesh = '/effects/entities/ShieldSection01/ShieldSection01_mesh',
+				Mesh = '/effects/entities/SeraphimShield01/SeraphimShield01_mesh',
+				MeshZ = '/effects/entities/Shield01/Shield01z_mesh',
+				RegenAssistMult = 60,
+				ShieldEnergyDrainRechargeTime = 60,
+				ShieldMaxHealth = 25000,
+				ShieldRechargeTime = 20,
+				ShieldRegenRate = 210,
+				ShieldRegenStartTime = 1,
+				ShieldSize = 90,
+				ShieldVerticalOffset = -25,
+			});
+
+		local EnemyCommander = CreateUnitHPR('URL0001', "ARMY_SURVIVAL_ENEMY", -150, -150, -0, 0, 0, 0) --- Enemy commander
+			EnemyCommander:SetDoNotTarget(true)
+			EnemyCommander:SetCanBeKilled(false)
+			EnemyCommander:SetReclaimable(false)
+			EnemyCommander:SetProductionPerSecondEnergy(10000000)
+			EnemyCommander:SetProductionPerSecondMass(10000000)
+		local EnemyOmni = CreateUnitHPR('XSB3104', "ARMY_SURVIVAL_ENEMY",  -120, -120, -0, 0, 0, 0)	--- Enemy Omni
+			EnemyOmni:SetDoNotTarget(true)
+			EnemyOmni:SetCanBeKilled(false)
+			EnemyOmni:SetReclaimable(false)
+			EnemyOmni:SetConsumptionPerSecondEnergy(0)
+			EnemyOmni:SetIntelRadius('Omni', 10000)
 end
 
 
@@ -476,9 +525,43 @@ Survival_SpawnUnit = function(UnitID, ArmyID, POS, OrderID) -- blueprint, army, 
 
 	local NewUnit = createSurvivalUnit(UnitID, POS[1], POS[2], POS[3])
 
-	NewUnit:SetProductionPerSecondEnergy(1000000);
-	NewUnit:SetProductionPerSecondMass(1000000);
+	NewUnit:SetProductionPerSecondEnergy(100);
+	NewUnit:SetProductionPerSecondMass(100);
+	NewUnit:SetIntelRadius('Vision', 1000);
+	NewUnit:SetReclaimable(false);
+	NewUnit:SetCapturable(false);
 
+	if (UnitID == "UAL0205") then
+		NewUnit:CreateShield({
+			ImpactEffects = 'SeraphimShieldHit01',
+			ImpactMesh = '/effects/entities/ShieldSection01/ShieldSection01_mesh',
+			Mesh = '/effects/entities/SeraphimShield01/SeraphimShield01_mesh',
+			MeshZ = '/effects/entities/Shield01/Shield01z_mesh',
+			RegenAssistMult = 60,
+			ShieldEnergyDrainRechargeTime = 60,
+			ShieldMaxHealth = 4000,
+			ShieldRechargeTime = 20,
+			ShieldRegenRate = 60,
+			ShieldRegenStartTime = 1,
+			ShieldSize = 15,
+			ShieldVerticalOffset = -2,
+		})
+	elseif (UnitID == "DALK003") then
+		NewUnit:CreateShield({
+			ImpactEffects = 'SeraphimShieldHit01',
+			ImpactMesh = '/effects/entities/ShieldSection01/ShieldSection01_mesh',
+			Mesh = '/effects/entities/SeraphimShield01/SeraphimShield01_mesh',
+			MeshZ = '/effects/entities/Shield01/Shield01z_mesh',
+			RegenAssistMult = 60,
+			ShieldEnergyDrainRechargeTime = 60,
+			ShieldMaxHealth = 14000,
+			ShieldRechargeTime = 20,
+			ShieldRegenRate = 210,
+			ShieldRegenStartTime = 1,
+			ShieldSize = 22,
+			ShieldVerticalOffset = -4,
+		})
+	end
 	table.insert(PlatoonList, NewUnit)
 	Survival_PlatoonOrder(ArmyID, PlatoonList, OrderID)
 end
@@ -608,8 +691,10 @@ Survival_FireNuke = function()
 			LOG("----- Survival MOD: FIRENUKE: table.getn >= 1...");
 
 			RandID = math.random(1, table.getn(Survival_NukeUnits)); -- pick a random nuke launcher
-			Survival_NukeUnits[RandID]:GiveNukeSiloAmmo(1); -- give it 1 ammo
-			IssueNuke({Survival_NukeUnits[RandID]}, ScenarioUtils.MarkerToPosition('SURVIVAL_CENTER_1' ) );
+			if (Survival_NukeUnits[RandID]:IsDead() == false) then
+				Survival_NukeUnits[RandID]:GiveNukeSiloAmmo(2); -- give it 2 ammo
+				IssueNuke({Survival_NukeUnits[RandID]}, ScenarioUtils.MarkerToPosition("SURVIVAL_CENTER_1") );
+			end
 
 			Survival_NextNukeTime = Survival_CurrentTime + Survival_NukeFrequency; -- update counter for next time
 		end
@@ -735,7 +820,7 @@ end
 
 -- calculates how many units to spawn per wave
 --------------------------------------------------------------------------
-function Survival_CalcNukeFrequency()
+function Survival_CalcNukeFrequency() --- +/- every 60 sec 
 
 	local RatioEPM = (ScenarioInfo.Options.opt_Survival_EnemiesPerMinute - 16) / 48; -- returns 0-1 based on EPM difficulty
 	local RatioPC = (Survival_PlayerCount - 1) / 3; -- returns 0-1 based on player count
