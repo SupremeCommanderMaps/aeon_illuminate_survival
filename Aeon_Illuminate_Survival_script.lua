@@ -7,7 +7,7 @@ local Utilities = import('/lua/utilities.lua')
 
 ScenarioUtils.CreateResources = function() end
 
-local survivalGame = import('/maps/aeon_illuminate_survival.v0009/src/SurvivalGame.lua')
+local survivalGame = import('/maps/aeon_illuminate_survival.v0010/src/SurvivalGame.lua')
 
 -- class variables
 --------------------------------------------------------------------------
