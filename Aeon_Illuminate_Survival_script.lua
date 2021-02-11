@@ -7,7 +7,7 @@ local Utilities = import('/lua/utilities.lua')
 
 ScenarioUtils.CreateResources = function() end
 
-local survivalGame = import('/maps/aeon_illuminate_survival.v0007/src/SurvivalGame.lua')
+local survivalGame = import('/maps/aeon_illuminate_survival.v0009/src/SurvivalGame.lua')
 
 -- class variables
 --------------------------------------------------------------------------
@@ -130,15 +130,17 @@ Survival_InitGame = function()
 			for x, ArmyX in ListArmies() do
 				-- if human army
 				if (ArmyX == "ARMY_1" or ArmyX == "ARMY_2" or ArmyX == "ARMY_3" or ArmyX == "ARMY_4" or ArmyX == "ARMY_5" or ArmyX == "ARMY_6" or ArmyX == "ARMY_7" or ArmyX == "ARMY_8") then 
-					SetAlliance(Army, ArmyX, 'Ally'); 
+					SetAlliance(Army, ArmyX, 'Ally');
+					SetAlliance(Army, "ARMY_SURVIVAL_ALLY", 'Ally'); -- friendly AI team
+					SetAlliance(Army, "ARMY_SURVIVAL_ENEMY", 'Enemy');  -- enemy AI team
+					SetAlliance(ArmyX, "ARMY_SURVIVAL_ALLY", 'Ally'); -- friendly AI team
+					SetAlliance(ArmyX, "ARMY_SURVIVAL_ENEMY", 'Enemy');  -- enemy AI team
 				end
 			end	
 			
 			SetArmyColor('ARMY_SURVIVAL_ALLY',253,255,0) 
 			SetArmyColor('ARMY_SURVIVAL_ENEMY',99,255,52) 
 		
-			SetAlliance(Army, "ARMY_SURVIVAL_ALLY", 'Ally'); -- friendly AI team
-			SetAlliance(Army, "ARMY_SURVIVAL_ENEMY", 'Enemy');  -- enemy AI team
 
 			SetAlliedVictory(Army, true); -- can win together of course :)
 		end
@@ -185,8 +187,8 @@ Survival_Units = function() ---Random unit stuff on map
 			EnemyCommander:SetDoNotTarget(true)
 			EnemyCommander:SetCanBeKilled(false)
 			EnemyCommander:SetReclaimable(false)
-			EnemyCommander:SetProductionPerSecondEnergy(10000000)
-			EnemyCommander:SetProductionPerSecondMass(10000000)
+			EnemyCommander:SetProductionPerSecondEnergy(100)
+			EnemyCommander:SetProductionPerSecondMass(100)
 		local EnemyOmni = CreateUnitHPR('XSB3104', "ARMY_SURVIVAL_ENEMY",  -120, -120, -0, 0, 0, 0)	--- Enemy Omni
 			EnemyOmni:SetDoNotTarget(true)
 			EnemyOmni:SetCanBeKilled(false)
@@ -554,7 +556,7 @@ Survival_SpawnUnit = function(UnitID, ArmyID, POS, OrderID) -- blueprint, army, 
 			MeshZ = '/effects/entities/Shield01/Shield01z_mesh',
 			RegenAssistMult = 60,
 			ShieldEnergyDrainRechargeTime = 60,
-			ShieldMaxHealth = 6000  * ScenarioInfo.Options.opt_Survival_HealthMultiplier,
+			ShieldMaxHealth = 6000 * ScenarioInfo.Options.opt_Survival_HealthMultiplier,
 			ShieldRechargeTime = 20,
 			ShieldRegenRate = 190,
 			ShieldRegenStartTime = 1,

@@ -1,17 +1,17 @@
 version = 3 -- Lua Version. Dont touch this
 ScenarioInfo = {
     name = "Aeon Illuminate Survival",
-    description = "The Aeon Illuminate is attacking. Defend Black Sun!!",
+    description = "The Aeon Illuminate is attacking. Defend Black Sun!!\n\nDifficulty = Its Doable",
     preview = '',
-    map_version = 7,
+    map_version = 9,
     AdaptiveMap = true,
     type = 'skirmish',
     starts = true,
     size = {512, 512},
     reclaim = {141816.6, 16899.51},
-    map = '/maps/aeon_illuminate_survival.v0007/aeon_illuminate_survival.scmap',
-    save = '/maps/aeon_illuminate_survival.v0007/aeon_illuminate_survival_save.lua',
-    script = '/maps/aeon_illuminate_survival.v0007/aeon_illuminate_survival_script.lua',
+    map = '/maps/aeon_illuminate_survival.v0009/aeon_illuminate_survival.scmap',
+    save = '/maps/aeon_illuminate_survival.v0009/aeon_illuminate_survival_save.lua',
+    script = '/maps/aeon_illuminate_survival.v0009/aeon_illuminate_survival_script.lua',
     norushradius = 40,
     Configurations = {
         ['standard'] = {

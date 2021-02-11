@@ -8,6 +8,14 @@ You can find the latest version of the map [on GitHub][GitHub].
 
 ## Version History
 
+### Version 9
+* Fixed Overflow Mass when in slot 3
+* HP multiplier to shields
+
+### Version 8
+
+-
+
 ### Version 7
 
 * Wave changes
