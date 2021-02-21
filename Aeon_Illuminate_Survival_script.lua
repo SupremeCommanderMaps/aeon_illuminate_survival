@@ -527,8 +527,8 @@ Survival_SpawnUnit = function(UnitID, ArmyID, POS, OrderID) -- blueprint, army, 
 
 	local NewUnit = createSurvivalUnit(UnitID, POS[1], POS[2], POS[3])
 
-	NewUnit:SetProductionPerSecondEnergy(100);
-	NewUnit:SetProductionPerSecondMass(100);
+	NewUnit:SetProductionPerSecondEnergy(1000);
+	NewUnit:SetProductionPerSecondMass(1000);
 	NewUnit:SetIntelRadius('Vision', 1000);
 	NewUnit:SetReclaimable(false);
 	NewUnit:SetCapturable(false);
