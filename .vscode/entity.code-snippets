@@ -1,0 +1,29 @@
+{
+    "init": {
+        "prefix": [
+            "init"
+        ],
+        "body": [
+            "${1:entity}:init(${2:spec})"
+        ],
+        "description": ""
+    },
+    "OnCreate": {
+        "prefix": [
+            "OnCreate"
+        ],
+        "body": [
+            "${1:entity}:OnCreate(${2:spec})"
+        ],
+        "description": ""
+    },
+    "OnDestroy": {
+        "prefix": [
+            "OnDestroy"
+        ],
+        "body": [
+            "${1:entity}:OnDestroy()"
+        ],
+        "description": ""
+    }
+}

@@ -1,0 +1,1109 @@
+{
+    "RemoveBuildRestriction": {
+        "prefix": [
+            "RemoveBuildRestriction"
+        ],
+        "body": [
+            "${1:unit}:RemoveBuildRestriction(${2:category})"
+        ],
+        "description": "Allow building of categories for this unit.\r\n@param category Unit's category, example categories.TECH1."
+    },
+    "RemoveTacticalSiloAmmo": {
+        "prefix": [
+            "RemoveTacticalSiloAmmo"
+        ],
+        "body": [
+            "${1:unit}:RemoveTacticalSiloAmmo(${2:num})"
+        ],
+        "description": "Remove amout of tactical missiles from the unit.\r\n@param num Amount of tactical missiles to remove."
+    },
+    "SetPaused": {
+        "prefix": [
+            "SetPaused"
+        ],
+        "body": [
+            "${1:unit}:SetPaused(${2:flag})"
+        ],
+        "description": "Pauses building, upgrading and other tasks of the unit.\r\n@param flag true/false."
+    },
+    "GetGuardedUnit": {
+        "prefix": [
+            "GetGuardedUnit"
+        ],
+        "body": [
+            "${1:unit}:GetGuardedUnit()"
+        ],
+        "description": "Returns the unit that is being guarded.\r\n@return unit Guarded unit or nil."
+    },
+    "RemoveNukeSiloAmmo": {
+        "prefix": [
+            "RemoveNukeSiloAmmo"
+        ],
+        "body": [
+            "${1:unit}:RemoveNukeSiloAmmo(${2:num})"
+        ],
+        "description": "Remove amout of nuke missiles from the unit.\r\n@param num Amount of nukes to remove."
+    },
+    "GetResourceConsumed": {
+        "prefix": [
+            "GetResourceConsumed"
+        ],
+        "body": [
+            "${1:unit}:GetResourceConsumed()"
+        ],
+        "description": "Return the fraction of requested resources this unit consumed last tick.\r\nNormally 1, but can be fractional if economy is struggling."
+    },
+    "SetShieldRatio": {
+        "prefix": [
+            "SetShieldRatio"
+        ],
+        "body": [
+            "${1:unit}:SetShieldRatio(${2:ratio})"
+        ],
+        "description": "Set the shield ratio.\r\n@param ratio Float, range 0 - 1."
+    },
+    "SetProductionPerSecondEnergy": {
+        "prefix": [
+            "SetProductionPerSecondEnergy"
+        ],
+        "body": [
+            "${1:unit}:SetProductionPerSecondEnergy(${2:number})"
+        ],
+        "description": "Set the production of energy of the unit.\r\n@param number Amout of energy to produce per second."
+    },
+    "GetStat": {
+        "prefix": [
+            "GetStat"
+        ],
+        "body": [
+            "${1:unit}:GetStat(${2:statName}, ${3:defaultVal})"
+        ],
+        "description": "Find out unit's specific statistics.\r\nExample: 'KILLS'.\r\n@param statName String, name of the stat to find out.\r\n@param [defaultVal] TODO.\r\nSpecial case for the Salem:\r\nGetStat(\"h1_SetSalemAmph\", 0 or 1)\r\nDisable/Enable amphibious mode"
+    },
+    "GiveTacticalSiloAmmo": {
+        "prefix": [
+            "GiveTacticalSiloAmmo"
+        ],
+        "body": [
+            "${1:unit}:GiveTacticalSiloAmmo(${2:num})"
+        ],
+        "description": "Give tactical missile to the unit.\r\n@param num Amout of missiles to give."
+    },
+    "SetIsValidTarget": {
+        "prefix": [
+            "SetIsValidTarget"
+        ],
+        "body": [
+            "${1:unit}:SetIsValidTarget(${2:self}, ${3:bool})"
+        ],
+        "description": "SetIsValidTarget(self,bool)"
+    },
+    "GetTacticalSiloAmmoCount": {
+        "prefix": [
+            "GetTacticalSiloAmmoCount"
+        ],
+        "body": [
+            "${1:unit}:GetTacticalSiloAmmoCount()"
+        ],
+        "description": "Find out number of tactical missile this unit has available.\r\n@return number"
+    },
+    "GetNukeSiloAmmoCount": {
+        "prefix": [
+            "GetNukeSiloAmmoCount"
+        ],
+        "body": [
+            "${1:unit}:GetNukeSiloAmmoCount()"
+        ],
+        "description": "Find out number of nuclear missile this unit has available.\r\n@return number"
+    },
+    "GiveNukeSiloAmmo": {
+        "prefix": [
+            "GiveNukeSiloAmmo"
+        ],
+        "body": [
+            "${1:unit}:GiveNukeSiloAmmo(${2:num})"
+        ],
+        "description": "Give nuclear missile to the unit.\r\n@param num Amout of missiles to give."
+    },
+    "CanBuild": {
+        "prefix": [
+            "CanBuild"
+        ],
+        "body": [
+            "${1:unit}:CanBuild(${2:bpID})"
+        ],
+        "description": "See if the unit can build the target unit.\r\n@param bpID Blueprint ID of the target unit, example 'ueb0101'.\r\n@return true/false."
+    },
+    "GetHealth": {
+        "prefix": [
+            "GetHealth"
+        ],
+        "body": [
+            "${1:unit}:GetHealth()"
+        ],
+        "description": "Find out current health\r\n@return number HP remaining."
+    },
+    "GetWorkProgress": {
+        "prefix": [
+            "GetWorkProgress"
+        ],
+        "body": [
+            "${1:unit}:GetWorkProgress()"
+        ],
+        "description": "TODO."
+    },
+    "SetProductionPerSecondMass": {
+        "prefix": [
+            "SetProductionPerSecondMass"
+        ],
+        "body": [
+            "${1:unit}:SetProductionPerSecondMass(${2:number})"
+        ],
+        "description": "Set the production of mass of the unit.\r\n@param number Amout of mass to produce per second."
+    },
+    "GetFuelUseTime": {
+        "prefix": [
+            "GetFuelUseTime"
+        ],
+        "body": [
+            "${1:unit}:GetFuelUseTime()"
+        ],
+        "description": "Get the fuel use time.\r\n@return number Fuel left in seconds."
+    },
+    "IsMobile": {
+        "prefix": [
+            "IsMobile"
+        ],
+        "body": [
+            "${1:unit}:IsMobile()"
+        ],
+        "description": "See if it's a mobile unit.\r\n@return bool true/false."
+    },
+    "CanPathToRect": {
+        "prefix": [
+            "CanPathToRect"
+        ],
+        "body": [
+            "${1:unit}:CanPathToRect(${2:rectangle})"
+        ],
+        "description": "See if the unit can path to the goal rectangle.\r\nTODO: find out if it returns position as well\r\n@param rectangle Map area created by function Rect(x0, z0, x1, z1).\r\n@return true/false"
+    },
+    "SetBreakOffTriggerMult": {
+        "prefix": [
+            "SetBreakOffTriggerMult"
+        ],
+        "body": [
+            "${1:unit}:SetBreakOffTriggerMult(${2:float})"
+        ],
+        "description": "Set the break off trigger multiplier of the unit.\r\nTODO: find out what this does."
+    },
+    "base": {
+        "prefix": [
+            "base"
+        ],
+        "body": [
+            "${1:unit}:base()"
+        ],
+        "description": "derived from Entity"
+    },
+    "AlterArmor": {
+        "prefix": [
+            "AlterArmor"
+        ],
+        "body": [
+            "${1:unit}:AlterArmor(${2:damageTypeName}, ${3:multiplier})"
+        ],
+        "description": "Changes the unit's armor type.\r\n@param damageTypeName String, see lua/armordefinition.lua available types.\r\n@param multiplier TODO."
+    },
+    "GetArmorMult": {
+        "prefix": [
+            "GetArmorMult"
+        ],
+        "body": [
+            "${1:unit}:GetArmorMult(${2:damageTypeName})"
+        ],
+        "description": "TODO."
+    },
+    "IsValidTarget": {
+        "prefix": [
+            "IsValidTarget"
+        ],
+        "body": [
+            "${1:unit}:IsValidTarget(${2:self})"
+        ],
+        "description": "TODO.\r\n@return bool true/false."
+    },
+    "TestToggleCaps": {
+        "prefix": [
+            "TestToggleCaps"
+        ],
+        "body": [
+            "${1:unit}:TestToggleCaps(${2:capName})"
+        ],
+        "description": "Test if a unit has this specified set to true in the blueprint spec.\r\n@param capName String."
+    },
+    "RevertElevation": {
+        "prefix": [
+            "RevertElevation"
+        ],
+        "body": [
+            "${1:unit}:RevertElevation()"
+        ],
+        "description": "Revert the elevation of the unit back to the blueperint spec."
+    },
+    "CalculateWorldPositionFromRelative": {
+        "prefix": [
+            "CalculateWorldPositionFromRelative"
+        ],
+        "body": [
+            "${1:unit}:CalculateWorldPositionFromRelative(${2:vector})"
+        ],
+        "description": "Calculate the desired world position from the supplied relative vector from the center of the unit.\r\nUsed for naval factories to set rally point under them.\r\n@param vector Table {x, y, z}."
+    },
+    "SetDoNotTarget": {
+        "prefix": [
+            "SetDoNotTarget"
+        ],
+        "body": [
+            "${1:unit}:SetDoNotTarget(${2:flag})"
+        ],
+        "description": "If set true, enemy units won't target this unit.\r\nAccidental hits can still damage it but it enemy units won't lock on it.\r\n@param flag true/false."
+    },
+    "GetUnitId": {
+        "prefix": [
+            "GetUnitId"
+        ],
+        "body": [
+            "${1:unit}:GetUnitId(${2:self})"
+        ],
+        "description": "Returns the unit's blueprint ID.\r\n@return bpID"
+    },
+    "AddUnitToStorage": {
+        "prefix": [
+            "AddUnitToStorage"
+        ],
+        "body": [
+            "${1:unit}:AddUnitToStorage(${2:unit})"
+        ],
+        "description": "Adds unit to the storage of the carrier.\r\n@param unit Target unit to load."
+    },
+    "GetFuelRatio": {
+        "prefix": [
+            "GetFuelRatio"
+        ],
+        "body": [
+            "${1:unit}:GetFuelRatio()"
+        ],
+        "description": "Find out ratio of fuel ramaining.\r\n@return ratio How much fuel left, range 0 - 1."
+    },
+    "SetSpeedMult": {
+        "prefix": [
+            "SetSpeedMult"
+        ],
+        "body": [
+            "${1:unit}:SetSpeedMult(${2:float})"
+        ],
+        "description": "Set the speed multiplier of the unit.\r\n@param float Multiplier to apply."
+    },
+    "RecoilImpulse": {
+        "prefix": [
+            "RecoilImpulse"
+        ],
+        "body": [
+            "${1:unit}:RecoilImpulse(${2:x}, ${3:y}, ${4:z})"
+        ],
+        "description": "TODO."
+    },
+    "GetConsumptionPerSecondMass": {
+        "prefix": [
+            "GetConsumptionPerSecondMass"
+        ],
+        "body": [
+            "${1:unit}:GetConsumptionPerSecondMass()"
+        ],
+        "description": "Get the consumption of mass of the unit.\r\n@return number"
+    },
+    "HasMeleeSpaceAroundTarget": {
+        "prefix": [
+            "HasMeleeSpaceAroundTarget"
+        ],
+        "body": [
+            "${1:unit}:HasMeleeSpaceAroundTarget(${2:target})"
+        ],
+        "description": "TODO."
+    },
+    "TestCommandCaps": {
+        "prefix": [
+            "TestCommandCaps"
+        ],
+        "body": [
+            "${1:unit}:TestCommandCaps(${2:capName})"
+        ],
+        "description": "Test if a unit has this specified set to true in the blueprint spec.\r\n@param capName String."
+    },
+    "GetCommandQueue": {
+        "prefix": [
+            "GetCommandQueue"
+        ],
+        "body": [
+            "${1:unit}:GetCommandQueue()"
+        ],
+        "description": "Return table of commands queued up for this unit.\r\n@return table"
+    },
+    "SetOverchargePaused": {
+        "prefix": [
+            "SetOverchargePaused"
+        ],
+        "body": [
+            "${1:unit}:SetOverchargePaused(${2:flag})"
+        ],
+        "description": "Set if this unit has an overcharge pasued.\r\n@param flag true/false."
+    },
+    "RevertRegenRate": {
+        "prefix": [
+            "RevertRegenRate"
+        ],
+        "body": [
+            "${1:unit}:RevertRegenRate()"
+        ],
+        "description": "Restore regen rate of the unit back to blueprint spec."
+    },
+    "GetNumBuildOrders": {
+        "prefix": [
+            "GetNumBuildOrders"
+        ],
+        "body": [
+            "${1:unit}:GetNumBuildOrders(${2:category})"
+        ],
+        "description": "Get number of factory/engineer build orders that fit in the specified category.\r\n@param category Unit's category, example: categories.ALLUNITS."
+    },
+    "RemoveCommandCap": {
+        "prefix": [
+            "RemoveCommandCap"
+        ],
+        "body": [
+            "${1:unit}:RemoveCommandCap(${2:capName})"
+        ],
+        "description": "Remove a command cap to a unit.\r\nAlso removes the command button, or disables it, from the UI, see AddCommandCap for available options.\r\n@param capName String."
+    },
+    "SetAccMult": {
+        "prefix": [
+            "SetAccMult"
+        ],
+        "body": [
+            "${1:unit}:SetAccMult(${2:float})"
+        ],
+        "description": "Set the acceleration multiplier of the unit.\r\n@param float Multiplier to apply."
+    },
+    "SetConsumptionActive": {
+        "prefix": [
+            "SetConsumptionActive"
+        ],
+        "body": [
+            "${1:unit}:SetConsumptionActive(${2:flag})"
+        ],
+        "description": "TODO.\r\n@param flag true/false."
+    },
+    "RevertCollisionShape": {
+        "prefix": [
+            "RevertCollisionShape"
+        ],
+        "body": [
+            "${1:unit}:RevertCollisionShape()"
+        ],
+        "description": "Revert the collision shape to the blueprint spec."
+    },
+    "SetUnitState": {
+        "prefix": [
+            "SetUnitState"
+        ],
+        "body": [
+            "${1:unit}:SetUnitState(${2:stateName}, ${3:bool})"
+        ],
+        "description": "Set unit's state.\r\n@param stateName String, name of the state to set.\r\n'Immobile'\r\n'Moving'\r\n'Attacking'\r\n'Guarding'\r\n'Building'\r\n'Upgrading'\r\n'WaitingForTransport'\r\n'TransportLoading'\r\n'TransportUnloading'\r\n'MovingDown'\r\n'MovingUp'\r\n'Patrolling'\r\n'Busy'\r\n'Attached'\r\n'BeingReclaimed'\r\n'Repairing'\r\n'Diving'\r\n'Surfacing'\r\n'Teleporting'\r\n'Ferrying'\r\n'WaitForFerry'\r\n'AssistMoving'\r\n'PathFinding'\r\n'ProblemGettingToGoal'\r\n'NeedToTerminateTask'\r\n'Capturing'\r\n'BeingCaptured'\r\n'Reclaiming'\r\n'AssistingCommander'\r\n'Refueling'\r\n'GuardBusy'\r\n'ForceSpeedThrough'\r\n'UnSelectable'\r\n'DoNotTarget'\r\n'LandingOnPlatform'\r\n'CannotFindPlaceToLand'\r\n'BeingUpgraded'\r\n'Enhancing'\r\n'BeingBuilt'\r\n'NoReclaim'\r\n'NoCost'\r\n'BlockCommandQueue'\r\n'MakingAttackRun'\r\n'HoldingPattern'\r\n'SiloBuildingAmmo'\r\n@param bool true/false."
+    },
+    "HasValidTeleportDest": {
+        "prefix": [
+            "HasValidTeleportDest"
+        ],
+        "body": [
+            "${1:unit}:HasValidTeleportDest()"
+        ],
+        "description": "TODO."
+    },
+    "GetCurrentMoveLocation": {
+        "prefix": [
+            "GetCurrentMoveLocation"
+        ],
+        "body": [
+            "${1:unit}:GetCurrentMoveLocation()"
+        ],
+        "description": "Returns the current move location of the unit.\r\nTODO: untested.\r\n@return position Table with position {x, y ,z}."
+    },
+    "IsBeingBuilt": {
+        "prefix": [
+            "IsBeingBuilt"
+        ],
+        "body": [
+            "${1:unit}:IsBeingBuilt()"
+        ],
+        "description": "See if unit is under construction.\r\n@return bool true/false."
+    },
+    "SetImmobile": {
+        "prefix": [
+            "SetImmobile"
+        ],
+        "body": [
+            "${1:unit}:SetImmobile(${2:flag})"
+        ],
+        "description": "Sets if the unit is able to move.\r\n@param flag true/false."
+    },
+    "IsMoving": {
+        "prefix": [
+            "IsMoving"
+        ],
+        "body": [
+            "${1:unit}:IsMoving()"
+        ],
+        "description": "See if the unit is moving or not.\r\n@return bool true/false."
+    },
+    "GetProductionPerSecondMass": {
+        "prefix": [
+            "GetProductionPerSecondMass"
+        ],
+        "body": [
+            "${1:unit}:GetProductionPerSecondMass()"
+        ],
+        "description": "Get the production of mass of the unit.\r\n@return number Production of mass per second."
+    },
+    "SetWorkProgress": {
+        "prefix": [
+            "SetWorkProgress"
+        ],
+        "body": [
+            "${1:unit}:SetWorkProgress(${2:float})"
+        ],
+        "description": "Set the work progress on the unit.\r\nUsed for ACU upgrades, missile construction? TODO.\r\n@param float Range 0 - 1, where 1 is completed."
+    },
+    "SetCustomName": {
+        "prefix": [
+            "SetCustomName"
+        ],
+        "body": [
+            "${1:unit}:SetCustomName(${2:name})"
+        ],
+        "description": "Sets a custom name for the unit, displayed by green text.\r\n@param name String with the name."
+    },
+    "RestoreCommandCaps": {
+        "prefix": [
+            "RestoreCommandCaps"
+        ],
+        "body": [
+            "${1:unit}:RestoreCommandCaps()"
+        ],
+        "description": "Restore the command caps of the unit back to blueprint spec."
+    },
+    "RemoveToggleCap": {
+        "prefix": [
+            "RemoveToggleCap"
+        ],
+        "body": [
+            "${1:unit}:RemoveToggleCap(${2:capName})"
+        ],
+        "description": "Remove a toggle cap to a unit.\r\nAlso removes the command button, or disables it, from the UI, see AddToggleCap for available options.\r\n@param capName String."
+    },
+    "SetFuelUseTime": {
+        "prefix": [
+            "SetFuelUseTime"
+        ],
+        "body": [
+            "${1:unit}:SetFuelUseTime(${2:seconds})"
+        ],
+        "description": "Set the fuel use time.\r\n@seconds Number, how many seconds of can the unit fly."
+    },
+    "GetVelocity": {
+        "prefix": [
+            "GetVelocity"
+        ],
+        "body": [
+            "${1:unit}:GetVelocity()"
+        ],
+        "description": "TODO.\r\nGetVelocity() -> x,y,z"
+    },
+    "GetFireState": {
+        "prefix": [
+            "GetFireState"
+        ],
+        "body": [
+            "${1:unit}:GetFireState()"
+        ],
+        "description": "Get the fire state for the unit.\r\nTODO find out return format."
+    },
+    "SetStunned": {
+        "prefix": [
+            "SetStunned"
+        ],
+        "body": [
+            "${1:unit}:SetStunned(${2:time})"
+        ],
+        "description": "Stuns the unit for the set time.\r\n@param time Number, seconds."
+    },
+    "GetBlip": {
+        "prefix": [
+            "GetBlip"
+        ],
+        "body": [
+            "${1:unit}:GetBlip(${2:armyIndex})"
+        ],
+        "description": "Returns a blip (if any) that the given army has for the unit\r\n@return blip"
+    },
+    "RestoreBuildRestrictions": {
+        "prefix": [
+            "RestoreBuildRestrictions"
+        ],
+        "body": [
+            "${1:unit}:RestoreBuildRestrictions()"
+        ],
+        "description": "Restore buildable categories to that as defined in the blueprint"
+    },
+    "IsCapturable": {
+        "prefix": [
+            "IsCapturable"
+        ],
+        "body": [
+            "${1:unit}:IsCapturable()"
+        ],
+        "description": "Returns if this unit can be captured or not.\r\n@return bool true/false."
+    },
+    "GetNavigator": {
+        "prefix": [
+            "GetNavigator"
+        ],
+        "body": [
+            "${1:unit}:GetNavigator()"
+        ],
+        "description": "Get the navigator object of this unit."
+    },
+    "GetFocusUnit": {
+        "prefix": [
+            "GetFocusUnit"
+        ],
+        "body": [
+            "${1:unit}:GetFocusUnit(${2:self})"
+        ],
+        "description": "TODO."
+    },
+    "GetTargetEntity": {
+        "prefix": [
+            "GetTargetEntity"
+        ],
+        "body": [
+            "${1:unit}:GetTargetEntity()"
+        ],
+        "description": "Return our target unit if we have one.\r\n@return entity or nil."
+    },
+    "SetConsumptionPerSecondMass": {
+        "prefix": [
+            "SetConsumptionPerSecondMass"
+        ],
+        "body": [
+            "${1:unit}:SetConsumptionPerSecondMass(${2:value})"
+        ],
+        "description": "Set the consumption of mass of the unit.\r\n@param value Amount of mass consumed per second."
+    },
+    "AddCommandCap": {
+        "prefix": [
+            "AddCommandCap"
+        ],
+        "body": [
+            "${1:unit}:AddCommandCap(${2:capName})"
+        ],
+        "description": "Class Unit\r\n@classmod Sim.Unit\r\nAdd a command cap to a unit.\r\nAlso adds a button to the UI, or enables it, for the unit to use the new command.\r\n@param capName String Available:\r\nRULEUCC_Move\r\nRULEUCC_Stop\r\nRULEUCC_Attack\r\nRULEUCC_Guard\r\nRULEUCC_Patrol\r\nRULEUCC_RetaliateToggle\r\nRULEUCC_Repair\r\nRULEUCC_Capture\r\nRULEUCC_Transport\r\nRULEUCC_CallTransport\r\nRULEUCC_Nuke\r\nRULEUCC_Tactical\r\nRULEUCC_Teleport\r\nRULEUCC_Ferry\r\nRULEUCC_SiloBuildTactical\r\nRULEUCC_SiloBuildNuke\r\nRULEUCC_Sacrifice\r\nRULEUCC_Pause\r\nRULEUCC_Overcharge\r\nRULEUCC_Dive\r\nRULEUCC_Reclaim\r\nRULEUCC_SpecialAction\r\nRULEUCC_Dock\r\nRULEUCC_Script\r\nRULEUCC_Invalid"
+    },
+    "GetCurrentLayer": {
+        "prefix": [
+            "GetCurrentLayer"
+        ],
+        "body": [
+            "${1:unit}:GetCurrentLayer()"
+        ],
+        "description": "Return the name of the layer the unit is currently in.\r\n@return layer String, name of the layer, types: 'Air','Land', 'Orbital', 'Seabed', 'Sub', 'Water'."
+    },
+    "GetWeapon": {
+        "prefix": [
+            "GetWeapon"
+        ],
+        "body": [
+            "${1:unit}:GetWeapon(${2:index})"
+        ],
+        "description": "return the index'th weapon of this unit.\r\nIndex must be between 1 and self:GetWeaponCount(), inclusive.\r\n@return weapon"
+    },
+    "IsPaused": {
+        "prefix": [
+            "IsPaused"
+        ],
+        "body": [
+            "${1:unit}:IsPaused()"
+        ],
+        "description": "See if the unit is paused.\r\n@return bool true/false."
+    },
+    "GetWeaponCount": {
+        "prefix": [
+            "GetWeaponCount"
+        ],
+        "body": [
+            "${1:unit}:GetWeaponCount()"
+        ],
+        "description": "Return the number of weapons on this unit.\r\nNote that dummy weapons are not included in the count, so this may differ from the number of weapons defined in the unit's blueprint.\r\n@return number"
+    },
+    "SetTurnMult": {
+        "prefix": [
+            "SetTurnMult"
+        ],
+        "body": [
+            "${1:unit}:SetTurnMult(${2:float})"
+        ],
+        "description": "Set the turn multiplier of the unit.\r\n@param float Multiplier to apply."
+    },
+    "StopSiloBuild": {
+        "prefix": [
+            "StopSiloBuild"
+        ],
+        "body": [
+            "${1:unit}:StopSiloBuild()"
+        ],
+        "description": "Stops production of a missile."
+    },
+    "PrintCommandQueue": {
+        "prefix": [
+            "PrintCommandQueue"
+        ],
+        "body": [
+            "${1:unit}:PrintCommandQueue()"
+        ],
+        "description": "TODO."
+    },
+    "SetBusy": {
+        "prefix": [
+            "SetBusy"
+        ],
+        "body": [
+            "${1:unit}:SetBusy(${2:flag})"
+        ],
+        "description": "TODO.\r\n@param flag true/false."
+    },
+    "GetBuildRate": {
+        "prefix": [
+            "GetBuildRate"
+        ],
+        "body": [
+            "${1:unit}:GetBuildRate()"
+        ],
+        "description": "Returns the build rate of a unit.\r\nWhat fraction of target unit it builds per second.\r\n@return rate"
+    },
+    "ToggleScriptBit": {
+        "prefix": [
+            "ToggleScriptBit"
+        ],
+        "body": [
+            "${1:unit}:ToggleScriptBit()"
+        ],
+        "description": "Toggle the script bit that matches the string.\r\nTODO."
+    },
+    "CanPathTo": {
+        "prefix": [
+            "CanPathTo"
+        ],
+        "body": [
+            "${1:unit}:CanPathTo(${2:position})"
+        ],
+        "description": "See if the unit can path to the goal.\r\n@param position Table with position {x, y, z}.\r\n@return result, bestGoal true/false, if falses, returns the closest position, else the original position."
+    },
+    "SetConsumptionPerSecondEnergy": {
+        "prefix": [
+            "SetConsumptionPerSecondEnergy"
+        ],
+        "body": [
+            "${1:unit}:SetConsumptionPerSecondEnergy(${2:value})"
+        ],
+        "description": "Set the consumption of energy of a unit.\r\n@param value Amount of energy consumed per second."
+    },
+    "SetScriptBit": {
+        "prefix": [
+            "SetScriptBit"
+        ],
+        "body": [
+            "${1:unit}:SetScriptBit(${2:string}, ${3:state})"
+        ],
+        "description": "Set the script bit that matches the string to the desired state.\r\n@param string TODO.\r\n@param state true/false."
+    },
+    "ShowBone": {
+        "prefix": [
+            "ShowBone"
+        ],
+        "body": [
+            "${1:unit}:ShowBone(${2:bone}, ${3:affectChildren})"
+        ],
+        "description": "Makes unit's bone visible.\r\n@param bone Bone name or index.\r\n@param affectChildren true/false."
+    },
+    "ToggleFireState": {
+        "prefix": [
+            "ToggleFireState"
+        ],
+        "body": [
+            "${1:unit}:ToggleFireState()"
+        ],
+        "description": "Toggle the fire state for the retaliation state of the unit."
+    },
+    "SetReclaimable": {
+        "prefix": [
+            "SetReclaimable"
+        ],
+        "body": [
+            "${1:unit}:SetReclaimable(${2:flag})"
+        ],
+        "description": "Set if this unit can be reclaimed or not.\r\n@param flag true/false."
+    },
+    "SetProductionActive": {
+        "prefix": [
+            "SetProductionActive"
+        ],
+        "body": [
+            "${1:unit}:SetProductionActive(${2:flag})"
+        ],
+        "description": "Enable, disable production of resources on the unit.\r\nUsed for mass fabricators or extractors for example.\r\n@param flag true/false."
+    },
+    "SetElevation": {
+        "prefix": [
+            "SetElevation"
+        ],
+        "body": [
+            "${1:unit}:SetElevation()"
+        ],
+        "description": "Set the elevation of the unit\r\n@param TODO."
+    },
+    "SetFireState": {
+        "prefix": [
+            "SetFireState"
+        ],
+        "body": [
+            "${1:unit}:SetFireState(${2:fireState})"
+        ],
+        "description": "Set a specific fire state for the retaliation state of the unit.\r\n@param fireState Return fie - 0, Hold fire - 1 and Ground fire - 2."
+    },
+    "SetFocusEntity": {
+        "prefix": [
+            "SetFocusEntity"
+        ],
+        "body": [
+            "${1:unit}:SetFocusEntity(${2:focus})"
+        ],
+        "description": "TODO."
+    },
+    "SetBlockCommandQueue": {
+        "prefix": [
+            "SetBlockCommandQueue"
+        ],
+        "body": [
+            "${1:unit}:SetBlockCommandQueue(${2:flag})"
+        ],
+        "description": "TODO.\r\n@param flag true/false."
+    },
+    "GetProductionPerSecondEnergy": {
+        "prefix": [
+            "GetProductionPerSecondEnergy"
+        ],
+        "body": [
+            "${1:unit}:GetProductionPerSecondEnergy()"
+        ],
+        "description": "Get the production of energy of the unit.\r\n@return number Production of energy per second."
+    },
+    "TransportDetachAllUnits": {
+        "prefix": [
+            "TransportDetachAllUnits"
+        ],
+        "body": [
+            "${1:unit}:TransportDetachAllUnits(${2:destroySomeUnits})"
+        ],
+        "description": "Detach all units from a transport.\r\n@param destroySomeUnits TODO."
+    },
+    "GetGuards": {
+        "prefix": [
+            "GetGuards"
+        ],
+        "body": [
+            "${1:unit}:GetGuards()"
+        ],
+        "description": "Find out units that are guarding this unit.\r\n@return table Table of units that are guarding this uni."
+    },
+    "GetShieldRatio": {
+        "prefix": [
+            "GetShieldRatio"
+        ],
+        "body": [
+            "${1:unit}:GetShieldRatio()"
+        ],
+        "description": "Get the shield ratio.\r\n@return float Range 0 - 1."
+    },
+    "IsOverchargePaused": {
+        "prefix": [
+            "IsOverchargePaused"
+        ],
+        "body": [
+            "${1:unit}:IsOverchargePaused()"
+        ],
+        "description": "See if the unit has paused overcharge.\r\n@return bool true/false."
+    },
+    "SetStat": {
+        "prefix": [
+            "SetStat"
+        ],
+        "body": [
+            "${1:unit}:SetStat(${2:name}, ${3:value})"
+        ],
+        "description": "Set the unit statistic.\r\n@param name String, name of the stat to set.\r\n@param value Number."
+    },
+    "KillManipulator": {
+        "prefix": [
+            "KillManipulator"
+        ],
+        "body": [
+            "${1:unit}:KillManipulator()"
+        ],
+        "description": "Kill a specific manipulator held by a script object.\r\nTODO: param"
+    },
+    "GetRallyPoint": {
+        "prefix": [
+            "GetRallyPoint"
+        ],
+        "body": [
+            "${1:unit}:GetRallyPoint()"
+        ],
+        "description": "Get the rally point for the factory.\r\n@return position Table with position {x, y ,z}."
+    },
+    "MeleeWarpAdjacentToTarget": {
+        "prefix": [
+            "MeleeWarpAdjacentToTarget"
+        ],
+        "body": [
+            "${1:unit}:MeleeWarpAdjacentToTarget(${2:target})"
+        ],
+        "description": "TODO."
+    },
+    "IsUnitState": {
+        "prefix": [
+            "IsUnitState"
+        ],
+        "body": [
+            "${1:unit}:IsUnitState(${2:stateName})"
+        ],
+        "description": "See if the unit is in given state.\r\n@param stateName String, see SetUnitState function for available states.\r\n@return bool true/false."
+    },
+    "SetRegenRate": {
+        "prefix": [
+            "SetRegenRate"
+        ],
+        "body": [
+            "${1:unit}:SetRegenRate(${2:rate})"
+        ],
+        "description": "Set the regen rate of a unit.\r\n@param rate Number of HPs regenerated per second."
+    },
+    "GetTransportFerryBeacon": {
+        "prefix": [
+            "GetTransportFerryBeacon"
+        ],
+        "body": [
+            "${1:unit}:GetTransportFerryBeacon()"
+        ],
+        "description": "Unit:GetTransportFerryBeacon()"
+    },
+    "SetUnSelectable": {
+        "prefix": [
+            "SetUnSelectable"
+        ],
+        "body": [
+            "${1:unit}:SetUnSelectable(${2:flag})"
+        ],
+        "description": "Set if the unit can be selected.\r\n@param flag true/false."
+    },
+    "RestoreToggleCaps": {
+        "prefix": [
+            "RestoreToggleCaps"
+        ],
+        "body": [
+            "${1:unit}:RestoreToggleCaps()"
+        ],
+        "description": "Restore the toggle caps of the unit back to blueprint spec."
+    },
+    "SetCreator": {
+        "prefix": [
+            "SetCreator"
+        ],
+        "body": [
+            "${1:unit}:SetCreator(${2:unit})"
+        ],
+        "description": "Set the creator for this unit.\r\nUsed for example for UEF ACU pods or Kennel pods.\r\n@param unit Parent unit."
+    },
+    "HideBone": {
+        "prefix": [
+            "HideBone"
+        ],
+        "body": [
+            "${1:unit}:HideBone(${2:bone}, ${3:affectChildren})"
+        ],
+        "description": "Makes unit's bone invisible.\r\n@param bone Bone name or index.\r\n@param affectChildren true/false."
+    },
+    "SetStrategicUnderlay": {
+        "prefix": [
+            "SetStrategicUnderlay"
+        ],
+        "body": [
+            "${1:unit}:SetStrategicUnderlay(${2:icon})"
+        ],
+        "description": "Sets the icon underlay to set texture.\r\nUsed in campaign to highlight objetcive targets. Example 'icon_objective_primary', the dds textures must be in textures\\ui\\common\\game\\strategicicons.\r\n@param icon String, name of the texture to apply, '' - empty string to reset."
+    },
+    "GetConsumptionPerSecondEnergy": {
+        "prefix": [
+            "GetConsumptionPerSecondEnergy"
+        ],
+        "body": [
+            "${1:unit}:GetConsumptionPerSecondEnergy()"
+        ],
+        "description": "Get the consumption of energy of the unit.\r\n@return number"
+    },
+    "TransportHasSpaceFor": {
+        "prefix": [
+            "TransportHasSpaceFor"
+        ],
+        "body": [
+            "${1:unit}:TransportHasSpaceFor(${2:target})"
+        ],
+        "description": "Find out if the target unit can fit into the carrier.\r\n@param target Unit to test.\r\n@return true/false."
+    },
+    "ScaleGetBuiltEmitter": {
+        "prefix": [
+            "ScaleGetBuiltEmitter"
+        ],
+        "body": [
+            "${1:unit}:ScaleGetBuiltEmitter(${2:self}, ${3:emitter})"
+        ],
+        "description": "TODO.\r\nScaleGetBuiltEmitter(self, emitter)"
+    },
+    "GetScriptBit": {
+        "prefix": [
+            "GetScriptBit"
+        ],
+        "body": [
+            "${1:unit}:GetScriptBit()"
+        ],
+        "description": "Get the current toggle state of the script bit that matches the string.\r\nTODO."
+    },
+    "GetCargo": {
+        "prefix": [
+            "GetCargo"
+        ],
+        "body": [
+            "${1:unit}:GetCargo()"
+        ],
+        "description": "Returns list of unit that the unit is transporting.\r\n@return Table List of units or empty table."
+    },
+    "SetBuildRate": {
+        "prefix": [
+            "SetBuildRate"
+        ],
+        "body": [
+            "${1:unit}:SetBuildRate(${2:frac})"
+        ],
+        "description": "Set the build rate of a unit: what fraction of target unit it builds per second.\r\n@param frac Number."
+    },
+    "SetAutoMode": {
+        "prefix": [
+            "SetAutoMode"
+        ],
+        "body": [
+            "${1:unit}:SetAutoMode(${2:bool})"
+        ],
+        "description": "Set auto silo build mode to on/off.\r\n@param bool true/false"
+    },
+    "ClearFocusEntity": {
+        "prefix": [
+            "ClearFocusEntity"
+        ],
+        "body": [
+            "${1:unit}:ClearFocusEntity()"
+        ],
+        "description": "TODO."
+    },
+    "SetCapturable": {
+        "prefix": [
+            "SetCapturable"
+        ],
+        "body": [
+            "${1:unit}:SetCapturable(${2:flag})"
+        ],
+        "description": "Set if this unit can be captured or not.\r\n@param flag true/false."
+    },
+    "TransportHasAvailableStorage": {
+        "prefix": [
+            "TransportHasAvailableStorage"
+        ],
+        "body": [
+            "${1:unit}:TransportHasAvailableStorage()"
+        ],
+        "description": "Find out if carrier is full or not.\r\n@return true/false."
+    },
+    "SetFuelRatio": {
+        "prefix": [
+            "SetFuelRatio"
+        ],
+        "body": [
+            "${1:unit}:SetFuelRatio(${2:ratio})"
+        ],
+        "description": "Set the fuel ratio.\r\nHow much fuel has the unit left\r\n@param ratio Float, range 0 - 1."
+    },
+    "SetBreakOffDistanceMult": {
+        "prefix": [
+            "SetBreakOffDistanceMult"
+        ],
+        "body": [
+            "${1:unit}:SetBreakOffDistanceMult(${2:float})"
+        ],
+        "description": "Set the break off distance multiplier of the unit.\r\n@param float Multiplier to apply."
+    },
+    "IsIdleState": {
+        "prefix": [
+            "IsIdleState"
+        ],
+        "body": [
+            "${1:unit}:IsIdleState()"
+        ],
+        "description": "See if the eunit is in Idle state or not.\r\n@return bool true/false."
+    },
+    "AddToggleCap": {
+        "prefix": [
+            "AddToggleCap"
+        ],
+        "body": [
+            "${1:unit}:AddToggleCap(${2:capName})"
+        ],
+        "description": "Add a toggle cap to a unit.\r\nAlso adds a button to the UI, or enables it, for the unit to use the new command.\r\n@param capName String Available:\r\nRULEUTC_ShieldToggle\r\nRULEUTC_WeaponToggle\r\nRULEUTC_JammingToggle\r\nRULEUTC_IntelToggle\r\nRULEUTC_ProductionToggle\r\nRULEUTC_StealthToggle\r\nRULEUTC_GenericToggle\r\nRULEUTC_SpecialToggle\r\nRULEUTC_CloakToggle"
+    },
+    "IsStunned": {
+        "prefix": [
+            "IsStunned"
+        ],
+        "body": [
+            "${1:unit}:IsStunned()"
+        ],
+        "description": "See if the unit is stunned.\r\n@return bool true/false."
+    },
+    "GetAttacker": {
+        "prefix": [
+            "GetAttacker"
+        ],
+        "body": [
+            "${1:unit}:GetAttacker()"
+        ],
+        "description": "Get the tactical attack manager object of this unit."
+    }
+}

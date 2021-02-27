@@ -1,0 +1,11 @@
+{
+    "base": {
+        "prefix": [
+            "base"
+        ],
+        "body": [
+            "${1:prop}:base()"
+        ],
+        "description": "Class Prop\r\n@classmod Sim.Prop\r\nderived from Entity"
+    }
+}

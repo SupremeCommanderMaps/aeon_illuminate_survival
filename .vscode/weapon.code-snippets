@@ -1,0 +1,353 @@
+{
+    "OnGotTarget": {
+        "prefix": [
+            "OnGotTarget"
+        ],
+        "body": [
+            "${1:weapon}:OnGotTarget()"
+        ],
+        "description": ""
+    },
+    "OnLostTarget": {
+        "prefix": [
+            "OnLostTarget"
+        ],
+        "body": [
+            "${1:weapon}:OnLostTarget()"
+        ],
+        "description": ""
+    },
+    "GetOnTransport": {
+        "prefix": [
+            "GetOnTransport"
+        ],
+        "body": [
+            "${1:weapon}:GetOnTransport()"
+        ],
+        "description": "Method to retreive onTransport information. True if the parent unit has been loaded on to a transport unit"
+    },
+    "GetDamageTableInternal": {
+        "prefix": [
+            "GetDamageTableInternal"
+        ],
+        "body": [
+            "${1:weapon}:GetDamageTableInternal()"
+        ],
+        "description": ""
+    },
+    "SetValidTargetsForCurrentLayer": {
+        "prefix": [
+            "SetValidTargetsForCurrentLayer"
+        ],
+        "body": [
+            "${1:weapon}:SetValidTargetsForCurrentLayer(${2:newLayer})"
+        ],
+        "description": ""
+    },
+    "init": {
+        "prefix": [
+            "init"
+        ],
+        "body": [
+            "${1:weapon}:init(${2:unit})"
+        ],
+        "description": ""
+    },
+    "OnMotionHorzEventChange": {
+        "prefix": [
+            "OnMotionHorzEventChange"
+        ],
+        "body": [
+            "${1:weapon}:OnMotionHorzEventChange(${2:new}, ${3:old})"
+        ],
+        "description": ""
+    },
+    "PlayWeaponSound": {
+        "prefix": [
+            "PlayWeaponSound"
+        ],
+        "body": [
+            "${1:weapon}:PlayWeaponSound(${2:sound})"
+        ],
+        "description": ""
+    },
+    "SetWeaponEnabled": {
+        "prefix": [
+            "SetWeaponEnabled"
+        ],
+        "body": [
+            "${1:weapon}:SetWeaponEnabled(${2:enable})"
+        ],
+        "description": "This is the function to set a weapon enabled.\r\nIf the weapon is enhabled by an enhancement, this will check to see if the unit has the enhancement before\r\nallowing it to try to be enabled or disabled."
+    },
+    "OnCreate": {
+        "prefix": [
+            "OnCreate"
+        ],
+        "body": [
+            "${1:weapon}:OnCreate()"
+        ],
+        "description": ""
+    },
+    "WeaponUsesEnergy": {
+        "prefix": [
+            "WeaponUsesEnergy"
+        ],
+        "body": [
+            "${1:weapon}:WeaponUsesEnergy()"
+        ],
+        "description": ""
+    },
+    "CreateProjectileForWeapon": {
+        "prefix": [
+            "CreateProjectileForWeapon"
+        ],
+        "body": [
+            "${1:weapon}:CreateProjectileForWeapon(${2:bone})"
+        ],
+        "description": ""
+    },
+    "OnVeteranLevel": {
+        "prefix": [
+            "OnVeteranLevel"
+        ],
+        "body": [
+            "${1:weapon}:OnVeteranLevel(${2:old}, ${3:new})"
+        ],
+        "description": ""
+    },
+    "AimManipulatorSetEnabled": {
+        "prefix": [
+            "AimManipulatorSetEnabled"
+        ],
+        "body": [
+            "${1:weapon}:AimManipulatorSetEnabled(${2:enabled})"
+        ],
+        "description": ""
+    },
+    "GetDamageTable": {
+        "prefix": [
+            "GetDamageTable"
+        ],
+        "body": [
+            "${1:weapon}:GetDamageTable()"
+        ],
+        "description": ""
+    },
+    "SetTurretPitchSpeed": {
+        "prefix": [
+            "SetTurretPitchSpeed"
+        ],
+        "body": [
+            "${1:weapon}:SetTurretPitchSpeed(${2:speed})"
+        ],
+        "description": ""
+    },
+    "OnStartTracking": {
+        "prefix": [
+            "OnStartTracking"
+        ],
+        "body": [
+            "${1:weapon}:OnStartTracking(${2:label})"
+        ],
+        "description": ""
+    },
+    "GetTurretPitchMinMax": {
+        "prefix": [
+            "GetTurretPitchMinMax"
+        ],
+        "body": [
+            "${1:weapon}:GetTurretPitchMinMax()"
+        ],
+        "description": ""
+    },
+    "OnStopTracking": {
+        "prefix": [
+            "OnStopTracking"
+        ],
+        "body": [
+            "${1:weapon}:OnStopTracking(${2:label})"
+        ],
+        "description": ""
+    },
+    "OnFire": {
+        "prefix": [
+            "OnFire"
+        ],
+        "body": [
+            "${1:weapon}:OnFire()"
+        ],
+        "description": ""
+    },
+    "StopWeaponAmbientSound": {
+        "prefix": [
+            "StopWeaponAmbientSound"
+        ],
+        "body": [
+            "${1:weapon}:StopWeaponAmbientSound(${2:sound})"
+        ],
+        "description": ""
+    },
+    "ReEnableBuff": {
+        "prefix": [
+            "ReEnableBuff"
+        ],
+        "body": [
+            "${1:weapon}:ReEnableBuff(${2:buffname})"
+        ],
+        "description": ""
+    },
+    "AddDamageRadiusMod": {
+        "prefix": [
+            "AddDamageRadiusMod"
+        ],
+        "body": [
+            "${1:weapon}:AddDamageRadiusMod(${2:dmgRadMod})"
+        ],
+        "description": ""
+    },
+    "SetWeaponPriorities": {
+        "prefix": [
+            "SetWeaponPriorities"
+        ],
+        "body": [
+            "${1:weapon}:SetWeaponPriorities(${2:priTable})"
+        ],
+        "description": ""
+    },
+    "AddDamageMod": {
+        "prefix": [
+            "AddDamageMod"
+        ],
+        "body": [
+            "${1:weapon}:AddDamageMod(${2:dmgMod})"
+        ],
+        "description": ""
+    },
+    "SetupTurret": {
+        "prefix": [
+            "SetupTurret"
+        ],
+        "body": [
+            "${1:weapon}:SetupTurret()"
+        ],
+        "description": ""
+    },
+    "GetTurretYawMinMax": {
+        "prefix": [
+            "GetTurretYawMinMax"
+        ],
+        "body": [
+            "${1:weapon}:GetTurretYawMinMax()"
+        ],
+        "description": ""
+    },
+    "GetTurretPitchSpeed": {
+        "prefix": [
+            "GetTurretPitchSpeed"
+        ],
+        "body": [
+            "${1:weapon}:GetTurretPitchSpeed()"
+        ],
+        "description": ""
+    },
+    "SetTurretYawSpeed": {
+        "prefix": [
+            "SetTurretYawSpeed"
+        ],
+        "body": [
+            "${1:weapon}:SetTurretYawSpeed(${2:speed})"
+        ],
+        "description": ""
+    },
+    "OnEnableWeapon": {
+        "prefix": [
+            "OnEnableWeapon"
+        ],
+        "body": [
+            "${1:weapon}:OnEnableWeapon()"
+        ],
+        "description": ""
+    },
+    "PlayWeaponAmbientSound": {
+        "prefix": [
+            "PlayWeaponAmbientSound"
+        ],
+        "body": [
+            "${1:weapon}:PlayWeaponAmbientSound(${2:sound})"
+        ],
+        "description": ""
+    },
+    "SetOnTransport": {
+        "prefix": [
+            "SetOnTransport"
+        ],
+        "body": [
+            "${1:weapon}:SetOnTransport(${2:transportstate})"
+        ],
+        "description": "Method to mark weapon when parent unit gets loaded on to a transport unit"
+    },
+    "AmmoThread": {
+        "prefix": [
+            "AmmoThread"
+        ],
+        "body": [
+            "${1:weapon}:AmmoThread(${2:nuke}, ${3:amount})"
+        ],
+        "description": ""
+    },
+    "DisableBuff": {
+        "prefix": [
+            "DisableBuff"
+        ],
+        "body": [
+            "${1:weapon}:DisableBuff(${2:buffname})"
+        ],
+        "description": ""
+    },
+    "OnDestroy": {
+        "prefix": [
+            "OnDestroy"
+        ],
+        "body": [
+            "${1:weapon}:OnDestroy()"
+        ],
+        "description": ""
+    },
+    "AddBuff": {
+        "prefix": [
+            "AddBuff"
+        ],
+        "body": [
+            "${1:weapon}:AddBuff(${2:buffTbl})"
+        ],
+        "description": ""
+    },
+    "GetTurretYawSpeed": {
+        "prefix": [
+            "GetTurretYawSpeed"
+        ],
+        "body": [
+            "${1:weapon}:GetTurretYawSpeed()"
+        ],
+        "description": ""
+    },
+    "DoOnFireBuffs": {
+        "prefix": [
+            "DoOnFireBuffs"
+        ],
+        "body": [
+            "${1:weapon}:DoOnFireBuffs()"
+        ],
+        "description": ""
+    },
+    "GetAimManipulator": {
+        "prefix": [
+            "GetAimManipulator"
+        ],
+        "body": [
+            "${1:weapon}:GetAimManipulator()"
+        ],
+        "description": ""
+    }
+}

@@ -1,0 +1,281 @@
+{
+    "AIPlatoonSquadAttackVectorSorian": {
+        "prefix": [
+            "AIPlatoonSquadAttackVectorSorian"
+        ],
+        "body": [
+            "AIAttackUtils.AIPlatoonSquadAttackVectorSorian(${1:aiBrain}, ${2:platoon}, ${3:bAggro})"
+        ],
+        "description": ""
+    },
+    "GetPathGraphs": {
+        "prefix": [
+            "GetPathGraphs"
+        ],
+        "body": [
+            "AIAttackUtils.GetPathGraphs()"
+        ],
+        "description": "Function: GetPathGraphs\r\nArgs:\r\nDescription:\r\nThis function uses Graph Node markers in the map to generate a coarse pathfinding graph\r\nReturns: A table of graphs. Table format is:\r\nScenarioInfo.PathGraphs -> Graph Layer -> Graph Name -> Marker Name -> Marker Data"
+    },
+    "InWaterCheck": {
+        "prefix": [
+            "InWaterCheck"
+        ],
+        "body": [
+            "AIAttackUtils.InWaterCheck(${1:platoon})"
+        ],
+        "description": ""
+    },
+    "GraphExists": {
+        "prefix": [
+            "GraphExists"
+        ],
+        "body": [
+            "AIAttackUtils.GraphExists(${1:layer})"
+        ],
+        "description": "Deprecated functions / unused"
+    },
+    "CheckNavalPathingSorian": {
+        "prefix": [
+            "CheckNavalPathingSorian"
+        ],
+        "body": [
+            "AIAttackUtils.CheckNavalPathingSorian(${1:aiBrain}, ${2:platoon}, ${3:location}, ${4:maxRange}, ${5:selectedWeaponArc}, ${6:turretPitch})"
+        ],
+        "description": ""
+    },
+    "GetClosestPathNodeInRadiusByGraph": {
+        "prefix": [
+            "GetClosestPathNodeInRadiusByGraph"
+        ],
+        "body": [
+            "AIAttackUtils.GetClosestPathNodeInRadiusByGraph(${1:location}, ${2:radius}, ${3:graphName})"
+        ],
+        "description": "Function: GetClosestPathNodeInRadiusByGraph\r\nArgs:\r\nlocation - location to search around\r\nradius - radius around location to search in\r\ngraphName - name of graph to use to find closest path\r\nDescription:\r\nIf there is a node from a specific graph within radius distance of location, this function will get its name.\r\nReturns:\r\nThe closest node's name else false"
+    },
+    "AIPlatoonNavalAttackVectorSorian": {
+        "prefix": [
+            "AIPlatoonNavalAttackVectorSorian"
+        ],
+        "body": [
+            "AIAttackUtils.AIPlatoonNavalAttackVectorSorian(${1:aiBrain}, ${2:platoon})"
+        ],
+        "description": ""
+    },
+    "GetClosestPathNodeInRadiusByLayerSorian": {
+        "prefix": [
+            "GetClosestPathNodeInRadiusByLayerSorian"
+        ],
+        "body": [
+            "AIAttackUtils.GetClosestPathNodeInRadiusByLayerSorian(${1:location}, ${2:destination}, ${3:radius}, ${4:layer})"
+        ],
+        "description": ""
+    },
+    "GeneratePath": {
+        "prefix": [
+            "GeneratePath"
+        ],
+        "body": [
+            "AIAttackUtils.GeneratePath(${1:aiBrain}, ${2:startNode}, ${3:endNode}, ${4:threatType}, ${5:threatWeight}, ${6:endPos}, ${7:startPos})"
+        ],
+        "description": ""
+    },
+    "GetNavalPlatoonMaxRangeSorian": {
+        "prefix": [
+            "GetNavalPlatoonMaxRangeSorian"
+        ],
+        "body": [
+            "AIAttackUtils.GetNavalPlatoonMaxRangeSorian(${1:aiBrain}, ${2:platoon})"
+        ],
+        "description": "Below this line are Sorian AI exclusive functions added for sorian AI"
+    },
+    "GetMostRestrictiveLayer": {
+        "prefix": [
+            "GetMostRestrictiveLayer"
+        ],
+        "body": [
+            "AIAttackUtils.GetMostRestrictiveLayer(${1:platoon})"
+        ],
+        "description": "Function: GetMostRestrictiveLayer\r\nArgs:\r\nplatoon - platoon to find best target for\r\nDescription:\r\nset platoon.MovementLayer to the most restrictive movement layer\r\nof a given platoon, and return a representative unit\r\nReturns:\r\nThe most restrictive layer of movement for a given platoon (string)"
+    },
+    "SendPlatoonWithTransportsSorian": {
+        "prefix": [
+            "SendPlatoonWithTransportsSorian"
+        ],
+        "body": [
+            "AIAttackUtils.SendPlatoonWithTransportsSorian(${1:aiBrain}, ${2:platoon}, ${3:destination}, ${4:bRequired}, ${5:bSkipLastMove}, ${6:waitLonger})"
+        ],
+        "description": ""
+    },
+    "DrawPathGraph": {
+        "prefix": [
+            "DrawPathGraph"
+        ],
+        "body": [
+            "AIAttackUtils.DrawPathGraph()"
+        ],
+        "description": "Function: DrawPathGraph\r\nArgs:\r\nDescription:\r\nrender graph on screen to verify correctness\r\nReturns: nothing"
+    },
+    "GetThreatOfUnits": {
+        "prefix": [
+            "GetThreatOfUnits"
+        ],
+        "body": [
+            "AIAttackUtils.GetThreatOfUnits(${1:platoon})"
+        ],
+        "description": "Function: GetThreatOfUnits\r\nArgs:\r\nplatoon - platoon to evaluate\r\nDescription:\r\nGets the sum of the threat of the units based on each unit's movement layer\r\nMust have calculated platoon's movement layer first\r\nReturns:\r\nthe sum of the threats of the units passed in"
+    },
+    "AIPlatoonSquadAttackVector": {
+        "prefix": [
+            "AIPlatoonSquadAttackVector"
+        ],
+        "body": [
+            "AIAttackUtils.AIPlatoonSquadAttackVector(${1:aiBrain}, ${2:platoon}, ${3:bAggro})"
+        ],
+        "description": "Function: AIPlatoonSquadAttackVector\r\nArgs:\r\naiBrain - aiBrain to use\r\nplatoon - platoon to find best target for\r\nDescription:\r\nGenerate the attack vector by picking a good place to attack\r\nreturns the current command queue of all the units in the platoon if it worked\r\nor an empty queue if it didn't\r\nReturns:\r\na table of every command in every command queue for every unit in the platoon\r\nor an empty table if it fails"
+    },
+    "CheckNavalPathing": {
+        "prefix": [
+            "CheckNavalPathing"
+        ],
+        "body": [
+            "AIAttackUtils.CheckNavalPathing(${1:aiBrain}, ${2:platoon}, ${3:location}, ${4:maxRange}, ${5:selectedWeaponArc})"
+        ],
+        "description": "Function: CheckNavalPathing\r\nArgs:\r\naiBrain - aiBrain to use\r\nplatoon - platoon to find best target for\r\nlocation - spot we want to get to\r\nmaxRange - maximum range of the platoon (can bombard from water)\r\nDescription:\r\nFinds if the platoon can move to the location given, or close enough to bombard\r\nReturns:\r\nbool"
+    },
+    "AIPlatoonNavalAttackVector": {
+        "prefix": [
+            "AIPlatoonNavalAttackVector"
+        ],
+        "body": [
+            "AIAttackUtils.AIPlatoonNavalAttackVector(${1:aiBrain}, ${2:platoon})"
+        ],
+        "description": "Function: AIPlatoonNavalAttackVector\r\nArgs:\r\naiBrain - aiBrain to use\r\nplatoon - platoon to find best target for\r\nDescription:\r\nGenerate the attack vector by picking a good place to attack\r\nreturns the current command queue of all the units in the platoon if it worked\r\nor an empty queue if it didn't. Simpler than the land version of this.\r\nReturns:\r\na table of every command in every command queue for every unit in the platoon\r\nor an empty table if it fails"
+    },
+    "GetLandPlatoonMaxRangeSorian": {
+        "prefix": [
+            "GetLandPlatoonMaxRangeSorian"
+        ],
+        "body": [
+            "AIAttackUtils.GetLandPlatoonMaxRangeSorian(${1:aiBrain}, ${2:platoon})"
+        ],
+        "description": ""
+    },
+    "AIFindUnitRadiusThreat": {
+        "prefix": [
+            "AIFindUnitRadiusThreat"
+        ],
+        "body": [
+            "AIAttackUtils.AIFindUnitRadiusThreat(${1:aiBrain}, ${2:alliance}, ${3:priTable}, ${4:position}, ${5:radius}, ${6:tMin}, ${7:tMax}, ${8:tRing})"
+        ],
+        "description": ""
+    },
+    "AINavalPlanB": {
+        "prefix": [
+            "AINavalPlanB"
+        ],
+        "body": [
+            "AIAttackUtils.AINavalPlanB(${1:aiBrain}, ${2:platoon})"
+        ],
+        "description": "Function: AINavalPlanB\r\nArgs:\r\naiBrain - aiBrain to use\r\nplatoon - platoon to find best target for\r\nDescription:\r\nGets the path to a random naval marker.\r\nReturns:\r\nA table representing the path"
+    },
+    "GetClosestPathNodeInRadiusByLayer": {
+        "prefix": [
+            "GetClosestPathNodeInRadiusByLayer"
+        ],
+        "body": [
+            "AIAttackUtils.GetClosestPathNodeInRadiusByLayer(${1:location}, ${2:radius}, ${3:layer})"
+        ],
+        "description": "Function: GetClosestPathNodeInRadiusByLayer\r\nArgs:\r\nlocation - location to search around\r\nradius - radius around location to search in\r\nlayer - layer to use to generate safe path... e.g. 'Air', 'Land', etc.\r\nDescription:\r\nGets the name of the closest pathing node (within radius distance of location) on the layer we specify.\r\nReturns:\r\nClosest pathing node's name else false"
+    },
+    "PlatoonGenerateSafePathTo": {
+        "prefix": [
+            "PlatoonGenerateSafePathTo"
+        ],
+        "body": [
+            "AIAttackUtils.PlatoonGenerateSafePathTo(${1:aiBrain}, ${2:platoonLayer}, ${3:start}, ${4:destination}, ${5:optThreatWeight}, ${6:optMaxMarkerDist}, ${7:testPathDist})"
+        ],
+        "description": "Function: PlatoonGenerateSafePathTo\r\nArgs:\r\naiBrain - aiBrain to use\r\nplatoonLayer - layer to use to generate safe path... e.g. 'Air', 'Land', etc.\r\nstart - table representing starting location\r\ndestination - table representing the destination location\r\noptMaxMarkerDist - the maximum distance away a platoon should look for a pathing marker\r\noptThreatWeight - the importance of threat when choosing a path. High weight generates longer, safer paths.\r\nDescription:\r\nIf there are pathing nodes available to this platoon's most restrictive movement type, then a path to the destination\r\ncan be generated while avoiding other high threat areas along the way.\r\nReturns:\r\na table of locations representing the safest path to get to the specified destination"
+    },
+    "CanGraphTo": {
+        "prefix": [
+            "CanGraphTo"
+        ],
+        "body": [
+            "AIAttackUtils.CanGraphTo(${1:unit}, ${2:destPos}, ${3:layer})"
+        ],
+        "description": "Function: CanGraphTo\r\nArgs:\r\nunit - platoon to check pathing for\r\ndestPos - destination of platoon\r\nlayer - layer name to check for pathing on.\r\nDescription:\r\nChecks to see if platoon can path to destination using path graphs. Used to save precious precious CPU cycles compared to CanPathTo\r\nReturns:\r\ntrue, end node position if successful. nil otherwise"
+    },
+    "GeneratePathSorian": {
+        "prefix": [
+            "GeneratePathSorian"
+        ],
+        "body": [
+            "AIAttackUtils.GeneratePathSorian(${1:aiBrain}, ${2:startNode}, ${3:endNode}, ${4:threatType}, ${5:threatWeight}, ${6:destination}, ${7:location})"
+        ],
+        "description": "Function: GeneratePath\r\nArgs:\r\naiBrain - aiBrain to use\r\nstartNode - starting path node\r\nendNode - ending path node\r\nthreatType - type of threat to path around\r\nthreatWeight - weight applied for heuristic when avoiding threat\r\nDescription:\r\nGenerates a path between two supplied pathing nodes, taking threat into account. The influence of threat on the\r\nsearch heuristic can be adjusted with the threatWeight multiplier.\r\nReturns:\r\nA list of positions of path nodes from beginning to end of the selected path"
+    },
+    "GetAirThreatOfUnits": {
+        "prefix": [
+            "GetAirThreatOfUnits"
+        ],
+        "body": [
+            "AIAttackUtils.GetAirThreatOfUnits(${1:platoon})"
+        ],
+        "description": "Function: GetAirThreatOfUnits\r\nArgs:\r\nplatoon - units to evaluate\r\nDescription:\r\nGets a platoon's total air threat.\r\nReturns:\r\nthe sum of the air threats of the units passed in\r\nBlame: Robert"
+    },
+    "SendPlatoonWithTransportsNoCheck": {
+        "prefix": [
+            "SendPlatoonWithTransportsNoCheck"
+        ],
+        "body": [
+            "AIAttackUtils.SendPlatoonWithTransportsNoCheck(${1:aiBrain}, ${2:platoon}, ${3:destination}, ${4:bRequired}, ${5:bSkipLastMove})"
+        ],
+        "description": ""
+    },
+    "GetNavalPlatoonMaxRange": {
+        "prefix": [
+            "GetNavalPlatoonMaxRange"
+        ],
+        "body": [
+            "AIAttackUtils.GetNavalPlatoonMaxRange(${1:aiBrain}, ${2:platoon})"
+        ],
+        "description": "Function: GetNavalPlatoonMaxRange\r\nArgs:\r\naiBrain - aiBrain to use\r\nplatoon - platoon to find range for\r\nDescription:\r\nFinds the maximum range of the platoon, returns false if T1 or no range\r\nReturns:\r\nnumber or bool"
+    },
+    "SendPlatoonWithTransports": {
+        "prefix": [
+            "SendPlatoonWithTransports"
+        ],
+        "body": [
+            "AIAttackUtils.SendPlatoonWithTransports(${1:aiBrain}, ${2:platoon}, ${3:destination}, ${4:bRequired}, ${5:bSkipLastMove}, ${6:waitLonger})"
+        ],
+        "description": "Function: SendPlatoonWithTransports\r\nArgs:\r\naiBrain - aiBrain to use\r\nplatoon - platoon to find best target for\r\ndestination - table representing the destination location\r\nbRequired - wait for transports if there aren't any, since it's required to use them\r\nbSkipLastMove - don't do the final move... useful for when engineers use this function\r\nDescription:\r\nFind transports and use them to move platoon.  If bRequired is set, then have platoon\r\nwait 60 seconds for transports before failing\r\nReturns:\r\ntrue if successful, false if couldn't use transports"
+    },
+    "GetSurfaceThreatOfUnits": {
+        "prefix": [
+            "GetSurfaceThreatOfUnits"
+        ],
+        "body": [
+            "AIAttackUtils.GetSurfaceThreatOfUnits(${1:platoon})"
+        ],
+        "description": "Function: GetSurfaceThreatOfUnits\r\nArgs:\r\nplatoon - units to evaluate\r\nDescription:\r\nGets a platoon's total surface threat.\r\nReturns:\r\nthe sum of the surface threats of the units passed in"
+    },
+    "CheckPlatoonPathingEx": {
+        "prefix": [
+            "CheckPlatoonPathingEx"
+        ],
+        "body": [
+            "AIAttackUtils.CheckPlatoonPathingEx(${1:platoon}, ${2:destPos})"
+        ],
+        "description": "Function: CheckPlatoonPathingEx\r\nArgs:\r\nplatoon - platoon to check pathing for\r\ndestPos - destination of platoon\r\nDescription:\r\nChecks to see if platoon can path to destination\r\nReturns:\r\ntrue and the destinationPos if successful, false and the closest point it could get to otherwise"
+    },
+    "GetBestThreatTarget": {
+        "prefix": [
+            "GetBestThreatTarget"
+        ],
+        "body": [
+            "AIAttackUtils.GetBestThreatTarget(${1:aiBrain}, ${2:platoon}, ${3:bSkipPathability})"
+        ],
+        "description": "Function: GetBestThreatTarget\r\nArgs:\r\naiBrain - aiBrain to use\r\nplatoon - platoon to find best target for\r\nbSkipPathability - skip check to see if platoon can path to destination\r\nDescription:\r\nGet the best target on a map based on platoon location\r\nuses threat map and returns the center of one of the grids in the threat map\r\nReturns:\r\nA table representing the location of the best threat target"
+    }
+}

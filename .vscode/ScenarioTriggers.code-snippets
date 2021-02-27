@@ -1,0 +1,425 @@
+{
+    "CreateUnitPercentageBuiltTrigger": {
+        "prefix": [
+            "CreateUnitPercentageBuiltTrigger"
+        ],
+        "body": [
+            "TriggersFile.CreateUnitPercentageBuiltTrigger(${1:callbackFunction}, ${2:aiBrain}, ${3:category}, ${4:percent})"
+        ],
+        "description": ""
+    },
+    "CreateUnitVeterancyTrigger": {
+        "prefix": [
+            "CreateUnitVeterancyTrigger"
+        ],
+        "body": [
+            "TriggersFile.CreateUnitVeterancyTrigger(${1:callbackFunction}, ${2:unit})"
+        ],
+        "description": ""
+    },
+    "CreateUnitStopReclaimTrigger": {
+        "prefix": [
+            "CreateUnitStopReclaimTrigger"
+        ],
+        "body": [
+            "TriggersFile.CreateUnitStopReclaimTrigger(${1:cb}, ${2:unit})"
+        ],
+        "description": ""
+    },
+    "CreatePropKilledTrigger": {
+        "prefix": [
+            "CreatePropKilledTrigger"
+        ],
+        "body": [
+            "TriggersFile.CreatePropKilledTrigger(${1:cb}, ${2:prop})"
+        ],
+        "description": "Prop Triggers"
+    },
+    "CreatePropReclaimedTrigger": {
+        "prefix": [
+            "CreatePropReclaimedTrigger"
+        ],
+        "body": [
+            "TriggersFile.CreatePropReclaimedTrigger(${1:cb}, ${2:prop})"
+        ],
+        "description": ""
+    },
+    "CreateUnitStopBeingCapturedTrigger": {
+        "prefix": [
+            "CreateUnitStopBeingCapturedTrigger"
+        ],
+        "body": [
+            "TriggersFile.CreateUnitStopBeingCapturedTrigger(${1:cb}, ${2:unit})"
+        ],
+        "description": ""
+    },
+    "GroupDeathTriggerThread": {
+        "prefix": [
+            "GroupDeathTriggerThread"
+        ],
+        "body": [
+            "TriggersFile.GroupDeathTriggerThread(${1:callbackFunction}, ${2:group}, ${3:name})"
+        ],
+        "description": ""
+    },
+    "ThreatTriggerAroundUnitThread": {
+        "prefix": [
+            "ThreatTriggerAroundUnitThread"
+        ],
+        "body": [
+            "TriggersFile.ThreatTriggerAroundUnitThread(${1:callbackFunction}, ${2:aiBrain}, ${3:unit}, ${4:rings}, ${5:onceOnly}, ${6:value}, ${7:greater}, ${8:name})"
+        ],
+        "description": ""
+    },
+    "CreateThreatTriggerAroundPosition": {
+        "prefix": [
+            "CreateThreatTriggerAroundPosition"
+        ],
+        "body": [
+            "TriggersFile.CreateThreatTriggerAroundPosition(${1:callbackFunction}, ${2:aiBrain}, ${3:posVector}, ${4:rings}, ${5:onceOnly}, ${6:value}, ${7:greater})"
+        ],
+        "description": ""
+    },
+    "RemoveUnitTrigger": {
+        "prefix": [
+            "RemoveUnitTrigger"
+        ],
+        "body": [
+            "TriggersFile.RemoveUnitTrigger(${1:unit}, ${2:callbackFunction})"
+        ],
+        "description": ""
+    },
+    "CreateArmyUnitCategoryVeterancyTrigger": {
+        "prefix": [
+            "CreateArmyUnitCategoryVeterancyTrigger"
+        ],
+        "body": [
+            "TriggersFile.CreateArmyUnitCategoryVeterancyTrigger(${1:callbackFunction}, ${2:aiBrain}, ${3:category}, ${4:level})"
+        ],
+        "description": ""
+    },
+    "VariableBoolCheckThread": {
+        "prefix": [
+            "VariableBoolCheckThread"
+        ],
+        "body": [
+            "TriggersFile.VariableBoolCheckThread(${1:cb}, ${2:varName}, ${3:value}, ${4:name})"
+        ],
+        "description": ""
+    },
+    "CreateUnitToPositionDistanceTrigger": {
+        "prefix": [
+            "CreateUnitToPositionDistanceTrigger"
+        ],
+        "body": [
+            "TriggersFile.CreateUnitToPositionDistanceTrigger(${1:callbackFunction}, ${2:unit}, ${3:marker}, ${4:distance})"
+        ],
+        "description": ""
+    },
+    "UnitDistanceTriggerThread": {
+        "prefix": [
+            "UnitDistanceTriggerThread"
+        ],
+        "body": [
+            "TriggersFile.UnitDistanceTriggerThread(${1:callbackFunction}, ${2:unitOne}, ${3:unitTwo}, ${4:distance})"
+        ],
+        "description": ""
+    },
+    "CreateUnitDeathTrigger": {
+        "prefix": [
+            "CreateUnitDeathTrigger"
+        ],
+        "body": [
+            "TriggersFile.CreateUnitDeathTrigger(${1:callbackFunction}, ${2:unit})"
+        ],
+        "description": ""
+    },
+    "CreateUnitReclaimedTrigger": {
+        "prefix": [
+            "CreateUnitReclaimedTrigger"
+        ],
+        "body": [
+            "TriggersFile.CreateUnitReclaimedTrigger(${1:cb}, ${2:unit})"
+        ],
+        "description": ""
+    },
+    "CreateUnitStopCaptureTrigger": {
+        "prefix": [
+            "CreateUnitStopCaptureTrigger"
+        ],
+        "body": [
+            "TriggersFile.CreateUnitStopCaptureTrigger(${1:cb}, ${2:unit})"
+        ],
+        "description": ""
+    },
+    "TimerTriggerThread": {
+        "prefix": [
+            "TimerTriggerThread"
+        ],
+        "body": [
+            "TriggersFile.TimerTriggerThread(${1:callbackFunction}, ${2:seconds}, ${3:name}, ${4:displayBool}, ${5:onTickFunc})"
+        ],
+        "description": ""
+    },
+    "CreateUnitGivenTrigger": {
+        "prefix": [
+            "CreateUnitGivenTrigger"
+        ],
+        "body": [
+            "TriggersFile.CreateUnitGivenTrigger(${1:cb}, ${2:unit})"
+        ],
+        "description": ""
+    },
+    "SubGroupDeathTriggerThread": {
+        "prefix": [
+            "SubGroupDeathTriggerThread"
+        ],
+        "body": [
+            "TriggersFile.SubGroupDeathTriggerThread(${1:callbackFunction}, ${2:group}, ${3:num}, ${4:name})"
+        ],
+        "description": ""
+    },
+    "AreaTriggerThread": {
+        "prefix": [
+            "AreaTriggerThread"
+        ],
+        "body": [
+            "TriggersFile.AreaTriggerThread(${1:callbackFunction}, ${2:rectangleTable}, ${3:category}, ${4:onceOnly}, ${5:invert}, ${6:aiBrain}, ${7:number}, ${8:requireBuilt}, ${9:name})"
+        ],
+        "description": ""
+    },
+    "CreateArmyStatTrigger": {
+        "prefix": [
+            "CreateArmyStatTrigger"
+        ],
+        "body": [
+            "TriggersFile.CreateArmyStatTrigger(${1:callbackFunction}, ${2:aiBrain}, ${3:name}, ${4:triggerTable})"
+        ],
+        "description": ""
+    },
+    "MissionNumberTriggerThread": {
+        "prefix": [
+            "MissionNumberTriggerThread"
+        ],
+        "body": [
+            "TriggersFile.MissionNumberTriggerThread(${1:cb}, ${2:value}, ${3:name})"
+        ],
+        "description": ""
+    },
+    "CreateUnitBuiltTrigger": {
+        "prefix": [
+            "CreateUnitBuiltTrigger"
+        ],
+        "body": [
+            "TriggersFile.CreateUnitBuiltTrigger(${1:callbackFunction}, ${2:unit}, ${3:category})"
+        ],
+        "description": ""
+    },
+    "CreateUnitNearTypeTriggerThread": {
+        "prefix": [
+            "CreateUnitNearTypeTriggerThread"
+        ],
+        "body": [
+            "TriggersFile.CreateUnitNearTypeTriggerThread(${1:callbackFunction}, ${2:unit}, ${3:brain}, ${4:category}, ${5:distance}, ${6:name})"
+        ],
+        "description": ""
+    },
+    "CreateThreatTriggerAroundUnit": {
+        "prefix": [
+            "CreateThreatTriggerAroundUnit"
+        ],
+        "body": [
+            "TriggersFile.CreateThreatTriggerAroundUnit(${1:callbackFunction}, ${2:aiBrain}, ${3:unit}, ${4:rings}, ${5:onceOnly}, ${6:value}, ${7:greater})"
+        ],
+        "description": ""
+    },
+    "CreateUnitStartReclaimTrigger": {
+        "prefix": [
+            "CreateUnitStartReclaimTrigger"
+        ],
+        "body": [
+            "TriggersFile.CreateUnitStartReclaimTrigger(${1:cb}, ${2:unit})"
+        ],
+        "description": ""
+    },
+    "CreateGroupDeathTrigger": {
+        "prefix": [
+            "CreateGroupDeathTrigger"
+        ],
+        "body": [
+            "TriggersFile.CreateGroupDeathTrigger(${1:callbackFunction}, ${2:group})"
+        ],
+        "description": ""
+    },
+    "CreateStartBuildTrigger": {
+        "prefix": [
+            "CreateStartBuildTrigger"
+        ],
+        "body": [
+            "TriggersFile.CreateStartBuildTrigger(${1:callbackFunction}, ${2:unit}, ${3:category})"
+        ],
+        "description": "Unit Triggers"
+    },
+    "CreateUnitNearTypeTrigger": {
+        "prefix": [
+            "CreateUnitNearTypeTrigger"
+        ],
+        "body": [
+            "TriggersFile.CreateUnitNearTypeTrigger(${1:callbackFunction}, ${2:unit}, ${3:brain}, ${4:category}, ${5:distance})"
+        ],
+        "description": ""
+    },
+    "CreateUnitCapturedTrigger": {
+        "prefix": [
+            "CreateUnitCapturedTrigger"
+        ],
+        "body": [
+            "TriggersFile.CreateUnitCapturedTrigger(${1:cbOldUnit}, ${2:cbNewUnit}, ${3:unit})"
+        ],
+        "description": ""
+    },
+    "ThreatTriggerAroundPositionThread": {
+        "prefix": [
+            "ThreatTriggerAroundPositionThread"
+        ],
+        "body": [
+            "TriggersFile.ThreatTriggerAroundPositionThread(${1:callbackFunction}, ${2:aiBrain}, ${3:posVector}, ${4:rings}, ${5:onceOnly}, ${6:value}, ${7:greater}, ${8:name})"
+        ],
+        "description": ""
+    },
+    "CreateUnitDamagedTrigger": {
+        "prefix": [
+            "CreateUnitDamagedTrigger"
+        ],
+        "body": [
+            "TriggersFile.CreateUnitDamagedTrigger(${1:callbackFunction}, ${2:unit}, ${3:amount}, ${4:repeatNum})"
+        ],
+        "description": ""
+    },
+    "CreateUnitFailedCaptureTrigger": {
+        "prefix": [
+            "CreateUnitFailedCaptureTrigger"
+        ],
+        "body": [
+            "TriggersFile.CreateUnitFailedCaptureTrigger(${1:cb}, ${2:unit})"
+        ],
+        "description": ""
+    },
+    "CreateUnitStartBeingCapturedTrigger": {
+        "prefix": [
+            "CreateUnitStartBeingCapturedTrigger"
+        ],
+        "body": [
+            "TriggersFile.CreateUnitStartBeingCapturedTrigger(${1:cb}, ${2:unit})"
+        ],
+        "description": ""
+    },
+    "CreateTimerTrigger": {
+        "prefix": [
+            "CreateTimerTrigger"
+        ],
+        "body": [
+            "TriggersFile.CreateTimerTrigger(${1:callbackFunction}, ${2:seconds}, ${3:name}, ${4:displayBool}, ${5:onTickFunc})"
+        ],
+        "description": ""
+    },
+    "CreateMultipleAreaTrigger": {
+        "prefix": [
+            "CreateMultipleAreaTrigger"
+        ],
+        "body": [
+            "TriggersFile.CreateMultipleAreaTrigger(${1:callbackFunction}, ${2:rectangleTable}, ${3:category}, ${4:onceOnly}, ${5:invert}, ${6:aiBrain}, ${7:number}, ${8:requireBuilt})"
+        ],
+        "description": ""
+    },
+    "CreateOnFailedToBuildTrigger": {
+        "prefix": [
+            "CreateOnFailedToBuildTrigger"
+        ],
+        "body": [
+            "TriggersFile.CreateOnFailedToBuildTrigger(${1:callbackFunction}, ${2:unit})"
+        ],
+        "description": ""
+    },
+    "CreateSubGroupDeathTrigger": {
+        "prefix": [
+            "CreateSubGroupDeathTrigger"
+        ],
+        "body": [
+            "TriggersFile.CreateSubGroupDeathTrigger(${1:callbackFunction}, ${2:group}, ${3:num})"
+        ],
+        "description": ""
+    },
+    "CreateAreaTrigger": {
+        "prefix": [
+            "CreateAreaTrigger"
+        ],
+        "body": [
+            "TriggersFile.CreateAreaTrigger(${1:callbackFunction}, ${2:rectangle}, ${3:category}, ${4:onceOnly}, ${5:invert}, ${6:aiBrain}, ${7:number}, ${8:requireBuilt})"
+        ],
+        "description": ""
+    },
+    "CreateUnitStopBeingBuiltTrigger": {
+        "prefix": [
+            "CreateUnitStopBeingBuiltTrigger"
+        ],
+        "body": [
+            "TriggersFile.CreateUnitStopBeingBuiltTrigger(${1:cb}, ${2:unit})"
+        ],
+        "description": ""
+    },
+    "CreateUnitStartCaptureTrigger": {
+        "prefix": [
+            "CreateUnitStartCaptureTrigger"
+        ],
+        "body": [
+            "TriggersFile.CreateUnitStartCaptureTrigger(${1:cb}, ${2:unit})"
+        ],
+        "description": ""
+    },
+    "CreateUnitFailedBeingCapturedTrigger": {
+        "prefix": [
+            "CreateUnitFailedBeingCapturedTrigger"
+        ],
+        "body": [
+            "TriggersFile.CreateUnitFailedBeingCapturedTrigger(${1:cb}, ${2:unit})"
+        ],
+        "description": ""
+    },
+    "CreateArmyIntelTrigger": {
+        "prefix": [
+            "CreateArmyIntelTrigger"
+        ],
+        "body": [
+            "TriggersFile.CreateArmyIntelTrigger(${1:callbackFunction}, ${2:aiBrain}, ${3:reconType}, ${4:blip}, ${5:value}, ${6:category}, ${7:onceOnly}, ${8:targetAIBrain})"
+        ],
+        "description": ""
+    },
+    "UnitToPositionDistanceTriggerThread": {
+        "prefix": [
+            "UnitToPositionDistanceTriggerThread"
+        ],
+        "body": [
+            "TriggersFile.UnitToPositionDistanceTriggerThread(${1:cb}, ${2:unit}, ${3:marker}, ${4:distance}, ${5:name})"
+        ],
+        "description": ""
+    },
+    "CreateUnitDestroyedTrigger": {
+        "prefix": [
+            "CreateUnitDestroyedTrigger"
+        ],
+        "body": [
+            "TriggersFile.CreateUnitDestroyedTrigger(${1:callbackFunction}, ${2:unit})"
+        ],
+        "description": ""
+    },
+    "CreateUnitDistanceTrigger": {
+        "prefix": [
+            "CreateUnitDistanceTrigger"
+        ],
+        "body": [
+            "TriggersFile.CreateUnitDistanceTrigger(${1:callbackFunction}, ${2:unitOne}, ${3:unitTwo}, ${4:distance})"
+        ],
+        "description": ""
+    }
+}

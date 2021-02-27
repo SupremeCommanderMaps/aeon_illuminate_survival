@@ -1,0 +1,290 @@
+{
+    "table.subtract": {
+        "prefix": [
+            "table.subtract"
+        ],
+        "body": [
+            "table.subtract(${1:t1}, ${2:t2})"
+        ],
+        "description": "Remove all keys in t2 from t1."
+    },
+    "table.keys": {
+        "prefix": [
+            "table.keys"
+        ],
+        "body": [
+            "table.keys(${1:t}, ${2:comp})"
+        ],
+        "description": "table.keys(t, [comp]) returns a list of the keys of t, sorted.\r\ncomp] is an optional comparison function, defaulting to less-than, e.g.\r\ntable.keys(t) -- returns keys in increasing order (low performance with large tables)\r\ntable.keys(t, function(a, b) return a > b end) -- returns keys in decreasing order (low performance with large tables)\r\ntable.keys(t, false) -- returns keys without comparing/sorting (better performance with large tables)"
+    },
+    "math.round": {
+        "prefix": [
+            "math.round"
+        ],
+        "body": [
+            "math.round(${1:num}, ${2:idp})"
+        ],
+        "description": "Rounds a number to specified double precision"
+    },
+    "table.map": {
+        "prefix": [
+            "table.map"
+        ],
+        "body": [
+            "table.map(${1:fn}, ${2:t})"
+        ],
+        "description": "table.map(fn,t) returns a table with the same keys as t but with\r\nfn function applied to each value."
+    },
+    "table.destructiveCat": {
+        "prefix": [
+            "table.destructiveCat"
+        ],
+        "body": [
+            "table.destructiveCat(${1:t1}, ${2:t2})"
+        ],
+        "description": "Destructively concatenate two tables. (numerical keys only)\r\nAppends the keys of t2 onto t1, returning it. The original t1 is destroyed,\r\nbut this avoids the need to copy the values in t1, saving some time."
+    },
+    "table.binsert": {
+        "prefix": [
+            "table.binsert"
+        ],
+        "body": [
+            "table.binsert(${1:t}, ${2:value}, ${3:cmp})"
+        ],
+        "description": "table.binsert(t, value, cmp) binary insert value into table using cmp-func"
+    },
+    "math.clamp": {
+        "prefix": [
+            "math.clamp"
+        ],
+        "body": [
+            "math.clamp(${1:v}, ${2:min}, ${3:max})"
+        ],
+        "description": "Clamps numeric value to specified Min and Max range"
+    },
+    "table.find": {
+        "prefix": [
+            "table.find"
+        ],
+        "body": [
+            "table.find(${1:t}, ${2:val})"
+        ],
+        "description": "table.contains(t,val) returns the key for val if it is in t table.\r\nOtherwise, return nil"
+    },
+    "table.filter": {
+        "prefix": [
+            "table.filter"
+        ],
+        "body": [
+            "table.filter(${1:t}, ${2:fn})"
+        ],
+        "description": "Return filtered table containing every mapping from table for which fn function returns true when passed the value.\r\n@param t  - is a table to filter\r\n@param fn - is decision function to use to filter the table, defaults checking if a value is true or exists in table"
+    },
+    "table.assimilate": {
+        "prefix": [
+            "table.assimilate"
+        ],
+        "body": [
+            "table.assimilate(${1:t1}, ${2:t2})"
+        ],
+        "description": "Write all undefined keys from t2 into t1."
+    },
+    "table.reverse": {
+        "prefix": [
+            "table.reverse"
+        ],
+        "body": [
+            "table.reverse(${1:t})"
+        ],
+        "description": "Reverses order of values in a table using their index\r\ntable.reverse {'one','two','three'} => {'three', 'two', 'one'}"
+    },
+    "table.getsize": {
+        "prefix": [
+            "table.getsize"
+        ],
+        "body": [
+            "table.getsize(${1:t})"
+        ],
+        "description": "Returns actual size of a table, including string keys"
+    },
+    "table.subset": {
+        "prefix": [
+            "table.subset"
+        ],
+        "body": [
+            "table.subset(${1:t1}, ${2:t2})"
+        ],
+        "description": "table.subset(t1,t2) returns true iff every key/value pair in t1 is also in t2"
+    },
+    "table.removeByValue": {
+        "prefix": [
+            "table.removeByValue"
+        ],
+        "body": [
+            "table.removeByValue(${1:t}, ${2:val})"
+        ],
+        "description": "table.removeByValue(t,val) remove a field by value instead of by index"
+    },
+    "table.unhash": {
+        "prefix": [
+            "table.unhash"
+        ],
+        "body": [
+            "table.unhash(${1:t})"
+        ],
+        "description": "Converts a table to a new table with values as keys only if their values are true\r\nit is reverse logic of table.hash(t)\r\ntable.unhash { [A] = true, [B] = true, [C] = false }  =>\r\n{ [1] = 'A',  [2] = 'B', }"
+    },
+    "table.equal": {
+        "prefix": [
+            "table.equal"
+        ],
+        "body": [
+            "table.equal(${1:t1}, ${2:t2})"
+        ],
+        "description": "table.equal(t1,t2) returns true iff t1 and t2 contain the same key/value pairs."
+    },
+    "table.merged": {
+        "prefix": [
+            "table.merged"
+        ],
+        "body": [
+            "table.merged(${1:t1}, ${2:t2})"
+        ],
+        "description": "table.merged(t1,t2) returns a table in which fields from t2 overwrite\r\nfields from t1. Neither t1 nor t2 is modified. The returned table may\r\nshare structure with either t1 or t2, so it is not safe to modify.\r\ne.g.  t1 = { x=1, y=2, sub1={z=3}, sub2={w=4} }\r\nt2 = { y=5, sub1={a=6}, sub2=\"Fred\" }\r\nmerged(t1,t2) -> { x=1, y=5, sub1={a=6,z=3}, sub2=\"Fred\" }\r\nmerged(t2,t1) -> { x=1, y=2, sub1={a=6,z=3}, sub2={w=4} }"
+    },
+    "table.shuffle": {
+        "prefix": [
+            "table.shuffle"
+        ],
+        "body": [
+            "table.shuffle(${1:t})"
+        ],
+        "description": "table.shuffle(t) returns a shuffled table"
+    },
+    "table.hash": {
+        "prefix": [
+            "table.hash"
+        ],
+        "body": [
+            "table.hash(${1:t})"
+        ],
+        "description": "Converts a table to a new table with values as keys and values equal to true, duplicated table values are discarded\r\nit is useful for quickly looking up values in tables instead of looping over them\r\ntable.hash { [1] = 'A',  [2] = 'B',  [3] = 'C',  [4] = 'C' } =>\r\n{ [A] = true, [B] = true, [C] = true }"
+    },
+    "table.empty": {
+        "prefix": [
+            "table.empty"
+        ],
+        "body": [
+            "table.empty(${1:t})"
+        ],
+        "description": "table.empty(t) returns true iff t has no keys/values."
+    },
+    "table.copy": {
+        "prefix": [
+            "table.copy"
+        ],
+        "body": [
+            "table.copy(${1:t})"
+        ],
+        "description": "table.copy(t) returns a shallow copy of t."
+    },
+    "table.values": {
+        "prefix": [
+            "table.values"
+        ],
+        "body": [
+            "table.values(${1:t})"
+        ],
+        "description": "table.values(t) Return a list of the values of t, in unspecified order."
+    },
+    "table.indexize": {
+        "prefix": [
+            "table.indexize"
+        ],
+        "body": [
+            "table.indexize(${1:t})"
+        ],
+        "description": "Converts hash table to a new table with keys from 1 to size of table and the same values\r\nit is useful for preparing hash table before sorting its values\r\ntable.indexize { [a] = 'one', [b] = 'two', [c] = 'three' } =>\r\n{ [1] = 'one', [2] = 'two', [3] = 'three' }"
+    },
+    "table.inverse": {
+        "prefix": [
+            "table.inverse"
+        ],
+        "body": [
+            "table.inverse(${1:t})"
+        ],
+        "description": "Returns a table with keys and values from t reversed.\r\ne.g. table.inverse {'one','two','three'} => {one=1, two=2, three=3}\r\ntable.inverse {foo=17, bar=100}     => {[17]=foo, [100]=bar}\r\nIf t contains duplicate values, it is unspecified which one will be returned.\r\ne.g. table.inverse {foo='x', bar='x'} => possibly {x='bar'} or {x='foo'}"
+    },
+    "table.concatkeys": {
+        "prefix": [
+            "table.concatkeys"
+        ],
+        "body": [
+            "table.concatkeys(${1:t}, ${2:sep})"
+        ],
+        "description": "Concatenate keys of a table into a string and separates them by optional string."
+    },
+    "table.count": {
+        "prefix": [
+            "table.count"
+        ],
+        "body": [
+            "table.count(${1:t}, ${2:fn})"
+        ],
+        "description": "Returns total count of values that match fn function or if values exist in table\r\n@param fn is optional filtering function that is applied to each value of the table"
+    },
+    "table.unique": {
+        "prefix": [
+            "table.unique"
+        ],
+        "body": [
+            "table.unique(${1:t})"
+        ],
+        "description": "Returns a new table with unique values stored using numeric keys and it does not preserve keys of the original table"
+    },
+    "table.sorted": {
+        "prefix": [
+            "table.sorted"
+        ],
+        "body": [
+            "table.sorted(${1:t}, ${2:comp})"
+        ],
+        "description": "table.sorted(t, [comp]) is the same as table.sort(t, comp) except it returns\r\na sorted copy of t, leaving the original unchanged.\r\ncomp] is an optional comparison function, defaulting to less-than."
+    },
+    "table.hashkeys": {
+        "prefix": [
+            "table.hashkeys"
+        ],
+        "body": [
+            "table.hashkeys(${1:t}, ${2:value})"
+        ],
+        "description": "Gets keys of hash table if their values equal to specified boolean value, defaults to true\r\nit is useful to check which keys are present or not in a hash table\r\nt = { [A] = true, [B] = true, [C] = false }\r\ntable.hashkeys(t, true)  =>  { 'A', 'B' }\r\ntable.hashkeys(t, false) =>  { 'C' }"
+    },
+    "table.cat": {
+        "prefix": [
+            "table.cat"
+        ],
+        "body": [
+            "table.cat(${1:t1}, ${2:t2})"
+        ],
+        "description": "table.cat(t1, t2) performs a shallow \"merge\" of t1 and t2, where t1 and t2\r\nare expected to be numerically keyed (existing keys are discarded).\r\ne.g. table.cat({1, 2, 3}, {'A', 'House', 3.14})  ->  {1, 2, 3, 'A', 'House', 3.14}"
+    },
+    "table.print": {
+        "prefix": [
+            "table.print"
+        ],
+        "body": [
+            "table.print(${1:tbl}, ${2:tblPrefix}, ${3:printer})"
+        ],
+        "description": "Prints keys and values of a table and sub-tables if present\r\n@param tbl specifies a table to print\r\n@param tblPrefix specifies optional table prefix/name\r\n@param printer specifies optional message printer: LOG, WARN, error, etc.\r\ne.g. table.print(categories)\r\ntable.print(categories, 'categories')\r\ntable.print(categories, 'categories', 'WARN')"
+    },
+    "table.deepcopy": {
+        "prefix": [
+            "table.deepcopy"
+        ],
+        "body": [
+            "table.deepcopy(${1:t}, ${2:backrefs})"
+        ],
+        "description": "table.deepcopy(t) returns a copy of t with all sub-tables also copied."
+    }
+}

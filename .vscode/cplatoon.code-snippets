@@ -1,0 +1,443 @@
+{
+    "IsOpponentAIRunning": {
+        "prefix": [
+            "IsOpponentAIRunning"
+        ],
+        "body": [
+            "${1:platoon}:IsOpponentAIRunning()"
+        ],
+        "description": "TODO.\r\n@return true/false"
+    },
+    "GetPlatoonUnits": {
+        "prefix": [
+            "GetPlatoonUnits"
+        ],
+        "body": [
+            "${1:platoon}:GetPlatoonUnits()"
+        ],
+        "description": "Returns list of units in theh platoon.\r\n@return Table containing units."
+    },
+    "FindClosestUnitToBase": {
+        "prefix": [
+            "FindClosestUnitToBase"
+        ],
+        "body": [
+            "${1:platoon}:FindClosestUnitToBase()"
+        ],
+        "description": "TODO.\r\nNeeds 4 parametrs."
+    },
+    "PlatoonCategoryCount": {
+        "prefix": [
+            "PlatoonCategoryCount"
+        ],
+        "body": [
+            "${1:platoon}:PlatoonCategoryCount(${2:category})"
+        ],
+        "description": "Count how many units fit the specified category.\r\n@param category Unit's category. Example: categories.TECH3 .\r\n@return number"
+    },
+    "Patrol": {
+        "prefix": [
+            "Patrol"
+        ],
+        "body": [
+            "${1:platoon}:Patrol(${2:position}, ${3:squad})"
+        ],
+        "description": "Orders platoon to patrol at target position.\r\nIf squad is specified, patrols only with the squad.\r\n@param position Table with position {x, y, z}.\r\n@param [squad] Types: 'Attack', 'Artillery', 'Guard' 'None', 'Scout', 'Support'.\r\n@return command"
+    },
+    "CalculatePlatoonThreatAroundPosition": {
+        "prefix": [
+            "CalculatePlatoonThreatAroundPosition"
+        ],
+        "body": [
+            "${1:platoon}:CalculatePlatoonThreatAroundPosition(${2:threatType}, ${3:category}, ${4:position}, ${5:radius})"
+        ],
+        "description": "TODO.\r\n@param threatType TODO. Examples: 'AntiSurface', 'AntiAir', 'Overall'.\r\n@param category Unit's category, example: categories.TECH2 .\r\n@param position Table with position {x, y, z}.\r\n@param radius Radius in game units.\r\n@return Number"
+    },
+    "FindClosestUnit": {
+        "prefix": [
+            "FindClosestUnit"
+        ],
+        "body": [
+            "${1:platoon}:FindClosestUnit(${2:squad}, ${3:alliance}, ${4:canAttack}, ${5:category})"
+        ],
+        "description": "Returns closest unit to the platoon's squad.\r\nExample: FindClosestUnit('Attack', 'Enemy', true, categories.ALLUNITS - categories.WALL).\r\n@param squad Types: 'Attack', 'Artillery', 'Guard' 'None', 'Scout', 'Support'.\r\n@param alliance Target alliance, types: 'Ally, 'Enemy', 'Neutral'.\r\n@param canAttack true/false if the squad has to be able to attack the unit.\r\n@param category Target unit category, example: categories.TECH2 .\r\n@return Unit."
+    },
+    "IsCommandsActive": {
+        "prefix": [
+            "IsCommandsActive"
+        ],
+        "body": [
+            "${1:platoon}:IsCommandsActive(${2:command})"
+        ],
+        "description": "Returns true if <command> is active.\r\n@return true/false"
+    },
+    "SetPlatoonFormationOverride": {
+        "prefix": [
+            "SetPlatoonFormationOverride"
+        ],
+        "body": [
+            "${1:platoon}:SetPlatoonFormationOverride(${2:formation})"
+        ],
+        "description": "Changes platoon's formation for all squads.\r\n@param formation Types: 'AttackFormation', 'GrowthFormation', 'NoFormation'."
+    },
+    "IsAttacking": {
+        "prefix": [
+            "IsAttacking"
+        ],
+        "body": [
+            "${1:platoon}:IsAttacking(${2:squad})"
+        ],
+        "description": "Returns true if platoon's squad is on attack command.\r\n@param squad Types: 'Attack', 'Artillery', 'Guard' 'None', 'Scout', 'Support'.\r\n@return true/false"
+    },
+    "DisbandOnIdle": {
+        "prefix": [
+            "DisbandOnIdle"
+        ],
+        "body": [
+            "${1:platoon}:DisbandOnIdle()"
+        ],
+        "description": "Disband the platoon once it gets into the Idle state."
+    },
+    "CanFormPlatoon": {
+        "prefix": [
+            "CanFormPlatoon"
+        ],
+        "body": [
+            "${1:platoon}:CanFormPlatoon()"
+        ],
+        "description": "TODO.\r\nExample: local formIt = poolPlatoon:CanFormPlatoon(template, personality:GetPlatoonSize(), self.Location, radius)\r\n@return true/false"
+    },
+    "CalculatePlatoonThreat": {
+        "prefix": [
+            "CalculatePlatoonThreat"
+        ],
+        "body": [
+            "${1:platoon}:CalculatePlatoonThreat(${2:threatType}, ${3:category})"
+        ],
+        "description": "TODO.\r\n@return Number"
+    },
+    "UnloadUnitsAtLocation": {
+        "prefix": [
+            "UnloadUnitsAtLocation"
+        ],
+        "body": [
+            "${1:platoon}:UnloadUnitsAtLocation(${2:category}, ${3:position})"
+        ],
+        "description": "Unloads specific units from transports (carriers).\r\nThis seems to work only with carriers and not with air transports.\r\n@param category Unit category (categories.BOMBER).\r\n@param position Table with position {x, y, z}.\r\n@return command"
+    },
+    "GetBrain": {
+        "prefix": [
+            "GetBrain"
+        ],
+        "body": [
+            "${1:platoon}:GetBrain()"
+        ],
+        "description": "Returns army brain of the platoon."
+    },
+    "IsFerrying": {
+        "prefix": [
+            "IsFerrying"
+        ],
+        "body": [
+            "${1:platoon}:IsFerrying(${2:squad})"
+        ],
+        "description": "Returns true if platoon's squad is on ferry command.\r\n@param squad Types: 'Attack', 'Artillery', 'Guard' 'None', 'Scout', 'Support'.\r\n@return true/false"
+    },
+    "GetFactionIndex": {
+        "prefix": [
+            "GetFactionIndex"
+        ],
+        "body": [
+            "${1:platoon}:GetFactionIndex()"
+        ],
+        "description": "Returns number representing faction.\r\n1 UEF, 2 Aeon, 3 Cybran, 4 Seraphim.\r\n@return Number 1-4"
+    },
+    "SetPrioritizedTargetList": {
+        "prefix": [
+            "SetPrioritizedTargetList"
+        ],
+        "body": [
+            "${1:platoon}:SetPrioritizedTargetList(${2:squad}, ${3:tblCategory})"
+        ],
+        "description": "Sets target priorities for platoon's squad.\r\n@param squad Types: 'Attack', 'Artillery', 'Guard' 'None', 'Scout', 'Support'.\r\n@param tblCategory List of categories, highest to lowerst priority, example: {categories.COMMAND, categories.EXPERIMENTAL, categories.ALLUNITS}"
+    },
+    "MoveToTarget": {
+        "prefix": [
+            "MoveToTarget"
+        ],
+        "body": [
+            "${1:platoon}:MoveToTarget(${2:target}, ${3:useTransports}, ${4:squad})"
+        ],
+        "description": "Orders platoon to move to target unit.\r\nIf squad is specified, move only with the squad.\r\n@param target Unit to move to.\r\n@param useTransports true/false\r\n@param [squad] Types: 'Attack', 'Artillery', 'Guard' 'None', 'Scout', 'Support'.\r\n@return command"
+    },
+    "GetPlatoonLifetimeStats": {
+        "prefix": [
+            "GetPlatoonLifetimeStats"
+        ],
+        "body": [
+            "${1:platoon}:GetPlatoonLifetimeStats()"
+        ],
+        "description": "TODO."
+    },
+    "LoadUnits": {
+        "prefix": [
+            "LoadUnits"
+        ],
+        "body": [
+            "${1:platoon}:LoadUnits(${2:category})"
+        ],
+        "description": "Loads <category> units into transports of the platoon.\r\n@param category Unit's category to laod.\r\n@return command"
+    },
+    "GetFerryBeacons": {
+        "prefix": [
+            "GetFerryBeacons"
+        ],
+        "body": [
+            "${1:platoon}:GetFerryBeacons()"
+        ],
+        "description": "TODO."
+    },
+    "CanConsiderFormingPlatoon": {
+        "prefix": [
+            "CanConsiderFormingPlatoon"
+        ],
+        "body": [
+            "${1:platoon}:CanConsiderFormingPlatoon()"
+        ],
+        "description": "TODO.\r\n@return true/false"
+    },
+    "IsMoving": {
+        "prefix": [
+            "IsMoving"
+        ],
+        "body": [
+            "${1:platoon}:IsMoving(${2:squad})"
+        ],
+        "description": "Returns true if platoon's squad is on move command.\r\n@param squad Types: 'Attack', 'Artillery', 'Guard' 'None', 'Scout', 'Support'.\r\n@return true/false"
+    },
+    "SwitchAIPlan": {
+        "prefix": [
+            "SwitchAIPlan"
+        ],
+        "body": [
+            "${1:platoon}:SwitchAIPlan()"
+        ],
+        "description": "TODO."
+    },
+    "AttackTarget": {
+        "prefix": [
+            "AttackTarget"
+        ],
+        "body": [
+            "${1:platoon}:AttackTarget(${2:target}, ${3:squad})"
+        ],
+        "description": "Class CPlatoon\r\n@classmod Sim.CPlatoon\r\nOrders platoon to attack target unit.\r\nIf squad is specified, attacks only with the squad.\r\n@param target Unit to attack.\r\n@param [squad] Types: 'Attack', 'Artillery', 'Guard' 'None', 'Scout', 'Support'.\r\n@return command"
+    },
+    "FindFurthestUnit": {
+        "prefix": [
+            "FindFurthestUnit"
+        ],
+        "body": [
+            "${1:platoon}:FindFurthestUnit(${2:squad}, ${3:alliance}, ${4:canAttack}, ${5:category})"
+        ],
+        "description": "Returns furthest unit to the platoon's squad.\r\nExample: FindClosestUnit('Attack', 'Enemy', true, categories.ALLUNITS - categories.WALL).\r\n@param squad Types: 'Attack', 'Artillery', 'Guard' 'None', 'Scout', 'Support'.\r\n@param alliance Target alliance, types: 'Ally, 'Enemy', 'Neutral'.\r\n@param canAttack true/false if the squad has to be able to attack the unit.\r\n@param category Target unit category, example: categories.TECH2 .\r\n@return Unit."
+    },
+    "FindHighestValueUnit": {
+        "prefix": [
+            "FindHighestValueUnit"
+        ],
+        "body": [
+            "${1:platoon}:FindHighestValueUnit()"
+        ],
+        "description": "TODO.\r\nNeeds 4 arguments"
+    },
+    "FerryToLocation": {
+        "prefix": [
+            "FerryToLocation"
+        ],
+        "body": [
+            "${1:platoon}:FerryToLocation(${2:position})"
+        ],
+        "description": "Orders platoon to create ferry route to target location.\r\nCan be called several times to create a non linear route.\r\n@param position Table with position {x, y, z}.\r\n@return command"
+    },
+    "UnloadAllAtLocation": {
+        "prefix": [
+            "UnloadAllAtLocation"
+        ],
+        "body": [
+            "${1:platoon}:UnloadAllAtLocation(${2:position})"
+        ],
+        "description": "Orders platoon to drop all units at target position.\r\n@param position Table with position {x, y, z}.\r\n@return command"
+    },
+    "GuardTarget": {
+        "prefix": [
+            "GuardTarget"
+        ],
+        "body": [
+            "${1:platoon}:GuardTarget(${2:target}, ${3:squad})"
+        ],
+        "description": "Orders platoon to assist the target unit.\r\nIf squad is specified, assists the unit only with the squad.\r\n@param [squad] Types: 'Attack', 'Artillery', 'Guard' 'None', 'Scout', 'Support'.\r\n@return command"
+    },
+    "MoveToLocation": {
+        "prefix": [
+            "MoveToLocation"
+        ],
+        "body": [
+            "${1:platoon}:MoveToLocation(${2:position}, ${3:useTransports}, ${4:squad})"
+        ],
+        "description": "Orders platoon to move to target position.\r\nIf squad is specified, moves only the squad.\r\n@param position Table with position {x, y, z}.\r\n@param useTransports true/false\r\n@param [squad] Types: 'Attack', 'Artillery', 'Guard' 'None', 'Scout', 'Support'.\r\n@return command"
+    },
+    "GetPersonality": {
+        "prefix": [
+            "GetPersonality"
+        ],
+        "body": [
+            "${1:platoon}:GetPersonality()"
+        ],
+        "description": "TODO."
+    },
+    "FindPrioritizedUnit": {
+        "prefix": [
+            "FindPrioritizedUnit"
+        ],
+        "body": [
+            "${1:platoon}:FindPrioritizedUnit(${2:squad}, ${3:alliance}, ${4:canAttack}, ${5:position}, ${6:radius})"
+        ],
+        "description": "Finds prioritized unit to attack for squad.\r\nUses priorities set by SetPrioritizedTargetList function.\r\nUsed for TMLs to find a pick a target in their range\r\n@param squad Types: 'Attack', 'Artillery', 'Guard' 'None', 'Scout', 'Support'.\r\n@param alliance Target alliance, types: 'Ally, 'Enemy', 'Neutral'.\r\n@param canAttack true/false if the squad has to be able to attack the unit.\r\n@param position Table with position {x, y, z}.\r\n@param radius Radius in game units.\r\n@return Unit."
+    },
+    "IsPatrolling": {
+        "prefix": [
+            "IsPatrolling"
+        ],
+        "body": [
+            "${1:platoon}:IsPatrolling(${2:squad})"
+        ],
+        "description": "Returns true if platoon's squad is on patrol command.\r\n@param squad Types: 'Attack', 'Artillery', 'Guard' 'None', 'Scout', 'Support'.\r\n@return true/false"
+    },
+    "Destroy": {
+        "prefix": [
+            "Destroy"
+        ],
+        "body": [
+            "${1:platoon}:Destroy()"
+        ],
+        "description": "Destroys the platoon including all its units."
+    },
+    "UseTeleporter": {
+        "prefix": [
+            "UseTeleporter"
+        ],
+        "body": [
+            "${1:platoon}:UseTeleporter(${2:gameObject}, ${3:squad})"
+        ],
+        "description": "TODO.\r\n@param gameObject TODO.\r\n@param [squad] Types: 'Attack', 'Artillery', 'Guard' 'None', 'Scout', 'Support'."
+    },
+    "GetSquadPosition": {
+        "prefix": [
+            "GetSquadPosition"
+        ],
+        "body": [
+            "${1:platoon}:GetSquadPosition(${2:squad})"
+        ],
+        "description": "Returns list of platoon's squad units.\r\n@param squad Types: 'Attack', 'Artillery', 'Guard' 'None', 'Scout', 'Support'.\r\n@return Table containing units."
+    },
+    "CanAttackTarget": {
+        "prefix": [
+            "CanAttackTarget"
+        ],
+        "body": [
+            "${1:platoon}:CanAttackTarget(${2:squad}, ${3:target})"
+        ],
+        "description": "Returns true if squad can attack target unit.\r\n@param target Unit to check.\r\n@param squad Types: 'Attack', 'Artillery', 'Guard' 'None', 'Scout', 'Support'.\r\n@return true/false"
+    },
+    "UseFerryBeacon": {
+        "prefix": [
+            "UseFerryBeacon"
+        ],
+        "body": [
+            "${1:platoon}:UseFerryBeacon(${2:category}, ${3:beacon})"
+        ],
+        "description": "TODO.\r\nExample: categories.ALLUNITS, ScenarioInfo.VarTable[data.MoveBeacon\r\n@return command"
+    },
+    "GetAIPlan": {
+        "prefix": [
+            "GetAIPlan"
+        ],
+        "body": [
+            "${1:platoon}:GetAIPlan()"
+        ],
+        "description": "TODO."
+    },
+    "GetPlatoonUniqueName": {
+        "prefix": [
+            "GetPlatoonUniqueName"
+        ],
+        "body": [
+            "${1:platoon}:GetPlatoonUniqueName()"
+        ],
+        "description": "Returns platoon unique name if it has it.\r\nTo return the name, it has to be set by CPlatoon:UniquelyNamePlatoon(name) function.\r\n@return strName."
+    },
+    "Stop": {
+        "prefix": [
+            "Stop"
+        ],
+        "body": [
+            "${1:platoon}:Stop(${2:squad})"
+        ],
+        "description": "Orders platoon to stop, cancels all commands.\r\nIf squad is specified, stops only the squad.\r\nCancels all commands.\r\n@param [squad] Types: 'Attack', 'Artillery', 'Guard' 'None', 'Scout', 'Support'."
+    },
+    "GetPlatoonPosition": {
+        "prefix": [
+            "GetPlatoonPosition"
+        ],
+        "body": [
+            "${1:platoon}:GetPlatoonPosition()"
+        ],
+        "description": "Returns platoon position\r\n@return Table with position {x, y, z}."
+    },
+    "AggressiveMoveToLocation": {
+        "prefix": [
+            "AggressiveMoveToLocation"
+        ],
+        "body": [
+            "${1:platoon}:AggressiveMoveToLocation(${2:position}, ${3:squad})"
+        ],
+        "description": "Orders platoon to attack mote to target position..\r\nIf squad is specified, attack moves only with the squad.\r\n@param position Table with position {x, y, z}.\r\n@param [squad] Types: 'Attack', 'Artillery', 'Guard' 'None', 'Scout', 'Support'.\r\n@return command"
+    },
+    "UniquelyNamePlatoon": {
+        "prefix": [
+            "UniquelyNamePlatoon"
+        ],
+        "body": [
+            "${1:platoon}:UniquelyNamePlatoon(${2:name})"
+        ],
+        "description": "Gives a unique name to the platoon.\r\nThat platoon can be later returned by aiBrain:GetPlatoonUniquelyNamed(name) function\r\n@param name String."
+    },
+    "PlatoonCategoryCountAroundPosition": {
+        "prefix": [
+            "PlatoonCategoryCountAroundPosition"
+        ],
+        "body": [
+            "${1:platoon}:PlatoonCategoryCountAroundPosition(${2:category}, ${3:position}, ${4:radius})"
+        ],
+        "description": "Count how many units fit the specified category around target position.\r\n@param category Unit's category. Example: categories.TECH3 .\r\n@param position Table with position {x, y, z}.\r\n@return number"
+    },
+    "FormPlatoon": {
+        "prefix": [
+            "FormPlatoon"
+        ],
+        "body": [
+            "${1:platoon}:FormPlatoon()"
+        ],
+        "description": "TODO.\r\nExample: local hndl = poolPlatoon:FormPlatoon(template, personality:GetPlatoonSize(), self.Location, radius)\r\n@return Formed platoon"
+    },
+    "GetSquadUnits": {
+        "prefix": [
+            "GetSquadUnits"
+        ],
+        "body": [
+            "${1:platoon}:GetSquadUnits(${2:squad})"
+        ],
+        "description": "Returns units table of <squad>\r\n@param squad Types: 'Attack', 'Artillery', 'Guard' 'None', 'Scout', 'Support'."
+    }
+}

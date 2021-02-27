@@ -1,0 +1,281 @@
+{
+    "ResetTarget": {
+        "prefix": [
+            "ResetTarget"
+        ],
+        "body": [
+            "${1:weapon}:ResetTarget()"
+        ],
+        "description": "UnitWeapon:ResetTarget()"
+    },
+    "CanFire": {
+        "prefix": [
+            "CanFire"
+        ],
+        "body": [
+            "${1:weapon}:CanFire()"
+        ],
+        "description": "Class UnitWeapon\r\n@classmod Sim.UnitWeapon\r\nUnitWeapon:CanFire()"
+    },
+    "ChangeMinRadius": {
+        "prefix": [
+            "ChangeMinRadius"
+        ],
+        "body": [
+            "${1:weapon}:ChangeMinRadius(${2:value})"
+        ],
+        "description": "UnitWeapon:ChangeMinRadius(value)"
+    },
+    "PlaySound": {
+        "prefix": [
+            "PlaySound"
+        ],
+        "body": [
+            "${1:weapon}:PlaySound(${2:weapon}, ${3:ParamTable})"
+        ],
+        "description": "UnitWeapon:PlaySound(weapon,ParamTable)"
+    },
+    "SetEnabled": {
+        "prefix": [
+            "SetEnabled"
+        ],
+        "body": [
+            "${1:weapon}:SetEnabled(${2:enabled})"
+        ],
+        "description": "UnitWeapon:SetEnabled(enabled)"
+    },
+    "SetFiringRandomness": {
+        "prefix": [
+            "SetFiringRandomness"
+        ],
+        "body": [
+            "${1:weapon}:SetFiringRandomness()"
+        ],
+        "description": "Set the firing randomness"
+    },
+    "TransferTarget": {
+        "prefix": [
+            "TransferTarget"
+        ],
+        "body": [
+            "${1:weapon}:TransferTarget()"
+        ],
+        "description": "Transfer target from 1 weapon to another"
+    },
+    "ChangeDamageType": {
+        "prefix": [
+            "ChangeDamageType"
+        ],
+        "body": [
+            "${1:weapon}:ChangeDamageType(${2:typeName})"
+        ],
+        "description": "UnitWeapon:ChangeDamageType(typeName)"
+    },
+    "IsFireControl": {
+        "prefix": [
+            "IsFireControl"
+        ],
+        "body": [
+            "${1:weapon}:IsFireControl(${2:label})"
+        ],
+        "description": "UnitWeapon:IsFireControl(label)"
+    },
+    "SetTargetEntity": {
+        "prefix": [
+            "SetTargetEntity"
+        ],
+        "body": [
+            "${1:weapon}:SetTargetEntity()"
+        ],
+        "description": "UnitWeapon:SetTarget(entity)"
+    },
+    "WeaponHasTarget": {
+        "prefix": [
+            "WeaponHasTarget"
+        ],
+        "body": [
+            "${1:weapon}:WeaponHasTarget()"
+        ],
+        "description": "bool = UnitWeapon:HasTarget()"
+    },
+    "CreateProjectile": {
+        "prefix": [
+            "CreateProjectile"
+        ],
+        "body": [
+            "${1:weapon}:CreateProjectile(${2:muzzlebone})"
+        ],
+        "description": "UnitWeapon:CreateProjectile(muzzlebone)"
+    },
+    "ChangeProjectileBlueprint": {
+        "prefix": [
+            "ChangeProjectileBlueprint"
+        ],
+        "body": [
+            "${1:weapon}:ChangeProjectileBlueprint()"
+        ],
+        "description": "Change the projectile blueprint of a weapon"
+    },
+    "GetProjectileBlueprint": {
+        "prefix": [
+            "GetProjectileBlueprint"
+        ],
+        "body": [
+            "${1:weapon}:GetProjectileBlueprint()"
+        ],
+        "description": "blueprint = UnitWeapon:GetProjectileBlueprint()"
+    },
+    "DoInstaHit": {
+        "prefix": [
+            "DoInstaHit"
+        ],
+        "body": [
+            "${1:weapon}:DoInstaHit(${2:bone}, ${3:r}, ${4:g}, ${5:b}, ${6:glow}, ${7:width}, ${8:texture}, ${9:lifetime})"
+        ],
+        "description": "UnitWeapon:DoInstaHit(bone, r,g,b, glow, width, texture, lifetime)"
+    },
+    "SetTargetingPriorities": {
+        "prefix": [
+            "SetTargetingPriorities"
+        ],
+        "body": [
+            "${1:weapon}:SetTargetingPriorities()"
+        ],
+        "description": "Set the targeting priorities for the unit"
+    },
+    "ChangeFiringTolerance": {
+        "prefix": [
+            "ChangeFiringTolerance"
+        ],
+        "body": [
+            "${1:weapon}:ChangeFiringTolerance(${2:value})"
+        ],
+        "description": "UnitWeapon:ChangeFiringTolerance(value)"
+    },
+    "GetCurrentTargetPos": {
+        "prefix": [
+            "GetCurrentTargetPos"
+        ],
+        "body": [
+            "${1:weapon}:GetCurrentTargetPos()"
+        ],
+        "description": "UnitWeapon:GetCurrentTargetPos()"
+    },
+    "FireWeapon": {
+        "prefix": [
+            "FireWeapon"
+        ],
+        "body": [
+            "${1:weapon}:FireWeapon()"
+        ],
+        "description": "bool = UnitWeapon:FireWeapon()"
+    },
+    "ChangeMaxRadius": {
+        "prefix": [
+            "ChangeMaxRadius"
+        ],
+        "body": [
+            "${1:weapon}:ChangeMaxRadius(${2:value})"
+        ],
+        "description": "UnitWeapon:ChangeMaxRadius(value)"
+    },
+    "SetFireControl": {
+        "prefix": [
+            "SetFireControl"
+        ],
+        "body": [
+            "${1:weapon}:SetFireControl(${2:label})"
+        ],
+        "description": "UnitWeapon:SetFireControl(label)"
+    },
+    "ChangeDamage": {
+        "prefix": [
+            "ChangeDamage"
+        ],
+        "body": [
+            "${1:weapon}:ChangeDamage(${2:value})"
+        ],
+        "description": "UnitWeapon:ChangeDamage(value)"
+    },
+    "ChangeRateOfFire": {
+        "prefix": [
+            "ChangeRateOfFire"
+        ],
+        "body": [
+            "${1:weapon}:ChangeRateOfFire(${2:value})"
+        ],
+        "description": "UnitWeapon:ChangeRateOfFire(value)"
+    },
+    "ChangeDamageRadius": {
+        "prefix": [
+            "ChangeDamageRadius"
+        ],
+        "body": [
+            "${1:weapon}:ChangeDamageRadius(${2:value})"
+        ],
+        "description": "UnitWeapon:ChangeDamageRadius(value)"
+    },
+    "ChangeMaxHeightDiff": {
+        "prefix": [
+            "ChangeMaxHeightDiff"
+        ],
+        "body": [
+            "${1:weapon}:ChangeMaxHeightDiff(${2:value})"
+        ],
+        "description": "UnitWeapon:ChangeMaxHeightDiff(value)"
+    },
+    "GetFiringRandomness": {
+        "prefix": [
+            "GetFiringRandomness"
+        ],
+        "body": [
+            "${1:weapon}:GetFiringRandomness()"
+        ],
+        "description": "Get the firing randomness"
+    },
+    "GetCurrentTarget": {
+        "prefix": [
+            "GetCurrentTarget"
+        ],
+        "body": [
+            "${1:weapon}:GetCurrentTarget()"
+        ],
+        "description": "UnitWeapon:GetCurrentTarget()"
+    },
+    "SetTargetGround": {
+        "prefix": [
+            "SetTargetGround"
+        ],
+        "body": [
+            "${1:weapon}:SetTargetGround()"
+        ],
+        "description": "UnitWeapon:SetTarget(location)"
+    },
+    "GetBlueprint": {
+        "prefix": [
+            "GetBlueprint"
+        ],
+        "body": [
+            "${1:weapon}:GetBlueprint()"
+        ],
+        "description": "blueprint = UnitWeapon:GetBlueprint()"
+    },
+    "SetFireTargetLayerCaps": {
+        "prefix": [
+            "SetFireTargetLayerCaps"
+        ],
+        "body": [
+            "${1:weapon}:SetFireTargetLayerCaps(${2:mask})"
+        ],
+        "description": "UnitWeapon:SetFireTargetLayerCaps(mask)"
+    },
+    "GetFireClockPct": {
+        "prefix": [
+            "GetFireClockPct"
+        ],
+        "body": [
+            "${1:weapon}:GetFireClockPct()"
+        ],
+        "description": "Get the firing clock percent (0 - 1)"
+    }
+}

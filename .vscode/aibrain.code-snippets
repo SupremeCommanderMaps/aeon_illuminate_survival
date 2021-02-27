@@ -1,0 +1,1541 @@
+{
+    "ForceManagerSort": {
+        "prefix": [
+            "ForceManagerSort"
+        ],
+        "body": [
+            "${1:brain}:ForceManagerSort()"
+        ],
+        "description": ""
+    },
+    "PBMSetBuildingHandleFalse": {
+        "prefix": [
+            "PBMSetBuildingHandleFalse"
+        ],
+        "body": [
+            "${1:brain}:PBMSetBuildingHandleFalse(${2:builder})"
+        ],
+        "description": ""
+    },
+    "ESEnergyStorageUpdate": {
+        "prefix": [
+            "ESEnergyStorageUpdate"
+        ],
+        "body": [
+            "${1:brain}:ESEnergyStorageUpdate(${2:newState})"
+        ],
+        "description": ""
+    },
+    "OnPlayCommanderUnderAttackVO": {
+        "prefix": [
+            "OnPlayCommanderUnderAttackVO"
+        ],
+        "body": [
+            "${1:brain}:OnPlayCommanderUnderAttackVO()"
+        ],
+        "description": ""
+    },
+    "CalculateLayerPreference": {
+        "prefix": [
+            "CalculateLayerPreference"
+        ],
+        "body": [
+            "${1:brain}:CalculateLayerPreference()"
+        ],
+        "description": ""
+    },
+    "PlatoonBuildManagerThread": {
+        "prefix": [
+            "PlatoonBuildManagerThread"
+        ],
+        "body": [
+            "${1:brain}:PlatoonBuildManagerThread()"
+        ],
+        "description": "Main building and forming platoon thread for the Platoon Build Manager"
+    },
+    "ExecutePlan": {
+        "prefix": [
+            "ExecutePlan"
+        ],
+        "body": [
+            "${1:brain}:ExecutePlan()"
+        ],
+        "description": ""
+    },
+    "ImportScenarioArmyPlans": {
+        "prefix": [
+            "ImportScenarioArmyPlans"
+        ],
+        "body": [
+            "${1:brain}:ImportScenarioArmyPlans(${2:planName})"
+        ],
+        "description": "AI BRAIN FUNCTIONS HANDLED HERE"
+    },
+    "AddConsumption": {
+        "prefix": [
+            "AddConsumption"
+        ],
+        "body": [
+            "${1:brain}:AddConsumption(${2:locationType}, ${3:consumptionType}, ${4:unit}, ${5:unitBeingBuilt})"
+        ],
+        "description": ""
+    },
+    "ESRegisterUnitMassStorage": {
+        "prefix": [
+            "ESRegisterUnitMassStorage"
+        ],
+        "body": [
+            "${1:brain}:ESRegisterUnitMassStorage(${2:unit})"
+        ],
+        "description": ""
+    },
+    "BaseMonitorAlertTimeout": {
+        "prefix": [
+            "BaseMonitorAlertTimeout"
+        ],
+        "body": [
+            "${1:brain}:BaseMonitorAlertTimeout(${2:pos}, ${3:threattype})"
+        ],
+        "description": ""
+    },
+    "SetupOverMassStatTrigger": {
+        "prefix": [
+            "SetupOverMassStatTrigger"
+        ],
+        "body": [
+            "${1:brain}:SetupOverMassStatTrigger(${2:threshold})"
+        ],
+        "description": ""
+    },
+    "PBMSetPriority": {
+        "prefix": [
+            "PBMSetPriority"
+        ],
+        "body": [
+            "${1:brain}:PBMSetPriority(${2:platoon}, ${3:amount})"
+        ],
+        "description": ""
+    },
+    "BaseMonitorCheck": {
+        "prefix": [
+            "BaseMonitorCheck"
+        ],
+        "body": [
+            "${1:brain}:BaseMonitorCheck()"
+        ],
+        "description": ""
+    },
+    "PBMUnlockStart": {
+        "prefix": [
+            "PBMUnlockStart"
+        ],
+        "body": [
+            "${1:brain}:PBMUnlockStart()"
+        ],
+        "description": ""
+    },
+    "BaseMonitorThread": {
+        "prefix": [
+            "BaseMonitorThread"
+        ],
+        "body": [
+            "${1:brain}:BaseMonitorThread()"
+        ],
+        "description": ""
+    },
+    "FindClosestBuilderManagerPosition": {
+        "prefix": [
+            "FindClosestBuilderManagerPosition"
+        ],
+        "body": [
+            "${1:brain}:FindClosestBuilderManagerPosition(${2:position})"
+        ],
+        "description": ""
+    },
+    "SetupUnderEnergyStatTrigger": {
+        "prefix": [
+            "SetupUnderEnergyStatTrigger"
+        ],
+        "body": [
+            "${1:brain}:SetupUnderEnergyStatTrigger(${2:threshold})"
+        ],
+        "description": ""
+    },
+    "PBMCheckBuildConditions": {
+        "prefix": [
+            "PBMCheckBuildConditions"
+        ],
+        "body": [
+            "${1:brain}:PBMCheckBuildConditions(${2:bCs}, ${3:index})"
+        ],
+        "description": ""
+    },
+    "GetStartVector3f": {
+        "prefix": [
+            "GetStartVector3f"
+        ],
+        "body": [
+            "${1:brain}:GetStartVector3f()"
+        ],
+        "description": ""
+    },
+    "InitializeSkirmishSystems": {
+        "prefix": [
+            "InitializeSkirmishSystems"
+        ],
+        "body": [
+            "${1:brain}:InitializeSkirmishSystems()"
+        ],
+        "description": "SKIRMISH AI HELPER SYSTEMS"
+    },
+    "ESMassStorageUpdate": {
+        "prefix": [
+            "ESMassStorageUpdate"
+        ],
+        "body": [
+            "${1:brain}:ESMassStorageUpdate(${2:newState})"
+        ],
+        "description": ""
+    },
+    "RemoveEconomyTrigger": {
+        "prefix": [
+            "RemoveEconomyTrigger"
+        ],
+        "body": [
+            "${1:brain}:RemoveEconomyTrigger(${2:triggerName})"
+        ],
+        "description": ""
+    },
+    "PBMRemoveBuildLocation": {
+        "prefix": [
+            "PBMRemoveBuildLocation"
+        ],
+        "body": [
+            "${1:brain}:PBMRemoveBuildLocation(${2:loc}, ${3:locType})"
+        ],
+        "description": "Removes a build location based on it area\r\nIF either is nil, then it will do the other.\r\nThis way you can remove all of one type or all of one rectangle"
+    },
+    "InitializePlatoonBuildManager": {
+        "prefix": [
+            "InitializePlatoonBuildManager"
+        ],
+        "body": [
+            "${1:brain}:InitializePlatoonBuildManager()"
+        ],
+        "description": "AI PLATOON MANAGEMENT\r\nNew PlatoonBuildManager\r\nThis system is meant to be able to give some data about the platoon you want and have them\r\nbuilt and formed into platoons at will."
+    },
+    "ESUnregisterUnit": {
+        "prefix": [
+            "ESUnregisterUnit"
+        ],
+        "body": [
+            "${1:brain}:ESUnregisterUnit(${2:unit})"
+        ],
+        "description": ""
+    },
+    "SetupArmyIntelTrigger": {
+        "prefix": [
+            "SetupArmyIntelTrigger"
+        ],
+        "body": [
+            "${1:brain}:SetupArmyIntelTrigger(${2:triggerSpec})"
+        ],
+        "description": "INTEL TRIGGER SPEC\r\n{\r\nCallbackFunction = <function>,\r\nType = 'LOS'/'Radar'/'Sonar'/'Omni',\r\nBlip = true/false,\r\nValue = true/false,\r\nCategory: blip category to match\r\nOnceOnly: fire onceonly\r\nTargetAIBrain: AI Brain of the army you want it to trigger off of.\r\n},"
+    },
+    "OnCreateHuman": {
+        "prefix": [
+            "OnCreateHuman"
+        ],
+        "body": [
+            "${1:brain}:OnCreateHuman(${2:planName})"
+        ],
+        "description": "HUMAN BRAIN FUNCTIONS HANDLED HERE"
+    },
+    "GetLocationPosition": {
+        "prefix": [
+            "GetLocationPosition"
+        ],
+        "body": [
+            "${1:brain}:GetLocationPosition(${2:locationType})"
+        ],
+        "description": ""
+    },
+    "ESRegisterUnitEnergyStorage": {
+        "prefix": [
+            "ESRegisterUnitEnergyStorage"
+        ],
+        "body": [
+            "${1:brain}:ESRegisterUnitEnergyStorage(${2:unit})"
+        ],
+        "description": ""
+    },
+    "GetUnitStat": {
+        "prefix": [
+            "GetUnitStat"
+        ],
+        "body": [
+            "${1:brain}:GetUnitStat(${2:unitId}, ${3:statName})"
+        ],
+        "description": ""
+    },
+    "PBMSortPlatoonsViaPriority": {
+        "prefix": [
+            "PBMSortPlatoonsViaPriority"
+        ],
+        "body": [
+            "${1:brain}:PBMSortPlatoonsViaPriority(${2:platoonType})"
+        ],
+        "description": "Sort platoon list\r\nPlatoonType = 'Air', 'Land' or 'Sea'"
+    },
+    "GetAllianceEnemy": {
+        "prefix": [
+            "GetAllianceEnemy"
+        ],
+        "body": [
+            "${1:brain}:GetAllianceEnemy(${2:strengthTable})"
+        ],
+        "description": ""
+    },
+    "OverMassThreshold": {
+        "prefix": [
+            "OverMassThreshold"
+        ],
+        "body": [
+            "${1:brain}:OverMassThreshold()"
+        ],
+        "description": ""
+    },
+    "OnCreateAI": {
+        "prefix": [
+            "OnCreateAI"
+        ],
+        "body": [
+            "${1:brain}:OnCreateAI(${2:planName})"
+        ],
+        "description": ""
+    },
+    "UnderEnergyThresholdSorian": {
+        "prefix": [
+            "UnderEnergyThresholdSorian"
+        ],
+        "body": [
+            "${1:brain}:UnderEnergyThresholdSorian()"
+        ],
+        "description": ""
+    },
+    "OnIntelChange": {
+        "prefix": [
+            "OnIntelChange"
+        ],
+        "body": [
+            "${1:brain}:OnIntelChange(${2:blip}, ${3:reconType}, ${4:val})"
+        ],
+        "description": "Called when recon data changes for enemy units (e.g. A unit comes into line of sight)\r\nParams\r\nblip: the unit (could be fake) in question\r\ntype: 'LOSNow', 'Radar', 'Sonar', or 'Omni'\r\nval: true or false\r\ncalls callback function with blip it saw."
+    },
+    "PickEnemyLogicSorian": {
+        "prefix": [
+            "PickEnemyLogicSorian"
+        ],
+        "body": [
+            "${1:brain}:PickEnemyLogicSorian(${2:brainbool})"
+        ],
+        "description": ""
+    },
+    "PBMPlatoonTimeOutThread": {
+        "prefix": [
+            "PBMPlatoonTimeOutThread"
+        ],
+        "body": [
+            "${1:brain}:PBMPlatoonTimeOutThread(${2:platoon})"
+        ],
+        "description": ""
+    },
+    "PBMCheckHandleBuilding": {
+        "prefix": [
+            "PBMCheckHandleBuilding"
+        ],
+        "body": [
+            "${1:brain}:PBMCheckHandleBuilding(${2:builder})"
+        ],
+        "description": ""
+    },
+    "BaseMonitorPlatoonDistressThread": {
+        "prefix": [
+            "BaseMonitorPlatoonDistressThread"
+        ],
+        "body": [
+            "${1:brain}:BaseMonitorPlatoonDistressThread()"
+        ],
+        "description": ""
+    },
+    "CombinePlatoons": {
+        "prefix": [
+            "CombinePlatoons"
+        ],
+        "body": [
+            "${1:brain}:CombinePlatoons(${2:platoonList}, ${3:ai})"
+        ],
+        "description": ""
+    },
+    "PBMFormPlatoons": {
+        "prefix": [
+            "PBMFormPlatoons"
+        ],
+        "body": [
+            "${1:brain}:PBMFormPlatoons(${2:requireBuilding}, ${3:platoonType}, ${4:location})"
+        ],
+        "description": "Form platoons\r\nExtracted as it's own function so you can call this to try and form platoons to clean up the pool\r\nrequireBuilding: true = platoon must have 'BUILDING' has its handle, false = it'll form any platoon it can\r\nPlatoontype is just 'Air'/'Land'/'Sea', those are found in the platoon build manager table template.\r\nLocation/Radius are where to do this.  If they aren't specified they will grab from anywhere."
+    },
+    "PBMEnableRandomSamePriority": {
+        "prefix": [
+            "PBMEnableRandomSamePriority"
+        ],
+        "body": [
+            "${1:brain}:PBMEnableRandomSamePriority()"
+        ],
+        "description": ""
+    },
+    "DeadBaseMonitor": {
+        "prefix": [
+            "DeadBaseMonitor"
+        ],
+        "body": [
+            "${1:brain}:DeadBaseMonitor()"
+        ],
+        "description": "Removes bases that have no engineers or factories.  This is a sorian AI function\r\nHelps reduce the load on the game."
+    },
+    "GetEngineerManagerUnitsBeingBuilt": {
+        "prefix": [
+            "GetEngineerManagerUnitsBeingBuilt"
+        ],
+        "body": [
+            "${1:brain}:GetEngineerManagerUnitsBeingBuilt(${2:category})"
+        ],
+        "description": ""
+    },
+    "OnPlayNoStagingPlatformsVO": {
+        "prefix": [
+            "OnPlayNoStagingPlatformsVO"
+        ],
+        "body": [
+            "${1:brain}:OnPlayNoStagingPlatformsVO()"
+        ],
+        "description": ""
+    },
+    "AddUnitBuiltPercentageCallback": {
+        "prefix": [
+            "AddUnitBuiltPercentageCallback"
+        ],
+        "body": [
+            "${1:brain}:AddUnitBuiltPercentageCallback(${2:callback}, ${3:category}, ${4:percent})"
+        ],
+        "description": ""
+    },
+    "SetCurrentPlan": {
+        "prefix": [
+            "SetCurrentPlan"
+        ],
+        "body": [
+            "${1:brain}:SetCurrentPlan(${2:bestPlan})"
+        ],
+        "description": ""
+    },
+    "PBMDisableRandomSamePriority": {
+        "prefix": [
+            "PBMDisableRandomSamePriority"
+        ],
+        "body": [
+            "${1:brain}:PBMDisableRandomSamePriority()"
+        ],
+        "description": ""
+    },
+    "AddScoutArea": {
+        "prefix": [
+            "AddScoutArea"
+        ],
+        "body": [
+            "${1:brain}:AddScoutArea(${2:location})"
+        ],
+        "description": "Function: AddScoutArea\r\nArgs:\r\nbrain - the brain to run the function for\r\nvec3 - the area to flag for scouting\r\nDescription:\r\nSets an area to be scouted once by air scouts at the next opportunity.\r\nReturns:\r\nnil"
+    },
+    "SortScoutingAreas": {
+        "prefix": [
+            "SortScoutingAreas"
+        ],
+        "body": [
+            "${1:brain}:SortScoutingAreas(${2:list})"
+        ],
+        "description": "Function: SortScoutingAreas\r\nArgs:\r\nbrain - the brain to run the function for\r\ntable - high priority or low priority scouting list to be sorted\r\nDescription:\r\nSorts the brain's list of scouting areas by time since scouted, and then distance from main base.\r\nReturns:\r\nnil"
+    },
+    "GetNewAttackVectors": {
+        "prefix": [
+            "GetNewAttackVectors"
+        ],
+        "body": [
+            "${1:brain}:GetNewAttackVectors()"
+        ],
+        "description": ""
+    },
+    "AbandonedByPlayer": {
+        "prefix": [
+            "AbandonedByPlayer"
+        ],
+        "body": [
+            "${1:brain}:AbandonedByPlayer()"
+        ],
+        "description": ""
+    },
+    "ExpansionHelp": {
+        "prefix": [
+            "ExpansionHelp"
+        ],
+        "body": [
+            "${1:brain}:ExpansionHelp(${2:eng}, ${3:reference})"
+        ],
+        "description": "Skirmish expansion help"
+    },
+    "GroupHelpThread": {
+        "prefix": [
+            "GroupHelpThread"
+        ],
+        "body": [
+            "${1:brain}:GroupHelpThread(${2:units}, ${3:reference})"
+        ],
+        "description": ""
+    },
+    "RemoveConsumption": {
+        "prefix": [
+            "RemoveConsumption"
+        ],
+        "body": [
+            "${1:brain}:RemoveConsumption(${2:locationType}, ${3:unit})"
+        ],
+        "description": ""
+    },
+    "CreateBrainShared": {
+        "prefix": [
+            "CreateBrainShared"
+        ],
+        "body": [
+            "${1:brain}:CreateBrainShared(${2:planName})"
+        ],
+        "description": ""
+    },
+    "PBMSetRallyPoint": {
+        "prefix": [
+            "PBMSetRallyPoint"
+        ],
+        "body": [
+            "${1:brain}:PBMSetRallyPoint(${2:factories}, ${3:location}, ${4:rallyLoc}, ${5:markerType})"
+        ],
+        "description": ""
+    },
+    "InitializeEconomyState": {
+        "prefix": [
+            "InitializeEconomyState"
+        ],
+        "body": [
+            "${1:brain}:InitializeEconomyState()"
+        ],
+        "description": "GLOBAL AI BRAIN ARMY FEATURES"
+    },
+    "OverEnergyThreshold": {
+        "prefix": [
+            "OverEnergyThreshold"
+        ],
+        "body": [
+            "${1:brain}:OverEnergyThreshold()"
+        ],
+        "description": ""
+    },
+    "UnderMassThresholdSorian": {
+        "prefix": [
+            "UnderMassThresholdSorian"
+        ],
+        "body": [
+            "${1:brain}:UnderMassThresholdSorian()"
+        ],
+        "description": ""
+    },
+    "DoAIPing": {
+        "prefix": [
+            "DoAIPing"
+        ],
+        "body": [
+            "${1:brain}:DoAIPing(${2:pingData})"
+        ],
+        "description": ""
+    },
+    "PBMSetPrimaryFactories": {
+        "prefix": [
+            "PBMSetPrimaryFactories"
+        ],
+        "body": [
+            "${1:brain}:PBMSetPrimaryFactories()"
+        ],
+        "description": "Goes through the location areas, finds the factories, sets a primary then tells all the others to guard."
+    },
+    "PBMRemoveHandle": {
+        "prefix": [
+            "PBMRemoveHandle"
+        ],
+        "body": [
+            "${1:brain}:PBMRemoveHandle(${2:platoon})"
+        ],
+        "description": ""
+    },
+    "PBMCheckHighestTechFactory": {
+        "prefix": [
+            "PBMCheckHighestTechFactory"
+        ],
+        "body": [
+            "${1:brain}:PBMCheckHighestTechFactory(${2:factories}, ${3:primary})"
+        ],
+        "description": ""
+    },
+    "PickEnemySorian": {
+        "prefix": [
+            "PickEnemySorian"
+        ],
+        "body": [
+            "${1:brain}:PickEnemySorian()"
+        ],
+        "description": ""
+    },
+    "SetResult": {
+        "prefix": [
+            "SetResult"
+        ],
+        "body": [
+            "${1:brain}:SetResult(${2:result})"
+        ],
+        "description": ""
+    },
+    "BaseMonitorPlatoonDistress": {
+        "prefix": [
+            "BaseMonitorPlatoonDistress"
+        ],
+        "body": [
+            "${1:brain}:BaseMonitorPlatoonDistress(${2:platoon}, ${3:threat})"
+        ],
+        "description": ""
+    },
+    "AddInitialEnemyThreatSorian": {
+        "prefix": [
+            "AddInitialEnemyThreatSorian"
+        ],
+        "body": [
+            "${1:brain}:AddInitialEnemyThreatSorian(${2:amount}, ${3:decay}, ${4:threatType})"
+        ],
+        "description": ""
+    },
+    "SelfMonitorCheck": {
+        "prefix": [
+            "SelfMonitorCheck"
+        ],
+        "body": [
+            "${1:brain}:SelfMonitorCheck()"
+        ],
+        "description": ""
+    },
+    "BuildScoutLocationsSorian": {
+        "prefix": [
+            "BuildScoutLocationsSorian"
+        ],
+        "body": [
+            "${1:brain}:BuildScoutLocationsSorian()"
+        ],
+        "description": ""
+    },
+    "PBMCheckBusyFactories": {
+        "prefix": [
+            "PBMCheckBusyFactories"
+        ],
+        "body": [
+            "${1:brain}:PBMCheckBusyFactories()"
+        ],
+        "description": ""
+    },
+    "ReportScore": {
+        "prefix": [
+            "ReportScore"
+        ],
+        "body": [
+            "${1:brain}:ReportScore()"
+        ],
+        "description": ""
+    },
+    "SetUnitStat": {
+        "prefix": [
+            "SetUnitStat"
+        ],
+        "body": [
+            "${1:brain}:SetUnitStat(${2:unitId}, ${3:statName}, ${4:value})"
+        ],
+        "description": ""
+    },
+    "OnSpawnPreBuiltUnits": {
+        "prefix": [
+            "OnSpawnPreBuiltUnits"
+        ],
+        "body": [
+            "${1:brain}:OnSpawnPreBuiltUnits()"
+        ],
+        "description": ""
+    },
+    "DoPingCallbacks": {
+        "prefix": [
+            "DoPingCallbacks"
+        ],
+        "body": [
+            "${1:brain}:DoPingCallbacks(${2:pingData})"
+        ],
+        "description": ""
+    },
+    "BaseMonitorDistressLocation": {
+        "prefix": [
+            "BaseMonitorDistressLocation"
+        ],
+        "body": [
+            "${1:brain}:BaseMonitorDistressLocation(${2:position}, ${3:radius}, ${4:threshold})"
+        ],
+        "description": ""
+    },
+    "SetupUnderMassStatTrigger": {
+        "prefix": [
+            "SetupUnderMassStatTrigger"
+        ],
+        "body": [
+            "${1:brain}:SetupUnderMassStatTrigger(${2:threshold})"
+        ],
+        "description": ""
+    },
+    "ParseIntelThreadSorian": {
+        "prefix": [
+            "ParseIntelThreadSorian"
+        ],
+        "body": [
+            "${1:brain}:ParseIntelThreadSorian()"
+        ],
+        "description": ""
+    },
+    "GetEconomyOverTime": {
+        "prefix": [
+            "GetEconomyOverTime"
+        ],
+        "body": [
+            "${1:brain}:GetEconomyOverTime()"
+        ],
+        "description": ""
+    },
+    "BaseMonitorInitialization": {
+        "prefix": [
+            "BaseMonitorInitialization"
+        ],
+        "body": [
+            "${1:brain}:BaseMonitorInitialization(${2:spec})"
+        ],
+        "description": "BASE MONITORING SYSTEM"
+    },
+    "PBMGetPrimaryFactory": {
+        "prefix": [
+            "PBMGetPrimaryFactory"
+        ],
+        "body": [
+            "${1:brain}:PBMGetPrimaryFactory(${2:factories})"
+        ],
+        "description": "Picks the first tech 3, tech 2 or tech 1 factory to make primary"
+    },
+    "PBMNumHandlesAvailable": {
+        "prefix": [
+            "PBMNumHandlesAvailable"
+        ],
+        "body": [
+            "${1:brain}:PBMNumHandlesAvailable(${2:builder})"
+        ],
+        "description": ""
+    },
+    "OnDraw": {
+        "prefix": [
+            "OnDraw"
+        ],
+        "body": [
+            "${1:brain}:OnDraw()"
+        ],
+        "description": ""
+    },
+    "PBMUnlockStartThread": {
+        "prefix": [
+            "PBMUnlockStartThread"
+        ],
+        "body": [
+            "${1:brain}:PBMUnlockStartThread()"
+        ],
+        "description": ""
+    },
+    "ExecuteAIThread": {
+        "prefix": [
+            "ExecuteAIThread"
+        ],
+        "body": [
+            "${1:brain}:ExecuteAIThread()"
+        ],
+        "description": ""
+    },
+    "SetupOverEnergyStatTrigger": {
+        "prefix": [
+            "SetupOverEnergyStatTrigger"
+        ],
+        "body": [
+            "${1:brain}:SetupOverEnergyStatTrigger(${2:threshold})"
+        ],
+        "description": ""
+    },
+    "OnTransportFull": {
+        "prefix": [
+            "OnTransportFull"
+        ],
+        "body": [
+            "${1:brain}:OnTransportFull()"
+        ],
+        "description": ""
+    },
+    "T4ThreatMonitorTimeout": {
+        "prefix": [
+            "T4ThreatMonitorTimeout"
+        ],
+        "body": [
+            "${1:brain}:T4ThreatMonitorTimeout(${2:threattypes})"
+        ],
+        "description": ""
+    },
+    "PBMFormAllPlatoons": {
+        "prefix": [
+            "PBMFormAllPlatoons"
+        ],
+        "body": [
+            "${1:brain}:PBMFormAllPlatoons(${2:location})"
+        ],
+        "description": ""
+    },
+    "IsDefeated": {
+        "prefix": [
+            "IsDefeated"
+        ],
+        "body": [
+            "${1:brain}:IsDefeated()"
+        ],
+        "description": ""
+    },
+    "PBMGetLocationRadius": {
+        "prefix": [
+            "PBMGetLocationRadius"
+        ],
+        "body": [
+            "${1:brain}:PBMGetLocationRadius(${2:loc})"
+        ],
+        "description": ""
+    },
+    "AttackPointsTimeout": {
+        "prefix": [
+            "AttackPointsTimeout"
+        ],
+        "body": [
+            "${1:brain}:AttackPointsTimeout(${2:pos})"
+        ],
+        "description": ""
+    },
+    "OnPlayBusyStagingPlatformsVO": {
+        "prefix": [
+            "OnPlayBusyStagingPlatformsVO"
+        ],
+        "body": [
+            "${1:brain}:OnPlayBusyStagingPlatformsVO()"
+        ],
+        "description": ""
+    },
+    "PBMClearBuildConditionsCache": {
+        "prefix": [
+            "PBMClearBuildConditionsCache"
+        ],
+        "body": [
+            "${1:brain}:PBMClearBuildConditionsCache()"
+        ],
+        "description": ""
+    },
+    "OnUnitCapLimitReached": {
+        "prefix": [
+            "OnUnitCapLimitReached"
+        ],
+        "body": [
+            "${1:brain}:OnUnitCapLimitReached()"
+        ],
+        "description": ""
+    },
+    "SetupBrainVeterancyTrigger": {
+        "prefix": [
+            "SetupBrainVeterancyTrigger"
+        ],
+        "body": [
+            "${1:brain}:SetupBrainVeterancyTrigger(${2:triggerSpec})"
+        ],
+        "description": ""
+    },
+    "PBMResetPrimaryFactories": {
+        "prefix": [
+            "PBMResetPrimaryFactories"
+        ],
+        "body": [
+            "${1:brain}:PBMResetPrimaryFactories()"
+        ],
+        "description": ""
+    },
+    "PBMGetLocation": {
+        "prefix": [
+            "PBMGetLocation"
+        ],
+        "body": [
+            "${1:brain}:PBMGetLocation(${2:locationName})"
+        ],
+        "description": ""
+    },
+    "PBMSetCheckInterval": {
+        "prefix": [
+            "PBMSetCheckInterval"
+        ],
+        "body": [
+            "${1:brain}:PBMSetCheckInterval(${2:interval})"
+        ],
+        "description": ""
+    },
+    "PBMHandleAvailable": {
+        "prefix": [
+            "PBMHandleAvailable"
+        ],
+        "body": [
+            "${1:brain}:PBMHandleAvailable(${2:builderData})"
+        ],
+        "description": ""
+    },
+    "SetRepeatExecution": {
+        "prefix": [
+            "SetRepeatExecution"
+        ],
+        "body": [
+            "${1:brain}:SetRepeatExecution(${2:repeatEx})"
+        ],
+        "description": ""
+    },
+    "PBMGenerateTimeOut": {
+        "prefix": [
+            "PBMGenerateTimeOut"
+        ],
+        "body": [
+            "${1:brain}:PBMGenerateTimeOut(${2:platoon}, ${3:factories}, ${4:location}, ${5:pType})"
+        ],
+        "description": ""
+    },
+    "BaseMonitorThreadSorian": {
+        "prefix": [
+            "BaseMonitorThreadSorian"
+        ],
+        "body": [
+            "${1:brain}:BaseMonitorThreadSorian()"
+        ],
+        "description": ""
+    },
+    "SetConstantEvaluate": {
+        "prefix": [
+            "SetConstantEvaluate"
+        ],
+        "body": [
+            "${1:brain}:SetConstantEvaluate(${2:eval})"
+        ],
+        "description": ""
+    },
+    "OnFailedUnitTransfer": {
+        "prefix": [
+            "OnFailedUnitTransfer"
+        ],
+        "body": [
+            "${1:brain}:OnFailedUnitTransfer()"
+        ],
+        "description": ""
+    },
+    "SetupOverMassStatTriggerSorian": {
+        "prefix": [
+            "SetupOverMassStatTriggerSorian"
+        ],
+        "body": [
+            "${1:brain}:SetupOverMassStatTriggerSorian(${2:threshold})"
+        ],
+        "description": ""
+    },
+    "SetupUnderEnergyStatTriggerSorian": {
+        "prefix": [
+            "SetupUnderEnergyStatTriggerSorian"
+        ],
+        "body": [
+            "${1:brain}:SetupUnderEnergyStatTriggerSorian(${2:threshold})"
+        ],
+        "description": ""
+    },
+    "RebuildTable": {
+        "prefix": [
+            "RebuildTable"
+        ],
+        "body": [
+            "${1:brain}:RebuildTable(${2:oldtable})"
+        ],
+        "description": "Used to get rid of nil table entries  --sorian ai function"
+    },
+    "GetUntaggedMustScoutArea": {
+        "prefix": [
+            "GetUntaggedMustScoutArea"
+        ],
+        "body": [
+            "${1:brain}:GetUntaggedMustScoutArea()"
+        ],
+        "description": "Function: GetUntaggedMustScoutArea\r\nArgs:\r\nbrain - the brain to run the function for\r\nDescription:\r\nGets an area that has been flagged with the AddScoutArea function that does not have a unit heading to scout it already.\r\nReturns:\r\nlocation, index"
+    },
+    "PBMAssistGivenFactory": {
+        "prefix": [
+            "PBMAssistGivenFactory"
+        ],
+        "body": [
+            "${1:brain}:PBMAssistGivenFactory(${2:factories}, ${3:primary})"
+        ],
+        "description": ""
+    },
+    "AMAddPlatoon": {
+        "prefix": [
+            "AMAddPlatoon"
+        ],
+        "body": [
+            "${1:brain}:AMAddPlatoon(${2:spec})"
+        ],
+        "description": ""
+    },
+    "OnBrainUnitVeterancyLevel": {
+        "prefix": [
+            "OnBrainUnitVeterancyLevel"
+        ],
+        "body": [
+            "${1:brain}:OnBrainUnitVeterancyLevel(${2:unit}, ${3:level})"
+        ],
+        "description": ""
+    },
+    "PBMStoreHandle": {
+        "prefix": [
+            "PBMStoreHandle"
+        ],
+        "body": [
+            "${1:brain}:PBMStoreHandle(${2:platoon}, ${3:builderData})"
+        ],
+        "description": ""
+    },
+    "PBMGetLocationCoords": {
+        "prefix": [
+            "PBMGetLocationCoords"
+        ],
+        "body": [
+            "${1:brain}:PBMGetLocationCoords(${2:loc})"
+        ],
+        "description": ""
+    },
+    "PBMGetAllFactories": {
+        "prefix": [
+            "PBMGetAllFactories"
+        ],
+        "body": [
+            "${1:brain}:PBMGetAllFactories(${2:location})"
+        ],
+        "description": ""
+    },
+    "EvaluateAIPlanList": {
+        "prefix": [
+            "EvaluateAIPlanList"
+        ],
+        "body": [
+            "${1:brain}:EvaluateAIPlanList()"
+        ],
+        "description": ""
+    },
+    "OverMassThresholdSorian": {
+        "prefix": [
+            "OverMassThresholdSorian"
+        ],
+        "body": [
+            "${1:brain}:OverMassThresholdSorian()"
+        ],
+        "description": ""
+    },
+    "AddUnitStat": {
+        "prefix": [
+            "AddUnitStat"
+        ],
+        "body": [
+            "${1:brain}:AddUnitStat(${2:unitId}, ${3:statName}, ${4:value})"
+        ],
+        "description": ""
+    },
+    "PBMGetNumFactoriesAtLocation": {
+        "prefix": [
+            "PBMGetNumFactoriesAtLocation"
+        ],
+        "body": [
+            "${1:brain}:PBMGetNumFactoriesAtLocation(${2:location}, ${3:pType})"
+        ],
+        "description": ""
+    },
+    "GetFactoriesBeingBuilt": {
+        "prefix": [
+            "GetFactoriesBeingBuilt"
+        ],
+        "body": [
+            "${1:brain}:GetFactoriesBeingBuilt()"
+        ],
+        "description": ""
+    },
+    "UnderEnergyThreshold": {
+        "prefix": [
+            "UnderEnergyThreshold"
+        ],
+        "body": [
+            "${1:brain}:UnderEnergyThreshold()"
+        ],
+        "description": ""
+    },
+    "PBMBuildNumFactories": {
+        "prefix": [
+            "PBMBuildNumFactories"
+        ],
+        "body": [
+            "${1:brain}:PBMBuildNumFactories(${2:template}, ${3:location}, ${4:pType}, ${5:factory})"
+        ],
+        "description": "Set number of units to be built as the number of factories in a location"
+    },
+    "AMPauseAttackManager": {
+        "prefix": [
+            "AMPauseAttackManager"
+        ],
+        "body": [
+            "${1:brain}:AMPauseAttackManager()"
+        ],
+        "description": ""
+    },
+    "PickEnemyLogic": {
+        "prefix": [
+            "PickEnemyLogic"
+        ],
+        "body": [
+            "${1:brain}:PickEnemyLogic()"
+        ],
+        "description": ""
+    },
+    "EvaluateAIThread": {
+        "prefix": [
+            "EvaluateAIThread"
+        ],
+        "body": [
+            "${1:brain}:EvaluateAIThread()"
+        ],
+        "description": ""
+    },
+    "PBMAddBuildLocation": {
+        "prefix": [
+            "PBMAddBuildLocation"
+        ],
+        "body": [
+            "${1:brain}:PBMAddBuildLocation(${2:loc}, ${3:radius}, ${4:locType}, ${5:useCenterPoint})"
+        ],
+        "description": "Adds a new build location"
+    },
+    "OnVictory": {
+        "prefix": [
+            "OnVictory"
+        ],
+        "body": [
+            "${1:brain}:OnVictory()"
+        ],
+        "description": ""
+    },
+    "PBMFactoryLocationCheck": {
+        "prefix": [
+            "PBMFactoryLocationCheck"
+        ],
+        "body": [
+            "${1:brain}:PBMFactoryLocationCheck(${2:factory}, ${3:location})"
+        ],
+        "description": ""
+    },
+    "PBMHasPlatoonList": {
+        "prefix": [
+            "PBMHasPlatoonList"
+        ],
+        "body": [
+            "${1:brain}:PBMHasPlatoonList()"
+        ],
+        "description": ""
+    },
+    "EvaluatePlan": {
+        "prefix": [
+            "EvaluatePlan"
+        ],
+        "body": [
+            "${1:brain}:EvaluatePlan(${2:planName})"
+        ],
+        "description": ""
+    },
+    "AddPingCallback": {
+        "prefix": [
+            "AddPingCallback"
+        ],
+        "body": [
+            "${1:brain}:AddPingCallback(${2:callback}, ${3:pingType})"
+        ],
+        "description": ""
+    },
+    "OnStatsTrigger": {
+        "prefix": [
+            "OnStatsTrigger"
+        ],
+        "body": [
+            "${1:brain}:OnStatsTrigger(${2:triggerName})"
+        ],
+        "description": "TRIGGERS BASED ON AN AI BRAIN"
+    },
+    "PBMRemoveBuilder": {
+        "prefix": [
+            "PBMRemoveBuilder"
+        ],
+        "body": [
+            "${1:brain}:PBMRemoveBuilder(${2:builderName})"
+        ],
+        "description": ""
+    },
+    "EconomyMonitor": {
+        "prefix": [
+            "EconomyMonitor"
+        ],
+        "body": [
+            "${1:brain}:EconomyMonitor()"
+        ],
+        "description": "ECONOMY MONITOR\r\nMonitors the economy over time for skirmish; allows better trend analysis"
+    },
+    "PBMSetEnabled": {
+        "prefix": [
+            "PBMSetEnabled"
+        ],
+        "body": [
+            "${1:brain}:PBMSetEnabled(${2:enable})"
+        ],
+        "description": ""
+    },
+    "PBMAdjustPriority": {
+        "prefix": [
+            "PBMAdjustPriority"
+        ],
+        "body": [
+            "${1:brain}:PBMAdjustPriority(${2:platoon}, ${3:amount})"
+        ],
+        "description": ""
+    },
+    "AddBuilderManagers": {
+        "prefix": [
+            "AddBuilderManagers"
+        ],
+        "body": [
+            "${1:brain}:AddBuilderManagers(${2:position}, ${3:radius}, ${4:baseName}, ${5:useCenter})"
+        ],
+        "description": ""
+    },
+    "OverEnergyThresholdSorian": {
+        "prefix": [
+            "OverEnergyThresholdSorian"
+        ],
+        "body": [
+            "${1:brain}:OverEnergyThresholdSorian()"
+        ],
+        "description": ""
+    },
+    "GetCurrentPlanScript": {
+        "prefix": [
+            "GetCurrentPlanScript"
+        ],
+        "body": [
+            "${1:brain}:GetCurrentPlanScript()"
+        ],
+        "description": ""
+    },
+    "IgnoreArmyUnitCap": {
+        "prefix": [
+            "IgnoreArmyUnitCap"
+        ],
+        "body": [
+            "${1:brain}:IgnoreArmyUnitCap(${2:val})"
+        ],
+        "description": ""
+    },
+    "AddInitialEnemyThreat": {
+        "prefix": [
+            "AddInitialEnemyThreat"
+        ],
+        "body": [
+            "${1:brain}:AddInitialEnemyThreat(${2:amount}, ${3:decay})"
+        ],
+        "description": "Scouting help...\r\nFunction: AddInitialEnemyThreat\r\nArgs:\r\nbrain - brain to run the function for\r\namount - amount of threat to add to each enemy start area\r\ndecay - rate that the threat should decay\r\nDescription:\r\nCreates an influence map threat at enemy bases so the AI will start sending attacks before scouting gets up.\r\nReturns:\r\nnil"
+    },
+    "PickEnemy": {
+        "prefix": [
+            "PickEnemy"
+        ],
+        "body": [
+            "${1:brain}:PickEnemy()"
+        ],
+        "description": "ENEMY PICKER AI"
+    },
+    "SetupAttackVectorsThread": {
+        "prefix": [
+            "SetupAttackVectorsThread"
+        ],
+        "body": [
+            "${1:brain}:SetupAttackVectorsThread()"
+        ],
+        "description": ""
+    },
+    "PBMPlatoonDestroyed": {
+        "prefix": [
+            "PBMPlatoonDestroyed"
+        ],
+        "body": [
+            "${1:brain}:PBMPlatoonDestroyed(${2:platoon})"
+        ],
+        "description": ""
+    },
+    "InitializeAttackManager": {
+        "prefix": [
+            "InitializeAttackManager"
+        ],
+        "body": [
+            "${1:brain}:InitializeAttackManager(${2:attackDataTable})"
+        ],
+        "description": ""
+    },
+    "PBMGetPriority": {
+        "prefix": [
+            "PBMGetPriority"
+        ],
+        "body": [
+            "${1:brain}:PBMGetPriority(${2:platoon})"
+        ],
+        "description": ""
+    },
+    "UnderMassThreshold": {
+        "prefix": [
+            "UnderMassThreshold"
+        ],
+        "body": [
+            "${1:brain}:UnderMassThreshold()"
+        ],
+        "description": ""
+    },
+    "PBMClearPlatoonList": {
+        "prefix": [
+            "PBMClearPlatoonList"
+        ],
+        "body": [
+            "${1:brain}:PBMClearPlatoonList(${2:formPlatoons})"
+        ],
+        "description": "Function to clear all the platoon lists so you can feed it a bunch more.\r\nformPlatoons - Gives you the option to form all the platoons in the list before its cleaned up so that\r\nyou don't have units hanging around."
+    },
+    "OnDestroy": {
+        "prefix": [
+            "OnDestroy"
+        ],
+        "body": [
+            "${1:brain}:OnDestroy()"
+        ],
+        "description": ""
+    },
+    "AIGetLayerPreference": {
+        "prefix": [
+            "AIGetLayerPreference"
+        ],
+        "body": [
+            "${1:brain}:AIGetLayerPreference()"
+        ],
+        "description": ""
+    },
+    "PBMGetLocationFactories": {
+        "prefix": [
+            "PBMGetLocationFactories"
+        ],
+        "body": [
+            "${1:brain}:PBMGetLocationFactories(${2:location})"
+        ],
+        "description": ""
+    },
+    "OnDefeat": {
+        "prefix": [
+            "OnDefeat"
+        ],
+        "body": [
+            "${1:brain}:OnDefeat()"
+        ],
+        "description": ""
+    },
+    "GetManagerCount": {
+        "prefix": [
+            "GetManagerCount"
+        ],
+        "body": [
+            "${1:brain}:GetManagerCount(${2:type})"
+        ],
+        "description": ""
+    },
+    "ExpansionHelpThread": {
+        "prefix": [
+            "ExpansionHelpThread"
+        ],
+        "body": [
+            "${1:brain}:ExpansionHelpThread(${2:eng}, ${3:reference})"
+        ],
+        "description": ""
+    },
+    "GetLowestOrderPrimaryFactory": {
+        "prefix": [
+            "GetLowestOrderPrimaryFactory"
+        ],
+        "body": [
+            "${1:brain}:GetLowestOrderPrimaryFactory(${2:location})"
+        ],
+        "description": "Get the primary factory with the lowest order count\r\nThis is used for the 'Any' platoon type so we can find any primary factory to build from."
+    },
+    "BuildScoutLocations": {
+        "prefix": [
+            "BuildScoutLocations"
+        ],
+        "body": [
+            "${1:brain}:BuildScoutLocations()"
+        ],
+        "description": "Function: BuildScoutLocations\r\nArgs:\r\nbrain - the brain to run the function for\r\nDescription:\r\nSets up the initial low-priority scouting areas. If playing with fixed starting locations,\r\nalso sets up high-priority scouting areas. This function may be called multiple times, but only\r\nhas an effect the first time it is called per brain.\r\nReturns:\r\nnil"
+    },
+    "AirAttackPointsTimeout": {
+        "prefix": [
+            "AirAttackPointsTimeout"
+        ],
+        "body": [
+            "${1:brain}:AirAttackPointsTimeout(${2:pos}, ${3:enemy})"
+        ],
+        "description": ""
+    },
+    "PBMFactoryCanBuildPlatoon": {
+        "prefix": [
+            "PBMFactoryCanBuildPlatoon"
+        ],
+        "body": [
+            "${1:brain}:PBMFactoryCanBuildPlatoon(${2:platoonTemplate}, ${3:factory})"
+        ],
+        "description": ""
+    },
+    "PlayVOSound": {
+        "prefix": [
+            "PlayVOSound"
+        ],
+        "body": [
+            "${1:brain}:PlayVOSound(${2:string}, ${3:sound})"
+        ],
+        "description": ""
+    },
+    "NuclearLaunchDetected": {
+        "prefix": [
+            "NuclearLaunchDetected"
+        ],
+        "body": [
+            "${1:brain}:NuclearLaunchDetected(${2:sound})"
+        ],
+        "description": ""
+    },
+    "BaseMonitorInitializationSorian": {
+        "prefix": [
+            "BaseMonitorInitializationSorian"
+        ],
+        "body": [
+            "${1:brain}:BaseMonitorInitializationSorian(${2:spec})"
+        ],
+        "description": ""
+    },
+    "SetupOverEnergyStatTriggerSorian": {
+        "prefix": [
+            "SetupOverEnergyStatTriggerSorian"
+        ],
+        "body": [
+            "${1:brain}:SetupOverEnergyStatTriggerSorian(${2:threshold})"
+        ],
+        "description": ""
+    },
+    "ParseIntelThread": {
+        "prefix": [
+            "ParseIntelThread"
+        ],
+        "body": [
+            "${1:brain}:ParseIntelThread()"
+        ],
+        "description": "Function: ParseIntelThread\r\nArgs:\r\nbrain - brain to run the function for\r\nDescription:\r\nOnce per second, checks imap for enemy expansion bases.\r\nReturns:\r\nnil (loops forever)"
+    },
+    "GetStructureVectors": {
+        "prefix": [
+            "GetStructureVectors"
+        ],
+        "body": [
+            "${1:brain}:GetStructureVectors()"
+        ],
+        "description": ""
+    },
+    "PBMSetHandleBuilding": {
+        "prefix": [
+            "PBMSetHandleBuilding"
+        ],
+        "body": [
+            "${1:brain}:PBMSetHandleBuilding(${2:builder})"
+        ],
+        "description": ""
+    },
+    "PBMAddPlatoon": {
+        "prefix": [
+            "PBMAddPlatoon"
+        ],
+        "body": [
+            "${1:brain}:PBMAddPlatoon(${2:pltnTable})"
+        ],
+        "description": "Platoon Spec\r\n{\r\nPlatoonTemplate = platoon template,\r\nInstanceCount = number of duplicates to place in the platoon list\r\nPriority = integer,\r\nBuildConditions = list of functions that return true/false, list of args, {< function>, {<args>}}\r\nLocationType = string for type of location, setup via addnewlocation function,\r\nBuildTimeOut = how long it'll try to form this platoon after it's been told to build.,\r\nPlatoonType = 'Air'/'Land'/'Sea' basic type of unit, used for finding what type of factory to build from,\r\nRequiresConstruction = true/false do I need to build this from a factory or should I just try to form it?,\r\nPlatoonBuildCallbacks = {FunctionsToCallBack when the platoon starts to build}\r\nPlatoonAIFunction = if nil uses function in platoon.lua, function for the main AI thread\r\nPlatoonAddFunctions = {<other threads to be forked on this platoon>}\r\nPlatoonData = {\r\nConstruction = {\r\nBaseTemplate = basetemplates, must contain templates for all 3 factions it will be viewed by faction index,\r\nBuildingTemplate = building templates, contain templates for all 3 factions it will be viewed by faction index,\r\nBuildClose = true/false do I follow the table order or do build the best spot near me?\r\nBuildRelative = true/false are the build coordinates relative to the starting location or absolute coords?,\r\nBuildStructures = {List of structure types and the order to build them.}\r\n}\r\n}\r\n},"
+    },
+    "SetupUnderMassStatTriggerSorian": {
+        "prefix": [
+            "SetupUnderMassStatTriggerSorian"
+        ],
+        "body": [
+            "${1:brain}:SetupUnderMassStatTriggerSorian(${2:threshold})"
+        ],
+        "description": ""
+    },
+    "GetUnitStats": {
+        "prefix": [
+            "GetUnitStats"
+        ],
+        "body": [
+            "${1:brain}:GetUnitStats()"
+        ],
+        "description": ""
+    },
+    "GetBaseVectors": {
+        "prefix": [
+            "GetBaseVectors"
+        ],
+        "body": [
+            "${1:brain}:GetBaseVectors()"
+        ],
+        "description": ""
+    }
+}

@@ -1,0 +1,2432 @@
+{
+    "DisableDefaultToggleCaps": {
+        "prefix": [
+            "DisableDefaultToggleCaps"
+        ],
+        "body": [
+            "${1:unit}:DisableDefaultToggleCaps()"
+        ],
+        "description": ""
+    },
+    "AddWeaponBuff": {
+        "prefix": [
+            "AddWeaponBuff"
+        ],
+        "body": [
+            "${1:unit}:AddWeaponBuff(${2:buffTable}, ${3:weapon})"
+        ],
+        "description": ""
+    },
+    "InitiateTeleportThread": {
+        "prefix": [
+            "InitiateTeleportThread"
+        ],
+        "body": [
+            "${1:unit}:InitiateTeleportThread(${2:teleporter}, ${3:location}, ${4:orientation})"
+        ],
+        "description": ""
+    },
+    "OnUnpaused": {
+        "prefix": [
+            "OnUnpaused"
+        ],
+        "body": [
+            "${1:unit}:OnUnpaused()"
+        ],
+        "description": ""
+    },
+    "UpdateBeamExhaust": {
+        "prefix": [
+            "UpdateBeamExhaust"
+        ],
+        "body": [
+            "${1:unit}:UpdateBeamExhaust(${2:motionState})"
+        ],
+        "description": ""
+    },
+    "OnKilledUnit": {
+        "prefix": [
+            "OnKilledUnit"
+        ],
+        "body": [
+            "${1:unit}:OnKilledUnit(${2:unitKilled}, ${3:massKilled})"
+        ],
+        "description": "Called when this unit kills another. Chiefly responsible for the veterancy system for now."
+    },
+    "OnGotTarget": {
+        "prefix": [
+            "OnGotTarget"
+        ],
+        "body": [
+            "${1:unit}:OnGotTarget(${2:Weapon})"
+        ],
+        "description": ""
+    },
+    "SetupBuildBones": {
+        "prefix": [
+            "SetupBuildBones"
+        ],
+        "body": [
+            "${1:unit}:SetupBuildBones()"
+        ],
+        "description": "CONSTRUCTING - BUILDING - REPAIR"
+    },
+    "OnLostTarget": {
+        "prefix": [
+            "OnLostTarget"
+        ],
+        "body": [
+            "${1:unit}:OnLostTarget(${2:Weapon})"
+        ],
+        "description": ""
+    },
+    "PlayAnimationThread": {
+        "prefix": [
+            "PlayAnimationThread"
+        ],
+        "body": [
+            "${1:unit}:PlayAnimationThread(${2:anim}, ${3:rate})"
+        ],
+        "description": ""
+    },
+    "InheritWork": {
+        "prefix": [
+            "InheritWork"
+        ],
+        "body": [
+            "${1:unit}:InheritWork(${2:target})"
+        ],
+        "description": "GENERIC WORK"
+    },
+    "CleanupEnhancementEffects": {
+        "prefix": [
+            "CleanupEnhancementEffects"
+        ],
+        "body": [
+            "${1:unit}:CleanupEnhancementEffects()"
+        ],
+        "description": ""
+    },
+    "OnLayerChange": {
+        "prefix": [
+            "OnLayerChange"
+        ],
+        "body": [
+            "${1:unit}:OnLayerChange(${2:new}, ${3:old})"
+        ],
+        "description": "LAYER EVENTS"
+    },
+    "SendNotifyMessage": {
+        "prefix": [
+            "SendNotifyMessage"
+        ],
+        "body": [
+            "${1:unit}:SendNotifyMessage(${2:trigger}, ${3:source})"
+        ],
+        "description": "Utility Functions"
+    },
+    "CreateUnitDestructionDebris": {
+        "prefix": [
+            "CreateUnitDestructionDebris"
+        ],
+        "body": [
+            "${1:unit}:CreateUnitDestructionDebris(${2:high}, ${3:low}, ${4:chassis})"
+        ],
+        "description": ""
+    },
+    "OnFailedToBuild": {
+        "prefix": [
+            "OnFailedToBuild"
+        ],
+        "body": [
+            "${1:unit}:OnFailedToBuild()"
+        ],
+        "description": ""
+    },
+    "SetAllWeaponsEnabled": {
+        "prefix": [
+            "SetAllWeaponsEnabled"
+        ],
+        "body": [
+            "${1:unit}:SetAllWeaponsEnabled(${2:enable})"
+        ],
+        "description": ""
+    },
+    "OnWorkBegin": {
+        "prefix": [
+            "OnWorkBegin"
+        ],
+        "body": [
+            "${1:unit}:OnWorkBegin(${2:work})"
+        ],
+        "description": ""
+    },
+    "OnStopBuild": {
+        "prefix": [
+            "OnStopBuild"
+        ],
+        "body": [
+            "${1:unit}:OnStopBuild(${2:built})"
+        ],
+        "description": ""
+    },
+    "CleanupTeleportChargeEffects": {
+        "prefix": [
+            "CleanupTeleportChargeEffects"
+        ],
+        "body": [
+            "${1:unit}:CleanupTeleportChargeEffects()"
+        ],
+        "description": ""
+    },
+    "OnProductionUnpaused": {
+        "prefix": [
+            "OnProductionUnpaused"
+        ],
+        "body": [
+            "${1:unit}:OnProductionUnpaused()"
+        ],
+        "description": ""
+    },
+    "SetTargetPriorities": {
+        "prefix": [
+            "SetTargetPriorities"
+        ],
+        "body": [
+            "${1:unit}:SetTargetPriorities(${2:priTable})"
+        ],
+        "description": ""
+    },
+    "PlayTeleportOutEffects": {
+        "prefix": [
+            "PlayTeleportOutEffects"
+        ],
+        "body": [
+            "${1:unit}:PlayTeleportOutEffects()"
+        ],
+        "description": ""
+    },
+    "DoUnitCallbacks": {
+        "prefix": [
+            "DoUnitCallbacks"
+        ],
+        "body": [
+            "${1:unit}:DoUnitCallbacks(${2:type}, ${3:param})"
+        ],
+        "description": ""
+    },
+    "CreateContrails": {
+        "prefix": [
+            "CreateContrails"
+        ],
+        "body": [
+            "${1:unit}:CreateContrails(${2:tableData})"
+        ],
+        "description": ""
+    },
+    "RemoveCallback": {
+        "prefix": [
+            "RemoveCallback"
+        ],
+        "body": [
+            "${1:unit}:RemoveCallback(${2:fn})"
+        ],
+        "description": ""
+    },
+    "OnStopBuilderTracking": {
+        "prefix": [
+            "OnStopBuilderTracking"
+        ],
+        "body": [
+            "${1:unit}:OnStopBuilderTracking()"
+        ],
+        "description": ""
+    },
+    "OnStartBuilderTracking": {
+        "prefix": [
+            "OnStartBuilderTracking"
+        ],
+        "body": [
+            "${1:unit}:OnStartBuilderTracking()"
+        ],
+        "description": ""
+    },
+    "AddDetectedByHook": {
+        "prefix": [
+            "AddDetectedByHook"
+        ],
+        "body": [
+            "${1:unit}:AddDetectedByHook(${2:hook})"
+        ],
+        "description": ""
+    },
+    "OnStartBuild": {
+        "prefix": [
+            "OnStartBuild"
+        ],
+        "body": [
+            "${1:unit}:OnStartBuild(${2:built}, ${3:order})"
+        ],
+        "description": ""
+    },
+    "DoOnHorizontalStartMoveCallbacks": {
+        "prefix": [
+            "DoOnHorizontalStartMoveCallbacks"
+        ],
+        "body": [
+            "${1:unit}:DoOnHorizontalStartMoveCallbacks()"
+        ],
+        "description": ""
+    },
+    "AddCaptor": {
+        "prefix": [
+            "AddCaptor"
+        ],
+        "body": [
+            "${1:unit}:AddCaptor(${2:captor})"
+        ],
+        "description": ""
+    },
+    "CloakFXWatcher": {
+        "prefix": [
+            "CloakFXWatcher"
+        ],
+        "body": [
+            "${1:unit}:CloakFXWatcher()"
+        ],
+        "description": ""
+    },
+    "StopBuildingEffects": {
+        "prefix": [
+            "StopBuildingEffects"
+        ],
+        "body": [
+            "${1:unit}:StopBuildingEffects(${2:built})"
+        ],
+        "description": ""
+    },
+    "AddProjectileDamagedCallback": {
+        "prefix": [
+            "AddProjectileDamagedCallback"
+        ],
+        "body": [
+            "${1:unit}:AddProjectileDamagedCallback(${2:fn})"
+        ],
+        "description": ""
+    },
+    "CreateWreckageProp": {
+        "prefix": [
+            "CreateWreckageProp"
+        ],
+        "body": [
+            "${1:unit}:CreateWreckageProp(${2:overkillRatio})"
+        ],
+        "description": ""
+    },
+    "DestroyTopSpeedEffects": {
+        "prefix": [
+            "DestroyTopSpeedEffects"
+        ],
+        "body": [
+            "${1:unit}:DestroyTopSpeedEffects()"
+        ],
+        "description": ""
+    },
+    "OnKilled": {
+        "prefix": [
+            "OnKilled"
+        ],
+        "body": [
+            "${1:unit}:OnKilled(${2:instigator}, ${3:type}, ${4:overkillRatio})"
+        ],
+        "description": "On killed: this function plays when the unit takes a mortal hit. Plays death effects and spawns wreckage, dependant on overkill"
+    },
+    "OnWorkFail": {
+        "prefix": [
+            "OnWorkFail"
+        ],
+        "body": [
+            "${1:unit}:OnWorkFail(${2:work})"
+        ],
+        "description": ""
+    },
+    "SeabedWatcher": {
+        "prefix": [
+            "SeabedWatcher"
+        ],
+        "body": [
+            "${1:unit}:SeabedWatcher()"
+        ],
+        "description": ""
+    },
+    "HideLandBones": {
+        "prefix": [
+            "HideLandBones"
+        ],
+        "body": [
+            "${1:unit}:HideLandBones()"
+        ],
+        "description": ""
+    },
+    "ShouldWatchIntel": {
+        "prefix": [
+            "ShouldWatchIntel"
+        ],
+        "body": [
+            "${1:unit}:ShouldWatchIntel()"
+        ],
+        "description": ""
+    },
+    "VeterancyDispersal": {
+        "prefix": [
+            "VeterancyDispersal"
+        ],
+        "body": [
+            "${1:unit}:VeterancyDispersal(${2:suicide})"
+        ],
+        "description": "This section contains functions used by the new mass-based veterancy system\r\nTell any living instigators that they need to gain some veterancy"
+    },
+    "OnMotionHorzEventChange": {
+        "prefix": [
+            "OnMotionHorzEventChange"
+        ],
+        "body": [
+            "${1:unit}:OnMotionHorzEventChange(${2:new}, ${3:old})"
+        ],
+        "description": ""
+    },
+    "SetCanBeKilled": {
+        "prefix": [
+            "SetCanBeKilled"
+        ],
+        "body": [
+            "${1:unit}:SetCanBeKilled(${2:val})"
+        ],
+        "description": "Argument val is true or false. False = cannot be killed"
+    },
+    "CreateReclaimEffects": {
+        "prefix": [
+            "CreateReclaimEffects"
+        ],
+        "body": [
+            "${1:unit}:CreateReclaimEffects(${2:target})"
+        ],
+        "description": ""
+    },
+    "StopUnitAmbientSound": {
+        "prefix": [
+            "StopUnitAmbientSound"
+        ],
+        "body": [
+            "${1:unit}:StopUnitAmbientSound(${2:sound})"
+        ],
+        "description": ""
+    },
+    "DoDeathWeapon": {
+        "prefix": [
+            "DoDeathWeapon"
+        ],
+        "body": [
+            "${1:unit}:DoDeathWeapon()"
+        ],
+        "description": "End of Veterancy Section"
+    },
+    "IntelWatchThread": {
+        "prefix": [
+            "IntelWatchThread"
+        ],
+        "body": [
+            "${1:unit}:IntelWatchThread()"
+        ],
+        "description": ""
+    },
+    "CreateLayerChangeEffects": {
+        "prefix": [
+            "CreateLayerChangeEffects"
+        ],
+        "body": [
+            "${1:unit}:CreateLayerChangeEffects(${2:new}, ${3:old})"
+        ],
+        "description": ""
+    },
+    "EnableUnitIntel": {
+        "prefix": [
+            "EnableUnitIntel"
+        ],
+        "body": [
+            "${1:unit}:EnableUnitIntel(${2:disabler}, ${3:intel})"
+        ],
+        "description": ""
+    },
+    "ResetCaptors": {
+        "prefix": [
+            "ResetCaptors"
+        ],
+        "body": [
+            "${1:unit}:ResetCaptors()"
+        ],
+        "description": ""
+    },
+    "ShallSink": {
+        "prefix": [
+            "ShallSink"
+        ],
+        "body": [
+            "${1:unit}:ShallSink()"
+        ],
+        "description": ""
+    },
+    "CheckAssistFocus": {
+        "prefix": [
+            "CheckAssistFocus"
+        ],
+        "body": [
+            "${1:unit}:CheckAssistFocus()"
+        ],
+        "description": ""
+    },
+    "TransportAnimation": {
+        "prefix": [
+            "TransportAnimation"
+        ],
+        "body": [
+            "${1:unit}:TransportAnimation(${2:rate})"
+        ],
+        "description": "Animation when being dropped from a transport."
+    },
+    "OnAdjacentBubbleShieldDamageSpillOver": {
+        "prefix": [
+            "OnAdjacentBubbleShieldDamageSpillOver"
+        ],
+        "body": [
+            "${1:unit}:OnAdjacentBubbleShieldDamageSpillOver(${2:instigator}, ${3:spillingUnit}, ${4:damage}, ${5:type})"
+        ],
+        "description": ""
+    },
+    "OnBeingBuiltProgress": {
+        "prefix": [
+            "OnBeingBuiltProgress"
+        ],
+        "body": [
+            "${1:unit}:OnBeingBuiltProgress(${2:unit}, ${3:oldProg}, ${4:newProg})"
+        ],
+        "description": "CONSTRUCTING - BEING BUILT"
+    },
+    "OnFailedBeingCaptured": {
+        "prefix": [
+            "OnFailedBeingCaptured"
+        ],
+        "body": [
+            "${1:unit}:OnFailedBeingCaptured(${2:captor})"
+        ],
+        "description": ""
+    },
+    "OnActive": {
+        "prefix": [
+            "OnActive"
+        ],
+        "body": [
+            "${1:unit}:OnActive()"
+        ],
+        "description": ""
+    },
+    "SinkDestructionEffects": {
+        "prefix": [
+            "SinkDestructionEffects"
+        ],
+        "body": [
+            "${1:unit}:SinkDestructionEffects()"
+        ],
+        "description": ""
+    },
+    "DestroyShield": {
+        "prefix": [
+            "DestroyShield"
+        ],
+        "body": [
+            "${1:unit}:DestroyShield()"
+        ],
+        "description": ""
+    },
+    "OnCreate": {
+        "prefix": [
+            "OnCreate"
+        ],
+        "body": [
+            "${1:unit}:OnCreate()"
+        ],
+        "description": ""
+    },
+    "StartBeingBuiltEffects": {
+        "prefix": [
+            "StartBeingBuiltEffects"
+        ],
+        "body": [
+            "${1:unit}:StartBeingBuiltEffects(${2:builder}, ${3:layer})"
+        ],
+        "description": ""
+    },
+    "StopRocking": {
+        "prefix": [
+            "StopRocking"
+        ],
+        "body": [
+            "${1:unit}:StopRocking()"
+        ],
+        "description": ""
+    },
+    "OnScriptBitClear": {
+        "prefix": [
+            "OnScriptBitClear"
+        ],
+        "body": [
+            "${1:unit}:OnScriptBitClear(${2:bit})"
+        ],
+        "description": ""
+    },
+    "OnConsumptionActive": {
+        "prefix": [
+            "OnConsumptionActive"
+        ],
+        "body": [
+            "${1:unit}:OnConsumptionActive()"
+        ],
+        "description": "ECONOMY"
+    },
+    "OnTerrainTypeChange": {
+        "prefix": [
+            "OnTerrainTypeChange"
+        ],
+        "body": [
+            "${1:unit}:OnTerrainTypeChange(${2:new}, ${3:old})"
+        ],
+        "description": ""
+    },
+    "GetRandomOffset": {
+        "prefix": [
+            "GetRandomOffset"
+        ],
+        "body": [
+            "${1:unit}:GetRandomOffset(${2:scalar})"
+        ],
+        "description": ""
+    },
+    "updateBuildRestrictions": {
+        "prefix": [
+            "updateBuildRestrictions"
+        ],
+        "body": [
+            "${1:unit}:updateBuildRestrictions()"
+        ],
+        "description": "Updates build restrictions of any unit passed, used for support factories"
+    },
+    "SetLandTargetPriorities": {
+        "prefix": [
+            "SetLandTargetPriorities"
+        ],
+        "body": [
+            "${1:unit}:SetLandTargetPriorities(${2:priTable})"
+        ],
+        "description": ""
+    },
+    "PlayDamageEffect": {
+        "prefix": [
+            "PlayDamageEffect"
+        ],
+        "body": [
+            "${1:unit}:PlayDamageEffect(${2:fxTable}, ${3:fxBag})"
+        ],
+        "description": ""
+    },
+    "OnNukeLaunched": {
+        "prefix": [
+            "OnNukeLaunched"
+        ],
+        "body": [
+            "${1:unit}:OnNukeLaunched()"
+        ],
+        "description": ""
+    },
+    "StartCaptureEffects": {
+        "prefix": [
+            "StartCaptureEffects"
+        ],
+        "body": [
+            "${1:unit}:StartCaptureEffects(${2:target})"
+        ],
+        "description": ""
+    },
+    "OnRemoveFromStorage": {
+        "prefix": [
+            "OnRemoveFromStorage"
+        ],
+        "body": [
+            "${1:unit}:OnRemoveFromStorage(${2:unit})"
+        ],
+        "description": ""
+    },
+    "SetActiveConsumptionInactive": {
+        "prefix": [
+            "SetActiveConsumptionInactive"
+        ],
+        "body": [
+            "${1:unit}:SetActiveConsumptionInactive()"
+        ],
+        "description": ""
+    },
+    "SetWeaponEnabledByLabel": {
+        "prefix": [
+            "SetWeaponEnabledByLabel"
+        ],
+        "body": [
+            "${1:unit}:SetWeaponEnabledByLabel(${2:label}, ${3:enable})"
+        ],
+        "description": ""
+    },
+    "OnMotionVertEventChange": {
+        "prefix": [
+            "OnMotionVertEventChange"
+        ],
+        "body": [
+            "${1:unit}:OnMotionVertEventChange(${2:new}, ${3:old})"
+        ],
+        "description": ""
+    },
+    "MovementCameraShakeThread": {
+        "prefix": [
+            "MovementCameraShakeThread"
+        ],
+        "body": [
+            "${1:unit}:MovementCameraShakeThread(${2:camShake})"
+        ],
+        "description": ""
+    },
+    "DisableUnitIntel": {
+        "prefix": [
+            "DisableUnitIntel"
+        ],
+        "body": [
+            "${1:unit}:DisableUnitIntel(${2:disabler}, ${3:intel})"
+        ],
+        "description": "INTEL\r\nThere are several ways to disable a unit's intel: The intel actually being part of an upgrade\r\n(enhancement) that is not present, the intel requiring energy and energy being stalled, etc.\r\nThe intel is turned on using the EnableIntel engine call if all disablers are removed.\r\nAs an optimisation, EnableIntel and DisableIntel are only called when going from one disabler\r\npresent to zero, and when going from zero disablers to one."
+    },
+    "ValidateBone": {
+        "prefix": [
+            "ValidateBone"
+        ],
+        "body": [
+            "${1:unit}:ValidateBone(${2:bone})"
+        ],
+        "description": ""
+    },
+    "CreateShield": {
+        "prefix": [
+            "CreateShield"
+        ],
+        "body": [
+            "${1:unit}:CreateShield(${2:bpShield})"
+        ],
+        "description": "SHIELDS"
+    },
+    "OnFailedTeleport": {
+        "prefix": [
+            "OnFailedTeleport"
+        ],
+        "body": [
+            "${1:unit}:OnFailedTeleport()"
+        ],
+        "description": ""
+    },
+    "OnScriptBitSet": {
+        "prefix": [
+            "OnScriptBitSet"
+        ],
+        "body": [
+            "${1:unit}:OnScriptBitSet(${2:bit})"
+        ],
+        "description": "TOGGLES"
+    },
+    "DisableShield": {
+        "prefix": [
+            "DisableShield"
+        ],
+        "body": [
+            "${1:unit}:DisableShield()"
+        ],
+        "description": ""
+    },
+    "Main": {
+        "prefix": [
+            "Main"
+        ],
+        "body": [
+            "${1:unit}:Main()"
+        ],
+        "description": ""
+    },
+    "OnCollisionCheckWeapon": {
+        "prefix": [
+            "OnCollisionCheckWeapon"
+        ],
+        "body": [
+            "${1:unit}:OnCollisionCheckWeapon(${2:firingWeapon})"
+        ],
+        "description": ""
+    },
+    "BuildManipulatorSetEnabled": {
+        "prefix": [
+            "BuildManipulatorSetEnabled"
+        ],
+        "body": [
+            "${1:unit}:BuildManipulatorSetEnabled(${2:enable})"
+        ],
+        "description": ""
+    },
+    "CleanupRemainingTeleportChargeEffects": {
+        "prefix": [
+            "CleanupRemainingTeleportChargeEffects"
+        ],
+        "body": [
+            "${1:unit}:CleanupRemainingTeleportChargeEffects()"
+        ],
+        "description": ""
+    },
+    "TransportAnimationThread": {
+        "prefix": [
+            "TransportAnimationThread"
+        ],
+        "body": [
+            "${1:unit}:TransportAnimationThread(${2:rate})"
+        ],
+        "description": ""
+    },
+    "UpdateMovementEffectsOnMotionEventChange": {
+        "prefix": [
+            "UpdateMovementEffectsOnMotionEventChange"
+        ],
+        "body": [
+            "${1:unit}:UpdateMovementEffectsOnMotionEventChange(${2:new}, ${3:old})"
+        ],
+        "description": ""
+    },
+    "PlayTeleportChargeEffects": {
+        "prefix": [
+            "PlayTeleportChargeEffects"
+        ],
+        "body": [
+            "${1:unit}:PlayTeleportChargeEffects(${2:location}, ${3:orientation}, ${4:teleDelay})"
+        ],
+        "description": ""
+    },
+    "OnShieldEnabled": {
+        "prefix": [
+            "OnShieldEnabled"
+        ],
+        "body": [
+            "${1:unit}:OnShieldEnabled()"
+        ],
+        "description": ""
+    },
+    "GetEconomyBuildRate": {
+        "prefix": [
+            "GetEconomyBuildRate"
+        ],
+        "body": [
+            "${1:unit}:GetEconomyBuildRate()"
+        ],
+        "description": ""
+    },
+    "CheckCanBeKilled": {
+        "prefix": [
+            "CheckCanBeKilled"
+        ],
+        "body": [
+            "${1:unit}:CheckCanBeKilled(${2:other})"
+        ],
+        "description": ""
+    },
+    "AddUnitCallback": {
+        "prefix": [
+            "AddUnitCallback"
+        ],
+        "body": [
+            "${1:unit}:AddUnitCallback(${2:fn}, ${3:type})"
+        ],
+        "description": "UNIT CALLBACKS"
+    },
+    "IsDead": {
+        "prefix": [
+            "IsDead"
+        ],
+        "body": [
+            "${1:unit}:IsDead()"
+        ],
+        "description": ""
+    },
+    "DoOnStartBuildCallbacks": {
+        "prefix": [
+            "DoOnStartBuildCallbacks"
+        ],
+        "body": [
+            "${1:unit}:DoOnStartBuildCallbacks(${2:unit})"
+        ],
+        "description": ""
+    },
+    "SetMaintenanceConsumptionActive": {
+        "prefix": [
+            "SetMaintenanceConsumptionActive"
+        ],
+        "body": [
+            "${1:unit}:SetMaintenanceConsumptionActive()"
+        ],
+        "description": "We are splitting Consumption into two catagories:\r\nMaintenance -- for units that are usually \"on\": radar, mass extractors, etc.\r\nActive -- when upgrading, constructing, or something similar.\r\nIt will be possible for both or neither of these consumption methods to be\r\nin operation at the same time.  Here are the functions to turn them off and on."
+    },
+    "MarkWeaponsOnTransport": {
+        "prefix": [
+            "MarkWeaponsOnTransport"
+        ],
+        "body": [
+            "${1:unit}:MarkWeaponsOnTransport(${2:bool})"
+        ],
+        "description": ""
+    },
+    "GetUnitSizes": {
+        "prefix": [
+            "GetUnitSizes"
+        ],
+        "body": [
+            "${1:unit}:GetUnitSizes()"
+        ],
+        "description": "Returns collision box size"
+    },
+    "PlayTeleportInEffects": {
+        "prefix": [
+            "PlayTeleportInEffects"
+        ],
+        "body": [
+            "${1:unit}:PlayTeleportInEffects()"
+        ],
+        "description": ""
+    },
+    "CloakFieldWatcher": {
+        "prefix": [
+            "CloakFieldWatcher"
+        ],
+        "body": [
+            "${1:unit}:CloakFieldWatcher()"
+        ],
+        "description": ""
+    },
+    "NukeCreatedAtUnit": {
+        "prefix": [
+            "NukeCreatedAtUnit"
+        ],
+        "body": [
+            "${1:unit}:NukeCreatedAtUnit()"
+        ],
+        "description": "STRATEGIC LAUNCH DETECTED"
+    },
+    "OnStartBeingCaptured": {
+        "prefix": [
+            "OnStartBeingCaptured"
+        ],
+        "body": [
+            "${1:unit}:OnStartBeingCaptured(${2:captor})"
+        ],
+        "description": ""
+    },
+    "OnTeleportUnit": {
+        "prefix": [
+            "OnTeleportUnit"
+        ],
+        "body": [
+            "${1:unit}:OnTeleportUnit(${2:teleporter}, ${3:location}, ${4:orientation})"
+        ],
+        "description": "TELEPORTING"
+    },
+    "OnSpecialAction": {
+        "prefix": [
+            "OnSpecialAction"
+        ],
+        "body": [
+            "${1:unit}:OnSpecialAction(${2:location})"
+        ],
+        "description": "MISC EVENTS"
+    },
+    "CreateDestructionEffects": {
+        "prefix": [
+            "CreateDestructionEffects"
+        ],
+        "body": [
+            "${1:unit}:CreateDestructionEffects(${2:overKillRatio})"
+        ],
+        "description": ""
+    },
+    "ShowBones": {
+        "prefix": [
+            "ShowBones"
+        ],
+        "body": [
+            "${1:unit}:ShowBones(${2:table}, ${3:children})"
+        ],
+        "description": "Generic function for showing a table of bones\r\nTable = List of bones\r\nChildrend = True/False to show child bones"
+    },
+    "AddOnHorizontalStartMoveCallback": {
+        "prefix": [
+            "AddOnHorizontalStartMoveCallback"
+        ],
+        "body": [
+            "${1:unit}:AddOnHorizontalStartMoveCallback(${2:fn})"
+        ],
+        "description": ""
+    },
+    "OnStopBeingCaptured": {
+        "prefix": [
+            "OnStopBeingCaptured"
+        ],
+        "body": [
+            "${1:unit}:OnStopBeingCaptured(${2:captor})"
+        ],
+        "description": ""
+    },
+    "OnStorageChange": {
+        "prefix": [
+            "OnStorageChange"
+        ],
+        "body": [
+            "${1:unit}:OnStorageChange(${2:loading})"
+        ],
+        "description": ""
+    },
+    "EnableShield": {
+        "prefix": [
+            "EnableShield"
+        ],
+        "body": [
+            "${1:unit}:EnableShield()"
+        ],
+        "description": ""
+    },
+    "DoVeterancyHealing": {
+        "prefix": [
+            "DoVeterancyHealing"
+        ],
+        "body": [
+            "${1:unit}:DoVeterancyHealing(${2:level})"
+        ],
+        "description": "Veterancy can't be 'Undone', so we heal the unit directly, one-off, rather than using a buff. Much more flexible."
+    },
+    "PlayUnitSound": {
+        "prefix": [
+            "PlayUnitSound"
+        ],
+        "body": [
+            "${1:unit}:PlayUnitSound(${2:sound})"
+        ],
+        "description": ""
+    },
+    "GetHealthPercent": {
+        "prefix": [
+            "GetHealthPercent"
+        ],
+        "body": [
+            "${1:unit}:GetHealthPercent()"
+        ],
+        "description": ""
+    },
+    "CheckAssistersFocus": {
+        "prefix": [
+            "CheckAssistersFocus"
+        ],
+        "body": [
+            "${1:unit}:CheckAssistersFocus()"
+        ],
+        "description": ""
+    },
+    "SetRegen": {
+        "prefix": [
+            "SetRegen"
+        ],
+        "body": [
+            "${1:unit}:SetRegen(${2:value})"
+        ],
+        "description": ""
+    },
+    "SetMaintenanceConsumptionInactive": {
+        "prefix": [
+            "SetMaintenanceConsumptionInactive"
+        ],
+        "body": [
+            "${1:unit}:SetMaintenanceConsumptionInactive()"
+        ],
+        "description": ""
+    },
+    "OnCreated": {
+        "prefix": [
+            "OnCreated"
+        ],
+        "body": [
+            "${1:unit}:OnCreated()"
+        ],
+        "description": ""
+    },
+    "CreateBuffField": {
+        "prefix": [
+            "CreateBuffField"
+        ],
+        "body": [
+            "${1:unit}:CreateBuffField(${2:name}, ${3:buffFieldBP})"
+        ],
+        "description": ""
+    },
+    "DestroyAllBuildEffects": {
+        "prefix": [
+            "DestroyAllBuildEffects"
+        ],
+        "body": [
+            "${1:unit}:DestroyAllBuildEffects()"
+        ],
+        "description": ""
+    },
+    "GetSync": {
+        "prefix": [
+            "GetSync"
+        ],
+        "body": [
+            "${1:unit}:GetSync()"
+        ],
+        "description": ""
+    },
+    "EnableDefaultToggleCaps": {
+        "prefix": [
+            "EnableDefaultToggleCaps"
+        ],
+        "body": [
+            "${1:unit}:EnableDefaultToggleCaps()"
+        ],
+        "description": ""
+    },
+    "OnCaptured": {
+        "prefix": [
+            "OnCaptured"
+        ],
+        "body": [
+            "${1:unit}:OnCaptured(${2:captor})"
+        ],
+        "description": ""
+    },
+    "GetUnitBeingBuilt": {
+        "prefix": [
+            "GetUnitBeingBuilt"
+        ],
+        "body": [
+            "${1:unit}:GetUnitBeingBuilt()"
+        ],
+        "description": "Deprecated functionality"
+    },
+    "OnCollisionCheck": {
+        "prefix": [
+            "OnCollisionCheck"
+        ],
+        "body": [
+            "${1:unit}:OnCollisionCheck(${2:other}, ${3:firingWeapon})"
+        ],
+        "description": ""
+    },
+    "StopReclaimEffects": {
+        "prefix": [
+            "StopReclaimEffects"
+        ],
+        "body": [
+            "${1:unit}:StopReclaimEffects(${2:target})"
+        ],
+        "description": ""
+    },
+    "GetWeaponByLabel": {
+        "prefix": [
+            "GetWeaponByLabel"
+        ],
+        "body": [
+            "${1:unit}:GetWeaponByLabel(${2:label})"
+        ],
+        "description": ""
+    },
+    "EndRockingThread": {
+        "prefix": [
+            "EndRockingThread"
+        ],
+        "body": [
+            "${1:unit}:EndRockingThread()"
+        ],
+        "description": ""
+    },
+    "UpdateCloakEffect": {
+        "prefix": [
+            "UpdateCloakEffect"
+        ],
+        "body": [
+            "${1:unit}:UpdateCloakEffect(${2:cloaked}, ${3:intel})"
+        ],
+        "description": ""
+    },
+    "SetEnergyMaintenanceConsumptionOverride": {
+        "prefix": [
+            "SetEnergyMaintenanceConsumptionOverride"
+        ],
+        "body": [
+            "${1:unit}:SetEnergyMaintenanceConsumptionOverride(${2:override})"
+        ],
+        "description": ""
+    },
+    "OnStartTransportBeamUp": {
+        "prefix": [
+            "OnStartTransportBeamUp"
+        ],
+        "body": [
+            "${1:unit}:OnStartTransportBeamUp(${2:transport}, ${3:bone})"
+        ],
+        "description": ""
+    },
+    "CreateEnhancement": {
+        "prefix": [
+            "CreateEnhancement"
+        ],
+        "body": [
+            "${1:unit}:CreateEnhancement(${2:enh})"
+        ],
+        "description": ""
+    },
+    "OnAnimCollision": {
+        "prefix": [
+            "OnAnimCollision"
+        ],
+        "body": [
+            "${1:unit}:OnAnimCollision(${2:bone}, ${3:x}, ${4:y}, ${5:z})"
+        ],
+        "description": ""
+    },
+    "OnDetectedBy": {
+        "prefix": [
+            "OnDetectedBy"
+        ],
+        "body": [
+            "${1:unit}:OnDetectedBy(${2:index})"
+        ],
+        "description": ""
+    },
+    "CreateCaptureEffects": {
+        "prefix": [
+            "CreateCaptureEffects"
+        ],
+        "body": [
+            "${1:unit}:CreateCaptureEffects(${2:target})"
+        ],
+        "description": ""
+    },
+    "OnStartReclaim": {
+        "prefix": [
+            "OnStartReclaim"
+        ],
+        "body": [
+            "${1:unit}:OnStartReclaim(${2:target})"
+        ],
+        "description": ""
+    },
+    "FindHQType": {
+        "prefix": [
+            "FindHQType"
+        ],
+        "body": [
+            "${1:unit}:FindHQType(${2:category})"
+        ],
+        "description": "self.FindHQType(aiBrain, category)"
+    },
+    "OnStopTransportBeamUp": {
+        "prefix": [
+            "OnStopTransportBeamUp"
+        ],
+        "body": [
+            "${1:unit}:OnStopTransportBeamUp()"
+        ],
+        "description": ""
+    },
+    "CreateIdleEffects": {
+        "prefix": [
+            "CreateIdleEffects"
+        ],
+        "body": [
+            "${1:unit}:CreateIdleEffects()"
+        ],
+        "description": ""
+    },
+    "DestroyAllDamageEffects": {
+        "prefix": [
+            "DestroyAllDamageEffects"
+        ],
+        "body": [
+            "${1:unit}:DestroyAllDamageEffects()"
+        ],
+        "description": ""
+    },
+    "OnStopRepair": {
+        "prefix": [
+            "OnStopRepair"
+        ],
+        "body": [
+            "${1:unit}:OnStopRepair(${2:unit})"
+        ],
+        "description": ""
+    },
+    "OnProductionPaused": {
+        "prefix": [
+            "OnProductionPaused"
+        ],
+        "body": [
+            "${1:unit}:OnProductionPaused()"
+        ],
+        "description": ""
+    },
+    "UpdateConsumptionValues": {
+        "prefix": [
+            "UpdateConsumptionValues"
+        ],
+        "body": [
+            "${1:unit}:UpdateConsumptionValues()"
+        ],
+        "description": "Called when we start building a unit, turn on/off, get/lose bonuses, or on\r\nany other change that might affect our build rate or resource use."
+    },
+    "CreatePresetEnhancementsThread": {
+        "prefix": [
+            "CreatePresetEnhancementsThread"
+        ],
+        "body": [
+            "${1:unit}:CreatePresetEnhancementsThread()"
+        ],
+        "description": ""
+    },
+    "InitBuffFields": {
+        "prefix": [
+            "InitBuffFields"
+        ],
+        "body": [
+            "${1:unit}:InitBuffFields()"
+        ],
+        "description": "Buff Fields"
+    },
+    "DestroyUnit": {
+        "prefix": [
+            "DestroyUnit"
+        ],
+        "body": [
+            "${1:unit}:DestroyUnit(${2:overkillRatio})"
+        ],
+        "description": "Called at the end of the destruction thread: create the wreckage and Destroy this unit."
+    },
+    "ShieldIsOn": {
+        "prefix": [
+            "ShieldIsOn"
+        ],
+        "body": [
+            "${1:unit}:ShieldIsOn()"
+        ],
+        "description": ""
+    },
+    "OnStopReclaim": {
+        "prefix": [
+            "OnStopReclaim"
+        ],
+        "body": [
+            "${1:unit}:OnStopReclaim(${2:target})"
+        ],
+        "description": ""
+    },
+    "OnStartRepair": {
+        "prefix": [
+            "OnStartRepair"
+        ],
+        "body": [
+            "${1:unit}:OnStartRepair(${2:unit})"
+        ],
+        "description": ""
+    },
+    "CreateWreckage": {
+        "prefix": [
+            "CreateWreckage"
+        ],
+        "body": [
+            "${1:unit}:CreateWreckage(${2:overkillRatio})"
+        ],
+        "description": "Create a unit's wrecked mesh blueprint from its regular mesh blueprint, by changing the shader and albedo"
+    },
+    "OnWorkEnd": {
+        "prefix": [
+            "OnWorkEnd"
+        ],
+        "body": [
+            "${1:unit}:OnWorkEnd(${2:work})"
+        ],
+        "description": ""
+    },
+    "SetActiveConsumptionActive": {
+        "prefix": [
+            "SetActiveConsumptionActive"
+        ],
+        "body": [
+            "${1:unit}:SetActiveConsumptionActive()"
+        ],
+        "description": ""
+    },
+    "OnHealthChanged": {
+        "prefix": [
+            "OnHealthChanged"
+        ],
+        "body": [
+            "${1:unit}:OnHealthChanged(${2:new}, ${3:old})"
+        ],
+        "description": ""
+    },
+    "DestroyBeamExhaust": {
+        "prefix": [
+            "DestroyBeamExhaust"
+        ],
+        "body": [
+            "${1:unit}:DestroyBeamExhaust()"
+        ],
+        "description": ""
+    },
+    "OnConsumptionInActive": {
+        "prefix": [
+            "OnConsumptionInActive"
+        ],
+        "body": [
+            "${1:unit}:OnConsumptionInActive()"
+        ],
+        "description": ""
+    },
+    "CreateTerrainTypeEffects": {
+        "prefix": [
+            "CreateTerrainTypeEffects"
+        ],
+        "body": [
+            "${1:unit}:CreateTerrainTypeEffects(${2:effectTypeGroups}, ${3:FxBlockType}, ${4:FxBlockKey}, ${5:TypeSuffix}, ${6:EffectBag}, ${7:TerrainType})"
+        ],
+        "description": ""
+    },
+    "CalculateVeterancyLevel": {
+        "prefix": [
+            "CalculateVeterancyLevel"
+        ],
+        "body": [
+            "${1:unit}:CalculateVeterancyLevel(${2:massKilled})"
+        ],
+        "description": ""
+    },
+    "OnPaused": {
+        "prefix": [
+            "OnPaused"
+        ],
+        "body": [
+            "${1:unit}:OnPaused()"
+        ],
+        "description": ""
+    },
+    "DisableSpecialToggle": {
+        "prefix": [
+            "DisableSpecialToggle"
+        ],
+        "body": [
+            "${1:unit}:DisableSpecialToggle()"
+        ],
+        "description": ""
+    },
+    "CreateTreadsThread": {
+        "prefix": [
+            "CreateTreadsThread"
+        ],
+        "body": [
+            "${1:unit}:CreateTreadsThread(${2:treads}, ${3:type})"
+        ],
+        "description": ""
+    },
+    "DoOnDamagedCallbacks": {
+        "prefix": [
+            "DoOnDamagedCallbacks"
+        ],
+        "body": [
+            "${1:unit}:DoOnDamagedCallbacks(${2:instigator})"
+        ],
+        "description": ""
+    },
+    "UpdateAssistersConsumption": {
+        "prefix": [
+            "UpdateAssistersConsumption"
+        ],
+        "body": [
+            "${1:unit}:UpdateAssistersConsumption()"
+        ],
+        "description": ""
+    },
+    "GetBuffFieldByName": {
+        "prefix": [
+            "GetBuffFieldByName"
+        ],
+        "body": [
+            "${1:unit}:GetBuffFieldByName(${2:name})"
+        ],
+        "description": ""
+    },
+    "StartSinking": {
+        "prefix": [
+            "StartSinking"
+        ],
+        "body": [
+            "${1:unit}:StartSinking(${2:callback})"
+        ],
+        "description": ""
+    },
+    "UnitBuiltPercentageCallbackThread": {
+        "prefix": [
+            "UnitBuiltPercentageCallbackThread"
+        ],
+        "body": [
+            "${1:unit}:UnitBuiltPercentageCallbackThread(${2:percent}, ${3:callback})"
+        ],
+        "description": ""
+    },
+    "ChooseAnimBlock": {
+        "prefix": [
+            "ChooseAnimBlock"
+        ],
+        "body": [
+            "${1:unit}:ChooseAnimBlock(${2:bp})"
+        ],
+        "description": ""
+    },
+    "SetVeterancy": {
+        "prefix": [
+            "SetVeterancy"
+        ],
+        "body": [
+            "${1:unit}:SetVeterancy(${2:veteranLevel})"
+        ],
+        "description": "Use this to set a veterancy level directly, usually used by a scenario"
+    },
+    "AddOnStartBuildCallback": {
+        "prefix": [
+            "AddOnStartBuildCallback"
+        ],
+        "body": [
+            "${1:unit}:AddOnStartBuildCallback(${2:fn})"
+        ],
+        "description": "Add a callback to be invoked when this unit starts building another. The unit being built is\r\npassed as a parameter to the callback function."
+    },
+    "OnPreCreate": {
+        "prefix": [
+            "OnPreCreate"
+        ],
+        "body": [
+            "${1:unit}:OnPreCreate()"
+        ],
+        "description": "INITIALIZATION"
+    },
+    "GetBuildRate": {
+        "prefix": [
+            "GetBuildRate"
+        ],
+        "body": [
+            "${1:unit}:GetBuildRate()"
+        ],
+        "description": ""
+    },
+    "OnDecayed": {
+        "prefix": [
+            "OnDecayed"
+        ],
+        "body": [
+            "${1:unit}:OnDecayed()"
+        ],
+        "description": ""
+    },
+    "GetWeaponClass": {
+        "prefix": [
+            "GetWeaponClass"
+        ],
+        "body": [
+            "${1:unit}:GetWeaponClass(${2:label})"
+        ],
+        "description": ""
+    },
+    "DeathThread": {
+        "prefix": [
+            "DeathThread"
+        ],
+        "body": [
+            "${1:unit}:DeathThread(${2:overkillRatio}, ${3:instigator})"
+        ],
+        "description": ""
+    },
+    "ResetWeaponByLabel": {
+        "prefix": [
+            "ResetWeaponByLabel"
+        ],
+        "body": [
+            "${1:unit}:ResetWeaponByLabel(${2:label})"
+        ],
+        "description": ""
+    },
+    "UpdateProductionValues": {
+        "prefix": [
+            "UpdateProductionValues"
+        ],
+        "body": [
+            "${1:unit}:UpdateProductionValues()"
+        ],
+        "description": ""
+    },
+    "OnGiven": {
+        "prefix": [
+            "OnGiven"
+        ],
+        "body": [
+            "${1:unit}:OnGiven(${2:newUnit})"
+        ],
+        "description": ""
+    },
+    "OnDamage": {
+        "prefix": [
+            "OnDamage"
+        ],
+        "body": [
+            "${1:unit}:OnDamage(${2:instigator}, ${3:amount}, ${4:vector}, ${5:damageType})"
+        ],
+        "description": ""
+    },
+    "OnBuildProgress": {
+        "prefix": [
+            "OnBuildProgress"
+        ],
+        "body": [
+            "${1:unit}:OnBuildProgress(${2:unit}, ${3:oldProg}, ${4:newProg})"
+        ],
+        "description": ""
+    },
+    "AddOnGivenCallback": {
+        "prefix": [
+            "AddOnGivenCallback"
+        ],
+        "body": [
+            "${1:unit}:AddOnGivenCallback(${2:fn})"
+        ],
+        "description": ""
+    },
+    "CreatePresetEnhancements": {
+        "prefix": [
+            "CreatePresetEnhancements"
+        ],
+        "body": [
+            "${1:unit}:CreatePresetEnhancements()"
+        ],
+        "description": ""
+    },
+    "HasEnhancement": {
+        "prefix": [
+            "HasEnhancement"
+        ],
+        "body": [
+            "${1:unit}:HasEnhancement(${2:enh})"
+        ],
+        "description": ""
+    },
+    "OnDetachedFromTransport": {
+        "prefix": [
+            "OnDetachedFromTransport"
+        ],
+        "body": [
+            "${1:unit}:OnDetachedFromTransport(${2:transport}, ${3:bone})"
+        ],
+        "description": ""
+    },
+    "GetRebuildBonus": {
+        "prefix": [
+            "GetRebuildBonus"
+        ],
+        "body": [
+            "${1:unit}:GetRebuildBonus(${2:bp})"
+        ],
+        "description": ""
+    },
+    "CreateReclaimEndEffects": {
+        "prefix": [
+            "CreateReclaimEndEffects"
+        ],
+        "body": [
+            "${1:unit}:CreateReclaimEndEffects(${2:target})"
+        ],
+        "description": ""
+    },
+    "DestroyIdleEffects": {
+        "prefix": [
+            "DestroyIdleEffects"
+        ],
+        "body": [
+            "${1:unit}:DestroyIdleEffects()"
+        ],
+        "description": ""
+    },
+    "OnInactive": {
+        "prefix": [
+            "OnInactive"
+        ],
+        "body": [
+            "${1:unit}:OnInactive()"
+        ],
+        "description": ""
+    },
+    "SetBuildRateOverride": {
+        "prefix": [
+            "SetBuildRateOverride"
+        ],
+        "body": [
+            "${1:unit}:SetBuildRateOverride(${2:overRide})"
+        ],
+        "description": ""
+    },
+    "OnAddToStorage": {
+        "prefix": [
+            "OnAddToStorage"
+        ],
+        "body": [
+            "${1:unit}:OnAddToStorage(${2:unit})"
+        ],
+        "description": ""
+    },
+    "EnableSpecialToggle": {
+        "prefix": [
+            "EnableSpecialToggle"
+        ],
+        "body": [
+            "${1:unit}:EnableSpecialToggle()"
+        ],
+        "description": ""
+    },
+    "CheckCanTakeDamage": {
+        "prefix": [
+            "CheckCanTakeDamage"
+        ],
+        "body": [
+            "${1:unit}:CheckCanTakeDamage()"
+        ],
+        "description": ""
+    },
+    "StartBuildingEffects": {
+        "prefix": [
+            "StartBuildingEffects"
+        ],
+        "body": [
+            "${1:unit}:StartBuildingEffects(${2:built}, ${3:order})"
+        ],
+        "description": ""
+    },
+    "newindex": {
+        "prefix": [
+            "newindex"
+        ],
+        "body": [
+            "${1:unit}:newindex(${2:key}, ${3:val})"
+        ],
+        "description": ""
+    },
+    "GetTerrainTypeEffects": {
+        "prefix": [
+            "GetTerrainTypeEffects"
+        ],
+        "body": [
+            "${1:unit}:GetTerrainTypeEffects(${2:layer}, ${3:pos}, ${4:type}, ${5:typesuffix})"
+        ],
+        "description": ""
+    },
+    "RemoveCaptor": {
+        "prefix": [
+            "RemoveCaptor"
+        ],
+        "body": [
+            "${1:unit}:RemoveCaptor(${2:captor})"
+        ],
+        "description": ""
+    },
+    "UpdateTeleportProgress": {
+        "prefix": [
+            "UpdateTeleportProgress"
+        ],
+        "body": [
+            "${1:unit}:UpdateTeleportProgress(${2:progress})"
+        ],
+        "description": ""
+    },
+    "OnStopCapture": {
+        "prefix": [
+            "OnStopCapture"
+        ],
+        "body": [
+            "${1:unit}:OnStopCapture(${2:target})"
+        ],
+        "description": ""
+    },
+    "CheckCaptor": {
+        "prefix": [
+            "CheckCaptor"
+        ],
+        "body": [
+            "${1:unit}:CheckCaptor(${2:captor})"
+        ],
+        "description": ""
+    },
+    "StopBeingBuiltEffects": {
+        "prefix": [
+            "StopBeingBuiltEffects"
+        ],
+        "body": [
+            "${1:unit}:StopBeingBuiltEffects(${2:builder}, ${3:layer})"
+        ],
+        "description": ""
+    },
+    "StartRocking": {
+        "prefix": [
+            "StartRocking"
+        ],
+        "body": [
+            "${1:unit}:StartRocking()"
+        ],
+        "description": "ROCKING\r\nCauses units to rock from side to side on water"
+    },
+    "OnReclaimed": {
+        "prefix": [
+            "OnReclaimed"
+        ],
+        "body": [
+            "${1:unit}:OnReclaimed(${2:entity})"
+        ],
+        "description": ""
+    },
+    "CreateVeterancyBuffs": {
+        "prefix": [
+            "CreateVeterancyBuffs"
+        ],
+        "body": [
+            "${1:unit}:CreateVeterancyBuffs(${2:level})"
+        ],
+        "description": ""
+    },
+    "DestroyMovementEffects": {
+        "prefix": [
+            "DestroyMovementEffects"
+        ],
+        "body": [
+            "${1:unit}:DestroyMovementEffects()"
+        ],
+        "description": ""
+    },
+    "GetMassBuildAdjMod": {
+        "prefix": [
+            "GetMassBuildAdjMod"
+        ],
+        "body": [
+            "${1:unit}:GetMassBuildAdjMod()"
+        ],
+        "description": ""
+    },
+    "OnStartCapture": {
+        "prefix": [
+            "OnStartCapture"
+        ],
+        "body": [
+            "${1:unit}:OnStartCapture(${2:target})"
+        ],
+        "description": ""
+    },
+    "ShouldUseVetSystem": {
+        "prefix": [
+            "ShouldUseVetSystem"
+        ],
+        "body": [
+            "${1:unit}:ShouldUseVetSystem()"
+        ],
+        "description": "Returns true if a unit can gain veterancy (Has a weapon)"
+    },
+    "ClearWork": {
+        "prefix": [
+            "ClearWork"
+        ],
+        "body": [
+            "${1:unit}:ClearWork()"
+        ],
+        "description": ""
+    },
+    "GetTTTreadType": {
+        "prefix": [
+            "GetTTTreadType"
+        ],
+        "body": [
+            "${1:unit}:GetTTTreadType(${2:pos})"
+        ],
+        "description": ""
+    },
+    "CreateFootFallManipulators": {
+        "prefix": [
+            "CreateFootFallManipulators"
+        ],
+        "body": [
+            "${1:unit}:CreateFootFallManipulators(${2:footfall})"
+        ],
+        "description": ""
+    },
+    "CalculateVeterancyLevelAfterTransfer": {
+        "prefix": [
+            "CalculateVeterancyLevelAfterTransfer"
+        ],
+        "body": [
+            "${1:unit}:CalculateVeterancyLevelAfterTransfer(${2:massKilled}, ${3:massKilledTrue})"
+        ],
+        "description": ""
+    },
+    "DoOnUnitBuiltCallbacks": {
+        "prefix": [
+            "DoOnUnitBuiltCallbacks"
+        ],
+        "body": [
+            "${1:unit}:DoOnUnitBuiltCallbacks(${2:unit})"
+        ],
+        "description": ""
+    },
+    "OnStopBeingBuilt": {
+        "prefix": [
+            "OnStopBeingBuilt"
+        ],
+        "body": [
+            "${1:unit}:OnStopBeingBuilt(${2:builder}, ${3:layer})"
+        ],
+        "description": ""
+    },
+    "CreateMotionChangeEffects": {
+        "prefix": [
+            "CreateMotionChangeEffects"
+        ],
+        "body": [
+            "${1:unit}:CreateMotionChangeEffects(${2:new}, ${3:old})"
+        ],
+        "description": ""
+    },
+    "StopCaptureEffects": {
+        "prefix": [
+            "StopCaptureEffects"
+        ],
+        "body": [
+            "${1:unit}:StopCaptureEffects(${2:target})"
+        ],
+        "description": ""
+    },
+    "RemoveDetectedByHook": {
+        "prefix": [
+            "RemoveDetectedByHook"
+        ],
+        "body": [
+            "${1:unit}:RemoveDetectedByHook(${2:hook})"
+        ],
+        "description": ""
+    },
+    "OnFailedToBeBuilt": {
+        "prefix": [
+            "OnFailedToBeBuilt"
+        ],
+        "body": [
+            "${1:unit}:OnFailedToBeBuilt()"
+        ],
+        "description": ""
+    },
+    "CreateEnhancementEffects": {
+        "prefix": [
+            "CreateEnhancementEffects"
+        ],
+        "body": [
+            "${1:unit}:CreateEnhancementEffects(${2:enhancement})"
+        ],
+        "description": ""
+    },
+    "OnStartBeingBuilt": {
+        "prefix": [
+            "OnStartBeingBuilt"
+        ],
+        "body": [
+            "${1:unit}:OnStartBeingBuilt(${2:builder}, ${3:layer})"
+        ],
+        "description": ""
+    },
+    "GetVeterancyValue": {
+        "prefix": [
+            "GetVeterancyValue"
+        ],
+        "body": [
+            "${1:unit}:GetVeterancyValue()"
+        ],
+        "description": ""
+    },
+    "GetFootPrintSize": {
+        "prefix": [
+            "GetFootPrintSize"
+        ],
+        "body": [
+            "${1:unit}:GetFootPrintSize()"
+        ],
+        "description": ""
+    },
+    "OnMotionTurnEventChange": {
+        "prefix": [
+            "OnMotionTurnEventChange"
+        ],
+        "body": [
+            "${1:unit}:OnMotionTurnEventChange()"
+        ],
+        "description": "Called as planes whoosh round corners. No sounds were shipped for use with this and it was a\r\ncycle eater, so we killed it."
+    },
+    "DoTakeDamage": {
+        "prefix": [
+            "DoTakeDamage"
+        ],
+        "body": [
+            "${1:unit}:DoTakeDamage(${2:instigator}, ${3:amount}, ${4:vector}, ${5:damageType})"
+        ],
+        "description": ""
+    },
+    "DeathWeaponDamageThread": {
+        "prefix": [
+            "DeathWeaponDamageThread"
+        ],
+        "body": [
+            "${1:unit}:DeathWeaponDamageThread(${2:damageRadius}, ${3:damage}, ${4:damageType}, ${5:damageFriendly})"
+        ],
+        "description": ""
+    },
+    "GetCachePosition": {
+        "prefix": [
+            "GetCachePosition"
+        ],
+        "body": [
+            "${1:unit}:GetCachePosition()"
+        ],
+        "description": ""
+    },
+    "AddSpecialToggleEnable": {
+        "prefix": [
+            "AddSpecialToggleEnable"
+        ],
+        "body": [
+            "${1:unit}:AddSpecialToggleEnable(${2:fn})"
+        ],
+        "description": ""
+    },
+    "GetWeaponManipulatorByLabel": {
+        "prefix": [
+            "GetWeaponManipulatorByLabel"
+        ],
+        "body": [
+            "${1:unit}:GetWeaponManipulatorByLabel(${2:label})"
+        ],
+        "description": ""
+    },
+    "ShowPresetEnhancementBones": {
+        "prefix": [
+            "ShowPresetEnhancementBones"
+        ],
+        "body": [
+            "${1:unit}:ShowPresetEnhancementBones()"
+        ],
+        "description": "UNIT ENHANCEMENT PRESETS"
+    },
+    "GetTransportClass": {
+        "prefix": [
+            "GetTransportClass"
+        ],
+        "body": [
+            "${1:unit}:GetTransportClass()"
+        ],
+        "description": "TRANSPORTING"
+    },
+    "SetVeteranLevel": {
+        "prefix": [
+            "SetVeteranLevel"
+        ],
+        "body": [
+            "${1:unit}:SetVeteranLevel(${2:level})"
+        ],
+        "description": "Set the veteran level to the level specified"
+    },
+    "OnNukeArmed": {
+        "prefix": [
+            "OnNukeArmed"
+        ],
+        "body": [
+            "${1:unit}:OnNukeArmed()"
+        ],
+        "description": "Called when a nuke is armed, played a nonexistent sound effect"
+    },
+    "OnAttachedToTransport": {
+        "prefix": [
+            "OnAttachedToTransport"
+        ],
+        "body": [
+            "${1:unit}:OnAttachedToTransport(${2:transport}, ${3:bone})"
+        ],
+        "description": ""
+    },
+    "RockingThread": {
+        "prefix": [
+            "RockingThread"
+        ],
+        "body": [
+            "${1:unit}:RockingThread()"
+        ],
+        "description": ""
+    },
+    "OnIntelDisabled": {
+        "prefix": [
+            "OnIntelDisabled"
+        ],
+        "body": [
+            "${1:unit}:OnIntelDisabled()"
+        ],
+        "description": ""
+    },
+    "GetEnergyBuildAdjMod": {
+        "prefix": [
+            "GetEnergyBuildAdjMod"
+        ],
+        "body": [
+            "${1:unit}:GetEnergyBuildAdjMod()"
+        ],
+        "description": ""
+    },
+    "CreateMovementEffects": {
+        "prefix": [
+            "CreateMovementEffects"
+        ],
+        "body": [
+            "${1:unit}:CreateMovementEffects(${2:EffectsBag}, ${3:TypeSuffix}, ${4:TerrainType})"
+        ],
+        "description": ""
+    },
+    "OnPrepareArmToBuild": {
+        "prefix": [
+            "OnPrepareArmToBuild"
+        ],
+        "body": [
+            "${1:unit}:OnPrepareArmToBuild()"
+        ],
+        "description": ""
+    },
+    "OnDestroy": {
+        "prefix": [
+            "OnDestroy"
+        ],
+        "body": [
+            "${1:unit}:OnDestroy()"
+        ],
+        "description": ""
+    },
+    "index": {
+        "prefix": [
+            "index"
+        ],
+        "body": [
+            "${1:unit}:index(${2:key})"
+        ],
+        "description": ""
+    },
+    "SetCanTakeDamage": {
+        "prefix": [
+            "SetCanTakeDamage"
+        ],
+        "body": [
+            "${1:unit}:SetCanTakeDamage(${2:val})"
+        ],
+        "description": "DAMAGE"
+    },
+    "GetBuildRateOverride": {
+        "prefix": [
+            "GetBuildRateOverride"
+        ],
+        "body": [
+            "${1:unit}:GetBuildRateOverride()"
+        ],
+        "description": ""
+    },
+    "OnIntelEnabled": {
+        "prefix": [
+            "OnIntelEnabled"
+        ],
+        "body": [
+            "${1:unit}:OnIntelEnabled()"
+        ],
+        "description": ""
+    },
+    "AddBuff": {
+        "prefix": [
+            "AddBuff"
+        ],
+        "body": [
+            "${1:unit}:AddBuff(${2:buffTable}, ${3:PosEntity})"
+        ],
+        "description": "BUFFS"
+    },
+    "ManageDamageEffects": {
+        "prefix": [
+            "ManageDamageEffects"
+        ],
+        "body": [
+            "${1:unit}:ManageDamageEffects(${2:newHealth}, ${3:oldHealth})"
+        ],
+        "description": ""
+    },
+    "OnShieldDisabled": {
+        "prefix": [
+            "OnShieldDisabled"
+        ],
+        "body": [
+            "${1:unit}:OnShieldDisabled()"
+        ],
+        "description": ""
+    },
+    "OnFailedCapture": {
+        "prefix": [
+            "OnFailedCapture"
+        ],
+        "body": [
+            "${1:unit}:OnFailedCapture(${2:target})"
+        ],
+        "description": ""
+    },
+    "DoOnFailedToBuildCallbacks": {
+        "prefix": [
+            "DoOnFailedToBuildCallbacks"
+        ],
+        "body": [
+            "${1:unit}:DoOnFailedToBuildCallbacks()"
+        ],
+        "description": ""
+    },
+    "GetSoundEntity": {
+        "prefix": [
+            "GetSoundEntity"
+        ],
+        "body": [
+            "${1:unit}:GetSoundEntity(${2:type})"
+        ],
+        "description": ""
+    },
+    "ShowEnhancementBones": {
+        "prefix": [
+            "ShowEnhancementBones"
+        ],
+        "body": [
+            "${1:unit}:ShowEnhancementBones()"
+        ],
+        "description": ""
+    },
+    "SetDead": {
+        "prefix": [
+            "SetDead"
+        ],
+        "body": [
+            "${1:unit}:SetDead()"
+        ],
+        "description": "MISC FUNCTIONS"
+    },
+    "OnSiloBuildStart": {
+        "prefix": [
+            "OnSiloBuildStart"
+        ],
+        "body": [
+            "${1:unit}:OnSiloBuildStart(${2:weapon})"
+        ],
+        "description": ""
+    },
+    "AddOnDamagedCallback": {
+        "prefix": [
+            "AddOnDamagedCallback"
+        ],
+        "body": [
+            "${1:unit}:AddOnDamagedCallback(${2:fn}, ${3:amount}, ${4:repeatNum})"
+        ],
+        "description": ""
+    },
+    "SetRebuildProgress": {
+        "prefix": [
+            "SetRebuildProgress"
+        ],
+        "body": [
+            "${1:unit}:SetRebuildProgress(${2:unit})"
+        ],
+        "description": "Look for a wreck of the thing we just started building at the same location. If there is\r\none, give the rebuild bonus."
+    },
+    "SetRotation": {
+        "prefix": [
+            "SetRotation"
+        ],
+        "body": [
+            "${1:unit}:SetRotation(${2:angle})"
+        ],
+        "description": ""
+    },
+    "AddSpecialToggleDisable": {
+        "prefix": [
+            "AddSpecialToggleDisable"
+        ],
+        "body": [
+            "${1:unit}:AddSpecialToggleDisable(${2:fn})"
+        ],
+        "description": ""
+    },
+    "CreateBuildEffects": {
+        "prefix": [
+            "CreateBuildEffects"
+        ],
+        "body": [
+            "${1:unit}:CreateBuildEffects(${2:built}, ${3:order})"
+        ],
+        "description": ""
+    },
+    "OnProductionActive": {
+        "prefix": [
+            "OnProductionActive"
+        ],
+        "body": [
+            "${1:unit}:OnProductionActive()"
+        ],
+        "description": ""
+    },
+    "GetSkirtRect": {
+        "prefix": [
+            "GetSkirtRect"
+        ],
+        "body": [
+            "${1:unit}:GetSkirtRect()"
+        ],
+        "description": "Returns 4 numbers: skirt x0, skirt z0, skirt.x1, skirt.z1"
+    },
+    "Rotate": {
+        "prefix": [
+            "Rotate"
+        ],
+        "body": [
+            "${1:unit}:Rotate(${2:angle})"
+        ],
+        "description": ""
+    },
+    "RotateTowardsMid": {
+        "prefix": [
+            "RotateTowardsMid"
+        ],
+        "body": [
+            "${1:unit}:RotateTowardsMid()"
+        ],
+        "description": ""
+    },
+    "GetShieldType": {
+        "prefix": [
+            "GetShieldType"
+        ],
+        "body": [
+            "${1:unit}:GetShieldType()"
+        ],
+        "description": ""
+    },
+    "OnDamageBy": {
+        "prefix": [
+            "OnDamageBy"
+        ],
+        "body": [
+            "${1:unit}:OnDamageBy(${2:index})"
+        ],
+        "description": "Called under mysterous circumstances, previously held logic for nonexistent sound effects."
+    },
+    "AddOnCapturedCallback": {
+        "prefix": [
+            "AddOnCapturedCallback"
+        ],
+        "body": [
+            "${1:unit}:AddOnCapturedCallback(${2:cbOldUnit}, ${3:cbNewUnit})"
+        ],
+        "description": ""
+    },
+    "StartReclaimEffects": {
+        "prefix": [
+            "StartReclaimEffects"
+        ],
+        "body": [
+            "${1:unit}:StartReclaimEffects(${2:target})"
+        ],
+        "description": ""
+    },
+    "CreateBeamExhaust": {
+        "prefix": [
+            "CreateBeamExhaust"
+        ],
+        "body": [
+            "${1:unit}:CreateBeamExhaust(${2:bpTable}, ${3:beamBP})"
+        ],
+        "description": ""
+    },
+    "RotateTowards": {
+        "prefix": [
+            "RotateTowards"
+        ],
+        "body": [
+            "${1:unit}:RotateTowards(${2:tpos})"
+        ],
+        "description": ""
+    },
+    "OnSiloBuildEnd": {
+        "prefix": [
+            "OnSiloBuildEnd"
+        ],
+        "body": [
+            "${1:unit}:OnSiloBuildEnd(${2:weapon})"
+        ],
+        "description": ""
+    },
+    "AddOnUnitBuiltCallback": {
+        "prefix": [
+            "AddOnUnitBuiltCallback"
+        ],
+        "body": [
+            "${1:unit}:AddOnUnitBuiltCallback(${2:fn}, ${3:category})"
+        ],
+        "description": ""
+    },
+    "SetDeathWeaponEnabled": {
+        "prefix": [
+            "SetDeathWeaponEnabled"
+        ],
+        "body": [
+            "${1:unit}:SetDeathWeaponEnabled(${2:enable})"
+        ],
+        "description": ""
+    },
+    "CreateTreads": {
+        "prefix": [
+            "CreateTreads"
+        ],
+        "body": [
+            "${1:unit}:CreateTreads(${2:treads})"
+        ],
+        "description": ""
+    },
+    "PlayUnitAmbientSound": {
+        "prefix": [
+            "PlayUnitAmbientSound"
+        ],
+        "body": [
+            "${1:unit}:PlayUnitAmbientSound(${2:sound})"
+        ],
+        "description": ""
+    }
+}

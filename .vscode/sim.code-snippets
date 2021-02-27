@@ -1,0 +1,1451 @@
+{
+    "IssueRepair": {
+        "prefix": [
+            "IssueRepair"
+        ],
+        "body": [
+            "IssueRepair(${1:tblUnits}, ${2:target})"
+        ],
+        "description": "Orders group of units to repair the target unit.\r\n@param tblUnits Table containing units.\r\n@param target Unit to repair.\r\n@return Returns the issued command."
+    },
+    "SetPlayableRect": {
+        "prefix": [
+            "SetPlayableRect"
+        ],
+        "body": [
+            "SetPlayableRect(${1:minX}, ${2:minZ}, ${3:maxX}, ${4:maxZ})"
+        ],
+        "description": "Set playable rectangle."
+    },
+    "CreateThrustController": {
+        "prefix": [
+            "CreateThrustController"
+        ],
+        "body": [
+            "CreateThrustController(${1:unit}, ${2:label}, ${3:thrustBone})"
+        ],
+        "description": "TODO."
+    },
+    "RemoveBuildRestriction": {
+        "prefix": [
+            "RemoveBuildRestriction"
+        ],
+        "body": [
+            "RemoveBuildRestriction(${1:army}, ${2:category})"
+        ],
+        "description": "Unrestrict the army from building the unit category.\r\nThe categories can be combined using + - * (), example: (categories.TECH3 * categories:NAVAL) + categories.urb0202.\r\n@param army Army's index.\r\n@param category Unit category."
+    },
+    "GetUnitsInRect": {
+        "prefix": [
+            "GetUnitsInRect"
+        ],
+        "body": [
+            "GetUnitsInRect(${1:rectangle})"
+        ],
+        "description": "Return a table with units inside the given rectangle.\r\n@param rectangle Map area created by function Rect(x0, z0, x1, z1)."
+    },
+    "IssueClearCommands": {
+        "prefix": [
+            "IssueClearCommands"
+        ],
+        "body": [
+            "IssueClearCommands(${1:tblUnits})"
+        ],
+        "description": "Clears all commands of given units.\r\nThat includes build queue as well.\r\n@param tblUnits Table containing units."
+    },
+    "SetArmyOutOfGame": {
+        "prefix": [
+            "SetArmyOutOfGame"
+        ],
+        "body": [
+            "SetArmyOutOfGame(${1:army})"
+        ],
+        "description": "Indicate that the supplied army has been defeated.\r\n@param army Army's index."
+    },
+    "StopLoop": {
+        "prefix": [
+            "StopLoop"
+        ],
+        "body": [
+            "StopLoop(${1:self}, ${2:handle})"
+        ],
+        "description": "TODO."
+    },
+    "CreateLightParticleIntel": {
+        "prefix": [
+            "CreateLightParticleIntel"
+        ],
+        "body": [
+            "CreateLightParticleIntel(${1:entity}, ${2:bone}, ${3:army}, ${4:size}, ${5:lifetime}, ${6:textureName}, ${7:rampName})"
+        ],
+        "description": "TODO."
+    },
+    "CreateBeamEntityToEntity": {
+        "prefix": [
+            "CreateBeamEntityToEntity"
+        ],
+        "body": [
+            "CreateBeamEntityToEntity(${1:entity}, ${2:bone}, ${3:other}, ${4:bone}, ${5:army}, ${6:blueprint})"
+        ],
+        "description": "TODO."
+    },
+    "IssueGuard": {
+        "prefix": [
+            "IssueGuard"
+        ],
+        "body": [
+            "IssueGuard(${1:tblUnits}, ${2:target})"
+        ],
+        "description": "Orders group of unit to assist the target unit.\r\n@param tblUnits Table containing units.\r\n@param target Unit to assist.\r\n@return Returns the issued command."
+    },
+    "Warp": {
+        "prefix": [
+            "Warp"
+        ],
+        "body": [
+            "Warp(${1:entity}, ${2:location}, ${3:orientation})"
+        ],
+        "description": "Instanly moves entity to target location.\r\n@param entity Entity to teleport.\r\n@param location Table with position {x, y, z}.\r\n@param orientation Target orientation, optimal parameter."
+    },
+    "SetArmyStatsSyncArmy": {
+        "prefix": [
+            "SetArmyStatsSyncArmy"
+        ],
+        "body": [
+            "SetArmyStatsSyncArmy()"
+        ],
+        "description": "Set the army index for which to sync army stats (-1 for none) .\r\nTODO"
+    },
+    "IssueAggressiveMove": {
+        "prefix": [
+            "IssueAggressiveMove"
+        ],
+        "body": [
+            "IssueAggressiveMove(${1:tblUnits}, ${2:position})"
+        ],
+        "description": "Orders group of units to attack move to target position.\r\n@param tblUnits Table containing units, same as group of units.\r\n@param position Table with position {x, y, z}.\r\n@return Returns the issued command."
+    },
+    "IssueTransportLoad": {
+        "prefix": [
+            "IssueTransportLoad"
+        ],
+        "body": [
+            "IssueTransportLoad(${1:tblUnits}, ${2:transport})"
+        ],
+        "description": "Orders group of units to load into the transport.\r\n@param tblUnits Table containing units.\r\n@param transport Transport unit to load into.\r\n@return Returns the issued command."
+    },
+    "SetIgnorePlayableRect": {
+        "prefix": [
+            "SetIgnorePlayableRect"
+        ],
+        "body": [
+            "SetIgnorePlayableRect(${1:army}, ${2:flag})"
+        ],
+        "description": "Sets army to ignore playable reclangle.\r\nUnits can move outside of restricted area.\r\nUsed in campaign for offmap attacks.\r\n@param army Army's index.\r\n@param flag true/false"
+    },
+    "IssueReclaim": {
+        "prefix": [
+            "IssueReclaim"
+        ],
+        "body": [
+            "IssueReclaim(${1:tblUnits}, ${2:target})"
+        ],
+        "description": "Orders group of units to reclaim the target entity.\r\n@param tblUnits Table containing units.\r\n@param target Unit or prop to reclaim.\r\n@return Returns the issued command."
+    },
+    "DamageArea": {
+        "prefix": [
+            "DamageArea"
+        ],
+        "body": [
+            "DamageArea(${1:instigator}, ${2:location}, ${3:radius}, ${4:amount}, ${5:damageType}, ${6:damageFriendly}, ${7:damageSelf})"
+        ],
+        "description": "Deals damage to the target unit.\r\n@param instigator Source of the damage (unit) or nil.\r\n@param location Table with position {x, y, z}.\r\n@param radius Number, distance from the location to deal the damage.\r\n@param amount Number, amount of damage.\r\n@param damageType Example: 'Force', 'Normal', 'Nuke', 'Fire', TODO.\r\n@param damageFriendly true/false if it should damage allied units.\r\n@param [damageSelf] true/false if the unit dealing the damage should take it as well."
+    },
+    "GetMapSize": {
+        "prefix": [
+            "GetMapSize"
+        ],
+        "body": [
+            "GetMapSize()"
+        ],
+        "description": "Returns map size.\r\n@return sizeX, sizeZ."
+    },
+    "IssueDestroySelf": {
+        "prefix": [
+            "IssueDestroySelf"
+        ],
+        "body": [
+            "IssueDestroySelf(${1:tblUnits})"
+        ],
+        "description": "Orders unit to destroy itself.\r\nThis doesn't leave wreckage.\r\n@param tblUnits Table containing units."
+    },
+    "IssueBuildMobile": {
+        "prefix": [
+            "IssueBuildMobile"
+        ],
+        "body": [
+            "IssueBuildMobile(${1:tblUnits}, ${2:position}, ${3:blueprintID}, ${4:table})"
+        ],
+        "description": "Orders a group of engineers to build a unit at target position.\r\nExample: IssueBuildMobile({builder}, Vector(pos.x, pos.y, pos.z-2), msid, {}).\r\n@param tblUnits Table containing engineers.\r\n@param position Table with position {x, y, z}.\r\n@param blueprintID ID of the unit to build, example: 'ueb0103'.\r\n@param table (Two element table - TODO: find out what it is) or empty table.\r\n@return Returns the issued command."
+    },
+    "IsCollisionBeam": {
+        "prefix": [
+            "IsCollisionBeam"
+        ],
+        "body": [
+            "IsCollisionBeam(${1:entity})"
+        ],
+        "description": "TODO.\r\nINFO: CollisionBeam = IsCollisionBeam(entity)."
+    },
+    "SelectedUnit": {
+        "prefix": [
+            "SelectedUnit"
+        ],
+        "body": [
+            "SelectedUnit()"
+        ],
+        "description": "Returns the currently selected unit. For use at the lua console, so you can call Lua methods on a unit.\r\nExample: unit = SelectedUnit()."
+    },
+    "IsNeutral": {
+        "prefix": [
+            "IsNeutral"
+        ],
+        "body": [
+            "IsNeutral(${1:army1}, ${2:army2})"
+        ],
+        "description": "Returns true if army2 is neutral to army1.\r\n@param army1 Army's index.\r\n@param army2 Army's index."
+    },
+    "IssueTeleportToBeacon": {
+        "prefix": [
+            "IssueTeleportToBeacon"
+        ],
+        "body": [
+            "IssueTeleportToBeacon()"
+        ],
+        "description": "TODO."
+    },
+    "IssueFormAttack": {
+        "prefix": [
+            "IssueFormAttack"
+        ],
+        "body": [
+            "IssueFormAttack(${1:tblUnits}, ${2:target}, ${3:formation}, ${4:number})"
+        ],
+        "description": "Orders group of units to attack the target unit.\r\nMoves to the unit in a formation.\r\n@param tblUnits Table containing units.\r\n@param target Unit to attack.\r\n@param formation Formation to use, 'AttackFormation', 'GrowthFormation'.\r\n@param number Unknown TODO.\r\n@return Returns the issued command."
+    },
+    "IssueKillSelf": {
+        "prefix": [
+            "IssueKillSelf"
+        ],
+        "body": [
+            "IssueKillSelf(${1:tblUnits})"
+        ],
+        "description": "Orders group of units to self-destruct.\r\nThisl leaves wreckages.\r\n@param tblUnits Table containing units."
+    },
+    "CreateAnimator": {
+        "prefix": [
+            "CreateAnimator"
+        ],
+        "body": [
+            "CreateAnimator(${1:unit})"
+        ],
+        "description": "Create a manipulator for playing animations."
+    },
+    "IsProjectile": {
+        "prefix": [
+            "IsProjectile"
+        ],
+        "body": [
+            "IsProjectile(${1:entity})"
+        ],
+        "description": "Returns true if the target entity is a projectile."
+    },
+    "InitializeArmyAI": {
+        "prefix": [
+            "InitializeArmyAI"
+        ],
+        "body": [
+            "InitializeArmyAI(${1:strArmy})"
+        ],
+        "description": "Starts the AI on given army."
+    },
+    "IsProp": {
+        "prefix": [
+            "IsProp"
+        ],
+        "body": [
+            "IsProp(${1:entity})"
+        ],
+        "description": "Returns true if the target entity is a prop."
+    },
+    "DebugGetSelection": {
+        "prefix": [
+            "DebugGetSelection"
+        ],
+        "body": [
+            "DebugGetSelection()"
+        ],
+        "description": "Get DEBUG info for UI selection.\r\nTODO."
+    },
+    "IssueDive": {
+        "prefix": [
+            "IssueDive"
+        ],
+        "body": [
+            "IssueDive(${1:tblUnits})"
+        ],
+        "description": "Orders a group of unit to dive.\r\nSurfaces the unit if they are already under water.\r\n@param tblUnits Table containing units."
+    },
+    "MetaImpact": {
+        "prefix": [
+            "MetaImpact"
+        ],
+        "body": [
+            "MetaImpact(${1:instigator}, ${2:location}, ${3:fMaxRadius}, ${4:iAmount}, ${5:affectsCategory}, ${6:damageFriendly})"
+        ],
+        "description": "TODO."
+    },
+    "IssueFormAggressiveMove": {
+        "prefix": [
+            "IssueFormAggressiveMove"
+        ],
+        "body": [
+            "IssueFormAggressiveMove(${1:tblUnits}, ${2:position}, ${3:formation}, ${4:number})"
+        ],
+        "description": "Orders group of units to attack move in formation to target position.\r\n@param tblUnits Table containing units.\r\n@param position Table with position {x, y, z}.\r\n@param formation Formation to use, 'AttackFormation', 'GrowthFormation'.\r\n@param number Unknown TODO.\r\n@return Returns the issued command."
+    },
+    "ArmyIsCivilian": {
+        "prefix": [
+            "ArmyIsCivilian"
+        ],
+        "body": [
+            "ArmyIsCivilian(${1:army})"
+        ],
+        "description": "Return true if the indicated army is civilian.\r\n@param army Army's index."
+    },
+    "IssueFactoryAssist": {
+        "prefix": [
+            "IssueFactoryAssist"
+        ],
+        "body": [
+            "IssueFactoryAssist(${1:tblUnits}, ${2:target})"
+        ],
+        "description": "Orders a group of factories to assisnt a target factory.\r\n@param tblUnits Table containing factories.\r\n@param target Factory to assist.\r\n@return Returns the issued command."
+    },
+    "EntityCategoryCountAroundPosition": {
+        "prefix": [
+            "EntityCategoryCountAroundPosition"
+        ],
+        "body": [
+            "EntityCategoryCountAroundPosition()"
+        ],
+        "description": "Count how many units fit the specified category around a position.\r\nTODO Ideas: (cytegory, position).\r\n@return Number."
+    },
+    "base": {
+        "prefix": [
+            "base"
+        ],
+        "body": [
+            "base()"
+        ],
+        "description": "derived from Entity"
+    },
+    "IssueCapture": {
+        "prefix": [
+            "IssueCapture"
+        ],
+        "body": [
+            "IssueCapture(${1:tblUnits}, ${2:target})"
+        ],
+        "description": "Orders a group of engineers to capture the target unit.\r\n@param tblUnits Table containing engineers.\r\n@param target Unit to capture.\r\n@return Returns the issued command."
+    },
+    "CreateRotator": {
+        "prefix": [
+            "CreateRotator"
+        ],
+        "body": [
+            "CreateRotator(${1:unit}, ${2:bone}, ${3:axis}, ${4:goal}, ${5:speed}, ${6:accel}, ${7:goalspeed})"
+        ],
+        "description": "Create a manipulator which rotates unit's bone.\r\n@param unit Unit to create the manipulator for.\r\n@param bone String, name of the bone to rotate.\r\n@param axis String, 'x', 'Y' or 'z', axis to rotate around.\r\n@param [goal] TODO.\r\n@param [speed] TODO.\r\n@param [accel] TODO.\r\n@param [goalspeed] TODO.\r\n@return manipulator"
+    },
+    "IsBlip": {
+        "prefix": [
+            "IsBlip"
+        ],
+        "body": [
+            "IsBlip(${1:entity})"
+        ],
+        "description": "TODO.\r\nINFO: Blip = IsBlip(entity)."
+    },
+    "GetArmyUnitCap": {
+        "prefix": [
+            "GetArmyUnitCap"
+        ],
+        "body": [
+            "GetArmyUnitCap(${1:strArmy})"
+        ],
+        "description": "Returns current army's unit capacity."
+    },
+    "SetTerrainTypeRect": {
+        "prefix": [
+            "SetTerrainTypeRect"
+        ],
+        "body": [
+            "SetTerrainTypeRect(${1:rect}, ${2:type})"
+        ],
+        "description": "Changes terrain type in given rectangle.\r\n@paran rect Map area created by function Rect(x0, z0, x1, z1).\r\n@param type Terrain type to change to."
+    },
+    "GetGameTick": {
+        "prefix": [
+            "GetGameTick"
+        ],
+        "body": [
+            "GetGameTick()"
+        ],
+        "description": "Get the current game time in ticks.\r\nThe game time is the simulation time, that stops when the game is paused."
+    },
+    "GetReclaimablesInRect": {
+        "prefix": [
+            "GetReclaimablesInRect"
+        ],
+        "body": [
+            "GetReclaimablesInRect(${1:rectangle})"
+        ],
+        "description": "Return the reclamable things inside the given rectangle.\r\nThat includes props, units, wreckages.\r\n@param rectangle Map area created by function Rect(x0, z0, x1, z1)."
+    },
+    "SetAllianceOneWay": {
+        "prefix": [
+            "SetAllianceOneWay"
+        ],
+        "body": [
+            "SetAllianceOneWay(${1:army1}, ${2:army2}, ${3:alliance})"
+        ],
+        "description": "Set alliances from army1 to army2.\r\n@param army1 Army's index.\r\n@param army2 Army's index.\r\n@param alliance Can be 'Neutral', 'Enemy', 'Ally'."
+    },
+    "EntityCategoryCount": {
+        "prefix": [
+            "EntityCategoryCount"
+        ],
+        "body": [
+            "EntityCategoryCount(${1:category}, ${2:tblUnits})"
+        ],
+        "description": "Count how many units fit the specified category.\r\n@param category Unit category.\r\n@tblUnits Table containing units, same as group of units.\r\n@return Number."
+    },
+    "IssueMove": {
+        "prefix": [
+            "IssueMove"
+        ],
+        "body": [
+            "IssueMove(${1:tblUnits}, ${2:position})"
+        ],
+        "description": "Oders group of units to move to target position.\r\n@param tblUnits Table containing units.\r\n@param position Table with position {x, y, z}.\r\n@return Returns the issued command."
+    },
+    "IssueClearFactoryCommands": {
+        "prefix": [
+            "IssueClearFactoryCommands"
+        ],
+        "body": [
+            "IssueClearFactoryCommands(${1:tblUnits})"
+        ],
+        "description": "Clears factory command without affecting current build queue.\r\nUsed to change rally point while the factories are building units.\r\n@param tblUnits Table containing factories."
+    },
+    "AttachBeamToEntity": {
+        "prefix": [
+            "AttachBeamToEntity"
+        ],
+        "body": [
+            "AttachBeamToEntity(${1:emitter}, ${2:entity}, ${3:tobone}, ${4:army})"
+        ],
+        "description": "TODO.\r\n@param army Army's index."
+    },
+    "IsEnemy": {
+        "prefix": [
+            "IsEnemy"
+        ],
+        "body": [
+            "IsEnemy(${1:army1}, ${2:army2})"
+        ],
+        "description": "Returns true if army2 is enemy to army1.\r\n@param army1 Army's index.\r\n@param army2 Army's index."
+    },
+    "CreateUnit2": {
+        "prefix": [
+            "CreateUnit2"
+        ],
+        "body": [
+            "CreateUnit2(${1:blueprint}, ${2:army}, ${3:layer}, ${4:x}, ${5:z}, ${6:heading})"
+        ],
+        "description": "TODO."
+    },
+    "EntityCategoryContains": {
+        "prefix": [
+            "EntityCategoryContains"
+        ],
+        "body": [
+            "EntityCategoryContains(${1:category}, ${2:unit})"
+        ],
+        "description": "Returns true if a unit category contains this unit.\r\n@param category Unit category.\r\n@unit Unit fo check for category."
+    },
+    "IssueSiloBuildTactical": {
+        "prefix": [
+            "IssueSiloBuildTactical"
+        ],
+        "body": [
+            "IssueSiloBuildTactical()"
+        ],
+        "description": "TODO."
+    },
+    "IssueSiloBuildNuke": {
+        "prefix": [
+            "IssueSiloBuildNuke"
+        ],
+        "body": [
+            "IssueSiloBuildNuke()"
+        ],
+        "description": "TODO."
+    },
+    "IssueMoveOffFactory": {
+        "prefix": [
+            "IssueMoveOffFactory"
+        ],
+        "body": [
+            "IssueMoveOffFactory(${1:tblUnits}, ${2:position})"
+        ],
+        "description": "Orders group of units to move off factory.\r\nThis is used to move units out of factories when they are finished.\r\n@param tblUnits Table containing units.\r\n@param position Table with position {x, y, z}.\r\n@return Returns the issued command."
+    },
+    "NotifyUpgrade": {
+        "prefix": [
+            "NotifyUpgrade"
+        ],
+        "body": [
+            "NotifyUpgrade(${1:from}, ${2:to})"
+        ],
+        "description": "TODO."
+    },
+    "CreateDecal": {
+        "prefix": [
+            "CreateDecal"
+        ],
+        "body": [
+            "CreateDecal(${1:position}, ${2:heading}, ${3:textureName1}, ${4:textureName2}, ${5:type}, ${6:sizeX}, ${7:sizeZ}, ${8:lodParam}, ${9:duration}, ${10:army}, ${11:fidelity})"
+        ],
+        "description": "Creates a decal with supplied parametrs.\r\nThis decal is visible to all armies.\r\n@param position Table with position {x, y, z}.\r\n@param heading Table with orientation {x, y, z}.\r\n@param textureName1 TODO.\r\n@param textureName2 TODO.\r\n@param type TODO.\r\n@param sizeX Size on x axis in game units.\r\n@param sizeZ Size on y axisin game units.\r\n@param lodParam Distance in game units before the decals disappear.\r\n@param duration Life time of the decal in seconds, 0 for infinite.\r\n@param army Owner's army's index.\r\n@param fidelity TODO.\r\n@return The created decal."
+    },
+    "Damage": {
+        "prefix": [
+            "Damage"
+        ],
+        "body": [
+            "Damage(${1:instigator}, ${2:target}, ${3:amount}, ${4:damageType})"
+        ],
+        "description": "Deals damage to the target unit.\r\n@param instigator Source of the damage (unit) or nil.\r\n@param target Unit taking the damage\r\n@param amount Number, amount of damage.\r\n@param damageType Example: 'Force', 'Normal', 'Nuke', 'Fire', TODO."
+    },
+    "IssueBuildFactory": {
+        "prefix": [
+            "IssueBuildFactory"
+        ],
+        "body": [
+            "IssueBuildFactory(${1:tblUnits}, ${2:blueprintID}, ${3:count})"
+        ],
+        "description": "Orders a group of factories to build units.\r\nWorks on mobile factories like Fatboy as well.\r\n@param tblUnits Table containing factories.\r\n@param blueprintID ID of the unit to build, example: 'uel0103'.\r\n@param count How many units to build.\r\n@return Returns the issued command."
+    },
+    "IssueFactoryRallyPoint": {
+        "prefix": [
+            "IssueFactoryRallyPoint"
+        ],
+        "body": [
+            "IssueFactoryRallyPoint(${1:tblUnits}, ${2:position})"
+        ],
+        "description": "Sets a factory rally point.\r\nDoesn't remove the current one, use IssueClearCommands for that.\r\n@param position Table with position {x, y, z}."
+    },
+    "GetUnitBlueprintByName": {
+        "prefix": [
+            "GetUnitBlueprintByName"
+        ],
+        "body": [
+            "GetUnitBlueprintByName(${1:bpName})"
+        ],
+        "description": "Returns unit's blueprint given the blueprint's name.\r\nExample: 'ueb0101'.\r\n@param bpName Unit's blueprint name."
+    },
+    "IssueScript": {
+        "prefix": [
+            "IssueScript"
+        ],
+        "body": [
+            "IssueScript(${1:tblUnits}, ${2:order})"
+        ],
+        "description": "Orders group of unit to do scripted task.\r\nCurrently used for ACU/sACU upgrading. Valid enhancement names are in the unut's blueprint or here http://wiki.faforever.com/index.php?title=Mission_Scripting#Enhancements .\r\n@param tblUnits Table containing units.\r\n@param oder Working format example: {TaskName = \"EnhanceTask\", Enhancement = \"AdvancedEngineering\"}.\r\n@return Returns the issued command."
+    },
+    "SetArmyColorIndex": {
+        "prefix": [
+            "SetArmyColorIndex"
+        ],
+        "body": [
+            "SetArmyColorIndex(${1:army}, ${2:index})"
+        ],
+        "description": "TODO.\r\n@param army Army's index."
+    },
+    "SetArmyShowScore": {
+        "prefix": [
+            "SetArmyShowScore"
+        ],
+        "body": [
+            "SetArmyShowScore(${1:army}, ${2:bool})"
+        ],
+        "description": "Determines if the user should be able to see the army score.\r\n@param army Army's index.\r\n@param bool true/false."
+    },
+    "RemoveEconomyEvent": {
+        "prefix": [
+            "RemoveEconomyEvent"
+        ],
+        "body": [
+            "RemoveEconomyEvent(${1:unit}, ${2:event})"
+        ],
+        "description": "Removes economy event created by CreateEconomyEvent function from the unit.\r\n@param unit Unit to remove the event from.\r\n@param event Event to remove."
+    },
+    "AudioSetLanguage": {
+        "prefix": [
+            "AudioSetLanguage"
+        ],
+        "body": [
+            "AudioSetLanguage(${1:language})"
+        ],
+        "description": "Sets language for playing voices.\r\nAvailable languages are in '/gamedata/loc'.\r\nGame currently defaults on 'us' language if the localized voices don't exists.\r\n@param language String of the language shortcut, example: 'us'."
+    },
+    "CreateLightParticle": {
+        "prefix": [
+            "CreateLightParticle"
+        ],
+        "body": [
+            "CreateLightParticle(${1:entity}, ${2:bone}, ${3:army}, ${4:size}, ${5:lifetime}, ${6:textureName}, ${7:rampName})"
+        ],
+        "description": "TODO."
+    },
+    "CreateResourceDeposit": {
+        "prefix": [
+            "CreateResourceDeposit"
+        ],
+        "body": [
+            "CreateResourceDeposit(${1:type}, ${2:x}, ${3:y}, ${4:z}, ${5:size})"
+        ],
+        "description": "Spawn Mass and Hydro points on the map.\r\n@param type Type of the resource to create, either 'Mass' or 'Hydrocarbon'.\r\n@param x Position on x axis.\r\n@param y Position on y axis.\r\n@param z Position on z axis.\r\n@param size Size in game units, 1 for Mass, 3 for Hydro."
+    },
+    "IssueAttack": {
+        "prefix": [
+            "IssueAttack"
+        ],
+        "body": [
+            "IssueAttack(${1:tblUnits}, ${2:target})"
+        ],
+        "description": "Orders group of units to attack the target unit.\r\n@param tblUnits Table containing units, same as group of units.\r\n@param target Unit to attack.\r\n@return Returns the issued command."
+    },
+    "IsEntity": {
+        "prefix": [
+            "IsEntity"
+        ],
+        "body": [
+            "IsEntity(${1:object})"
+        ],
+        "description": "Returns true if the given object is a Entity."
+    },
+    "IssueUpgrade": {
+        "prefix": [
+            "IssueUpgrade"
+        ],
+        "body": [
+            "IssueUpgrade(${1:tblUnits}, ${2:blueprintID})"
+        ],
+        "description": "Orders group of units to upgrade.\r\nUsed for factories, radars, etc.\r\n@param tblUnits Table containing units.\r\n@param blueprintID ID of the blueprint to upgrade to.\r\n@return Returns the issued command."
+    },
+    "EntityCategoryFilterDown": {
+        "prefix": [
+            "EntityCategoryFilterDown"
+        ],
+        "body": [
+            "EntityCategoryFilterDown(${1:category}, ${2:tblUnits})"
+        ],
+        "description": "Filter a list of units to only those found in the category.\r\n@param category Unit category.\r\n@tblUnits Table containing units, same as group of units.\r\n@return Filtered list of units."
+    },
+    "IssueStop": {
+        "prefix": [
+            "IssueStop"
+        ],
+        "body": [
+            "IssueStop(${1:tblUnits})"
+        ],
+        "description": "Order group of units to stop.\r\n@param tblUnits Table containing units."
+    },
+    "ShouldCreateInitialArmyUnits": {
+        "prefix": [
+            "ShouldCreateInitialArmyUnits"
+        ],
+        "body": [
+            "ShouldCreateInitialArmyUnits()"
+        ],
+        "description": "TODO."
+    },
+    "EndGame": {
+        "prefix": [
+            "EndGame"
+        ],
+        "body": [
+            "EndGame()"
+        ],
+        "description": "Signal the end of the game.\r\nActs like a permanent pause."
+    },
+    "print": {
+        "prefix": [
+            "print"
+        ],
+        "body": [
+            "print()"
+        ],
+        "description": "Print a log message\r\nTODO"
+    },
+    "DrawLinePop": {
+        "prefix": [
+            "DrawLinePop"
+        ],
+        "body": [
+            "DrawLinePop()"
+        ],
+        "description": "Draw a 3d line from a to b with color c with a circle at the endof the target line.\r\nTODO."
+    },
+    "IssueTactical": {
+        "prefix": [
+            "IssueTactical"
+        ],
+        "body": [
+            "IssueTactical(${1:tblUnits}, ${2:target})"
+        ],
+        "description": "Orders group of units to fire a tactical missile at target or location.\r\n@param tblUnits Table containing missle launchers.\r\n@param target Unit to fire at or table with position {x, y, z}.\r\n@return Returns the issued command."
+    },
+    "FlattenMapRect": {
+        "prefix": [
+            "FlattenMapRect"
+        ],
+        "body": [
+            "FlattenMapRect(${1:x}, ${2:z}, ${3:sizex}, ${4:sizez}, ${5:elevation})"
+        ],
+        "description": "Changes elevation of the map in the desired area.\r\nUsed mainly for spawning buildings, so they don't float in air.\r\n@param x Starting point on x axis in game units.\r\n@param z Starting point on z axis in game units.\r\n@param sizex Size on x axis in game units.\r\n@param sizez Size on z axis in game units.\r\n@param elevation Target elevation in game units."
+    },
+    "GetEntitiesInRect": {
+        "prefix": [
+            "GetEntitiesInRect"
+        ],
+        "body": [
+            "GetEntitiesInRect(${1:rectangle})"
+        ],
+        "description": "Return the enitities inside the given rectangle.\r\n@param rectangle Map area created by function Rect(x0, z0, x1, z1)."
+    },
+    "CreateEconomyEvent": {
+        "prefix": [
+            "CreateEconomyEvent"
+        ],
+        "body": [
+            "CreateEconomyEvent(${1:unit}, ${2:energy}, ${3:mass}, ${4:timeInSeconds})"
+        ],
+        "description": "Creates an economy event for the unit that consumes resources over given time.\r\nThe unit shows the orange build bar for this event.\r\n@param unit Target unit.\r\n@param energy Amount of total energy the event will consume.\r\n@param mass Amount of total energy the event will consume.\r\n@param timeInSeconds How many seconds will the event last.\r\nreturn event Created economy event."
+    },
+    "ArmyIsOutOfGame": {
+        "prefix": [
+            "ArmyIsOutOfGame"
+        ],
+        "body": [
+            "ArmyIsOutOfGame(${1:army})"
+        ],
+        "description": "Return true if the indicated army has been defeated.\r\n@param army Army's index."
+    },
+    "IssueNuke": {
+        "prefix": [
+            "IssueNuke"
+        ],
+        "body": [
+            "IssueNuke(${1:tblUnits}, ${2:position})"
+        ],
+        "description": "Launches a nuke at target position.\r\n@param tblUnits Table containing Nuke Launchers.\r\n@param position Table with position {x, y, z}.\r\n@return Returns the issued command."
+    },
+    "GenerateArmyStart": {
+        "prefix": [
+            "GenerateArmyStart"
+        ],
+        "body": [
+            "GenerateArmyStart(${1:strArmy})"
+        ],
+        "description": "TODO."
+    },
+    "HasLocalizedVO": {
+        "prefix": [
+            "HasLocalizedVO"
+        ],
+        "body": [
+            "HasLocalizedVO(${1:language})"
+        ],
+        "description": "Returns true if the language for playing voices exists.\r\nAvailable languages are in '/gamedata/loc'.\r\nGame currently defaults on 'us' language if the localized voices don't exists.\r\n@param language String of the language shortcut, example: 'us'."
+    },
+    "IsUnit": {
+        "prefix": [
+            "IsUnit"
+        ],
+        "body": [
+            "IsUnit(${1:entity})"
+        ],
+        "description": "Returns true if the target entity is a unit."
+    },
+    "CreateBuilderArmController": {
+        "prefix": [
+            "CreateBuilderArmController"
+        ],
+        "body": [
+            "CreateBuilderArmController(${1:unit}, ${2:turretBone}, ${3:barrelBone}, ${4:aimBone})"
+        ],
+        "description": "TODO."
+    },
+    "GetArmyBrain": {
+        "prefix": [
+            "GetArmyBrain"
+        ],
+        "body": [
+            "GetArmyBrain(${1:strArmy})"
+        ],
+        "description": "Returns an army brain given the brain's name."
+    },
+    "SessionIsReplay": {
+        "prefix": [
+            "SessionIsReplay"
+        ],
+        "body": [
+            "SessionIsReplay()"
+        ],
+        "description": "Returns true if the active session is a replay\r\nSame as user SessionIsReplay."
+    },
+    "ChangeUnitArmy": {
+        "prefix": [
+            "ChangeUnitArmy"
+        ],
+        "body": [
+            "ChangeUnitArmy(${1:unit}, ${2:army})"
+        ],
+        "description": "Change a unit's army, return the new unit.\r\n@param unit Unit to be given.\r\n@param army Army's index to recieve the unit."
+    },
+    "IssueTransportUnloadSpecific": {
+        "prefix": [
+            "IssueTransportUnloadSpecific"
+        ],
+        "body": [
+            "IssueTransportUnloadSpecific(${1:tblUnits}, ${2:category}, ${3:position})"
+        ],
+        "description": "Orders group of transports (carriers) to drop specific units at target position.\r\nThis seems to work only with carriers and not with air transports.\r\n@param tblUnits Table containing transports (carriers).\r\n@param category Unit category (categories.BOMBER).\r\n@param position Table with position {x, y, z}.\r\n@return Returns the issued command."
+    },
+    "IssueTransportUnload": {
+        "prefix": [
+            "IssueTransportUnload"
+        ],
+        "body": [
+            "IssueTransportUnload(${1:tblUnits}, ${2:position})"
+        ],
+        "description": "Orders group of transports to drop units at target position.\r\n@param tblUnits Table containing transports.\r\n@param position Table with position {x, y, z}.\r\n@return Returns the issued command."
+    },
+    "SetAlliedVictory": {
+        "prefix": [
+            "SetAlliedVictory"
+        ],
+        "body": [
+            "SetAlliedVictory()"
+        ],
+        "description": "TODO."
+    },
+    "IsAlly": {
+        "prefix": [
+            "IsAlly"
+        ],
+        "body": [
+            "IsAlly(${1:army1}, ${2:army2})"
+        ],
+        "description": "Returns true if army2 is allied with army1.\r\n@param army1 Army's index.\r\n@param army2 Army's index."
+    },
+    "SimConExecute": {
+        "prefix": [
+            "SimConExecute"
+        ],
+        "body": [
+            "SimConExecute(${1:commandString})"
+        ],
+        "description": "Perform a console command.\r\nSimConExecute('command string')."
+    },
+    "GetSystemTimeSecondsOnlyForProfileUse": {
+        "prefix": [
+            "GetSystemTimeSecondsOnlyForProfileUse"
+        ],
+        "body": [
+            "GetSystemTimeSecondsOnlyForProfileUse()"
+        ],
+        "description": "Returns System time in seconds.\r\nINFO: float GetSystemTimeSecondsOnlyForProfileUse().\r\nTODO."
+    },
+    "IssueSacrifice": {
+        "prefix": [
+            "IssueSacrifice"
+        ],
+        "body": [
+            "IssueSacrifice(${1:tblUnits}, ${2:target})"
+        ],
+        "description": "Orders group of unit to use Sacrifice on target unit.\r\n@param tblUnits Table containing units that can use sacrifice.\r\n@param target Unit to to sacrifice into.\r\nTODO This is untested.\r\n@return Returns the issued command."
+    },
+    "DrawCircle": {
+        "prefix": [
+            "DrawCircle"
+        ],
+        "body": [
+            "DrawCircle()"
+        ],
+        "description": "Draw a 3d circle at a with size s and color c.\r\nTODO."
+    },
+    "CreateUnit": {
+        "prefix": [
+            "CreateUnit"
+        ],
+        "body": [
+            "CreateUnit(${1:blueprint}, ${2:army}, ${3:tx}, ${4:ty}, ${5:tz}, ${6:qx}, ${7:qy}, ${8:qz}, ${9:qw}, ${10:layer})"
+        ],
+        "description": "TODO."
+    },
+    "EconomyEventIsDone": {
+        "prefix": [
+            "EconomyEventIsDone"
+        ],
+        "body": [
+            "EconomyEventIsDone(${1:event})"
+        ],
+        "description": "Check if the economy event is finished.\r\n@param event Economy event created by CreateEconomyEvent function.\r\n@return true/false."
+    },
+    "OkayToMessWithArmy": {
+        "prefix": [
+            "OkayToMessWithArmy"
+        ],
+        "body": [
+            "OkayToMessWithArmy()"
+        ],
+        "description": "Return true if the current command source is authorized to mess with the given army.\r\nOr if cheats are enabled.\r\nTODO."
+    },
+    "GetDepositsAroundPoint": {
+        "prefix": [
+            "GetDepositsAroundPoint"
+        ],
+        "body": [
+            "GetDepositsAroundPoint(${1:X}, ${2:Z}, ${3:Radius}, ${4:Type})"
+        ],
+        "description": "New functions from engine patch:\r\nReturns list of deposits\r\nType: 0 - All, 1 - Mass, 2 - Energy\r\nResult: {{X1,X2,Z1,Z2,Type,Dist},...}"
+    },
+    "IsGameOver": {
+        "prefix": [
+            "IsGameOver"
+        ],
+        "body": [
+            "IsGameOver()"
+        ],
+        "description": "Return true if the game is over.\r\ni.e. EndGame() has been called."
+    },
+    "GetFocusArmy": {
+        "prefix": [
+            "GetFocusArmy"
+        ],
+        "body": [
+            "GetFocusArmy()"
+        ],
+        "description": "Returns the index of local army."
+    },
+    "IssueOverCharge": {
+        "prefix": [
+            "IssueOverCharge"
+        ],
+        "body": [
+            "IssueOverCharge(${1:tblUnits}, ${2:target})"
+        ],
+        "description": "Orders unit to fire OverCharge weapon at the target.\r\n@param tblUnits Table containing units.\r\n@param target Unit to OC."
+    },
+    "SetArmyPlans": {
+        "prefix": [
+            "SetArmyPlans"
+        ],
+        "body": [
+            "SetArmyPlans(${1:army}, ${2:plans})"
+        ],
+        "description": "TODO."
+    },
+    "GetCurrentCommandSource": {
+        "prefix": [
+            "GetCurrentCommandSource"
+        ],
+        "body": [
+            "GetCurrentCommandSource()"
+        ],
+        "description": "Return the (1 based) index of the current command source.\r\nTODO."
+    },
+    "CreateFootPlantController": {
+        "prefix": [
+            "CreateFootPlantController"
+        ],
+        "body": [
+            "CreateFootPlantController(${1:unit}, ${2:footBone}, ${3:kneeBone}, ${4:hipBone}, ${5:straightLegs}, ${6:maxFootFall})"
+        ],
+        "description": "TODO."
+    },
+    "IsCommandDone": {
+        "prefix": [
+            "IsCommandDone"
+        ],
+        "body": [
+            "IsCommandDone(${1:cmd})"
+        ],
+        "description": "Returns true if given command is finished.\r\n@param cmd Unit's command crated for example by IssueMove()."
+    },
+    "CreateAimController": {
+        "prefix": [
+            "CreateAimController"
+        ],
+        "body": [
+            "CreateAimController(${1:weapon}, ${2:label}, ${3:turretBone}, ${4:barrelBone}, ${5:muzzleBone})"
+        ],
+        "description": "TODO."
+    },
+    "IssuePatrol": {
+        "prefix": [
+            "IssuePatrol"
+        ],
+        "body": [
+            "IssuePatrol(${1:tblUnits}, ${2:position})"
+        ],
+        "description": "Oders group of units to patrol on target position.\r\nCall this at least twice for two different positions to have any meaning.\r\n@param tblUnits Table containing units.\r\n@param position Table with position {x, y, z}.\r\n@return Returns the issued command."
+    },
+    "SetArmyStart": {
+        "prefix": [
+            "SetArmyStart"
+        ],
+        "body": [
+            "SetArmyStart(${1:army}, ${2:x}, ${3:z})"
+        ],
+        "description": "Set the arty starting position.\r\nPosition where the initial unit will be spawned.\r\n@param army Army's index.\r\n@param x Position on the map on X axis.\r\n@param x Position on the map on Z axis."
+    },
+    "SetTerrainType": {
+        "prefix": [
+            "SetTerrainType"
+        ],
+        "body": [
+            "SetTerrainType(${1:x}, ${2:z}, ${3:type})"
+        ],
+        "description": "Changes terrain type at given position.\r\n@param x Position on x axis.\r\n@param z Position on z axis.\r\n@param type Terrain type to change to."
+    },
+    "CheatsEnabled": {
+        "prefix": [
+            "CheatsEnabled"
+        ],
+        "body": [
+            "CheatsEnabled()"
+        ],
+        "description": "Return true if cheats are enabled.\r\nLogs the cheat attempt no matter what."
+    },
+    "SetArmyColor": {
+        "prefix": [
+            "SetArmyColor"
+        ],
+        "body": [
+            "SetArmyColor(${1:army}, ${2:r}, ${3:g}, ${4:b})"
+        ],
+        "description": "Set army's color using RGB values.\r\n@param army Army's index.\r\n@param r Number 0-255.\r\n@param g Number 0-255.\r\n@param b Number 0-255."
+    },
+    "CreateUnitHPR": {
+        "prefix": [
+            "CreateUnitHPR"
+        ],
+        "body": [
+            "CreateUnitHPR(${1:blueprint}, ${2:army}, ${3:x}, ${4:y}, ${5:z}, ${6:pitch}, ${7:yaw}, ${8:roll})"
+        ],
+        "description": "TODO."
+    },
+    "IssueTeleport": {
+        "prefix": [
+            "IssueTeleport"
+        ],
+        "body": [
+            "IssueTeleport(${1:tblUnits}, ${2:position})"
+        ],
+        "description": "Orders group of units to teleport to target position.\r\n@param tblUnits Table containing units.\r\n@param position Table with position {x, y, z}.\r\n@return Returns the issued command."
+    },
+    "PlayLoop": {
+        "prefix": [
+            "PlayLoop"
+        ],
+        "body": [
+            "PlayLoop(${1:self}, ${2:sndParams})"
+        ],
+        "description": "TODO.\r\nINFO: handle = PlayLoop(self,sndParams)"
+    },
+    "CreateCollisionDetector": {
+        "prefix": [
+            "CreateCollisionDetector"
+        ],
+        "body": [
+            "CreateCollisionDetector(${1:unit})"
+        ],
+        "description": "Create a collision detection manipulator\r\nTODO."
+    },
+    "ArmyInitializePrebuiltUnits": {
+        "prefix": [
+            "ArmyInitializePrebuiltUnits"
+        ],
+        "body": [
+            "ArmyInitializePrebuiltUnits(${1:army})"
+        ],
+        "description": "TODO.\r\n@param army Army's index."
+    },
+    "CreateBeamEmitterOnEntity": {
+        "prefix": [
+            "CreateBeamEmitterOnEntity"
+        ],
+        "body": [
+            "CreateBeamEmitterOnEntity(${1:entity}, ${2:tobone}, ${3:army}, ${4:blueprint})"
+        ],
+        "description": "TODO."
+    },
+    "ListArmies": {
+        "prefix": [
+            "ListArmies"
+        ],
+        "body": [
+            "ListArmies()"
+        ],
+        "description": "List all armies in the game.\r\n@return Table containing strings of army names."
+    },
+    "LUnitMoveNear": {
+        "prefix": [
+            "LUnitMoveNear"
+        ],
+        "body": [
+            "LUnitMoveNear(${1:self}, ${2:target}, ${3:range})"
+        ],
+        "description": "TODO.\r\nINFO: ScriptTask.LUnitMoveNear(self,target,range)"
+    },
+    "SetAlliance": {
+        "prefix": [
+            "SetAlliance"
+        ],
+        "body": [
+            "SetAlliance(${1:army1}, ${2:army2}, ${3:alliance})"
+        ],
+        "description": "Set alliances between 2 armies.\r\n@param army1 Army's index.\r\n@param army2 Army's index.\r\n@param alliance Can be 'Neutral', 'Enemy', 'Ally'."
+    },
+    "SetArmyFactionIndex": {
+        "prefix": [
+            "SetArmyFactionIndex"
+        ],
+        "body": [
+            "SetArmyFactionIndex(${1:army}, ${2:index})"
+        ],
+        "description": "Sets faction for the given army.\r\n0 - UEF, 1 - Aeon, 2 - Cybran, 3 - Seraphim.\r\n@param army Army's index.\r\n@param index Faction index."
+    },
+    "CreatePropHPR": {
+        "prefix": [
+            "CreatePropHPR"
+        ],
+        "body": [
+            "CreatePropHPR(${1:blueprint}, ${2:x}, ${3:y}, ${4:z}, ${5:heading}, ${6:pitch}, ${7:roll})"
+        ],
+        "description": "Spawns a prop.\r\nAdditional control to set orientation of the prop.\r\n@param blueprint Full path to the prop's blueprint.\r\n@param x Position on x axis.\r\n@param y Position on y axis.\r\n@param z Position on z axis.\r\n@param heading TODO.\r\n@param pitch TODO.\r\n@param roll TODO.\r\n@return The spawned prop."
+    },
+    "GetEntityById": {
+        "prefix": [
+            "GetEntityById"
+        ],
+        "body": [
+            "GetEntityById(${1:id})"
+        ],
+        "description": "Get entity by entity id.\r\nThis ID is unique for each entity."
+    },
+    "IssueFerry": {
+        "prefix": [
+            "IssueFerry"
+        ],
+        "body": [
+            "IssueFerry(${1:tblUnits}, ${2:position})"
+        ],
+        "description": "TODO."
+    },
+    "CreateInitialArmyUnit": {
+        "prefix": [
+            "CreateInitialArmyUnit"
+        ],
+        "body": [
+            "CreateInitialArmyUnit(${1:armyName}, ${2:initialUnitName})"
+        ],
+        "description": "Spawns initial unit for the given army.\r\n@param armyName String, army's name.\r\n@param initialUnitName String, unit blueprint name, example: 'uel0001'.\r\n@return The created unit."
+    },
+    "SubmitXMLArmyStats": {
+        "prefix": [
+            "SubmitXMLArmyStats"
+        ],
+        "body": [
+            "SubmitXMLArmyStats()"
+        ],
+        "description": "Request that we submit xml army stats to gpg.net.\r\nTODO."
+    },
+    "Random": {
+        "prefix": [
+            "Random"
+        ],
+        "body": [
+            "Random()"
+        ],
+        "description": "TODO.\r\nINFO: Random([[min,] max])"
+    },
+    "AttachBeamEntityToEntity": {
+        "prefix": [
+            "AttachBeamEntityToEntity"
+        ],
+        "body": [
+            "AttachBeamEntityToEntity(${1:self}, ${2:bone}, ${3:other}, ${4:bone}, ${5:army}, ${6:blueprint})"
+        ],
+        "description": "TODO."
+    },
+    "IssueFormPatrol": {
+        "prefix": [
+            "IssueFormPatrol"
+        ],
+        "body": [
+            "IssueFormPatrol(${1:tblUnits}, ${2:position}, ${3:formation}, ${4:number})"
+        ],
+        "description": "Oders group of units to patrol in formation on target position.\r\nCall this at least twice for two different positions to have any meaning.\r\n@param tblUnits Table containing units.\r\n@param position Table with position {x, y, z}.\r\n@param formation Formation to use, 'AttackFormation', 'GrowthFormation'.\r\n@param number Unknown TODO.\r\n@return Returns the issued command."
+    },
+    "LUnitMove": {
+        "prefix": [
+            "LUnitMove"
+        ],
+        "body": [
+            "LUnitMove(${1:self}, ${2:target})"
+        ],
+        "description": "TODO.\r\nINFO: ScriptTask.LUnitMove(self, target)"
+    },
+    "AddBuildRestriction": {
+        "prefix": [
+            "AddBuildRestriction"
+        ],
+        "body": [
+            "AddBuildRestriction(${1:army}, ${2:category})"
+        ],
+        "description": "Module: Sim\r\n@module Sim\r\nRestrict the army from building the unit category.\r\nThe categories can be combined using + - * (), example: (categories.TECH3 * categories:NAVAL) + categories.urb0202.\r\n@param army Army's index.\r\n@param category Unit category."
+    },
+    "TryCopyPose": {
+        "prefix": [
+            "TryCopyPose"
+        ],
+        "body": [
+            "TryCopyPose(${1:unitFrom}, ${2:entityTo}, ${3:bCopyWorldTransform})"
+        ],
+        "description": "Attempt to copy animation pose from the unit to the prop.\r\nOnly works if the mesh and skeletons are the same, but will not produce an error if not.\r\n@param unitFrom Unit to copy pose from.\r\n@param entityTo Entity (prop) to copy pose on.\r\n@param bCopyWorldTransform true/false."
+    },
+    "IssuePause": {
+        "prefix": [
+            "IssuePause"
+        ],
+        "body": [
+            "IssuePause(${1:unit})"
+        ],
+        "description": "Pauses the unit.\r\n@param unit Unit to pause."
+    },
+    "CreateStorageManip": {
+        "prefix": [
+            "CreateStorageManip"
+        ],
+        "body": [
+            "CreateStorageManip(${1:unit}, ${2:bone}, ${3:resouceName}, ${4:minX}, ${5:minY}, ${6:minZ}, ${7:maxX}, ${8:maxY}, ${9:maxZ})"
+        ],
+        "description": "TODO."
+    },
+    "GetUnitById": {
+        "prefix": [
+            "GetUnitById"
+        ],
+        "body": [
+            "GetUnitById(${1:id})"
+        ],
+        "description": "Returns unit by unique entity id.\r\nThis ID is unique for each entity."
+    },
+    "GetGameTimeSeconds": {
+        "prefix": [
+            "GetGameTimeSeconds"
+        ],
+        "body": [
+            "GetGameTimeSeconds()"
+        ],
+        "description": "Get the current game time in seconds.\r\nThe game time is the simulation time, that stops when the game is paused."
+    },
+    "GetArmyUnitCostTotal": {
+        "prefix": [
+            "GetArmyUnitCostTotal"
+        ],
+        "body": [
+            "GetArmyUnitCostTotal(${1:strArmy})"
+        ],
+        "description": "TODO."
+    },
+    "DrawLine": {
+        "prefix": [
+            "DrawLine"
+        ],
+        "body": [
+            "DrawLine()"
+        ],
+        "description": "Draw a 3d line from a to b with color c.\r\nTODO."
+    },
+    "ParseEntityCategory": {
+        "prefix": [
+            "ParseEntityCategory"
+        ],
+        "body": [
+            "ParseEntityCategory(${1:strCategory})"
+        ],
+        "description": "Parse a string to generate a new entity category.\r\n@param strCategory Example: 'ual0101'.\r\n@return Returns generated category, example: categories.ual0101 ."
+    },
+    "GenerateRandomOrientation": {
+        "prefix": [
+            "GenerateRandomOrientation"
+        ],
+        "body": [
+            "GenerateRandomOrientation()"
+        ],
+        "description": "TODO.\r\nINFO: rotation = GenerateRandomOrientation()"
+    },
+    "IssueFormMove": {
+        "prefix": [
+            "IssueFormMove"
+        ],
+        "body": [
+            "IssueFormMove(${1:tblUnits}, ${2:position}, ${3:formation}, ${4:number})"
+        ],
+        "description": "Oders group of units to move in formation to target position.\r\n@param tblUnits Table containing units.\r\n@param position Table with position {x, y, z}.\r\n@param formation Formation to use, 'AttackFormation', 'GrowthFormation'.\r\n@param number Unknown TODO.\r\n@return Returns the issued command."
+    },
+    "CreateSplat": {
+        "prefix": [
+            "CreateSplat"
+        ],
+        "body": [
+            "CreateSplat(${1:position}, ${2:heading}, ${3:textureName}, ${4:sizeX}, ${5:sizeZ}, ${6:lodParam}, ${7:duration}, ${8:army}, ${9:fidelity})"
+        ],
+        "description": "TODO."
+    },
+    "CoordinateAttacks": {
+        "prefix": [
+            "CoordinateAttacks"
+        ],
+        "body": [
+            "CoordinateAttacks()"
+        ],
+        "description": "TODO."
+    },
+    "GetBlueprint": {
+        "prefix": [
+            "GetBlueprint"
+        ],
+        "body": [
+            "GetBlueprint(${1:entity})"
+        ],
+        "description": "Returns entity's blueprint.\r\nCan be used as local bp = entity:GetBlueprint()."
+    },
+    "SetArmyUnitCap": {
+        "prefix": [
+            "SetArmyUnitCap"
+        ],
+        "body": [
+            "SetArmyUnitCap(${1:army}, ${2:unitCap})"
+        ],
+        "description": "Sets maximum number of units army can build.\r\n@param army Army's index.\r\n@param unitCap Number, the new unit cap."
+    },
+    "SinkAway": {
+        "prefix": [
+            "SinkAway"
+        ],
+        "body": [
+            "SinkAway(${1:vy})"
+        ],
+        "description": "Sinks the entity into the ground.\r\nUsed for dead trees for example.\r\n@param vy Velocity at Y axis."
+    },
+    "CreateSlider": {
+        "prefix": [
+            "CreateSlider"
+        ],
+        "body": [
+            "CreateSlider()"
+        ],
+        "description": "TODO.\r\nCreateSlider(unit, bone, [goal_x, goal_y, goal_z, [speed, [world_space]]])."
+    },
+    "CreateSplatOnBone": {
+        "prefix": [
+            "CreateSplatOnBone"
+        ],
+        "body": [
+            "CreateSplatOnBone(${1:boneName}, ${2:offset}, ${3:textureName}, ${4:sizeX}, ${5:sizeZ}, ${6:lodParam}, ${7:duration}, ${8:army})"
+        ],
+        "description": "Add a splat to the game at an entity bone position and heading.\r\nTODO."
+    },
+    "ArmyGetHandicap": {
+        "prefix": [
+            "ArmyGetHandicap"
+        ],
+        "body": [
+            "ArmyGetHandicap(${1:army})"
+        ],
+        "description": "TODO.\r\n@param army Army's index."
+    },
+    "FlushIntelInRect": {
+        "prefix": [
+            "FlushIntelInRect"
+        ],
+        "body": [
+            "FlushIntelInRect(${1:minX}, ${2:minZ}, ${3:maxX}, ${4:maxZ})"
+        ],
+        "description": "Deletes sscouted icons from the target area.\r\nIf the area is in a radar range, it will switch back to default unscouted icons."
+    },
+    "SetArmyEconomy": {
+        "prefix": [
+            "SetArmyEconomy"
+        ],
+        "body": [
+            "SetArmyEconomy(${1:army}, ${2:mass}, ${3:energy})"
+        ],
+        "description": "Gives mass and energy to the army.\r\nTODO: Find out if this is in any way special than brain:GiveResource().\r\n@param army Army's index.\r\n@param mass Amount of mass to give.\r\n@param energy Amount of energy to give."
+    },
+    "DamageRing": {
+        "prefix": [
+            "DamageRing"
+        ],
+        "body": [
+            "DamageRing(${1:instigator}, ${2:location}, ${3:minRadius}, ${4:maxRadius}, ${5:amount}, ${6:damageType}, ${7:damageFriendly}, ${8:damageSelf})"
+        ],
+        "description": "Deals damage to the target unit.\r\n@param instigator Source of the damage (unit) or nil.\r\n@param location Table with position {x, y, z}.\r\n@param minRadius Number, distance from the location to start dealing damage.\r\n@param maxRadius Number, distance from the location to stop dealing damage.\r\n@param amount Number, amount of damage.\r\n@param damageType Example: 'Force', 'Normal', 'Nuke', 'Fire', TODO.\r\n@param damageFriendly true/false if it should damage allied units.\r\n@param [damageSelf] true/false if the unit dealing the damage should take it as well."
+    },
+    "CreateBeamEmitter": {
+        "prefix": [
+            "CreateBeamEmitter"
+        ],
+        "body": [
+            "CreateBeamEmitter(${1:blueprint}, ${2:army})"
+        ],
+        "description": "TODO."
+    },
+    "SetIgnoreArmyUnitCap": {
+        "prefix": [
+            "SetIgnoreArmyUnitCap"
+        ],
+        "body": [
+            "SetIgnoreArmyUnitCap(${1:army}, ${2:flag})"
+        ],
+        "description": "Sets army to ignore max unit capacity.\r\n@param army Army's index.\r\n@param flag true/false."
+    },
+    "SetArmyAIPersonality": {
+        "prefix": [
+            "SetArmyAIPersonality"
+        ],
+        "body": [
+            "SetArmyAIPersonality(${1:army}, ${2:personality})"
+        ],
+        "description": "TODO.\r\n@param army Army's index.\r\n@param personality TODO."
+    }
+}

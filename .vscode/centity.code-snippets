@@ -1,0 +1,497 @@
+{
+    "GetIntelRadius": {
+        "prefix": [
+            "GetIntelRadius"
+        ],
+        "body": [
+            "${1:entity}:GetIntelRadius(${2:type})"
+        ],
+        "description": "GetIntelRadius(type)"
+    },
+    "SetOrientation": {
+        "prefix": [
+            "SetOrientation"
+        ],
+        "body": [
+            "${1:entity}:SetOrientation(${2:orientation}, ${3:immediately})"
+        ],
+        "description": "Entity:SetOrientation(orientation, immediately)"
+    },
+    "PlaySound": {
+        "prefix": [
+            "PlaySound"
+        ],
+        "body": [
+            "${1:entity}:PlaySound(${2:params})"
+        ],
+        "description": "Entity:PlaySound(params)"
+    },
+    "GetBoneName": {
+        "prefix": [
+            "GetBoneName"
+        ],
+        "body": [
+            "${1:entity}:GetBoneName(${2:i})"
+        ],
+        "description": "Entity:GetBoneName(i) -- return the name of the i'th bone of this entity (counting from 0)"
+    },
+    "GetHealth": {
+        "prefix": [
+            "GetHealth"
+        ],
+        "body": [
+            "${1:entity}:GetHealth()"
+        ],
+        "description": "Entity:GetHealth()"
+    },
+    "Kill": {
+        "prefix": [
+            "Kill"
+        ],
+        "body": [
+            "${1:entity}:Kill(${2:instigator}, ${3:type}, ${4:excessDamageRatio})"
+        ],
+        "description": "Entity:Kill(instigator,type,excessDamageRatio)"
+    },
+    "SetScale": {
+        "prefix": [
+            "SetScale"
+        ],
+        "body": [
+            "${1:entity}:SetScale(${2:s})"
+        ],
+        "description": "Entity:SetScale(s) or Entity:SetScale(sx,sy,sz)"
+    },
+    "GetFractionComplete": {
+        "prefix": [
+            "GetFractionComplete"
+        ],
+        "body": [
+            "${1:entity}:GetFractionComplete()"
+        ],
+        "description": "Entity:GetFractionComplete()"
+    },
+    "FallDown": {
+        "prefix": [
+            "FallDown"
+        ],
+        "body": [
+            "${1:entity}:FallDown(${2:dx}, ${3:dy}, ${4:dz}, ${5:force})"
+        ],
+        "description": "Entity:FallDown(dx,dy,dz,force) -- start falling down"
+    },
+    "IsIntelEnabled": {
+        "prefix": [
+            "IsIntelEnabled"
+        ],
+        "body": [
+            "${1:entity}:IsIntelEnabled(${2:type})"
+        ],
+        "description": "IsIntelEnabled(type)"
+    },
+    "AddThreadScroller": {
+        "prefix": [
+            "AddThreadScroller"
+        ],
+        "body": [
+            "${1:entity}:AddThreadScroller(${2:sideDist}, ${3:scrollMult})"
+        ],
+        "description": "Entity:AddThreadScroller(sideDist, scrollMult)"
+    },
+    "AddPingPongScroller": {
+        "prefix": [
+            "AddPingPongScroller"
+        ],
+        "body": [
+            "${1:entity}:AddPingPongScroller(${2:ping1}, ${3:pingSpeed1}, ${4:pong1}, ${5:pongSpeed1}, ${6:ping2}, ${7:pingSpeed2}, ${8:pong2}, ${9:pongSpeed2})"
+        ],
+        "description": "Entity:AddPingPongScroller(ping1, pingSpeed1, pong1, pongSpeed1, ping2, pingSpeed2, pong2, pongSpeed2)"
+    },
+    "GetAIBrain": {
+        "prefix": [
+            "GetAIBrain"
+        ],
+        "body": [
+            "${1:entity}:GetAIBrain(${2:self})"
+        ],
+        "description": "GetAIBrain(self)"
+    },
+    "SetVizToEnemies": {
+        "prefix": [
+            "SetVizToEnemies"
+        ],
+        "body": [
+            "${1:entity}:SetVizToEnemies(${2:type})"
+        ],
+        "description": "SetVizToEnemies(type)"
+    },
+    "AttachTo": {
+        "prefix": [
+            "AttachTo"
+        ],
+        "body": [
+            "${1:entity}:AttachTo(${2:entity}, ${3:bone})"
+        ],
+        "description": "Entity:AttachTo(entity, bone)"
+    },
+    "SetParentOffset": {
+        "prefix": [
+            "SetParentOffset"
+        ],
+        "body": [
+            "${1:entity}:SetParentOffset(${2:vector})"
+        ],
+        "description": "Entity:SetParentOffset(vector)"
+    },
+    "EnableIntel": {
+        "prefix": [
+            "EnableIntel"
+        ],
+        "body": [
+            "${1:entity}:EnableIntel(${2:type})"
+        ],
+        "description": "EnableIntel(type)"
+    },
+    "DetachAll": {
+        "prefix": [
+            "DetachAll"
+        ],
+        "body": [
+            "${1:entity}:DetachAll(${2:bone}, ${3:skipBallistic})"
+        ],
+        "description": "Entity:DetachAll(bone,[skipBallistic])"
+    },
+    "GetScale": {
+        "prefix": [
+            "GetScale"
+        ],
+        "body": [
+            "${1:entity}:GetScale()"
+        ],
+        "description": "Entity:GetScale() -> sx,sy,sz -- return current draw scale of this entity"
+    },
+    "GetHeading": {
+        "prefix": [
+            "GetHeading"
+        ],
+        "body": [
+            "${1:entity}:GetHeading()"
+        ],
+        "description": "Entity:GetHeading()"
+    },
+    "SetHealth": {
+        "prefix": [
+            "SetHealth"
+        ],
+        "body": [
+            "${1:entity}:SetHealth(${2:instigator}, ${3:health})"
+        ],
+        "description": "Entity:SetHealth(instigator,health)"
+    },
+    "AddManualScroller": {
+        "prefix": [
+            "AddManualScroller"
+        ],
+        "body": [
+            "${1:entity}:AddManualScroller(${2:scrollSpeed1}, ${3:scrollSpeed2})"
+        ],
+        "description": "Class Entity\r\n@classmod Sim.Entity\r\nEntity:AddManualScroller(scrollSpeed1, scrollSpeed2)"
+    },
+    "AddShooter": {
+        "prefix": [
+            "AddShooter"
+        ],
+        "body": [
+            "${1:entity}:AddShooter(${2:shooter})"
+        ],
+        "description": "AddShooter(shooter)"
+    },
+    "CreateProjectile": {
+        "prefix": [
+            "CreateProjectile"
+        ],
+        "body": [
+            "${1:entity}:CreateProjectile()"
+        ],
+        "description": "Entity:CreateProjectile(proj_bp, [ox, oy, oz], [dx, dy, dz"
+    },
+    "RemoveScroller": {
+        "prefix": [
+            "RemoveScroller"
+        ],
+        "body": [
+            "${1:entity}:RemoveScroller()"
+        ],
+        "description": "Entity:RemoveScroller()"
+    },
+    "BeenDestroyed": {
+        "prefix": [
+            "BeenDestroyed"
+        ],
+        "body": [
+            "${1:entity}:BeenDestroyed()"
+        ],
+        "description": "Entity:BeenDestroyed()"
+    },
+    "SetDrawScale": {
+        "prefix": [
+            "SetDrawScale"
+        ],
+        "body": [
+            "${1:entity}:SetDrawScale(${2:size})"
+        ],
+        "description": "Entity:SetDrawScale(size): Change mesh scale on the fly"
+    },
+    "SetVizToNeutrals": {
+        "prefix": [
+            "SetVizToNeutrals"
+        ],
+        "body": [
+            "${1:entity}:SetVizToNeutrals(${2:type})"
+        ],
+        "description": "SetVizToNeutrals(type)"
+    },
+    "SetMaxHealth": {
+        "prefix": [
+            "SetMaxHealth"
+        ],
+        "body": [
+            "${1:entity}:SetMaxHealth(${2:maxhealth})"
+        ],
+        "description": "Entity:SetMaxHealth(maxhealth)"
+    },
+    "GetParent": {
+        "prefix": [
+            "GetParent"
+        ],
+        "body": [
+            "${1:entity}:GetParent()"
+        ],
+        "description": "Entity:GetParent()"
+    },
+    "Destroy": {
+        "prefix": [
+            "Destroy"
+        ],
+        "body": [
+            "${1:entity}:Destroy()"
+        ],
+        "description": "Entity:Destroy()"
+    },
+    "SetVizToAllies": {
+        "prefix": [
+            "SetVizToAllies"
+        ],
+        "body": [
+            "${1:entity}:SetVizToAllies(${2:type})"
+        ],
+        "description": "SetVizToAllies(type)"
+    },
+    "GetCollisionExtents": {
+        "prefix": [
+            "GetCollisionExtents"
+        ],
+        "body": [
+            "${1:entity}:GetCollisionExtents()"
+        ],
+        "description": "Entity:GetCollisionExtents()"
+    },
+    "ShakeCamera": {
+        "prefix": [
+            "ShakeCamera"
+        ],
+        "body": [
+            "${1:entity}:ShakeCamera(${2:radius}, ${3:max}, ${4:min}, ${5:duration})"
+        ],
+        "description": "Entity:ShakeCamera(radius, max, min, duration)Shake the camera. This is a method of entities rather than a global functionbecause it takes the position of the entity as the epicenter where it shakes more."
+    },
+    "AddWorldImpulse": {
+        "prefix": [
+            "AddWorldImpulse"
+        ],
+        "body": [
+            "${1:entity}:AddWorldImpulse(${2:self}, ${3:Ix}, ${4:Iy}, ${5:Iz}, ${6:Px}, ${7:Py}, ${8:Pz})"
+        ],
+        "description": "AddWorldImpulse(self, Ix, Iy, Iz, Px, Py, Pz) Note: Does not appear to be functional."
+    },
+    "SetIntelRadius": {
+        "prefix": [
+            "SetIntelRadius"
+        ],
+        "body": [
+            "${1:entity}:SetIntelRadius()"
+        ],
+        "description": "SetRadius(type,radius)"
+    },
+    "GetOrientation": {
+        "prefix": [
+            "GetOrientation"
+        ],
+        "body": [
+            "${1:entity}:GetOrientation()"
+        ],
+        "description": "Entity:GetOrientation()"
+    },
+    "PushOver": {
+        "prefix": [
+            "PushOver"
+        ],
+        "body": [
+            "${1:entity}:PushOver(${2:nx}, ${3:ny}, ${4:nz}, ${5:depth})"
+        ],
+        "description": "Entity:PushOver(nx, ny, nz, depth)"
+    },
+    "RequestRefreshUI": {
+        "prefix": [
+            "RequestRefreshUI"
+        ],
+        "body": [
+            "${1:entity}:RequestRefreshUI()"
+        ],
+        "description": "Entity:RequestRefreshUI()"
+    },
+    "InitIntel": {
+        "prefix": [
+            "InitIntel"
+        ],
+        "body": [
+            "${1:entity}:InitIntel(${2:army}, ${3:type}, ${4:radius})"
+        ],
+        "description": "InitIntel(army,type,<radius>)"
+    },
+    "GetEntityId": {
+        "prefix": [
+            "GetEntityId"
+        ],
+        "body": [
+            "${1:entity}:GetEntityId()"
+        ],
+        "description": "Entity:GetEntityId()"
+    },
+    "AttachBoneToEntityBone": {
+        "prefix": [
+            "AttachBoneToEntityBone"
+        ],
+        "body": [
+            "${1:entity}:AttachBoneToEntityBone()"
+        ],
+        "description": "Attach a unit bone position to an entity bone position"
+    },
+    "SetPosition": {
+        "prefix": [
+            "SetPosition"
+        ],
+        "body": [
+            "${1:entity}:SetPosition(${2:vector}, ${3:immediate})"
+        ],
+        "description": "Entity:SetPosition(vector,[immediate])"
+    },
+    "GetBoneCount": {
+        "prefix": [
+            "GetBoneCount"
+        ],
+        "body": [
+            "${1:entity}:GetBoneCount()"
+        ],
+        "description": "Entity:GetBoneCount() -- returns number of bones in this entity's skeleton"
+    },
+    "ReachedMaxShooters": {
+        "prefix": [
+            "ReachedMaxShooters"
+        ],
+        "body": [
+            "${1:entity}:ReachedMaxShooters()"
+        ],
+        "description": "ReachedMaxShooters()"
+    },
+    "SetVizToFocusPlayer": {
+        "prefix": [
+            "SetVizToFocusPlayer"
+        ],
+        "body": [
+            "${1:entity}:SetVizToFocusPlayer(${2:type})"
+        ],
+        "description": "SetVizToFocusPlayer(type)"
+    },
+    "RemoveShooter": {
+        "prefix": [
+            "RemoveShooter"
+        ],
+        "body": [
+            "${1:entity}:RemoveShooter(${2:shooter})"
+        ],
+        "description": "RemoveShooter(shooter)"
+    },
+    "AttachBoneTo": {
+        "prefix": [
+            "AttachBoneTo"
+        ],
+        "body": [
+            "${1:entity}:AttachBoneTo(${2:selfbone}, ${3:entity}, ${4:bone})"
+        ],
+        "description": "Entity:AttachBoneTo(selfbone, entity, bone)"
+    },
+    "DisableIntel": {
+        "prefix": [
+            "DisableIntel"
+        ],
+        "body": [
+            "${1:entity}:DisableIntel(${2:type})"
+        ],
+        "description": "Intel:DisableIntel(type)"
+    },
+    "GetMaxHealth": {
+        "prefix": [
+            "GetMaxHealth"
+        ],
+        "body": [
+            "${1:entity}:GetMaxHealth()"
+        ],
+        "description": "Entity:GetMaxHealth()"
+    },
+    "GetArmy": {
+        "prefix": [
+            "GetArmy"
+        ],
+        "body": [
+            "${1:entity}:GetArmy(${2:self})"
+        ],
+        "description": "GetArmy(self)"
+    },
+    "GetBlueprint": {
+        "prefix": [
+            "GetBlueprint"
+        ],
+        "body": [
+            "${1:entity}:GetBlueprint()"
+        ],
+        "description": "blueprint = Entity:GetBlueprint()"
+    },
+    "SetAmbientSound": {
+        "prefix": [
+            "SetAmbientSound"
+        ],
+        "body": [
+            "${1:entity}:SetAmbientSound(${2:paramTableDetail}, ${3:paramTableRumble})"
+        ],
+        "description": "Entity:SetAmbientSound(paramTableDetail,paramTableRumble)"
+    },
+    "AdjustHealth": {
+        "prefix": [
+            "AdjustHealth"
+        ],
+        "body": [
+            "${1:entity}:AdjustHealth(${2:instigator}, ${3:delta})"
+        ],
+        "description": "Entity:AdjustHealth(instigator, delta)"
+    },
+    "DetachFrom": {
+        "prefix": [
+            "DetachFrom"
+        ],
+        "body": [
+            "${1:entity}:DetachFrom(${2:skipBallistic})"
+        ],
+        "description": "Entity:DetachFrom([skipBallistic])"
+    }
+}

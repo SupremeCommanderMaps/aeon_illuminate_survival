@@ -1,0 +1,416 @@
+{
+    "AssignOrders": {
+        "prefix": [
+            "AssignOrders"
+        ],
+        "body": [
+            "ScenarioUtilities.AssignOrders(${1:strQueue}, ${2:tblUnit}, ${3:target})"
+        ],
+        "description": "AssignOrders"
+    },
+    "FindUnitGroup": {
+        "prefix": [
+            "FindUnitGroup"
+        ],
+        "body": [
+            "ScenarioUtilities.FindUnitGroup(${1:strGroup}, ${2:tblNode})"
+        ],
+        "description": "FindUnitGroup\r\nFinds the unit group with the specified name."
+    },
+    "ChainToPositions": {
+        "prefix": [
+            "ChainToPositions"
+        ],
+        "body": [
+            "ScenarioUtilities.ChainToPositions(${1:chainName})"
+        ],
+        "description": ""
+    },
+    "CreateArmyGroup": {
+        "prefix": [
+            "CreateArmyGroup"
+        ],
+        "body": [
+            "ScenarioUtilities.CreateArmyGroup(${1:strArmy}, ${2:strGroup}, ${3:wreckage}, ${4:balance})"
+        ],
+        "description": "CreateArmyGroup\r\nCreates the specified group in game."
+    },
+    "GetMarker": {
+        "prefix": [
+            "GetMarker"
+        ],
+        "body": [
+            "ScenarioUtilities.GetMarker(${1:name})"
+        ],
+        "description": ""
+    },
+    "UpdateOSB": {
+        "prefix": [
+            "UpdateOSB"
+        ],
+        "body": [
+            "ScenarioUtilities.UpdateOSB(${1:buildName}, ${2:strArmy}, ${3:builderData})"
+        ],
+        "description": ""
+    },
+    "FactionConvert": {
+        "prefix": [
+            "FactionConvert"
+        ],
+        "body": [
+            "ScenarioUtilities.FactionConvert(${1:template}, ${2:factionIndex})"
+        ],
+        "description": "TODO: This really ought to be hooked.... this file needs to be made game agnostic as it's in mohodata"
+    },
+    "InitializeScenarioArmies": {
+        "prefix": [
+            "InitializeScenarioArmies"
+        ],
+        "body": [
+            "ScenarioUtilities.InitializeScenarioArmies()"
+        ],
+        "description": "InitializeScenarioArmies"
+    },
+    "InRect": {
+        "prefix": [
+            "InRect"
+        ],
+        "body": [
+            "ScenarioUtilities.InRect(${1:vectorPos}, ${2:rect})"
+        ],
+        "description": ""
+    },
+    "CreateProps": {
+        "prefix": [
+            "CreateProps"
+        ],
+        "body": [
+            "ScenarioUtilities.CreateProps()"
+        ],
+        "description": "CreateProps"
+    },
+    "SetPlans": {
+        "prefix": [
+            "SetPlans"
+        ],
+        "body": [
+            "ScenarioUtilities.SetPlans(${1:strArmy})"
+        ],
+        "description": ""
+    },
+    "CreateInitialArmyGroup": {
+        "prefix": [
+            "CreateInitialArmyGroup"
+        ],
+        "body": [
+            "ScenarioUtilities.CreateInitialArmyGroup(${1:strArmy}, ${2:createCommander})"
+        ],
+        "description": "CreateInitialArmyGroup"
+    },
+    "CreateArmyTree": {
+        "prefix": [
+            "CreateArmyTree"
+        ],
+        "body": [
+            "ScenarioUtilities.CreateArmyTree(${1:strArmy}, ${2:strGroup})"
+        ],
+        "description": "CreateArmyTree\r\nReturns tree of units created by the editor. 2nd return is table of units"
+    },
+    "InitializeStartLocation": {
+        "prefix": [
+            "InitializeStartLocation"
+        ],
+        "body": [
+            "ScenarioUtilities.InitializeStartLocation(${1:strArmy})"
+        ],
+        "description": ""
+    },
+    "CreatePlatoons": {
+        "prefix": [
+            "CreatePlatoons"
+        ],
+        "body": [
+            "ScenarioUtilities.CreatePlatoons(${1:strArmy}, ${2:tblNode}, ${3:tblResult}, ${4:platoonList}, ${5:currPlatoon}, ${6:treeResult}, ${7:balance})"
+        ],
+        "description": ""
+    },
+    "MarkerToPosition": {
+        "prefix": [
+            "MarkerToPosition"
+        ],
+        "body": [
+            "ScenarioUtilities.MarkerToPosition(${1:strMarker})"
+        ],
+        "description": "MarkerToPosition\r\nConverts a marker as specified in *_save.lua file to a position."
+    },
+    "AssembleUnitGroup": {
+        "prefix": [
+            "AssembleUnitGroup"
+        ],
+        "body": [
+            "ScenarioUtilities.AssembleUnitGroup(${1:tblNode}, ${2:tblResult})"
+        ],
+        "description": "AssembleUnitGroup\r\nReturns all units (leaf nodes) under the specified group."
+    },
+    "AssemblePlatoons": {
+        "prefix": [
+            "AssemblePlatoons"
+        ],
+        "body": [
+            "ScenarioUtilities.AssemblePlatoons(${1:tblNode}, ${2:tblResult})"
+        ],
+        "description": "AssemblePlatoons\r\nReturns all platoon template names specified under group."
+    },
+    "FilterFunctions": {
+        "prefix": [
+            "FilterFunctions"
+        ],
+        "body": [
+            "ScenarioUtilities.FilterFunctions(${1:tableOne}, ${2:tableTwo})"
+        ],
+        "description": ""
+    },
+    "CommanderWarpDelay": {
+        "prefix": [
+            "CommanderWarpDelay"
+        ],
+        "body": [
+            "ScenarioUtilities.CommanderWarpDelay(${1:cdrUnit}, ${2:delay})"
+        ],
+        "description": ""
+    },
+    "FlattenTreeGroup": {
+        "prefix": [
+            "FlattenTreeGroup"
+        ],
+        "body": [
+            "ScenarioUtilities.FlattenTreeGroup(${1:strArmy}, ${2:strGroup}, ${3:tblData}, ${4:unitGroup})"
+        ],
+        "description": ""
+    },
+    "SpawnPlatoon": {
+        "prefix": [
+            "SpawnPlatoon"
+        ],
+        "body": [
+            "ScenarioUtilities.SpawnPlatoon(${1:strArmy}, ${2:strGroup})"
+        ],
+        "description": "SpawnPlatoon\r\nSpawns unit group and assigns to platoon it is a part of"
+    },
+    "UpdateGivenOSB": {
+        "prefix": [
+            "UpdateGivenOSB"
+        ],
+        "body": [
+            "ScenarioUtilities.UpdateGivenOSB(${1:builderEdit}, ${2:builderData})"
+        ],
+        "description": ""
+    },
+    "CountChildUnits": {
+        "prefix": [
+            "CountChildUnits"
+        ],
+        "body": [
+            "ScenarioUtilities.CountChildUnits(${1:tblNode})"
+        ],
+        "description": ""
+    },
+    "FindParentChain": {
+        "prefix": [
+            "FindParentChain"
+        ],
+        "body": [
+            "ScenarioUtilities.FindParentChain(${1:markerName})"
+        ],
+        "description": "FindParentChain\r\nGets the parent chain that the supplied marker belongs to"
+    },
+    "LoadArmyPBMBuilders": {
+        "prefix": [
+            "LoadArmyPBMBuilders"
+        ],
+        "body": [
+            "ScenarioUtilities.LoadArmyPBMBuilders(${1:strArmy})"
+        ],
+        "description": "LoadArmyPBMBuilders\r\nLoads an Army Brain's PBM Builders from the save file"
+    },
+    "AreaToRect": {
+        "prefix": [
+            "AreaToRect"
+        ],
+        "body": [
+            "ScenarioUtilities.AreaToRect(${1:strArea})"
+        ],
+        "description": "AreaToRect\r\nConverts an area as specified in *_save.lua file to a rectangle."
+    },
+    "CreateWreckage": {
+        "prefix": [
+            "CreateWreckage"
+        ],
+        "body": [
+            "ScenarioUtilities.CreateWreckage(${1:unit}, ${2:needToRotate})"
+        ],
+        "description": ""
+    },
+    "GetMarkers": {
+        "prefix": [
+            "GetMarkers"
+        ],
+        "body": [
+            "ScenarioUtilities.GetMarkers()"
+        ],
+        "description": ""
+    },
+    "RebuildDataTable": {
+        "prefix": [
+            "RebuildDataTable"
+        ],
+        "body": [
+            "ScenarioUtilities.RebuildDataTable(${1:table})"
+        ],
+        "description": ""
+    },
+    "SplitUpdateOSBName": {
+        "prefix": [
+            "SplitUpdateOSBName"
+        ],
+        "body": [
+            "ScenarioUtilities.SplitUpdateOSBName(${1:buildName})"
+        ],
+        "description": ""
+    },
+    "AssembleArmyGroup": {
+        "prefix": [
+            "AssembleArmyGroup"
+        ],
+        "body": [
+            "ScenarioUtilities.AssembleArmyGroup(${1:strArmy}, ${2:strGroup})"
+        ],
+        "description": "AssembleArmyGroup\r\nReturns a table of units in the group owned by the specified army."
+    },
+    "CreateResources": {
+        "prefix": [
+            "CreateResources"
+        ],
+        "body": [
+            "ScenarioUtilities.CreateResources()"
+        ],
+        "description": "CreateResources"
+    },
+    "CreateArmyUnit": {
+        "prefix": [
+            "CreateArmyUnit"
+        ],
+        "body": [
+            "ScenarioUtilities.CreateArmyUnit(${1:strArmy}, ${2:strUnit})"
+        ],
+        "description": "CreateArmyUnit\r\nCreates a named unit in an army."
+    },
+    "SpawnTableOfPlatoons": {
+        "prefix": [
+            "SpawnTableOfPlatoons"
+        ],
+        "body": [
+            "ScenarioUtilities.SpawnTableOfPlatoons(${1:strArmy}, ${2:strGroup})"
+        ],
+        "description": ""
+    },
+    "LoadOSB": {
+        "prefix": [
+            "LoadOSB"
+        ],
+        "body": [
+            "ScenarioUtilities.LoadOSB(${1:buildName}, ${2:strArmy}, ${3:builderData})"
+        ],
+        "description": ""
+    },
+    "FindUnit": {
+        "prefix": [
+            "FindUnit"
+        ],
+        "body": [
+            "ScenarioUtilities.FindUnit(${1:strUnit}, ${2:tblNode})"
+        ],
+        "description": "FindUnit\r\nFinds the unit with the specified name."
+    },
+    "CreateArmyGroupAsPlatoonBalanced": {
+        "prefix": [
+            "CreateArmyGroupAsPlatoonBalanced"
+        ],
+        "body": [
+            "ScenarioUtilities.CreateArmyGroupAsPlatoonBalanced(${1:strArmy}, ${2:strGroup}, ${3:formation}, ${4:OnFinishedCallback})"
+        ],
+        "description": ""
+    },
+    "SplitOSBName": {
+        "prefix": [
+            "SplitOSBName"
+        ],
+        "body": [
+            "ScenarioUtilities.SplitOSBName(${1:buildName})"
+        ],
+        "description": ""
+    },
+    "CreateArmyGroupAsPlatoonVeteran": {
+        "prefix": [
+            "CreateArmyGroupAsPlatoonVeteran"
+        ],
+        "body": [
+            "ScenarioUtilities.CreateArmyGroupAsPlatoonVeteran(${1:strArmy}, ${2:strGroup}, ${3:formation}, ${4:veteranLevel})"
+        ],
+        "description": "Creates an army group at a certain veteran level"
+    },
+    "CreateWreckageUnit": {
+        "prefix": [
+            "CreateWreckageUnit"
+        ],
+        "body": [
+            "ScenarioUtilities.CreateWreckageUnit(${1:unit})"
+        ],
+        "description": ""
+    },
+    "CreateArmyGroupAsPlatoon": {
+        "prefix": [
+            "CreateArmyGroupAsPlatoon"
+        ],
+        "body": [
+            "ScenarioUtilities.CreateArmyGroupAsPlatoon(${1:strArmy}, ${2:strGroup}, ${3:formation}, ${4:tblNode}, ${5:platoon}, ${6:balance})"
+        ],
+        "description": "CreateArmyGroupAsPlatoon\r\nReturns a platoon that is created out of all units in a group and its sub groups."
+    },
+    "AnimateDeathThread": {
+        "prefix": [
+            "AnimateDeathThread"
+        ],
+        "body": [
+            "ScenarioUtilities.AnimateDeathThread(${1:unit}, ${2:deathAnim})"
+        ],
+        "description": "Animate unit death and skip it. Used for create wreckage like after death"
+    },
+    "GetMarkerChain": {
+        "prefix": [
+            "GetMarkerChain"
+        ],
+        "body": [
+            "ScenarioUtilities.GetMarkerChain(${1:name})"
+        ],
+        "description": ""
+    },
+    "InitializeArmies": {
+        "prefix": [
+            "InitializeArmies"
+        ],
+        "body": [
+            "ScenarioUtilities.InitializeArmies()"
+        ],
+        "description": "InitializeArmies"
+    },
+    "EnableLoadBalance": {
+        "prefix": [
+            "EnableLoadBalance"
+        ],
+        "body": [
+            "ScenarioUtilities.EnableLoadBalance(${1:enabled}, ${2:unitThreshold})"
+        ],
+        "description": ""
+    }
+}

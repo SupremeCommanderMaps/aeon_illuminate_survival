@@ -1,0 +1,443 @@
+{
+    "PlatoonChooseLowest": {
+        "prefix": [
+            "PlatoonChooseLowest"
+        ],
+        "body": [
+            "ScenarioPlatoonAI.PlatoonChooseLowest(${1:aiBrain}, ${2:locationList}, ${3:ringSize}, ${4:location})"
+        ],
+        "description": "Utility Function\r\nReturns location with lowest threat (including negative)"
+    },
+    "GetNumTransportSlots": {
+        "prefix": [
+            "GetNumTransportSlots"
+        ],
+        "body": [
+            "ScenarioPlatoonAI.GetNumTransportSlots(${1:unit})"
+        ],
+        "description": "Utility Function\r\nReturns the number of slots the transport has available"
+    },
+    "TransportPool": {
+        "prefix": [
+            "TransportPool"
+        ],
+        "body": [
+            "ScenarioPlatoonAI.TransportPool(${1:platoon})"
+        ],
+        "description": "TransportPool\r\nMoves unit to location if specified\r\nAssigns units in platoon to TransportPool platoon for other platoons to use\r\nPlatoonData\r\nTransportMoveLocation - Location to move transport to before assigning to transport pool\r\nfunction: TransportPool = AddFunction\r\nparameter 0: string: platoon = \"default_platoon\""
+    },
+    "CategoryHunterPlatoonAI": {
+        "prefix": [
+            "CategoryHunterPlatoonAI"
+        ],
+        "body": [
+            "ScenarioPlatoonAI.CategoryHunterPlatoonAI(${1:platoon})"
+        ],
+        "description": "CategoryHunterPlatoonAI\r\nSends out units to hunt and attack Experimental Air units (Soul Ripper, Czar, etc)\r\nIt cheats to find the air units.  This should *NOT* ever be used in skirmish.\r\nThis platoon only seeks out PLAYER experimentals.  It will never find any other army's\r\nPlatoonData\r\nCategoryList : The categories we are going to find and attack\r\nfunction: CategoryHunterPlatoonAI = AddFunction\r\nparameter 0: string: platoon = \"default_platoon\""
+    },
+    "EngineersAssistFactories": {
+        "prefix": [
+            "EngineersAssistFactories"
+        ],
+        "body": [
+            "ScenarioPlatoonAI.EngineersAssistFactories(${1:platoon}, ${2:locationType})"
+        ],
+        "description": "Utility Function\r\nTell engineers to assist factories in a locationType"
+    },
+    "PlatoonAttackLocation": {
+        "prefix": [
+            "PlatoonAttackLocation"
+        ],
+        "body": [
+            "ScenarioPlatoonAI.PlatoonAttackLocation(${1:platoon})"
+        ],
+        "description": "PlatoonAttackLocation\r\nAttack moves to a specific location on the map\r\nAfter reaching location will attack highest threat\r\nPlatoonData\r\nLocation - (REQUIRED) location on the map to attack move to\r\nfunction: PlatoonAttackLocation = AddFunction\r\nparameter 0: string: platoon = \"default_platoon\""
+    },
+    "PatrolThread": {
+        "prefix": [
+            "PatrolThread"
+        ],
+        "body": [
+            "ScenarioPlatoonAI.PatrolThread(${1:platoon})"
+        ],
+        "description": "PatrolThread\r\nPatrols a set of locations\r\nPlatoonData\r\nPatrolRoute - List of locations to patrol\r\nPatrolChain - Chain of locations to patrol\r\nfunction: PatrolThread = AddFunction\r\nparameter 0: string: platoon = \"default_platoon\""
+    },
+    "StartBaseEngineerThread": {
+        "prefix": [
+            "StartBaseEngineerThread"
+        ],
+        "body": [
+            "ScenarioPlatoonAI.StartBaseEngineerThread(${1:platoon})"
+        ],
+        "description": "StartBaseEngineerThread\r\nUpgrades engineer to desired tech level\r\nMoves an engineer to a location with either transports or using a transport beacon\r\nBuilds specific buildings found in PlatoonData.Construction\r\nCan maintain a base found in PlatoonData\r\nCan patrol a route either while maintaining a base or just prior to disbanding back into the PoolPlatoon\r\nPlatoonData\r\nReadyVariable - ScenarioInfo.VarTable[ReadyVariable] Variable set when units are on transports\r\nWaitVariable - ScenarioInfo.VarTable[WaitVariable] Variable checked before transports leave\r\nLandingLocation - Location for transports to drop engineers\r\nMoveBeacon - TransportBeacon to use to move engineer to location\r\nConstruction - Table that holds data for a specific building order\r\nonly the buildings specified in BuildStructures be built\r\n> BuildingTemplate - building template found in BaseTemplates.lua\r\n(only required if trying to build different factions buildings)\r\n> BaseTemplate - Name of base template to use.  This template is generated from bases made in the editor\r\n> BuildClose - Bool if you want to have unit pick closest of next building to build\r\n> BuildStructures - List of buildings to build in order, ex:T1AirFactory, T2ShieldDefense, etc\r\nBuildBaseTemplate - BaseTemplate of the base to build once\r\nMaintainBaseTemplate - BaseTemplate of base to build any non-existing buildings for.\r\nAssistFactories - Bool; will assist factories in a Location Type when set true; break off and rebuild if maintain\r\nLocationType - PBM Location Type to have the engineers assist build factories in\r\nBuildingTemplate - building template found in BaseTemplates.lua\r\n(only required if trying to build different factions buildings)\r\nPatrolRoute - Route of locations to patrol while maintaining or after platoon disbanded\r\nPatrolChain - Chain of locations to patrol while maintaining or after platoon disbanded\r\nTransportRoute - List of locations for the transport to use to get to the location\r\nTransportChain - Chain of locations for the transport to use to get to landing location\r\nDisbandAfterPatrol - bool, if true, platoon will disband if its not maintaining a base and given a patrol order\r\nRandomPatrol - bool, if true, platoon will sort PatrolRoute randomly\r\nUseTransports - bool, if true, platoons will use transports to move\r\nNamedUnitBuild - table of unit names; platoon will build these specific units and only build them once\r\nGroupBuildOnce - name of a group to build each thing in the group only once\r\nOrder of events:\r\nGrab transports, set ready variable, wait for wait variable, travel using transports,\r\ntravel using beacon, build structures in Construction block, build base using BuildBaseTemplate,\r\nthe platoon will assist factories if assigned to do so, they will break off and rebuild if Maintain is set,\r\nmaintain a base using MaintainBaseTemplate (will patrol here if PatrolRoute given),\r\npatrol using PatrolRoute, platoon can disband if given a patrol and is not maintaining a base\r\nfunction: StartBaseEngineerThread = AddFunction\r\nparameter 0: string: platoon = \"default_platoon\""
+    },
+    "PlatoonChooseRandomNonNegative": {
+        "prefix": [
+            "PlatoonChooseRandomNonNegative"
+        ],
+        "body": [
+            "ScenarioPlatoonAI.PlatoonChooseRandomNonNegative(${1:aiBrain}, ${2:locationList}, ${3:ringSize})"
+        ],
+        "description": "Utility Function\r\nReturns location randomly with threat > 0"
+    },
+    "GetRouteToVector": {
+        "prefix": [
+            "GetRouteToVector"
+        ],
+        "body": [
+            "ScenarioPlatoonAI.GetRouteToVector(${1:platoon}, ${2:squad})"
+        ],
+        "description": "Utility Function\r\nNOT USED - Creates a route to something"
+    },
+    "ReturnTransportsToPool": {
+        "prefix": [
+            "ReturnTransportsToPool"
+        ],
+        "body": [
+            "ScenarioPlatoonAI.ReturnTransportsToPool(${1:platoon}, ${2:data})"
+        ],
+        "description": "Utility Function\r\nTakes transports in platoon, returns them to pool, flys them back to return location"
+    },
+    "LandAssaultWithTransports": {
+        "prefix": [
+            "LandAssaultWithTransports"
+        ],
+        "body": [
+            "ScenarioPlatoonAI.LandAssaultWithTransports(${1:platoon})"
+        ],
+        "description": "LandAssaultWithTransports\r\nGrabs a specific number of transports from the TransportPool platoon\r\nLoads units onto transports\r\nSets a ready variable if required\r\nWaits while another variable has not been set if needed\r\nFlys to lowest threat in a list of locations and unloads land units\r\nTransports return to a location and are re-added to transport pool\r\nAttacks a list of locations starting with highest threat from a list\r\nPlatoonData\r\nReadyVariable - ScenarioInfo.VarTable[ReadyVariable] Variable set when units are on transports\r\nWaitVariable - ScenarioInfo.VarTable[WaitVariable] Variable checked before transports leave\r\nLandingList - (REQUIRED or LandingChain) List of possible locations for transports to unload units\r\nLandingChain - (REQUIRED or LandingList) Chain of possible landing locations\r\nTransportReturn - Location for transports to return to (they will attack with land units if this isn't set)\r\nAttackPoints - (REQUIRED or AttackChain or PatrolChain) List of locations to attack.\r\nThe platoon attacks the highest threat first\r\nAttackChain - (REQUIRED or AttackPoints or PatrolChain) Marker Chain of postitions to attack\r\nPatrolChain - (REQUIRED or AttackChain or AttackPoints) Chain of patrolling\r\nRandomPatrol - Bool if you want the patrol things to be random rather than in order\r\nfunction: LandAssaultWithTransports = AddFunction\r\nparameter 0: string: platoon = \"default_platoon\""
+    },
+    "GetTransportsThread": {
+        "prefix": [
+            "GetTransportsThread"
+        ],
+        "body": [
+            "ScenarioPlatoonAI.GetTransportsThread(${1:platoon})"
+        ],
+        "description": "Utility Function\r\nFunction that gets the correct number of transports for a platoon"
+    },
+    "PlatoonChooseLowestNonNegative": {
+        "prefix": [
+            "PlatoonChooseLowestNonNegative"
+        ],
+        "body": [
+            "ScenarioPlatoonAI.PlatoonChooseLowestNonNegative(${1:aiBrain}, ${2:locationList}, ${3:ringSize}, ${4:location})"
+        ],
+        "description": "Utility Function\r\nReturns location with lowest non-negative threat"
+    },
+    "SplitPatrolThread": {
+        "prefix": [
+            "SplitPatrolThread"
+        ],
+        "body": [
+            "ScenarioPlatoonAI.SplitPatrolThread(${1:platoon})"
+        ],
+        "description": "SplitPatrolThread\r\nGives random patrol chain from the list to each unit of a platoon\r\nPlatoonData\r\nPatrolChains - List of chains to choose from"
+    },
+    "PlatoonAttackLocationList": {
+        "prefix": [
+            "PlatoonAttackLocationList"
+        ],
+        "body": [
+            "ScenarioPlatoonAI.PlatoonAttackLocationList(${1:platoon})"
+        ],
+        "description": "PlatoonAttackLocationList\r\nAttack moves to a location chosen from a list\r\nLocation can be the highest threat or the lowest non-negative threat\r\nAfter reaching location will attack next location from the list\r\nPlatoonData\r\nLocationList - (REQUIRED) location on the map to attack move to\r\nLocationChain - (REQUIRED) Chain on the map to attack move to\r\nHigh - true will attack highest threats first, false lowest - defaults to false/lowest\r\nfunction: PlatoonAttackLocationList = AddFunction doc = \"Please work function docs.\"\r\nparameter 0: string: platoon = \"default_platoon\""
+    },
+    "EngPatrol": {
+        "prefix": [
+            "EngPatrol"
+        ],
+        "body": [
+            "ScenarioPlatoonAI.EngPatrol(${1:eng}, ${2:engTable}, ${3:data})"
+        ],
+        "description": "Utility Function\r\nSends engineers on patrol for StartBaseEngineer"
+    },
+    "MoveAlongRoute": {
+        "prefix": [
+            "MoveAlongRoute"
+        ],
+        "body": [
+            "ScenarioPlatoonAI.MoveAlongRoute(${1:platoon}, ${2:route})"
+        ],
+        "description": "Utility Function\r\nMoves a platoon along a route holding up the thread until finished"
+    },
+    "BreakOffFactoryAssist": {
+        "prefix": [
+            "BreakOffFactoryAssist"
+        ],
+        "body": [
+            "ScenarioPlatoonAI.BreakOffFactoryAssist(${1:platoon}, ${2:data})"
+        ],
+        "description": "Utility Function\r\nStops factory assisting when an eng platoon is maintaining a base"
+    },
+    "EngAssist": {
+        "prefix": [
+            "EngAssist"
+        ],
+        "body": [
+            "ScenarioPlatoonAI.EngAssist(${1:platoon}, ${2:engTable})"
+        ],
+        "description": "Utility Function\r\nAssign engineers to factories to assist"
+    },
+    "EngineersBuildPlatoon": {
+        "prefix": [
+            "EngineersBuildPlatoon"
+        ],
+        "body": [
+            "ScenarioPlatoonAI.EngineersBuildPlatoon(${1:platoon})"
+        ],
+        "description": "function: EngineersBuildPlatoon = AddFunction\r\nparameter 0: string platoon = \"default_platoon\""
+    },
+    "DefaultOSBasePatrol": {
+        "prefix": [
+            "DefaultOSBasePatrol"
+        ],
+        "body": [
+            "ScenarioPlatoonAI.DefaultOSBasePatrol(${1:platoon})"
+        ],
+        "description": "function: DefaultOSBasePatrol = AddFunction\r\nparameter 0: string: platoon = \"default_platoon\""
+    },
+    "ReorganizeEngineers": {
+        "prefix": [
+            "ReorganizeEngineers"
+        ],
+        "body": [
+            "ScenarioPlatoonAI.ReorganizeEngineers(${1:platoon}, ${2:engTable})"
+        ],
+        "description": "Utility Function\r\nReorganizes engineer assisting if there is an imbalance"
+    },
+    "StartBaseMaintainBase": {
+        "prefix": [
+            "StartBaseMaintainBase"
+        ],
+        "body": [
+            "ScenarioPlatoonAI.StartBaseMaintainBase(${1:platoon}, ${2:eng}, ${3:engTable}, ${4:data}, ${5:aiBrain})"
+        ],
+        "description": "Utility Function\r\nMaintains a base for engs using StartBaseEngineer"
+    },
+    "MoveToThread": {
+        "prefix": [
+            "MoveToThread"
+        ],
+        "body": [
+            "ScenarioPlatoonAI.MoveToThread(${1:platoon})"
+        ],
+        "description": "MoveToThread\r\nMoves to a set of locations\r\nPlatoonData\r\nMoveToRoute - List of locations to move to\r\nMoveChain - Chain of locations to move\r\nUseTransports - boolean, if true, use transports to move\r\nfunction: MoveToThread = AddFunction\r\nparameter 0: string: platoon = \"default_platoon\""
+    },
+    "PlatoonChooseHighestAttackRoute": {
+        "prefix": [
+            "PlatoonChooseHighestAttackRoute"
+        ],
+        "body": [
+            "ScenarioPlatoonAI.PlatoonChooseHighestAttackRoute(${1:aiBrain}, ${2:locationList}, ${3:ringSize})"
+        ],
+        "description": "Utility Function\r\nArranges a route from highest to lowest based on threat"
+    },
+    "AssistOtherEngineer": {
+        "prefix": [
+            "AssistOtherEngineer"
+        ],
+        "body": [
+            "ScenarioPlatoonAI.AssistOtherEngineer(${1:eng}, ${2:engTable}, ${3:unitBeingBuilt})"
+        ],
+        "description": "Utility Function\r\nResets main engineer and engTablef or StartBaseEngineer"
+    },
+    "EngineerBuildStructure": {
+        "prefix": [
+            "EngineerBuildStructure"
+        ],
+        "body": [
+            "ScenarioPlatoonAI.EngineerBuildStructure(${1:aiBrain}, ${2:builder}, ${3:building}, ${4:brainBaseTemplate}, ${5:buildingTemplate})"
+        ],
+        "description": "Utility Function\r\nHas an engineer build a certain type of structure using a base template"
+    },
+    "GetHumanEnemies": {
+        "prefix": [
+            "GetHumanEnemies"
+        ],
+        "body": [
+            "ScenarioPlatoonAI.GetHumanEnemies(${1:armyIndex})"
+        ],
+        "description": ""
+    },
+    "PlatoonAttackHighestThreat": {
+        "prefix": [
+            "PlatoonAttackHighestThreat"
+        ],
+        "body": [
+            "ScenarioPlatoonAI.PlatoonAttackHighestThreat(${1:platoon})"
+        ],
+        "description": "PlatoonAttackHighestThreat\r\nAttacks Location on the map with the highest threat\r\nfunction: PlatoonAttackHighestThreat = AddFunction\r\nparameter 0: string: platoon = \"default_platoon\""
+    },
+    "ReadyWaitVariables": {
+        "prefix": [
+            "ReadyWaitVariables"
+        ],
+        "body": [
+            "ScenarioPlatoonAI.ReadyWaitVariables(${1:data})"
+        ],
+        "description": "Utility Function\r\nSet Ready Variable and wait for Wait Variable if given"
+    },
+    "PlatoonChooseLowestAttackRoute": {
+        "prefix": [
+            "PlatoonChooseLowestAttackRoute"
+        ],
+        "body": [
+            "ScenarioPlatoonAI.PlatoonChooseLowestAttackRoute(${1:aiBrain}, ${2:locationList}, ${3:ringSize})"
+        ],
+        "description": "Utility Function\r\nArranges a route from lowest to highest on threat"
+    },
+    "StartBaseTransports": {
+        "prefix": [
+            "StartBaseTransports"
+        ],
+        "body": [
+            "ScenarioPlatoonAI.StartBaseTransports(${1:platoon}, ${2:data}, ${3:aiBrain})"
+        ],
+        "description": "UTILITY FUNCTIONS\r\nUtility Function\r\nGets engineers using StartBaseEngineers to their location"
+    },
+    "GetNumTransports": {
+        "prefix": [
+            "GetNumTransports"
+        ],
+        "body": [
+            "ScenarioPlatoonAI.GetNumTransports(${1:platoon})"
+        ],
+        "description": "Utility Function\r\nReturns the number of transports required to move the platoon"
+    },
+    "GetRandomPatrolRoute": {
+        "prefix": [
+            "GetRandomPatrolRoute"
+        ],
+        "body": [
+            "ScenarioPlatoonAI.GetRandomPatrolRoute(${1:patrol})"
+        ],
+        "description": "Utility function\r\nGenerates a random patrol route for RandomPatrolThread"
+    },
+    "StartBaseConstruction": {
+        "prefix": [
+            "StartBaseConstruction"
+        ],
+        "body": [
+            "ScenarioPlatoonAI.StartBaseConstruction(${1:eng}, ${2:engTable}, ${3:data}, ${4:aiBrain})"
+        ],
+        "description": "Utility Function\r\nUses Construction blocks in engineers using StartBaseEngineer"
+    },
+    "PlatoonAttackClosestUnit": {
+        "prefix": [
+            "PlatoonAttackClosestUnit"
+        ],
+        "body": [
+            "ScenarioPlatoonAI.PlatoonAttackClosestUnit(${1:platoon})"
+        ],
+        "description": "PlatoonAttackClosestUnit\r\nAttacks Closest Unit the AI Brain knows about\r\nfunction: PlatoonAttackClosestUnit = AddFunction\r\nparameter 0: string: platoon = \"default_platoon\""
+    },
+    "GetLoadTransports": {
+        "prefix": [
+            "GetLoadTransports"
+        ],
+        "body": [
+            "ScenarioPlatoonAI.GetLoadTransports(${1:platoon})"
+        ],
+        "description": "Utility Function\r\nGet and load transports with platoon units"
+    },
+    "PlatoonAssignOrders": {
+        "prefix": [
+            "PlatoonAssignOrders"
+        ],
+        "body": [
+            "ScenarioPlatoonAI.PlatoonAssignOrders(${1:platoon})"
+        ],
+        "description": "PlatoonAssignOrders\r\nAssigns orders from the editor to a platoon\r\nPlatoonData\r\nOrderName - Name of the Order from the editor\r\nTarget - Handle to Unit used in orders that require a target (OPTIONAL)\r\nfunction: PlatoonAssignOrders = AddFunction\r\nparameter 0: string: platoon = \"default_platoon\""
+    },
+    "CheckFactoryAssistBalance": {
+        "prefix": [
+            "CheckFactoryAssistBalance"
+        ],
+        "body": [
+            "ScenarioPlatoonAI.CheckFactoryAssistBalance(${1:factoryTable})"
+        ],
+        "description": "Utility Function\r\nCheck all factories in given table to see if there is imbalance"
+    },
+    "RandomDefensePatrolThread": {
+        "prefix": [
+            "RandomDefensePatrolThread"
+        ],
+        "body": [
+            "ScenarioPlatoonAI.RandomDefensePatrolThread(${1:platoon})"
+        ],
+        "description": "RandomDefensePatrolThread\r\nGives a platoon a random patrol path from a set of locations\r\nPlatoonData\r\nPatrolChain - Chain of locations to patrol\r\nfunction: RandomDefensePatrolThread = AddFunction\r\nparameter 0: string: platoon = \"default_platoon\""
+    },
+    "StartBaseGroupOnceBuild": {
+        "prefix": [
+            "StartBaseGroupOnceBuild"
+        ],
+        "body": [
+            "ScenarioPlatoonAI.StartBaseGroupOnceBuild(${1:eng}, ${2:engTable}, ${3:data}, ${4:aiBrain})"
+        ],
+        "description": "Utility Function\r\nUses GroupBuildOnce and builds each thing in said group once and only once"
+    },
+    "StartBaseBuildBase": {
+        "prefix": [
+            "StartBaseBuildBase"
+        ],
+        "body": [
+            "ScenarioPlatoonAI.StartBaseBuildBase(${1:eng}, ${2:engTable}, ${3:data}, ${4:aiBrain})"
+        ],
+        "description": "Utility Function\r\nBuilds a base using BuildBaseTemplate for engineers using StartBaseEngineer"
+    },
+    "StartBaseBuildUnits": {
+        "prefix": [
+            "StartBaseBuildUnits"
+        ],
+        "body": [
+            "ScenarioPlatoonAI.StartBaseBuildUnits(${1:eng}, ${2:engTable}, ${3:data}, ${4:aiBrain})"
+        ],
+        "description": "Utility Function\r\nUses UnitBuild block to build specific units on the map using StartBaseEngineer"
+    },
+    "SortUnitsOnTransports": {
+        "prefix": [
+            "SortUnitsOnTransports"
+        ],
+        "body": [
+            "ScenarioPlatoonAI.SortUnitsOnTransports(${1:transportTable}, ${2:unitTable}, ${3:numSlots})"
+        ],
+        "description": "Utility function\r\nSorts units onto transports distributing equally"
+    },
+    "PlatoonChooseHighest": {
+        "prefix": [
+            "PlatoonChooseHighest"
+        ],
+        "body": [
+            "ScenarioPlatoonAI.PlatoonChooseHighest(${1:aiBrain}, ${2:locationList}, ${3:ringSize}, ${4:location})"
+        ],
+        "description": "Utility Function\r\nReturns location with the highest threat"
+    },
+    "PatrolChainPickerThread": {
+        "prefix": [
+            "PatrolChainPickerThread"
+        ],
+        "body": [
+            "ScenarioPlatoonAI.PatrolChainPickerThread(${1:platoon})"
+        ],
+        "description": "PatrolChainPickerThread\r\nGives a platoon a random patrol chain from a set of chains\r\nPlatoonData\r\nPatrolChains - List of chains to choose from\r\nfunction: PatrolChainPickerThread = AddFunction\r\nparameter 0: string: platoon = \"default_platoon\""
+    },
+    "BuildOnce": {
+        "prefix": [
+            "BuildOnce"
+        ],
+        "body": [
+            "ScenarioPlatoonAI.BuildOnce(${1:platoon})"
+        ],
+        "description": "function: BuildOnce = AddFunction\r\nparameter 0: string: platoon = \"default_platoon\""
+    },
+    "RandomPatrolThread": {
+        "prefix": [
+            "RandomPatrolThread"
+        ],
+        "body": [
+            "ScenarioPlatoonAI.RandomPatrolThread(${1:platoon})"
+        ],
+        "description": "RandomPatrolThread\r\nGives a platoon a random patrol path from a set of locations\r\nPlatoonData\r\nPatrolRoute - List of locations to patrol\r\nPatrolChain - Chain of locations to patrol\r\nfunction: RandomPatrolThread = AddFunction\r\nparameter 0: string: platoon = \"default_platoon\""
+    }
+}

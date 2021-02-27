@@ -1,0 +1,587 @@
+{
+    "GiveStorage": {
+        "prefix": [
+            "GiveStorage"
+        ],
+        "body": [
+            "${1:brain}:GiveStorage(${2:type}, ${3:amount})"
+        ],
+        "description": "Gives storage to brain.\r\n@param type 'Energy', 'Mass'.\r\n@param amout Number, how much to give."
+    },
+    "FindClosestArmyWithBase": {
+        "prefix": [
+            "FindClosestArmyWithBase"
+        ],
+        "body": [
+            "${1:brain}:FindClosestArmyWithBase()"
+        ],
+        "description": "TODO."
+    },
+    "IsOpponentAIRunning": {
+        "prefix": [
+            "IsOpponentAIRunning"
+        ],
+        "body": [
+            "${1:brain}:IsOpponentAIRunning()"
+        ],
+        "description": "Returns true if opponent AI should be running.\r\n@return true/false"
+    },
+    "SetArmyStatsTrigger": {
+        "prefix": [
+            "SetArmyStatsTrigger"
+        ],
+        "body": [
+            "${1:brain}:SetArmyStatsTrigger(${2:statName}, ${3:triggerName}, ${4:compareType}, ${5:value})"
+        ],
+        "description": "Creates a new stat trigger.\r\n@param statName String, army's stat, example: \"Economy_Ratio_Mass\".\r\n@param triggerName String, unique name of the trigger.\r\n@param compareType String, available types: 'LessThan', 'LessThanOrEqual', 'GreaterThan', 'GreaterThanOrEqual', 'Equal'.\r\n@param value Number."
+    },
+    "GetThreatAtPosition": {
+        "prefix": [
+            "GetThreatAtPosition"
+        ],
+        "body": [
+            "${1:brain}:GetThreatAtPosition(${2:position}, ${3:radius}, ${4:restriction}, ${5:threatType}, ${6:armyIndex})"
+        ],
+        "description": "Returns threat at given position.\r\n@param position Table with position {x, y, z}.\r\n@param radius Number in game units.\r\n@param restriction TODO.\r\n@param threatType TODO.\r\n@param armyIndex Army's number, if specified uses, only this brain.\r\n@return Number."
+    },
+    "GetUnitsAroundPoint": {
+        "prefix": [
+            "GetUnitsAroundPoint"
+        ],
+        "body": [
+            "${1:brain}:GetUnitsAroundPoint(${2:category}, ${3:position}, ${4:radius}, ${5:alliance})"
+        ],
+        "description": "Return list of units around position.\r\n@param category Unit's category, example: categories.TECH2 .\r\n@param position Table with position {x, y, z}.\r\n@param radius Number in game units.\r\n@param alliance Types: 'Ally', 'Enemy', 'Neutral'.\r\n@return tblUnits Table containing units."
+    },
+    "GetEconomyUsage": {
+        "prefix": [
+            "GetEconomyUsage"
+        ],
+        "body": [
+            "${1:brain}:GetEconomyUsage(${2:resource})"
+        ],
+        "description": "Returns current resource usage.\r\nWhen stalling, this number is same as the current income.\r\n@param resource 'Energy' or 'Mass'.\r\n@return Number."
+    },
+    "GiveResource": {
+        "prefix": [
+            "GiveResource"
+        ],
+        "body": [
+            "${1:brain}:GiveResource(${2:type}, ${3:amount})"
+        ],
+        "description": "Gives resources to brain.\r\n@param type 'Energy', 'Mass'.\r\n@param amout Number, how much to give."
+    },
+    "GetArmyIndex": {
+        "prefix": [
+            "GetArmyIndex"
+        ],
+        "body": [
+            "${1:brain}:GetArmyIndex()"
+        ],
+        "description": "Returns the ArmyIndex of the army represented by this brain.\r\n@return Number."
+    },
+    "CanBuildStructureAt": {
+        "prefix": [
+            "CanBuildStructureAt"
+        ],
+        "body": [
+            "${1:brain}:CanBuildStructureAt(${2:blueprintID}, ${3:location})"
+        ],
+        "description": "Returns true if structure can be built at given location.\r\n@param blueprintID Unit's bp ID to build, example 'ueb0101'.\r\n@param location Table with position {x, y z}.\r\n@return true/false"
+    },
+    "CreateUnitNearSpot": {
+        "prefix": [
+            "CreateUnitNearSpot"
+        ],
+        "body": [
+            "${1:brain}:CreateUnitNearSpot(${2:blueprintID}, ${3:posX}, ${4:posY})"
+        ],
+        "description": "Spawn a structure near position.\r\nUsed for spawning prebuild base.\r\n@param blueprintID Unit's bp ID to spawn, example 'ueb0101'.\r\n@param posX Position on X axis.\r\n@param posY Position on Z axis (wrong name, also named like this in the functions that uses it, but it actually is the Z axis as Y is elevation).\r\n@return Spawned unit or nil."
+    },
+    "GetArmyStartPos": {
+        "prefix": [
+            "GetArmyStartPos"
+        ],
+        "body": [
+            "${1:brain}:GetArmyStartPos()"
+        ],
+        "description": "Retrun army start position.\r\nreturn x, z"
+    },
+    "MakePlatoon": {
+        "prefix": [
+            "MakePlatoon"
+        ],
+        "body": [
+            "${1:brain}:MakePlatoon(${2:name}, ${3:aiPlan})"
+        ],
+        "description": "Creates a new platoon.\r\n@param name or '', This is NOT platoon's unique name. TODO: probably template's name.\r\n@param aiPlan Plan to follow for this platoon or '', the function for the plan is in '/lua/platoon.lua'.\r\n@return Platoon."
+    },
+    "GetAvailableFactories": {
+        "prefix": [
+            "GetAvailableFactories"
+        ],
+        "body": [
+            "${1:brain}:GetAvailableFactories(${2:location}, ${3:radius})"
+        ],
+        "description": "Returns list of factories at location.\r\n@param location Table with location, it's not a position but location created by PBMAddBuildLocation function.\r\n@param radius Number in game units.\r\n@return tblUnits List of factories."
+    },
+    "GetHighestThreatPosition": {
+        "prefix": [
+            "GetHighestThreatPosition"
+        ],
+        "body": [
+            "${1:brain}:GetHighestThreatPosition(${2:ring}, ${3:restriction}, ${4:threatType}, ${5:armyIndex})"
+        ],
+        "description": "Returns a position with highest threat and the threat value.\r\nAlways reports a threatvalue of zero for Allies or self.\r\nthreatType and armyIndex are not required.\r\n@param ring Number, in game unit.\r\n@param restriction TODO.\r\n@param threatType TODO Find out all threat types.\r\n@param armyIndex Army's number, if not specified, uses all enemy armies.\r\n@return position, value Position table {x, y, z}, value Number."
+    },
+    "SetCurrentPlan": {
+        "prefix": [
+            "SetCurrentPlan"
+        ],
+        "body": [
+            "${1:brain}:SetCurrentPlan()"
+        ],
+        "description": "Set the current plan for this brain to run.\r\nTODO."
+    },
+    "PickBestAttackVector": {
+        "prefix": [
+            "PickBestAttackVector"
+        ],
+        "body": [
+            "${1:brain}:PickBestAttackVector()"
+        ],
+        "description": "TODO."
+    },
+    "GetPlatoonsList": {
+        "prefix": [
+            "GetPlatoonsList"
+        ],
+        "body": [
+            "${1:brain}:GetPlatoonsList()"
+        ],
+        "description": "Returns brain's platoons.\r\n@return tblPlatoons Table containing platoons."
+    },
+    "SetResourceSharing": {
+        "prefix": [
+            "SetResourceSharing"
+        ],
+        "body": [
+            "${1:brain}:SetResourceSharing(${2:bool})"
+        ],
+        "description": "Set if the brain should share resources to the allies.\r\n@param bool ture/false"
+    },
+    "GetFactionIndex": {
+        "prefix": [
+            "GetFactionIndex"
+        ],
+        "body": [
+            "${1:brain}:GetFactionIndex()"
+        ],
+        "description": "Returns the faction of the army represented by this brain.\r\n1 UEF, 2 Aeon, 3 Cybran, 4 Seraphim.\r\n@return Number."
+    },
+    "GetArmyStat": {
+        "prefix": [
+            "GetArmyStat"
+        ],
+        "body": [
+            "${1:brain}:GetArmyStat(${2:statName}, ${3:defaultValue})"
+        ],
+        "description": "Returns the relevant stat or default value.\r\n@param statName String, name of the stats to get.\r\n@param defaultValue Ff the stat doesn't exists, it creates it and returns this value.\r\n@return Number."
+    },
+    "IsAnyEngineerBuilding": {
+        "prefix": [
+            "IsAnyEngineerBuilding"
+        ],
+        "body": [
+            "${1:brain}:IsAnyEngineerBuilding(${2:category})"
+        ],
+        "description": "TODO."
+    },
+    "GetEconomyTrend": {
+        "prefix": [
+            "GetEconomyTrend"
+        ],
+        "body": [
+            "${1:brain}:GetEconomyTrend(${2:resource})"
+        ],
+        "description": "TODO.\r\n@param resource 'Energy' or 'Mass'.\r\n@return TODO."
+    },
+    "GetBlueprintStat": {
+        "prefix": [
+            "GetBlueprintStat"
+        ],
+        "body": [
+            "${1:brain}:GetBlueprintStat(${2:statName}, ${3:category})"
+        ],
+        "description": "Return a blueprint stat filtered by category.\r\n@param statName String, name of the stats to get, example: \"Enemies_Killed\".\r\n@param category Unit's category, example: categories.TECH2 .\r\n@return Number."
+    },
+    "AssignThreatAtPosition": {
+        "prefix": [
+            "AssignThreatAtPosition"
+        ],
+        "body": [
+            "${1:brain}:AssignThreatAtPosition(${2:position}, ${3:threat}, ${4:decay}, ${5:threatType})"
+        ],
+        "description": "Class CAiBrain\r\n@classmod Sim.CAiBrain\r\nAssigns threat value to given position.\r\nThreat is used for calculation where to attack with unit.\r\nOr what place to avoid with engineers.\r\n@param position Table with position {x, y z}.\r\n@param threat Number reptresenting the threat.\r\n@param decay Number, the thread is decreasing by time.\r\n@param threatType Types: TODO."
+    },
+    "GetNumPlatoonsWithAI": {
+        "prefix": [
+            "GetNumPlatoonsWithAI"
+        ],
+        "body": [
+            "${1:brain}:GetNumPlatoonsWithAI()"
+        ],
+        "description": "TODO.\r\n@return Number."
+    },
+    "BuildPlatoon": {
+        "prefix": [
+            "BuildPlatoon"
+        ],
+        "body": [
+            "${1:brain}:BuildPlatoon(${2:template}, ${3:factories}, ${4:count})"
+        ],
+        "description": "Orders factories to build a platoon.\r\n@param template Format: {name, plan, {bpID, min, max, squad, formation}, {...}, ...} .\r\n@param factories Table of units-factories to build the platoon.\r\n@param count How many times to built it."
+    },
+    "GetThreatsAroundPosition": {
+        "prefix": [
+            "GetThreatsAroundPosition"
+        ],
+        "body": [
+            "${1:brain}:GetThreatsAroundPosition(${2:position}, ${3:radius}, ${4:restriction}, ${5:threatType}, ${6:armyIndex})"
+        ],
+        "description": "Return threats around position.\r\n@param position Table with position {x, y, z}.\r\n@param radius Number in game units.\r\n@param restriction\r\n@param threatType\r\n@param armyIndex\r\n@return Table {{x, z, threatValue}, {...}, ...}."
+    },
+    "TakeResource": {
+        "prefix": [
+            "TakeResource"
+        ],
+        "body": [
+            "${1:brain}:TakeResource(${2:type}, ${3:amount})"
+        ],
+        "description": "Removes resources from brain.\r\n@param type 'Energy', 'Mass'.\r\n@param amout Number, how much to take."
+    },
+    "SetCurrentEnemy": {
+        "prefix": [
+            "SetCurrentEnemy"
+        ],
+        "body": [
+            "${1:brain}:SetCurrentEnemy(${2:armyIndex})"
+        ],
+        "description": "Set the current enemy for this brain to attack.\r\n@param armyIndex Target's army number."
+    },
+    "GetEconomyStored": {
+        "prefix": [
+            "GetEconomyStored"
+        ],
+        "body": [
+            "${1:brain}:GetEconomyStored(${2:resource})"
+        ],
+        "description": "Return current resource amout in storage.\r\n@param resource 'Energy' or 'Mass'.\r\n@return Number."
+    },
+    "GetAttackVectors": {
+        "prefix": [
+            "GetAttackVectors"
+        ],
+        "body": [
+            "${1:brain}:GetAttackVectors()"
+        ],
+        "description": "TODO."
+    },
+    "GetPlatoonUniquelyNamed": {
+        "prefix": [
+            "GetPlatoonUniquelyNamed"
+        ],
+        "body": [
+            "${1:brain}:GetPlatoonUniquelyNamed(${2:name})"
+        ],
+        "description": "Returns platoon by unique name.\r\n@param name String, unique platoon's name set by platoon:UniquelyNamePlatoon(name) function.\r\n@return platoon"
+    },
+    "NumCurrentlyBuilding": {
+        "prefix": [
+            "NumCurrentlyBuilding"
+        ],
+        "body": [
+            "${1:brain}:NumCurrentlyBuilding(${2:entityCategoryOfBuildee}, ${3:entityCategoryOfBuilder})"
+        ],
+        "description": "Return number of unit's categories being built.\r\n@param entityCategoryOfBuildee Unit's category that is being built.\r\n@param entityCategoryOfBuilder Unit's category of the unit building, example: categories.CONSTRUCTION .\r\n@return Number."
+    },
+    "FindUpgradeBP": {
+        "prefix": [
+            "FindUpgradeBP"
+        ],
+        "body": [
+            "${1:brain}:FindUpgradeBP(${2:unitName}, ${3:upgradeList})"
+        ],
+        "description": "Return an upgrade blueprint for the unit passed in.\r\n@param unitName Blueprint ID of the unit to upgrade, example 'ueb0101'.\r\n@param upgradeList Table, see '/lua/upgradetemplates.lua'.\r\n@return BlueprintID, example 'ueb0201'"
+    },
+    "GetUnitBlueprint": {
+        "prefix": [
+            "GetUnitBlueprint"
+        ],
+        "body": [
+            "${1:brain}:GetUnitBlueprint(${2:bpName})"
+        ],
+        "description": "Returns unit blueprint if given blueprint name.\r\n@param bpName Example 'ual0201'.\r\n@return Blueprint."
+    },
+    "PlatoonExists": {
+        "prefix": [
+            "PlatoonExists"
+        ],
+        "body": [
+            "${1:brain}:PlatoonExists(${2:platoon})"
+        ],
+        "description": "Returns true if platoon exists.\r\n@return true/false."
+    },
+    "GetNumPlatoonsTemplateNamed": {
+        "prefix": [
+            "GetNumPlatoonsTemplateNamed"
+        ],
+        "body": [
+            "${1:brain}:GetNumPlatoonsTemplateNamed()"
+        ],
+        "description": "TODO.\r\nProbably has to do something with first param of MakePlatoon().\r\n@return Number."
+    },
+    "SetArmyStat": {
+        "prefix": [
+            "SetArmyStat"
+        ],
+        "body": [
+            "${1:brain}:SetArmyStat(${2:statName}, ${3:value})"
+        ],
+        "description": "Sets army's stat to value.\r\n@param statName String, army's stat, example: \"Economy_Ratio_Mass\".\r\n@param value Number."
+    },
+    "GetNumUnitsAroundPoint": {
+        "prefix": [
+            "GetNumUnitsAroundPoint"
+        ],
+        "body": [
+            "${1:brain}:GetNumUnitsAroundPoint(${2:category}, ${3:position}, ${4:radius}, ${5:alliance})"
+        ],
+        "description": "Return number of units around position.\r\n@param category Unit's category, example: categories.TECH2 .\r\n@param position Table with position {x, y, z}.\r\n@param radius Number in game units.\r\n@param alliance Types: 'Ally', 'Enemy', 'Neutral'.\r\n@return Number."
+    },
+    "GetPersonality": {
+        "prefix": [
+            "GetPersonality"
+        ],
+        "body": [
+            "${1:brain}:GetPersonality()"
+        ],
+        "description": "Return the personality for this brain to use.\r\n@return TODO."
+    },
+    "CreateResourceBuildingNearest": {
+        "prefix": [
+            "CreateResourceBuildingNearest"
+        ],
+        "body": [
+            "${1:brain}:CreateResourceBuildingNearest(${2:blueprintID}, ${3:posX}, ${4:posY})"
+        ],
+        "description": "Spawns a resource building near position.\r\nUsed for spawning prebuild base resource structures.\r\n@param blueprintID Unit's bp ID to spawn, example 'ueb0101'.\r\n@param posX Position on X axis.\r\n@param posY Position on Z axis (wrong name, also named like this in the functions that uses it, but it actually is the Z axis as Y is elevation).\r\n@return Spawned unit or nil."
+    },
+    "GetCurrentUnits": {
+        "prefix": [
+            "GetCurrentUnits"
+        ],
+        "body": [
+            "${1:brain}:GetCurrentUnits(${2:category})"
+        ],
+        "description": "Return how many units of the given categories exist.\r\n@param category Unit's category, example: categories.TECH2 .\r\n@return Number."
+    },
+    "GetEconomyRequested": {
+        "prefix": [
+            "GetEconomyRequested"
+        ],
+        "body": [
+            "${1:brain}:GetEconomyRequested(${2:resource})"
+        ],
+        "description": "Return how much of the resource the brains wants to use.\r\nThis is used for calculating Paragon's production.\r\n@param resource 'Energy' or 'Mass'.\r\n@return Number."
+    },
+    "GetCurrentEnemy": {
+        "prefix": [
+            "GetCurrentEnemy"
+        ],
+        "body": [
+            "${1:brain}:GetCurrentEnemy()"
+        ],
+        "description": "Return this brain's current enemy.\r\n@return Number, target's army number."
+    },
+    "DisbandPlatoonUniquelyNamed": {
+        "prefix": [
+            "DisbandPlatoonUniquelyNamed"
+        ],
+        "body": [
+            "${1:brain}:DisbandPlatoonUniquelyNamed(${2:name})"
+        ],
+        "description": "Disbands a given platoon.\r\n@param name Unique name of a platoon to disband."
+    },
+    "GetNoRushTicks": {
+        "prefix": [
+            "GetNoRushTicks"
+        ],
+        "body": [
+            "${1:brain}:GetNoRushTicks()"
+        ],
+        "description": "TODO. Number of no rush ticks left?\r\n@return Number."
+    },
+    "CanBuildPlatoon": {
+        "prefix": [
+            "CanBuildPlatoon"
+        ],
+        "body": [
+            "${1:brain}:CanBuildPlatoon(${2:template}, ${3:factories})"
+        ],
+        "description": "Filteres factories that can build the platoon and returns them.\r\nUsually passed table with only one factory as AI picks the highest tech factory as a primary and others are assisting.\r\n@param tempate Platoon's template.\r\n@param factories Table containing units-factories.\r\n@return tblUnits Table containing units-factories."
+    },
+    "DecideWhatToBuild": {
+        "prefix": [
+            "DecideWhatToBuild"
+        ],
+        "body": [
+            "${1:brain}:DecideWhatToBuild(${2:builder}, ${3:type}, ${4:buildingTypes})"
+        ],
+        "description": "TODO.\r\n@param builder Unit-engineer to build with.\r\n@param type\r\n@param buildingTypes"
+    },
+    "BuildUnit": {
+        "prefix": [
+            "BuildUnit"
+        ],
+        "body": [
+            "${1:brain}:BuildUnit(${2:builder}, ${3:unitToBuild}, ${4:count})"
+        ],
+        "description": "Orders a mobile factory to build a unit.\r\n@param builder Unit, mobile factory.\r\n@param unitToBuild BlueprintID of unit to build, example 'uel0303'.\r\n@param count Number, how many units to build."
+    },
+    "AssignUnitsToPlatoon": {
+        "prefix": [
+            "AssignUnitsToPlatoon"
+        ],
+        "body": [
+            "${1:brain}:AssignUnitsToPlatoon(${2:platoon}, ${3:unit}, ${4:squad}, ${5:formation})"
+        ],
+        "description": "Assign unit to platoon.\r\nIf the unit is already in a platoon, it gets removed from it.\r\n@param platoon Either platoon or string with platoon's unique name.\r\n@param unit Unit to assign.\r\n@param squad Platoon's squad to assign the unit to, types: 'Attack', 'Artillery', 'Guard' 'None', 'Scout', 'Support', 'Unassigned'.\r\n@param formation Types: 'AttackFormation', 'GrowthFormation', 'NoFormation'."
+    },
+    "DisbandPlatoon": {
+        "prefix": [
+            "DisbandPlatoon"
+        ],
+        "body": [
+            "${1:brain}:DisbandPlatoon(${2:platoon})"
+        ],
+        "description": "Disbands a given platoon.\r\n@param platoon Platoon to disband."
+    },
+    "GetListOfUnits": {
+        "prefix": [
+            "GetListOfUnits"
+        ],
+        "body": [
+            "${1:brain}:GetListOfUnits(${2:category}, ${3:needToBeIdle}, ${4:requireBuilt})"
+        ],
+        "description": "Returns list of units by category.\r\n@param category Unit's category, example: categories.TECH2 .\r\n@param needToBeIdle true/false Unit has to be idle.\r\n@param requireBuilt true/false defaults to false which excludes units that are NOT finished.\r\n@return tblUnits Table containing units."
+    },
+    "RemoveArmyStatsTrigger": {
+        "prefix": [
+            "RemoveArmyStatsTrigger"
+        ],
+        "body": [
+            "${1:brain}:RemoveArmyStatsTrigger()"
+        ],
+        "description": "Remove an army stats trigger.\r\nTODO."
+    },
+    "CheckBlockingTerrain": {
+        "prefix": [
+            "CheckBlockingTerrain"
+        ],
+        "body": [
+            "${1:brain}:CheckBlockingTerrain(${2:startPos}, ${3:endPos}, ${4:arcType})"
+        ],
+        "description": "TODO.\r\n@param startPos  Table with position {x, y z}, current position.\r\n@param endPos position Table with position {x, y z}, desired position.\r\n@param arcType Types: 'high', 'low', 'none'.\r\n@return true/false"
+    },
+    "FindUnitToUpgrade": {
+        "prefix": [
+            "FindUnitToUpgrade"
+        ],
+        "body": [
+            "${1:brain}:FindUnitToUpgrade(${2:upgradeList})"
+        ],
+        "description": "Return a unit and it's upgrade blueprint.\r\nTODO untested.\r\n@param upgradeList Table, see '/lua/upgradetemplates.lua'.\r\n@return TODO."
+    },
+    "GetEconomyStoredRatio": {
+        "prefix": [
+            "GetEconomyStoredRatio"
+        ],
+        "body": [
+            "${1:brain}:GetEconomyStoredRatio(${2:resource})"
+        ],
+        "description": "Returns the ratio between resource in storage to maximum storage amout.\r\n@param resource 'Energy' or 'Mass'.\r\n@return Float Number 0.0 - 1"
+    },
+    "GetThreatBetweenPositions": {
+        "prefix": [
+            "GetThreatBetweenPositions"
+        ],
+        "body": [
+            "${1:brain}:GetThreatBetweenPositions(${2:position}, ${3:position2}, ${4:restriction}, ${5:threatType}, ${6:armyIndex})"
+        ],
+        "description": "Returns threat between two positions.\r\n@param position Table with position {x, y, z}.\r\n@param position2 Table with position {x, y, z}.\r\n@param restriction\r\n@param threatType\r\n@param armyIndex Army's number, if specified uses, only this brain.\r\n@return Number."
+    },
+    "FindUnit": {
+        "prefix": [
+            "FindUnit"
+        ],
+        "body": [
+            "${1:brain}:FindUnit(${2:category}, ${3:needToBeIdle})"
+        ],
+        "description": "Return an unit that matches the unit name.\r\nCan specify idle or not.\r\n@param category Unit's category, example: categories.TECH2 * categories.ENGINEER .\r\n@param needToBeIdle true/false.\r\n@return Unit."
+    },
+    "BuildStructure": {
+        "prefix": [
+            "BuildStructure"
+        ],
+        "body": [
+            "${1:brain}:BuildStructure(${2:builder}, ${3:blueprintID}, ${4:locationInfo}, ${5:something})"
+        ],
+        "description": "Orders the builder to build a unit.\r\n@param builder Unit, (engineer) to use.\r\n@param blueprintID Unit's bp ID to build, example: 'ueb0101'.\r\n@param locationInfo Table {x, z, 0}.\r\n@param something TODO: true/false.\r\n@return true/false"
+    },
+    "FindPlaceToBuild": {
+        "prefix": [
+            "FindPlaceToBuild"
+        ],
+        "body": [
+            "${1:brain}:FindPlaceToBuild(${2:type}, ${3:structureName}, ${4:buildingTypes}, ${5:relative}, ${6:builder}, ${7:optIgnoreAlliance}, ${8:optOverridePosX}, ${9:optOverridePosZ}, ${10:optIgnoreThreatOver})"
+        ],
+        "description": "TODO.\r\n@return x, z, distance"
+    },
+    "GetMapWaterRatio": {
+        "prefix": [
+            "GetMapWaterRatio"
+        ],
+        "body": [
+            "${1:brain}:GetMapWaterRatio()"
+        ],
+        "description": "Returns a ratio between water and land.\r\n@return Float number 0.0 - 1."
+    },
+    "SetGreaterOf": {
+        "prefix": [
+            "SetGreaterOf"
+        ],
+        "body": [
+            "${1:brain}:SetGreaterOf(${2:statname}, ${3:val})"
+        ],
+        "description": "TODO."
+    },
+    "GetEconomyIncome": {
+        "prefix": [
+            "GetEconomyIncome"
+        ],
+        "body": [
+            "${1:brain}:GetEconomyIncome(${2:resource})"
+        ],
+        "description": "Returns current resource income.\r\n@param resource 'Energy' or 'Mass'.\r\n@return Number."
+    },
+    "SetUpAttackVectorsToArmy": {
+        "prefix": [
+            "SetUpAttackVectorsToArmy"
+        ],
+        "body": [
+            "${1:brain}:SetUpAttackVectorsToArmy(${2:category})"
+        ],
+        "description": "TODO."
+    }
+}

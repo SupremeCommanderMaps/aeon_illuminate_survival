@@ -1,0 +1,218 @@
+{
+    "DoPropCallbacks": {
+        "prefix": [
+            "DoPropCallbacks"
+        ],
+        "body": [
+            "${1:prop}:DoPropCallbacks(${2:type}, ${3:param})"
+        ],
+        "description": ""
+    },
+    "RemoveCallback": {
+        "prefix": [
+            "RemoveCallback"
+        ],
+        "body": [
+            "${1:prop}:RemoveCallback(${2:fn})"
+        ],
+        "description": ""
+    },
+    "UpdateReclaimLeft": {
+        "prefix": [
+            "UpdateReclaimLeft"
+        ],
+        "body": [
+            "${1:prop}:UpdateReclaimLeft()"
+        ],
+        "description": "This function mimics the engine's behavior when calculating what value is left of a prop\r\nCalled from OnDestroy, OnDamage, and OnCreate"
+    },
+    "PlayPropSound": {
+        "prefix": [
+            "PlayPropSound"
+        ],
+        "body": [
+            "${1:prop}:PlayPropSound(${2:sound})"
+        ],
+        "description": ""
+    },
+    "init": {
+        "prefix": [
+            "init"
+        ],
+        "body": [
+            "${1:prop}:init(${2:spec})"
+        ],
+        "description": "Do not call the base class __init and __post_init, we already have a c++ object"
+    },
+    "OnKilled": {
+        "prefix": [
+            "OnKilled"
+        ],
+        "body": [
+            "${1:prop}:OnKilled(${2:instigator}, ${3:type}, ${4:exceessDamageRatio})"
+        ],
+        "description": ""
+    },
+    "PlayPropAmbientSound": {
+        "prefix": [
+            "PlayPropAmbientSound"
+        ],
+        "body": [
+            "${1:prop}:PlayPropAmbientSound(${2:sound})"
+        ],
+        "description": "Play the specified ambient sound for the unit, and if it has\r\nAmbientRumble defined, play that too"
+    },
+    "SplitOnBonesByName": {
+        "prefix": [
+            "SplitOnBonesByName"
+        ],
+        "body": [
+            "${1:prop}:SplitOnBonesByName(${2:dirprefix})"
+        ],
+        "description": "Split this prop into multiple sub-props, placing one at each of our bone locations.\r\nThe child prop names are taken from the names of the bones of this prop.\r\nIf this prop has bones named\r\n\"one\", \"two\", \"two_01\", \"two_02\"\r\nWe will create props named\r\n\"../one_prop.bp\", \"../two_prop.bp\", \"../two_prop.bp\", \"../two_prop.bp\"\r\nNote that the optional _01, _02, _03 ending to the bone name is stripped off.\r\nYou can pass an optional 'dirprefix' arg saying where to look for the child props.\r\nIf not given, it defaults to one directory up from this prop's blueprint location."
+    },
+    "SetCanBeKilled": {
+        "prefix": [
+            "SetCanBeKilled"
+        ],
+        "body": [
+            "${1:prop}:SetCanBeKilled(${2:val})"
+        ],
+        "description": "Sets if the unit can be killed.  val = true means it can be killed.\r\nval = false means it can't be killed"
+    },
+    "SyncMassLabel": {
+        "prefix": [
+            "SyncMassLabel"
+        ],
+        "body": [
+            "${1:prop}:SyncMassLabel()"
+        ],
+        "description": ""
+    },
+    "AddPropCallback": {
+        "prefix": [
+            "AddPropCallback"
+        ],
+        "body": [
+            "${1:prop}:AddPropCallback(${2:fn}, ${3:type})"
+        ],
+        "description": ""
+    },
+    "OnCreate": {
+        "prefix": [
+            "OnCreate"
+        ],
+        "body": [
+            "${1:prop}:OnCreate()"
+        ],
+        "description": ""
+    },
+    "GetReclaimCosts": {
+        "prefix": [
+            "GetReclaimCosts"
+        ],
+        "body": [
+            "${1:prop}:GetReclaimCosts(${2:reclaimer})"
+        ],
+        "description": "Prop reclaiming\r\ntime = the greater of either time to reclaim mass or energy\r\ntime to reclaim mass or energy is defined as:\r\nMass Time =  mass reclaim value / buildrate of thing reclaiming it * BP set mass mult\r\nEnergy Time = energy reclaim value / buildrate of thing reclaiming it * BP set energy mult\r\nThe time to reclaim is the highest of the two values above."
+    },
+    "SetMaxReclaimValues": {
+        "prefix": [
+            "SetMaxReclaimValues"
+        ],
+        "body": [
+            "${1:prop}:SetMaxReclaimValues(${2:time}, ${3:mass}, ${4:energy})"
+        ],
+        "description": "Set the mass/energy value of this wreck when at full health, and the time coefficient\r\nthat determine how quickly it can be reclaimed.\r\nThese values are used to set the real reclaim values as fractions of the health as the wreck\r\ntakes damage."
+    },
+    "CheckCanBeKilled": {
+        "prefix": [
+            "CheckCanBeKilled"
+        ],
+        "body": [
+            "${1:prop}:CheckCanBeKilled(${2:other})"
+        ],
+        "description": ""
+    },
+    "OnCollisionCheck": {
+        "prefix": [
+            "OnCollisionCheck"
+        ],
+        "body": [
+            "${1:prop}:OnCollisionCheck(${2:other})"
+        ],
+        "description": ""
+    },
+    "SetPropCollision": {
+        "prefix": [
+            "SetPropCollision"
+        ],
+        "body": [
+            "${1:prop}:SetPropCollision(${2:shape}, ${3:centerx}, ${4:centery}, ${5:centerz}, ${6:sizex}, ${7:sizey}, ${8:sizez}, ${9:radius})"
+        ],
+        "description": ""
+    },
+    "OnDamage": {
+        "prefix": [
+            "OnDamage"
+        ],
+        "body": [
+            "${1:prop}:OnDamage(${2:instigator}, ${3:amount}, ${4:direction}, ${5:damageType})"
+        ],
+        "description": ""
+    },
+    "CreateReclaimEndEffects": {
+        "prefix": [
+            "CreateReclaimEndEffects"
+        ],
+        "body": [
+            "${1:prop}:CreateReclaimEndEffects(${2:target})"
+        ],
+        "description": ""
+    },
+    "Destroy": {
+        "prefix": [
+            "Destroy"
+        ],
+        "body": [
+            "${1:prop}:Destroy()"
+        ],
+        "description": ""
+    },
+    "OnReclaimed": {
+        "prefix": [
+            "OnReclaimed"
+        ],
+        "body": [
+            "${1:prop}:OnReclaimed(${2:entity})"
+        ],
+        "description": ""
+    },
+    "GetCachePosition": {
+        "prefix": [
+            "GetCachePosition"
+        ],
+        "body": [
+            "${1:prop}:GetCachePosition()"
+        ],
+        "description": "Returns the cache position of the prop, since it doesn't move, it's a big optimization"
+    },
+    "OnDestroy": {
+        "prefix": [
+            "OnDestroy"
+        ],
+        "body": [
+            "${1:prop}:OnDestroy()"
+        ],
+        "description": ""
+    },
+    "SetCanTakeDamage": {
+        "prefix": [
+            "SetCanTakeDamage"
+        ],
+        "body": [
+            "${1:prop}:SetCanTakeDamage(${2:val})"
+        ],
+        "description": "Sets if the unit can take damage.  val = true means it can take damage.\r\nval = false means it can't take damage"
+    }
+}

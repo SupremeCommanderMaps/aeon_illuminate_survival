@@ -1,0 +1,45 @@
+
+// Builder {
+//     BuilderName = 'land factory',
+//     PlatoonTemplate = 'EngineerBuilder',
+//     Priority = 0,
+//     InstanceCount = 1,
+//     BuilderConditions = {
+//     },
+//     BuilderType = 'Any',
+//     BuilderData = {
+//         Construction = {
+//             BuildStructures = {
+//                 'T1LandFactory',
+//             }
+//         }
+//     }
+// },
+
+{
+    "BuilderA": {
+        "prefix": [
+            "Builder"
+        ],
+        "body": [
+            "Builder {" ,
+                "\tBuilderName = ${1:name},",
+                "\tPlatoonTemplate = ${2:template},",
+                "\tPriority = ${3:priority},",
+                "\tInstanceCount = ${4:instanceCount},",
+                "\tBuilderConditions = {",
+                "\t\t${5:conditions}",
+                "\t},",
+                "\tBuilderType = ${6:builderType},",
+                "\tBuilderData = {",
+                    "\t\tConstruction = {",
+                        "\t\t\tBuildStructures = {",
+                            "\t\t\t\t${7:structures},",
+                        "\t\t\t}",
+                    "\t\t}",
+                "\t}",
+            "},",
+        ],
+        "description": ""
+    },
+}

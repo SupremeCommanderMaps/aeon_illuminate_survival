@@ -1,0 +1,263 @@
+{
+    "GetLauncher": {
+        "prefix": [
+            "GetLauncher"
+        ],
+        "body": [
+            "${1:projectile}:GetLauncher()"
+        ],
+        "description": "Get who launched this projectile"
+    },
+    "SetCollision": {
+        "prefix": [
+            "SetCollision"
+        ],
+        "body": [
+            "${1:projectile}:SetCollision(${2:onoff})"
+        ],
+        "description": "Projectile:SetCollision(onoff)"
+    },
+    "SetDestroyOnWater": {
+        "prefix": [
+            "SetDestroyOnWater"
+        ],
+        "body": [
+            "${1:projectile}:SetDestroyOnWater(${2:flag})"
+        ],
+        "description": "Projectile:SetDestroyOnWater(flag)"
+    },
+    "SetNewTarget": {
+        "prefix": [
+            "SetNewTarget"
+        ],
+        "body": [
+            "${1:projectile}:SetNewTarget(${2:entity})"
+        ],
+        "description": "Projectile:SetNewTarget(entity)"
+    },
+    "ChangeZigZagFrequency": {
+        "prefix": [
+            "ChangeZigZagFrequency"
+        ],
+        "body": [
+            "${1:projectile}:ChangeZigZagFrequency()"
+        ],
+        "description": "Change the frequency of the zig zag --> min \"0\" (0┬á%), 0.5 (50%), max \"1.0\" (100%)"
+    },
+    "StayUnderwater": {
+        "prefix": [
+            "StayUnderwater"
+        ],
+        "body": [
+            "${1:projectile}:StayUnderwater(${2:onoff})"
+        ],
+        "description": "Projectile:StayUnderwater(onoff)"
+    },
+    "ChangeMaxZigZag": {
+        "prefix": [
+            "ChangeMaxZigZag"
+        ],
+        "body": [
+            "${1:projectile}:ChangeMaxZigZag()"
+        ],
+        "description": "Change the amount of zig zag in degrees per second"
+    },
+    "base": {
+        "prefix": [
+            "base"
+        ],
+        "body": [
+            "${1:projectile}:base()"
+        ],
+        "description": "derived from Entity"
+    },
+    "SetStayUpright": {
+        "prefix": [
+            "SetStayUpright"
+        ],
+        "body": [
+            "${1:projectile}:SetStayUpright(${2:truefalse})"
+        ],
+        "description": "Projectile:SetStayUpright(truefalse)"
+    },
+    "SetAcceleration": {
+        "prefix": [
+            "SetAcceleration"
+        ],
+        "body": [
+            "${1:projectile}:SetAcceleration(${2:accel})"
+        ],
+        "description": "Projectile:SetAcceleration(accel)"
+    },
+    "CreateChildProjectile": {
+        "prefix": [
+            "CreateChildProjectile"
+        ],
+        "body": [
+            "${1:projectile}:CreateChildProjectile(${2:blueprint})"
+        ],
+        "description": "Projectile:CreateChildProjectile(blueprint)"
+    },
+    "ChangeDetonateBelowHeight": {
+        "prefix": [
+            "ChangeDetonateBelowHeight"
+        ],
+        "body": [
+            "${1:projectile}:ChangeDetonateBelowHeight()"
+        ],
+        "description": "Class Projectile\r\n@classmod Sim.Projectile\r\nChange the detonate below height for the projectile"
+    },
+    "TrackTarget": {
+        "prefix": [
+            "TrackTarget"
+        ],
+        "body": [
+            "${1:projectile}:TrackTarget(${2:onoff})"
+        ],
+        "description": "Projectile:TrackTarget(onoff)"
+    },
+    "SetDamage": {
+        "prefix": [
+            "SetDamage"
+        ],
+        "body": [
+            "${1:projectile}:SetDamage(${2:amount}, ${3:radius})"
+        ],
+        "description": "Projectile:SetDamage(amount, radius) -- change how much damage this projectile will do. Either amount or radius can be nil to leave unchanged."
+    },
+    "GetVelocity": {
+        "prefix": [
+            "GetVelocity"
+        ],
+        "body": [
+            "${1:projectile}:GetVelocity()"
+        ],
+        "description": "Projectile:GetVelocity() -> x,y,z"
+    },
+    "SetLifetime": {
+        "prefix": [
+            "SetLifetime"
+        ],
+        "body": [
+            "${1:projectile}:SetLifetime(${2:seconds})"
+        ],
+        "description": "Projectile:SetLifetime(seconds)"
+    },
+    "SetBallisticAcceleration": {
+        "prefix": [
+            "SetBallisticAcceleration"
+        ],
+        "body": [
+            "${1:projectile}:SetBallisticAcceleration()"
+        ],
+        "description": "Wrong number of arguments to Projectile:SetAccelerationVector(), expected 1, 2, or 4 but got┬á%d"
+    },
+    "GetCurrentTargetPosition": {
+        "prefix": [
+            "GetCurrentTargetPosition"
+        ],
+        "body": [
+            "${1:projectile}:GetCurrentTargetPosition()"
+        ],
+        "description": "Projectile:GetCurrentTargetPosition()"
+    },
+    "SetVelocityRandomUpVector": {
+        "prefix": [
+            "SetVelocityRandomUpVector"
+        ],
+        "body": [
+            "${1:projectile}:SetVelocityRandomUpVector(${2:self})"
+        ],
+        "description": "SetVelocityRandomUpVector(self)"
+    },
+    "SetLocalAngularVelocity": {
+        "prefix": [
+            "SetLocalAngularVelocity"
+        ],
+        "body": [
+            "${1:projectile}:SetLocalAngularVelocity(${2:x}, ${3:y}, ${4:z})"
+        ],
+        "description": "Projectile:SetLocalAngularVelocity(x,y,z)"
+    },
+    "SetNewTargetGround": {
+        "prefix": [
+            "SetNewTargetGround"
+        ],
+        "body": [
+            "${1:projectile}:SetNewTargetGround(${2:location})"
+        ],
+        "description": "Projectile:SetNewTargetGround(location)"
+    },
+    "SetCollideEntity": {
+        "prefix": [
+            "SetCollideEntity"
+        ],
+        "body": [
+            "${1:projectile}:SetCollideEntity(${2:onoff})"
+        ],
+        "description": "Projectile:SetCollideEntity(onoff)"
+    },
+    "SetScaleVelocity": {
+        "prefix": [
+            "SetScaleVelocity"
+        ],
+        "body": [
+            "${1:projectile}:SetScaleVelocity(${2:vs})"
+        ],
+        "description": "Projectile:SetScaleVelocity(vs) or Projectile:SetScaleVelocity(vsx, vsy, vsz)"
+    },
+    "SetVelocity": {
+        "prefix": [
+            "SetVelocity"
+        ],
+        "body": [
+            "${1:projectile}:SetVelocity(${2:speed})"
+        ],
+        "description": "Projectile:SetVelocity(speed) or Projectile:SetVelocity(vx,vy,vz)"
+    },
+    "GetTrackingTarget": {
+        "prefix": [
+            "GetTrackingTarget"
+        ],
+        "body": [
+            "${1:projectile}:GetTrackingTarget()"
+        ],
+        "description": "Projectile:GetTrackingTarget()"
+    },
+    "SetVelocityAlign": {
+        "prefix": [
+            "SetVelocityAlign"
+        ],
+        "body": [
+            "${1:projectile}:SetVelocityAlign(${2:truefalse})"
+        ],
+        "description": "Projectile:SetVelocityAlign(truefalse)"
+    },
+    "GetCurrentSpeed": {
+        "prefix": [
+            "GetCurrentSpeed"
+        ],
+        "body": [
+            "${1:projectile}:GetCurrentSpeed()"
+        ],
+        "description": "Projectile:GetCurrentSpeed() -> val"
+    },
+    "SetCollideSurface": {
+        "prefix": [
+            "SetCollideSurface"
+        ],
+        "body": [
+            "${1:projectile}:SetCollideSurface(${2:onoff})"
+        ],
+        "description": "Projectile:SetCollideSurface(onoff)"
+    },
+    "SetMaxSpeed": {
+        "prefix": [
+            "SetMaxSpeed"
+        ],
+        "body": [
+            "${1:projectile}:SetMaxSpeed(${2:speed})"
+        ],
+        "description": "Projectile:SetMaxSpeed(speed)"
+    }
+}

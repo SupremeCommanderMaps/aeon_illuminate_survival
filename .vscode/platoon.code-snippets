@@ -1,0 +1,1181 @@
+{
+    "SetupEngineerCallbacksSorian": {
+        "prefix": [
+            "SetupEngineerCallbacksSorian"
+        ],
+        "body": [
+            "${1:platoon}:SetupEngineerCallbacksSorian()"
+        ],
+        "description": ""
+    },
+    "IsBetterThreat": {
+        "prefix": [
+            "IsBetterThreat"
+        ],
+        "body": [
+            "${1:platoon}:IsBetterThreat(${2:newMarker}, ${3:oldMarker})"
+        ],
+        "description": "greater than or less than check, based on what kind of threat order we want"
+    },
+    "AirScoutingAI": {
+        "prefix": [
+            "AirScoutingAI"
+        ],
+        "body": [
+            "${1:platoon}:AirScoutingAI()"
+        ],
+        "description": "Function: AirScoutingAI\r\nArgs:\r\nplatoon - platoon to run the AI\r\nDescription:\r\nHandles sending air scouts to important locations.\r\nReturns:\r\nnil (loops until platoon is destroyed)"
+    },
+    "CarrierAI": {
+        "prefix": [
+            "CarrierAI"
+        ],
+        "body": [
+            "${1:platoon}:CarrierAI()"
+        ],
+        "description": "Function: CarrierAI\r\nArgs:\r\nself - the carrier platoon to run the AI on\r\nDescription:\r\nUses the carrier as a sea-based powerful anti-air unit.\r\nDispatches the carrier to a location with heavy air cover\r\nto wreck havoc on air units\r\nReturns:\r\nnil (tail calls into a behavior function)"
+    },
+    "CaptureAI": {
+        "prefix": [
+            "CaptureAI"
+        ],
+        "body": [
+            "${1:platoon}:CaptureAI()"
+        ],
+        "description": ""
+    },
+    "ThreatStrikeSorian": {
+        "prefix": [
+            "ThreatStrikeSorian"
+        ],
+        "body": [
+            "${1:platoon}:ThreatStrikeSorian()"
+        ],
+        "description": ""
+    },
+    "EngineerReclaimDoneSorian": {
+        "prefix": [
+            "EngineerReclaimDoneSorian"
+        ],
+        "body": [
+            "${1:platoon}:EngineerReclaimDoneSorian(${2:params})"
+        ],
+        "description": ""
+    },
+    "ReturnToBaseAI": {
+        "prefix": [
+            "ReturnToBaseAI"
+        ],
+        "body": [
+            "${1:platoon}:ReturnToBaseAI()"
+        ],
+        "description": "Function: ReturnToBaseAI\r\nArgs:\r\nself - the single platoon to run the AI on\r\nDescription:\r\nFinds a base to return to and disband - that way it can be used\r\nfor a new platoon\r\nReturns:\r\nnil (tail calls into AttackForceAI or disbands)"
+    },
+    "GuardEngineer": {
+        "prefix": [
+            "GuardEngineer"
+        ],
+        "body": [
+            "${1:platoon}:GuardEngineer(${2:nextAIFunc}, ${3:forceGuardBase})"
+        ],
+        "description": "Function: GuardEngineer\r\nArgs:\r\nplatoon - platoon to run the AI\r\nfunction [opt] - AI function to run when done guarding\r\nbool [opt] - if true, forces a platoon's units to disband and guard a base forever\r\nDescription:\r\nProvides logic for platoons to guard expansion areas and engineers.\r\nReturns:\r\nnil (tail calls into the nextAIFunc or itself)"
+    },
+    "DoAirScoutVecs": {
+        "prefix": [
+            "DoAirScoutVecs"
+        ],
+        "body": [
+            "${1:platoon}:DoAirScoutVecs(${2:scout}, ${3:targetArea})"
+        ],
+        "description": "Function: DoAirScoutVecs\r\nArgs:\r\nplatoon - platoon to run the AI\r\nunit - the scout\r\ntargetArea - a position to scout\r\nDescription:\r\nCreates an attack vector that will cause the scout to fly by the target at a distance of its visual range.\r\nWhether to fly by on the left or right is decided randomly. This whole affair should hopefully extend the\r\nlife of the air scout.\r\nReturns:\r\ndestination position"
+    },
+    "HuntAI": {
+        "prefix": [
+            "HuntAI"
+        ],
+        "body": [
+            "${1:platoon}:HuntAI()"
+        ],
+        "description": ""
+    },
+    "GetPlatoonThreat": {
+        "prefix": [
+            "GetPlatoonThreat"
+        ],
+        "body": [
+            "${1:platoon}:GetPlatoonThreat(${2:threatType}, ${3:unitCategory}, ${4:position}, ${5:radius})"
+        ],
+        "description": ""
+    },
+    "AssistBody": {
+        "prefix": [
+            "AssistBody"
+        ],
+        "body": [
+            "${1:platoon}:AssistBody()"
+        ],
+        "description": ""
+    },
+    "EngineerBuildDone": {
+        "prefix": [
+            "EngineerBuildDone"
+        ],
+        "body": [
+            "${1:platoon}:EngineerBuildDone(${2:params})"
+        ],
+        "description": "Callback functions for EngineerBuildAI"
+    },
+    "EconDamagedShield": {
+        "prefix": [
+            "EconDamagedShield"
+        ],
+        "body": [
+            "${1:platoon}:EconDamagedShield()"
+        ],
+        "description": ""
+    },
+    "EngineerBuildAI": {
+        "prefix": [
+            "EngineerBuildAI"
+        ],
+        "body": [
+            "${1:platoon}:EngineerBuildAI()"
+        ],
+        "description": "Function: EngineerBuildAI\r\nArgs:\r\nself - the single-engineer platoon to run the AI on\r\nDescription:\r\na single-unit platoon made up of an engineer, this AI will determine\r\nwhat needs to be built (based on platoon data set by the calling\r\nabstraction, and then issue the build commands to the engineer\r\nReturns:\r\nnil (tail calls into a behavior function)"
+    },
+    "CheckCommandsCompleted": {
+        "prefix": [
+            "CheckCommandsCompleted"
+        ],
+        "body": [
+            "${1:platoon}:CheckCommandsCompleted(${2:commands})"
+        ],
+        "description": ""
+    },
+    "StrikeForceAISorian": {
+        "prefix": [
+            "StrikeForceAISorian"
+        ],
+        "body": [
+            "${1:platoon}:StrikeForceAISorian()"
+        ],
+        "description": ""
+    },
+    "EngineerFailedToBuildSorian": {
+        "prefix": [
+            "EngineerFailedToBuildSorian"
+        ],
+        "body": [
+            "${1:platoon}:EngineerFailedToBuildSorian(${2:params})"
+        ],
+        "description": ""
+    },
+    "AntiNukeAI": {
+        "prefix": [
+            "AntiNukeAI"
+        ],
+        "body": [
+            "${1:platoon}:AntiNukeAI()"
+        ],
+        "description": ""
+    },
+    "PlatoonCallForHelpAISorian": {
+        "prefix": [
+            "PlatoonCallForHelpAISorian"
+        ],
+        "body": [
+            "${1:platoon}:PlatoonCallForHelpAISorian()"
+        ],
+        "description": ""
+    },
+    "GuardMarkerSorian": {
+        "prefix": [
+            "GuardMarkerSorian"
+        ],
+        "body": [
+            "${1:platoon}:GuardMarkerSorian()"
+        ],
+        "description": "Function: GuardMarkerSorian\r\nArgs:\r\nplatoon - platoon to run the AI\r\nDescription:\r\nWill guard the location of a marker\r\nReturns:\r\nnil"
+    },
+    "AirIntelToggle": {
+        "prefix": [
+            "AirIntelToggle"
+        ],
+        "body": [
+            "${1:platoon}:AirIntelToggle()"
+        ],
+        "description": "Function: AirIntelToggle\r\nArgs:\r\nself - platoon to run the AI\r\nDescription:\r\nTurns on Air unit cloak/stealth.\r\nReturns:\r\nnil"
+    },
+    "NameUnitsSorian": {
+        "prefix": [
+            "NameUnitsSorian"
+        ],
+        "body": [
+            "${1:platoon}:NameUnitsSorian()"
+        ],
+        "description": ""
+    },
+    "ProcessBuildCommandSorian": {
+        "prefix": [
+            "ProcessBuildCommandSorian"
+        ],
+        "body": [
+            "${1:platoon}:ProcessBuildCommandSorian(${2:removeLastBuild})"
+        ],
+        "description": "Function: ProcessBuildCommandSorian\r\nArgs:\r\neng - the engineer that's gone through EngineerBuildAI\r\nDescription:\r\nRun after every build order is complete/fails.  Sets up the next\r\nbuild order in queue, and if the engineer has nothing left to do\r\nwill return the engineer back to the army pool by disbanding the\r\nthe platoon.  Support function for EngineerBuildAI\r\nReturns:\r\nnil (tail calls into a behavior function)"
+    },
+    "CDRHuntAISorian": {
+        "prefix": [
+            "CDRHuntAISorian"
+        ],
+        "body": [
+            "${1:platoon}:CDRHuntAISorian()"
+        ],
+        "description": ""
+    },
+    "EnhanceAI": {
+        "prefix": [
+            "EnhanceAI"
+        ],
+        "body": [
+            "${1:platoon}:EnhanceAI()"
+        ],
+        "description": ""
+    },
+    "GhettoAISorian": {
+        "prefix": [
+            "GhettoAISorian"
+        ],
+        "body": [
+            "${1:platoon}:GhettoAISorian()"
+        ],
+        "description": ""
+    },
+    "MergeWithNearbyPlatoons": {
+        "prefix": [
+            "MergeWithNearbyPlatoons"
+        ],
+        "body": [
+            "${1:platoon}:MergeWithNearbyPlatoons(${2:planName}, ${3:radius})"
+        ],
+        "description": "Function: MergeWithNearbyPlatoons\r\nArgs:\r\nself - the single platoon to run the AI on\r\nplanName - AI plan to merge with\r\nradius - check to see if we should merge with platoons in this radius\r\nDescription:\r\nFinds platoons nearby (when self platoon is not near a base) and merge\r\nwith them if they're a good fit.\r\nReturns:\r\nnil"
+    },
+    "ManagerEngineerAssistAI": {
+        "prefix": [
+            "ManagerEngineerAssistAI"
+        ],
+        "body": [
+            "${1:platoon}:ManagerEngineerAssistAI()"
+        ],
+        "description": ""
+    },
+    "TacticalAI": {
+        "prefix": [
+            "TacticalAI"
+        ],
+        "body": [
+            "${1:platoon}:TacticalAI()"
+        ],
+        "description": ""
+    },
+    "RemoveEngineerCallbacksSorian": {
+        "prefix": [
+            "RemoveEngineerCallbacksSorian"
+        ],
+        "body": [
+            "${1:platoon}:RemoveEngineerCallbacksSorian()"
+        ],
+        "description": ""
+    },
+    "ReclaimAI": {
+        "prefix": [
+            "ReclaimAI"
+        ],
+        "body": [
+            "${1:platoon}:ReclaimAI()"
+        ],
+        "description": ""
+    },
+    "AttackForceAISorian": {
+        "prefix": [
+            "AttackForceAISorian"
+        ],
+        "body": [
+            "${1:platoon}:AttackForceAISorian()"
+        ],
+        "description": ""
+    },
+    "NukeAI": {
+        "prefix": [
+            "NukeAI"
+        ],
+        "body": [
+            "${1:platoon}:NukeAI()"
+        ],
+        "description": ""
+    },
+    "OnCreate": {
+        "prefix": [
+            "OnCreate"
+        ],
+        "body": [
+            "${1:platoon}:OnCreate(${2:plan})"
+        ],
+        "description": ""
+    },
+    "EngineerCaptureDoneSorian": {
+        "prefix": [
+            "EngineerCaptureDoneSorian"
+        ],
+        "body": [
+            "${1:platoon}:EngineerCaptureDoneSorian(${2:params})"
+        ],
+        "description": ""
+    },
+    "GatherUnits": {
+        "prefix": [
+            "GatherUnits"
+        ],
+        "body": [
+            "${1:platoon}:GatherUnits()"
+        ],
+        "description": "NOTES:\r\ndon't always use defensive point, use naval point for navies, etc.\r\nor gather around center"
+    },
+    "ArtilleryAISorian": {
+        "prefix": [
+            "ArtilleryAISorian"
+        ],
+        "body": [
+            "${1:platoon}:ArtilleryAISorian()"
+        ],
+        "description": ""
+    },
+    "BaseManagersDistressAI": {
+        "prefix": [
+            "BaseManagersDistressAI"
+        ],
+        "body": [
+            "${1:platoon}:BaseManagersDistressAI()"
+        ],
+        "description": ""
+    },
+    "OnUnitsAddedToPlatoon": {
+        "prefix": [
+            "OnUnitsAddedToPlatoon"
+        ],
+        "body": [
+            "${1:platoon}:OnUnitsAddedToPlatoon()"
+        ],
+        "description": ""
+    },
+    "TurnOnPoolAI": {
+        "prefix": [
+            "TurnOnPoolAI"
+        ],
+        "body": [
+            "${1:platoon}:TurnOnPoolAI()"
+        ],
+        "description": ""
+    },
+    "EconAssistBody": {
+        "prefix": [
+            "EconAssistBody"
+        ],
+        "body": [
+            "${1:platoon}:EconAssistBody()"
+        ],
+        "description": ""
+    },
+    "PlatoonDisbandNoAssign": {
+        "prefix": [
+            "PlatoonDisbandNoAssign"
+        ],
+        "body": [
+            "${1:platoon}:PlatoonDisbandNoAssign()"
+        ],
+        "description": "Below is Sorian AI stuff... there's a lot of it"
+    },
+    "GuardBase": {
+        "prefix": [
+            "GuardBase"
+        ],
+        "body": [
+            "${1:platoon}:GuardBase()"
+        ],
+        "description": ""
+    },
+    "ReclaimUnitsAI": {
+        "prefix": [
+            "ReclaimUnitsAI"
+        ],
+        "body": [
+            "${1:platoon}:ReclaimUnitsAI()"
+        ],
+        "description": ""
+    },
+    "StopAttack": {
+        "prefix": [
+            "StopAttack"
+        ],
+        "body": [
+            "${1:platoon}:StopAttack()"
+        ],
+        "description": "Support Functions\r\nstop platoon and delete last attack destination so new one will be picked"
+    },
+    "AvoidsBases": {
+        "prefix": [
+            "AvoidsBases"
+        ],
+        "body": [
+            "${1:platoon}:AvoidsBases(${2:markerPos}, ${3:avoidBasesDefault}, ${4:baseRadius})"
+        ],
+        "description": "Helper functions for GuardMarker AI\r\nChecks radius around base to see if marker is sufficiently far away"
+    },
+    "EngineerDropAI": {
+        "prefix": [
+            "EngineerDropAI"
+        ],
+        "body": [
+            "${1:platoon}:EngineerDropAI()"
+        ],
+        "description": "DUNCAN - added"
+    },
+    "ExperimentalAIHubSorian": {
+        "prefix": [
+            "ExperimentalAIHubSorian"
+        ],
+        "body": [
+            "${1:platoon}:ExperimentalAIHubSorian()"
+        ],
+        "description": ""
+    },
+    "DoDestroyCallbacks": {
+        "prefix": [
+            "DoDestroyCallbacks"
+        ],
+        "body": [
+            "${1:platoon}:DoDestroyCallbacks()"
+        ],
+        "description": ""
+    },
+    "GuardUnit": {
+        "prefix": [
+            "GuardUnit"
+        ],
+        "body": [
+            "${1:platoon}:GuardUnit()"
+        ],
+        "description": "DUNCAN - added"
+    },
+    "PatrolBaseVectorsAI": {
+        "prefix": [
+            "PatrolBaseVectorsAI"
+        ],
+        "body": [
+            "${1:platoon}:PatrolBaseVectorsAI()"
+        ],
+        "description": ""
+    },
+    "ReclaimStructuresAI": {
+        "prefix": [
+            "ReclaimStructuresAI"
+        ],
+        "body": [
+            "${1:platoon}:ReclaimStructuresAI()"
+        ],
+        "description": "DUNCAN - credit to Sorian"
+    },
+    "UnlockBaseManagerDistressLocation": {
+        "prefix": [
+            "UnlockBaseManagerDistressLocation"
+        ],
+        "body": [
+            "${1:platoon}:UnlockBaseManagerDistressLocation(${2:locData})"
+        ],
+        "description": ""
+    },
+    "GetThreatLevel": {
+        "prefix": [
+            "GetThreatLevel"
+        ],
+        "body": [
+            "${1:platoon}:GetThreatLevel(${2:rings})"
+        ],
+        "description": ""
+    },
+    "DistressResponseAISorian": {
+        "prefix": [
+            "DistressResponseAISorian"
+        ],
+        "body": [
+            "${1:platoon}:DistressResponseAISorian()"
+        ],
+        "description": ""
+    },
+    "FighterDistributionHubSorian": {
+        "prefix": [
+            "FighterDistributionHubSorian"
+        ],
+        "body": [
+            "${1:platoon}:FighterDistributionHubSorian()"
+        ],
+        "description": ""
+    },
+    "ManagerEngineerFindUnfinished": {
+        "prefix": [
+            "ManagerEngineerFindUnfinished"
+        ],
+        "body": [
+            "${1:platoon}:ManagerEngineerFindUnfinished()"
+        ],
+        "description": "DUNCAN - credit to Sorian"
+    },
+    "TurnOffPoolAI": {
+        "prefix": [
+            "TurnOffPoolAI"
+        ],
+        "body": [
+            "${1:platoon}:TurnOffPoolAI()"
+        ],
+        "description": ""
+    },
+    "ScoutingAI": {
+        "prefix": [
+            "ScoutingAI"
+        ],
+        "body": [
+            "${1:platoon}:ScoutingAI()"
+        ],
+        "description": "Function: ScoutingAI\r\nArgs:\r\nplatoon - a single-scout platoon to run the AI for\r\nDescription:\r\nSwitches to AirScoutingAI or LandScoutingAI depending on the unit's movement capabilities.\r\nReturns:\r\nnil. (Tail call into other AI functions)"
+    },
+    "GuardExperimentalSorian": {
+        "prefix": [
+            "GuardExperimentalSorian"
+        ],
+        "body": [
+            "${1:platoon}:GuardExperimentalSorian(${2:nextAIFunc})"
+        ],
+        "description": ""
+    },
+    "GunshipHuntAI": {
+        "prefix": [
+            "GunshipHuntAI"
+        ],
+        "body": [
+            "${1:platoon}:GunshipHuntAI()"
+        ],
+        "description": "DUNCAN - Credit to sorian, called AirHuntAI in his pack"
+    },
+    "LandScoutingAISorian": {
+        "prefix": [
+            "LandScoutingAISorian"
+        ],
+        "body": [
+            "${1:platoon}:LandScoutingAISorian()"
+        ],
+        "description": ""
+    },
+    "IsPartOfAttackForce": {
+        "prefix": [
+            "IsPartOfAttackForce"
+        ],
+        "body": [
+            "${1:platoon}:IsPartOfAttackForce()"
+        ],
+        "description": ""
+    },
+    "NavalForceAISorian": {
+        "prefix": [
+            "NavalForceAISorian"
+        ],
+        "body": [
+            "${1:platoon}:NavalForceAISorian()"
+        ],
+        "description": ""
+    },
+    "SetAIPlan": {
+        "prefix": [
+            "SetAIPlan"
+        ],
+        "body": [
+            "${1:platoon}:SetAIPlan(${2:plan})"
+        ],
+        "description": ""
+    },
+    "WatchForNotBuilding": {
+        "prefix": [
+            "WatchForNotBuilding"
+        ],
+        "body": [
+            "${1:platoon}:WatchForNotBuilding()"
+        ],
+        "description": "Function: WatchForNotBuilding\r\nArgs:\r\neng - the engineer that's gone through EngineerBuildAI\r\nDescription:\r\nAfter we try to build something, watch the engineer to\r\nmake sure that the build goes through.  If not,\r\ntry the next thing in the queue\r\nReturns:\r\nnil"
+    },
+    "ManagerEngineerFindLowShield": {
+        "prefix": [
+            "ManagerEngineerFindLowShield"
+        ],
+        "body": [
+            "${1:platoon}:ManagerEngineerFindLowShield()"
+        ],
+        "description": ""
+    },
+    "AirScoutingAISorian": {
+        "prefix": [
+            "AirScoutingAISorian"
+        ],
+        "body": [
+            "${1:platoon}:AirScoutingAISorian()"
+        ],
+        "description": ""
+    },
+    "FighterHuntAI": {
+        "prefix": [
+            "FighterHuntAI"
+        ],
+        "body": [
+            "${1:platoon}:FighterHuntAI()"
+        ],
+        "description": ""
+    },
+    "PoolAI": {
+        "prefix": [
+            "PoolAI"
+        ],
+        "body": [
+            "${1:platoon}:PoolAI()"
+        ],
+        "description": ""
+    },
+    "SetupEngineerCallbacks": {
+        "prefix": [
+            "SetupEngineerCallbacks"
+        ],
+        "body": [
+            "${1:platoon}:SetupEngineerCallbacks()"
+        ],
+        "description": ""
+    },
+    "EngineerReclaimDone": {
+        "prefix": [
+            "EngineerReclaimDone"
+        ],
+        "body": [
+            "${1:platoon}:EngineerReclaimDone(${2:params})"
+        ],
+        "description": ""
+    },
+    "ReturnToBaseAISorian": {
+        "prefix": [
+            "ReturnToBaseAISorian"
+        ],
+        "body": [
+            "${1:platoon}:ReturnToBaseAISorian()"
+        ],
+        "description": ""
+    },
+    "StrikeForceAI": {
+        "prefix": [
+            "StrikeForceAI"
+        ],
+        "body": [
+            "${1:platoon}:StrikeForceAI()"
+        ],
+        "description": ""
+    },
+    "DisbandAI": {
+        "prefix": [
+            "DisbandAI"
+        ],
+        "body": [
+            "${1:platoon}:DisbandAI()"
+        ],
+        "description": ""
+    },
+    "EngineerBuildAISorian": {
+        "prefix": [
+            "EngineerBuildAISorian"
+        ],
+        "body": [
+            "${1:platoon}:EngineerBuildAISorian()"
+        ],
+        "description": "Function: EngineerBuildAI\r\nArgs:\r\nself - the single-engineer platoon to run the AI on\r\nDescription:\r\na single-unit platoon made up of an engineer, this AI will determine\r\nwhat needs to be built (based on platoon data set by the calling\r\nabstraction, and then issue the build commands to the engineer\r\nReturns:\r\nnil (tail calls into a behavior function)"
+    },
+    "EngineerFailedToBuild": {
+        "prefix": [
+            "EngineerFailedToBuild"
+        ],
+        "body": [
+            "${1:platoon}:EngineerFailedToBuild(${2:params})"
+        ],
+        "description": ""
+    },
+    "PlatoonCallForHelpAI": {
+        "prefix": [
+            "PlatoonCallForHelpAI"
+        ],
+        "body": [
+            "${1:platoon}:PlatoonCallForHelpAI()"
+        ],
+        "description": ""
+    },
+    "GuardMarker": {
+        "prefix": [
+            "GuardMarker"
+        ],
+        "body": [
+            "${1:platoon}:GuardMarker()"
+        ],
+        "description": "Function: GuardMarker\r\nArgs:\r\nplatoon - platoon to run the AI\r\nDescription:\r\nWill guard the location of a marker\r\nReturns:\r\nnil"
+    },
+    "HuntAISorian": {
+        "prefix": [
+            "HuntAISorian"
+        ],
+        "body": [
+            "${1:platoon}:HuntAISorian()"
+        ],
+        "description": ""
+    },
+    "UnlockPBMDistressLocation": {
+        "prefix": [
+            "UnlockPBMDistressLocation"
+        ],
+        "body": [
+            "${1:platoon}:UnlockPBMDistressLocation(${2:locData})"
+        ],
+        "description": ""
+    },
+    "EngineerBuildDoneSorian": {
+        "prefix": [
+            "EngineerBuildDoneSorian"
+        ],
+        "body": [
+            "${1:platoon}:EngineerBuildDoneSorian(${2:params})"
+        ],
+        "description": "Callback functions for EngineerBuildAI"
+    },
+    "EnhanceAISorian": {
+        "prefix": [
+            "EnhanceAISorian"
+        ],
+        "body": [
+            "${1:platoon}:EnhanceAISorian()"
+        ],
+        "description": ""
+    },
+    "NameUnits": {
+        "prefix": [
+            "NameUnits"
+        ],
+        "body": [
+            "${1:platoon}:NameUnits()"
+        ],
+        "description": "names units in platoon"
+    },
+    "ProcessBuildCommand": {
+        "prefix": [
+            "ProcessBuildCommand"
+        ],
+        "body": [
+            "${1:platoon}:ProcessBuildCommand(${2:removeLastBuild})"
+        ],
+        "description": "Function: ProcessBuildCommand\r\nArgs:\r\neng - the engineer that's gone through EngineerBuildAI\r\nDescription:\r\nRun after every build order is complete/fails.  Sets up the next\r\nbuild order in queue, and if the engineer has nothing left to do\r\nwill return the engineer back to the army pool by disbanding the\r\nthe platoon.  Support function for EngineerBuildAI\r\nReturns:\r\nnil (tail calls into a behavior function)"
+    },
+    "AddDestroyCallback": {
+        "prefix": [
+            "AddDestroyCallback"
+        ],
+        "body": [
+            "${1:platoon}:AddDestroyCallback(${2:callbackFunction})"
+        ],
+        "description": ""
+    },
+    "GetPlatoonThreatEx": {
+        "prefix": [
+            "GetPlatoonThreatEx"
+        ],
+        "body": [
+            "${1:platoon}:GetPlatoonThreatEx()"
+        ],
+        "description": "returns each type of threat for this platoon"
+    },
+    "PauseAI": {
+        "prefix": [
+            "PauseAI"
+        ],
+        "body": [
+            "${1:platoon}:PauseAI()"
+        ],
+        "description": ""
+    },
+    "MergeWithNearbyPlatoonsSorian": {
+        "prefix": [
+            "MergeWithNearbyPlatoonsSorian"
+        ],
+        "body": [
+            "${1:platoon}:MergeWithNearbyPlatoonsSorian(${2:planName}, ${3:radius}, ${4:fullrestart})"
+        ],
+        "description": ""
+    },
+    "EngineerCaptureDone": {
+        "prefix": [
+            "EngineerCaptureDone"
+        ],
+        "body": [
+            "${1:platoon}:EngineerCaptureDone(${2:params})"
+        ],
+        "description": ""
+    },
+    "GetNumCategoryUnits": {
+        "prefix": [
+            "GetNumCategoryUnits"
+        ],
+        "body": [
+            "${1:platoon}:GetNumCategoryUnits(${2:category}, ${3:position}, ${4:radius})"
+        ],
+        "description": ""
+    },
+    "RepairAI": {
+        "prefix": [
+            "RepairAI"
+        ],
+        "body": [
+            "${1:platoon}:RepairAI()"
+        ],
+        "description": "DUNCAN - credit to Sorian"
+    },
+    "SorianManagerEngineerAssistAI": {
+        "prefix": [
+            "SorianManagerEngineerAssistAI"
+        ],
+        "body": [
+            "${1:platoon}:SorianManagerEngineerAssistAI()"
+        ],
+        "description": ""
+    },
+    "AirHuntAI": {
+        "prefix": [
+            "AirHuntAI"
+        ],
+        "body": [
+            "${1:platoon}:AirHuntAI()"
+        ],
+        "description": ""
+    },
+    "AttackForceAI": {
+        "prefix": [
+            "AttackForceAI"
+        ],
+        "body": [
+            "${1:platoon}:AttackForceAI()"
+        ],
+        "description": "Function: AttackForceAI\r\nArgs:\r\nself - the single platoon to run the AI on\r\nDescription:\r\nBasic attack logic.  Searches for a good area to go attack, and will use\r\na safe path (if available) to get there.  If the threat of the platoon\r\ndrops too low, it will try and guard an engineer (to be more useful)\r\nSee AIAttackUtils for the bulk of the logic\r\nReturns:\r\nnil (tail calls into a behavior function)"
+    },
+    "GetPlan": {
+        "prefix": [
+            "GetPlan"
+        ],
+        "body": [
+            "${1:platoon}:GetPlan()"
+        ],
+        "description": ""
+    },
+    "TacticalAISorian": {
+        "prefix": [
+            "TacticalAISorian"
+        ],
+        "body": [
+            "${1:platoon}:TacticalAISorian()"
+        ],
+        "description": ""
+    },
+    "RemoveDestroyCallback": {
+        "prefix": [
+            "RemoveDestroyCallback"
+        ],
+        "body": [
+            "${1:platoon}:RemoveDestroyCallback(${2:fn})"
+        ],
+        "description": ""
+    },
+    "SetPlatoonData": {
+        "prefix": [
+            "SetPlatoonData"
+        ],
+        "body": [
+            "${1:platoon}:SetPlatoonData(${2:dataTable})"
+        ],
+        "description": ""
+    },
+    "GhettoAI": {
+        "prefix": [
+            "GhettoAI"
+        ],
+        "body": [
+            "${1:platoon}:GhettoAI()"
+        ],
+        "description": "DUNCAN - added"
+    },
+    "PlatoonDisband": {
+        "prefix": [
+            "PlatoonDisband"
+        ],
+        "body": [
+            "${1:platoon}:PlatoonDisband()"
+        ],
+        "description": ""
+    },
+    "StopAI": {
+        "prefix": [
+            "StopAI"
+        ],
+        "body": [
+            "${1:platoon}:StopAI()"
+        ],
+        "description": ""
+    },
+    "ArtilleryAI": {
+        "prefix": [
+            "ArtilleryAI"
+        ],
+        "body": [
+            "${1:platoon}:ArtilleryAI()"
+        ],
+        "description": ""
+    },
+    "RepairCDRAI": {
+        "prefix": [
+            "RepairCDRAI"
+        ],
+        "body": [
+            "${1:platoon}:RepairCDRAI()"
+        ],
+        "description": ""
+    },
+    "DummyAI": {
+        "prefix": [
+            "DummyAI"
+        ],
+        "body": [
+            "${1:platoon}:DummyAI()"
+        ],
+        "description": "Function: DummyAI\r\nArgs:\r\nself - the single platoon to run the AI on\r\nDescription:\r\nDoes nothing, just returns\r\nReturns:\r\nnil (tail calls into a behavior function)"
+    },
+    "GuardBaseSorian": {
+        "prefix": [
+            "GuardBaseSorian"
+        ],
+        "body": [
+            "${1:platoon}:GuardBaseSorian()"
+        ],
+        "description": ""
+    },
+    "SorianEconAssistBody": {
+        "prefix": [
+            "SorianEconAssistBody"
+        ],
+        "body": [
+            "${1:platoon}:SorianEconAssistBody()"
+        ],
+        "description": ""
+    },
+    "GatherUnitsSorian": {
+        "prefix": [
+            "GatherUnitsSorian"
+        ],
+        "body": [
+            "${1:platoon}:GatherUnitsSorian()"
+        ],
+        "description": ""
+    },
+    "AvoidsBasesSorian": {
+        "prefix": [
+            "AvoidsBasesSorian"
+        ],
+        "body": [
+            "${1:platoon}:AvoidsBasesSorian(${2:markerPos}, ${3:avoidBasesDefault}, ${4:baseRadius})"
+        ],
+        "description": "Modified version of AvoidsBases() that checks for and avoids ally bases"
+    },
+    "BaseManagersDistressAISorian": {
+        "prefix": [
+            "BaseManagersDistressAISorian"
+        ],
+        "body": [
+            "${1:platoon}:BaseManagersDistressAISorian()"
+        ],
+        "description": ""
+    },
+    "ExperimentalAIHub": {
+        "prefix": [
+            "ExperimentalAIHub"
+        ],
+        "body": [
+            "${1:platoon}:ExperimentalAIHub()"
+        ],
+        "description": "Function: ExperimentalAIHub\r\nArgs:\r\nself - the single-experimental platoon to run the AI on\r\nDescription:\r\nIf set as a platoon's AI function, will select an appropriate behavior based on the unit type.\r\nReturns:\r\nnil (tail calls into a behavior function)"
+    },
+    "GetPlatoonUnitsAroundPoint": {
+        "prefix": [
+            "GetPlatoonUnitsAroundPoint"
+        ],
+        "body": [
+            "${1:platoon}:GetPlatoonUnitsAroundPoint(${2:category}, ${3:point}, ${4:radius})"
+        ],
+        "description": ""
+    },
+    "TransferAI": {
+        "prefix": [
+            "TransferAI"
+        ],
+        "body": [
+            "${1:platoon}:TransferAI()"
+        ],
+        "description": ""
+    },
+    "SatelliteAISorian": {
+        "prefix": [
+            "SatelliteAISorian"
+        ],
+        "body": [
+            "${1:platoon}:SatelliteAISorian()"
+        ],
+        "description": ""
+    },
+    "InterceptorAI": {
+        "prefix": [
+            "InterceptorAI"
+        ],
+        "body": [
+            "${1:platoon}:InterceptorAI()"
+        ],
+        "description": "DUNCAN - Credit to sorian, called FighterHuntAI in his pack"
+    },
+    "NavalHuntAI": {
+        "prefix": [
+            "NavalHuntAI"
+        ],
+        "body": [
+            "${1:platoon}:NavalHuntAI()"
+        ],
+        "description": ""
+    },
+    "OnDestroy": {
+        "prefix": [
+            "OnDestroy"
+        ],
+        "body": [
+            "${1:platoon}:OnDestroy()"
+        ],
+        "description": ""
+    },
+    "UnitUpgradeAI": {
+        "prefix": [
+            "UnitUpgradeAI"
+        ],
+        "body": [
+            "${1:platoon}:UnitUpgradeAI()"
+        ],
+        "description": "UpgradeAnEngineeringPlatoon"
+    },
+    "DistressResponseAI": {
+        "prefix": [
+            "DistressResponseAI"
+        ],
+        "body": [
+            "${1:platoon}:DistressResponseAI()"
+        ],
+        "description": ""
+    },
+    "NukeAISAI": {
+        "prefix": [
+            "NukeAISAI"
+        ],
+        "body": [
+            "${1:platoon}:NukeAISAI()"
+        ],
+        "description": ""
+    },
+    "ScoutingAISorian": {
+        "prefix": [
+            "ScoutingAISorian"
+        ],
+        "body": [
+            "${1:platoon}:ScoutingAISorian()"
+        ],
+        "description": ""
+    },
+    "EconUnfinishedBody": {
+        "prefix": [
+            "EconUnfinishedBody"
+        ],
+        "body": [
+            "${1:platoon}:EconUnfinishedBody()"
+        ],
+        "description": ""
+    },
+    "EngineerAssistAI": {
+        "prefix": [
+            "EngineerAssistAI"
+        ],
+        "body": [
+            "${1:platoon}:EngineerAssistAI()"
+        ],
+        "description": ""
+    },
+    "LandScoutingAI": {
+        "prefix": [
+            "LandScoutingAI"
+        ],
+        "body": [
+            "${1:platoon}:LandScoutingAI()"
+        ],
+        "description": "Function: LandScoutingAI\r\nArgs:\r\nplatoon - platoon to run the AI\r\nDescription:\r\nHandles sending land scouts to important locations.\r\nReturns:\r\nnil (loops until platoon is destroyed)"
+    },
+    "NavalForceAI": {
+        "prefix": [
+            "NavalForceAI"
+        ],
+        "body": [
+            "${1:platoon}:NavalForceAI()"
+        ],
+        "description": "Function: NavalForceAI\r\nArgs:\r\nself - the single platoon to run the AI on\r\nDescription:\r\nBasic attack logic for boats.  Searches for a good area to go attack, and will use\r\na safe path (if available) to get there.\r\nReturns:\r\nnil (tail calls into a behavior function)"
+    },
+    "PoolDistressAI": {
+        "prefix": [
+            "PoolDistressAI"
+        ],
+        "body": [
+            "${1:platoon}:PoolDistressAI()"
+        ],
+        "description": ""
+    },
+    "SetPartOfAttackForce": {
+        "prefix": [
+            "SetPartOfAttackForce"
+        ],
+        "body": [
+            "${1:platoon}:SetPartOfAttackForce()"
+        ],
+        "description": ""
+    },
+    "WatchForNotBuildingSorian": {
+        "prefix": [
+            "WatchForNotBuildingSorian"
+        ],
+        "body": [
+            "${1:platoon}:WatchForNotBuildingSorian()"
+        ],
+        "description": "Function: WatchForNotBuildingSorian\r\nArgs:\r\neng - the engineer that's gone through EngineerBuildAI\r\nDescription:\r\nAfter we try to build something, watch the engineer to\r\nmake sure that the build goes through.  If not,\r\ntry the next thing in the queue\r\nReturns:\r\nnil"
+    },
+    "BuildOnceAI": {
+        "prefix": [
+            "BuildOnceAI"
+        ],
+        "body": [
+            "${1:platoon}:BuildOnceAI()"
+        ],
+        "description": "===== AI THREADS ====="
+    }
+}

@@ -1,0 +1,1361 @@
+{
+    "EndGameWaitThread": {
+        "prefix": [
+            "EndGameWaitThread"
+        ],
+        "body": [
+            "ScenarioFramework.EndGameWaitThread(${1:callback})"
+        ],
+        "description": ""
+    },
+    "GenerateOffMapAreas": {
+        "prefix": [
+            "GenerateOffMapAreas"
+        ],
+        "body": [
+            "ScenarioFramework.GenerateOffMapAreas()"
+        ],
+        "description": "Below is for anti-off mapping function"
+    },
+    "CreateUnitPercentageBuiltTrigger": {
+        "prefix": [
+            "CreateUnitPercentageBuiltTrigger"
+        ],
+        "body": [
+            "ScenarioFramework.CreateUnitPercentageBuiltTrigger(${1:callbackFunction}, ${2:aiBrain}, ${3:category}, ${4:percent})"
+        ],
+        "description": ""
+    },
+    "SetCybranEvilColor": {
+        "prefix": [
+            "SetCybranEvilColor"
+        ],
+        "body": [
+            "ScenarioFramework.SetCybranEvilColor(${1:number})"
+        ],
+        "description": ""
+    },
+    "PlayUnlockDialogue": {
+        "prefix": [
+            "PlayUnlockDialogue"
+        ],
+        "body": [
+            "ScenarioFramework.PlayUnlockDialogue()"
+        ],
+        "description": ""
+    },
+    "MidOperationCamera": {
+        "prefix": [
+            "MidOperationCamera"
+        ],
+        "body": [
+            "ScenarioFramework.MidOperationCamera(${1:unit}, ${2:track}, ${3:time})"
+        ],
+        "description": ""
+    },
+    "GetFactories": {
+        "prefix": [
+            "GetFactories"
+        ],
+        "body": [
+            "ScenarioFramework.GetFactories(${1:brain}, ${2:point}, ${3:radius})"
+        ],
+        "description": "Returns lists of factories by category\r\n<point> and <radius> are optional\r\nthis allows you to know which factories can build and which can't\r\nuseful if you want to track what factories can do what"
+    },
+    "UnflagUnkillable": {
+        "prefix": [
+            "UnflagUnkillable"
+        ],
+        "body": [
+            "ScenarioFramework.UnflagUnkillable(${1:armyNumber})"
+        ],
+        "description": ""
+    },
+    "PlayDialogue": {
+        "prefix": [
+            "PlayDialogue"
+        ],
+        "body": [
+            "ScenarioFramework.PlayDialogue()"
+        ],
+        "description": "The actual thread used by Dialogue"
+    },
+    "SetAeonEvilColor": {
+        "prefix": [
+            "SetAeonEvilColor"
+        ],
+        "body": [
+            "ScenarioFramework.SetAeonEvilColor(${1:number})"
+        ],
+        "description": ""
+    },
+    "CreateUnitVeterancyTrigger": {
+        "prefix": [
+            "CreateUnitVeterancyTrigger"
+        ],
+        "body": [
+            "ScenarioFramework.CreateUnitVeterancyTrigger(${1:cb}, ${2:unit})"
+        ],
+        "description": "Single line unit veterancy trigger creation\r\nWhen <unit> achieves veterancy, <cb> is called with parameters of the unit then level achieved"
+    },
+    "CreateEnhancements": {
+        "prefix": [
+            "CreateEnhancements"
+        ],
+        "body": [
+            "ScenarioFramework.CreateEnhancements(${1:unit}, ${2:enhancements}, ${3:delay})"
+        ],
+        "description": ""
+    },
+    "AMPlatoonCounter": {
+        "prefix": [
+            "AMPlatoonCounter"
+        ],
+        "body": [
+            "ScenarioFramework.AMPlatoonCounter(${1:aiBrain}, ${2:name})"
+        ],
+        "description": ""
+    },
+    "PlatoonMoveRoute": {
+        "prefix": [
+            "PlatoonMoveRoute"
+        ],
+        "body": [
+            "ScenarioFramework.PlatoonMoveRoute(${1:platoon}, ${2:route}, ${3:squad})"
+        ],
+        "description": "tells platoon to move along table of coordinates"
+    },
+    "MissionNISCameraThread": {
+        "prefix": [
+            "MissionNISCameraThread"
+        ],
+        "body": [
+            "ScenarioFramework.MissionNISCameraThread(${1:unit}, ${2:blendtime}, ${3:holdtime}, ${4:orientationoffset}, ${5:positionoffset}, ${6:zoomval})"
+        ],
+        "description": ""
+    },
+    "GateInEffect": {
+        "prefix": [
+            "GateInEffect"
+        ],
+        "body": [
+            "ScenarioFramework.GateInEffect(${1:unit}, ${2:effect}, ${3:bonesToHide})"
+        ],
+        "description": ""
+    },
+    "FlagUnkillableSelect": {
+        "prefix": [
+            "FlagUnkillableSelect"
+        ],
+        "body": [
+            "ScenarioFramework.FlagUnkillableSelect(${1:armyNumber}, ${2:units})"
+        ],
+        "description": ""
+    },
+    "FakeGateInUnit": {
+        "prefix": [
+            "FakeGateInUnit"
+        ],
+        "body": [
+            "ScenarioFramework.FakeGateInUnit(${1:unit}, ${2:callbackFunction}, ${3:bonesToHide})"
+        ],
+        "description": ""
+    },
+    "OverrideKilled": {
+        "prefix": [
+            "OverrideKilled"
+        ],
+        "body": [
+            "ScenarioFramework.OverrideKilled(${1:self}, ${2:instigator}, ${3:type}, ${4:overkillRatio})"
+        ],
+        "description": ""
+    },
+    "CreatePlatoonDeathTrigger": {
+        "prefix": [
+            "CreatePlatoonDeathTrigger"
+        ],
+        "body": [
+            "ScenarioFramework.CreatePlatoonDeathTrigger(${1:cb}, ${2:platoon})"
+        ],
+        "description": "Single line Platoon Death Trigger creation\r\nWhen all units in <platoon> are destroyed, <cb> function will be called"
+    },
+    "OnPostLoad": {
+        "prefix": [
+            "OnPostLoad"
+        ],
+        "body": [
+            "ScenarioFramework.OnPostLoad()"
+        ],
+        "description": ""
+    },
+    "CreateUnitStopReclaimTrigger": {
+        "prefix": [
+            "CreateUnitStopReclaimTrigger"
+        ],
+        "body": [
+            "ScenarioFramework.CreateUnitStopReclaimTrigger(${1:cb}, ${2:unit})"
+        ],
+        "description": "Single line unit finished reclaiming trigger creation\r\nWhen <unit> finishes reclaiming the <cb> function provided is called"
+    },
+    "EndOperation": {
+        "prefix": [
+            "EndOperation"
+        ],
+        "body": [
+            "ScenarioFramework.EndOperation(${1:success}, ${2:allPrimary}, ${3:allSecondary}, ${4:allBonus})"
+        ],
+        "description": "Call to end an operation\r\nbool _success - instructs UI which dialog to show\r\nbool _allPrimary - true if all primary objectives completed, otherwise, false\r\nbool _allSecondary - true if all secondary objectives completed, otherwise, false\r\nbool _allBonus - true if all bonus objectives completed, otherwise, false"
+    },
+    "SetCybranColor": {
+        "prefix": [
+            "SetCybranColor"
+        ],
+        "body": [
+            "ScenarioFramework.SetCybranColor(${1:number})"
+        ],
+        "description": "Cybran"
+    },
+    "SetNeutralColor": {
+        "prefix": [
+            "SetNeutralColor"
+        ],
+        "body": [
+            "ScenarioFramework.SetNeutralColor(${1:number})"
+        ],
+        "description": "Neutral"
+    },
+    "SetCybranAllyColor": {
+        "prefix": [
+            "SetCybranAllyColor"
+        ],
+        "body": [
+            "ScenarioFramework.SetCybranAllyColor(${1:number})"
+        ],
+        "description": ""
+    },
+    "PlatoonPatrolRoute": {
+        "prefix": [
+            "PlatoonPatrolRoute"
+        ],
+        "body": [
+            "ScenarioFramework.PlatoonPatrolRoute(${1:platoon}, ${2:route}, ${3:squad})"
+        ],
+        "description": "commands platoon to patrol a route"
+    },
+    "SetAeonAllyColor": {
+        "prefix": [
+            "SetAeonAllyColor"
+        ],
+        "body": [
+            "ScenarioFramework.SetAeonAllyColor(${1:number})"
+        ],
+        "description": ""
+    },
+    "PlatoonAttackChain": {
+        "prefix": [
+            "PlatoonAttackChain"
+        ],
+        "body": [
+            "ScenarioFramework.PlatoonAttackChain(${1:platoon}, ${2:chain}, ${3:squad})"
+        ],
+        "description": "Orders a platoon to attack move through a chain"
+    },
+    "SetAeonColor": {
+        "prefix": [
+            "SetAeonColor"
+        ],
+        "body": [
+            "ScenarioFramework.SetAeonColor(${1:number})"
+        ],
+        "description": "Sets an army color to a factional, or factional-ally, color given by art\r\nAeon"
+    },
+    "IAmABadUnit": {
+        "prefix": [
+            "IAmABadUnit"
+        ],
+        "body": [
+            "ScenarioFramework.IAmABadUnit(${1:self})"
+        ],
+        "description": ""
+    },
+    "NumCatUnitsInArea": {
+        "prefix": [
+            "NumCatUnitsInArea"
+        ],
+        "body": [
+            "ScenarioFramework.NumCatUnitsInArea(${1:cat}, ${2:area}, ${3:brain})"
+        ],
+        "description": "Returns the number of <cat> units in <area> belonging to <brain>"
+    },
+    "CreateUnitStopBeingCapturedTrigger": {
+        "prefix": [
+            "CreateUnitStopBeingCapturedTrigger"
+        ],
+        "body": [
+            "ScenarioFramework.CreateUnitStopBeingCapturedTrigger(${1:cb}, ${2:unit})"
+        ],
+        "description": "Single line unit stop being captured trigger\r\nwhen <unit> stops being captured, the function is called"
+    },
+    "GroupProgressTimer": {
+        "prefix": [
+            "GroupProgressTimer"
+        ],
+        "body": [
+            "ScenarioFramework.GroupProgressTimer(${1:group}, ${2:time})"
+        ],
+        "description": ""
+    },
+    "GroupDeathCheck": {
+        "prefix": [
+            "GroupDeathCheck"
+        ],
+        "body": [
+            "ScenarioFramework.GroupDeathCheck(${1:group})"
+        ],
+        "description": "Returns true if all units in group are dead"
+    },
+    "GetCatUnitsInArea": {
+        "prefix": [
+            "GetCatUnitsInArea"
+        ],
+        "body": [
+            "ScenarioFramework.GetCatUnitsInArea(${1:cat}, ${2:area}, ${3:brain})"
+        ],
+        "description": "Returns the units in <area> of <cat> belonging to <brain>"
+    },
+    "FlushDialogueQueue": {
+        "prefix": [
+            "FlushDialogueQueue"
+        ],
+        "body": [
+            "ScenarioFramework.FlushDialogueQueue()"
+        ],
+        "description": ""
+    },
+    "PlayEndGameMovie": {
+        "prefix": [
+            "PlayEndGameMovie"
+        ],
+        "body": [
+            "ScenarioFramework.PlayEndGameMovie(${1:faction}, ${2:callback})"
+        ],
+        "description": ""
+    },
+    "HelpPrompt": {
+        "prefix": [
+            "HelpPrompt"
+        ],
+        "body": [
+            "ScenarioFramework.HelpPrompt(${1:show})"
+        ],
+        "description": "Triggers a help text prompt to appear in the UI\r\nSee /modules/ui/help/helpstrings.lua for a list of valid Help Prompt IDs"
+    },
+    "CreateVisibleArea": {
+        "prefix": [
+            "CreateVisibleArea"
+        ],
+        "body": [
+            "ScenarioFramework.CreateVisibleArea(${1:vizRadius}, ${2:vizX}, ${3:vizZ}, ${4:vizLifetime}, ${5:vizArmy})"
+        ],
+        "description": "Similar to the above function except it takes in an {X, Z} location rather\r\nThan an {X, Y, Z} position"
+    },
+    "PlayNIS": {
+        "prefix": [
+            "PlayNIS"
+        ],
+        "body": [
+            "ScenarioFramework.PlayNIS(${1:pathToMovie})"
+        ],
+        "description": "Play an NIS"
+    },
+    "GroupFormPatrolChain": {
+        "prefix": [
+            "GroupFormPatrolChain"
+        ],
+        "body": [
+            "ScenarioFramework.GroupFormPatrolChain(${1:group}, ${2:chain}, ${3:formation})"
+        ],
+        "description": "orders group to patrol a route in formation"
+    },
+    "CreateThreatTriggerAroundPosition": {
+        "prefix": [
+            "CreateThreatTriggerAroundPosition"
+        ],
+        "body": [
+            "ScenarioFramework.CreateThreatTriggerAroundPosition(${1:callbackFunction}, ${2:aiBrain}, ${3:posVector}, ${4:rings}, ${5:onceOnly}, ${6:value}, ${7:greater})"
+        ],
+        "description": "Fires when the threat level of <position> of size <rings> is related to <value>\r\nif <greater> is true it will fire if the threat is greater than <value>"
+    },
+    "CreateArmyUnitCategoryVeterancyTrigger": {
+        "prefix": [
+            "CreateArmyUnitCategoryVeterancyTrigger"
+        ],
+        "body": [
+            "ScenarioFramework.CreateArmyUnitCategoryVeterancyTrigger(${1:callbackFunction}, ${2:aiBrain}, ${3:category}, ${4:level})"
+        ],
+        "description": ""
+    },
+    "WaitForDialogue": {
+        "prefix": [
+            "WaitForDialogue"
+        ],
+        "body": [
+            "ScenarioFramework.WaitForDialogue(${1:name})"
+        ],
+        "description": ""
+    },
+    "OperationNISCamera": {
+        "prefix": [
+            "OperationNISCamera"
+        ],
+        "body": [
+            "ScenarioFramework.OperationNISCamera(${1:unit}, ${2:camInfo})"
+        ],
+        "description": "NIS Garbage"
+    },
+    "Dialogue": {
+        "prefix": [
+            "Dialogue"
+        ],
+        "body": [
+            "ScenarioFramework.Dialogue(${1:dialogueTable}, ${2:callback}, ${3:critical}, ${4:speaker})"
+        ],
+        "description": "dialogueTable format\r\nit's a table of 4 variables - vid, cue, text, and duration\r\nex. Hello = {\r\n{vid=video, cue=false, bank=false, text='Hello World', duration = 5 },\r\n}\r\nbank = audio bank\r\ncue = audio cue\r\nvid = video cue\r\ntext:     text to be displayed on the screen\r\ndelay: time before begin next dialogue in table in second"
+    },
+    "PauseUnitDeath": {
+        "prefix": [
+            "PauseUnitDeath"
+        ],
+        "body": [
+            "ScenarioFramework.PauseUnitDeath(${1:unit})"
+        ],
+        "description": ""
+    },
+    "CreateVisibleAreaLocation": {
+        "prefix": [
+            "CreateVisibleAreaLocation"
+        ],
+        "body": [
+            "ScenarioFramework.CreateVisibleAreaLocation(${1:vizRadius}, ${2:vizLocation}, ${3:vizLifetime}, ${4:vizArmy})"
+        ],
+        "description": "Creates a visible area for <vizArmy> at <vizLocation> of <vizRadius> size.\r\nIf vizLifetime is 0, the entity lasts forever.  Otherwise for <vizLifetime> seconds.\r\nFunction returns an entity so you can destroy it later if you want"
+    },
+    "SetAeonAlly2Color": {
+        "prefix": [
+            "SetAeonAlly2Color"
+        ],
+        "body": [
+            "ScenarioFramework.SetAeonAlly2Color(${1:number})"
+        ],
+        "description": ""
+    },
+    "SetUEFAlly1Color": {
+        "prefix": [
+            "SetUEFAlly1Color"
+        ],
+        "body": [
+            "ScenarioFramework.SetUEFAlly1Color(${1:number})"
+        ],
+        "description": ""
+    },
+    "UnitsInAreaCheck": {
+        "prefix": [
+            "UnitsInAreaCheck"
+        ],
+        "body": [
+            "ScenarioFramework.UnitsInAreaCheck(${1:Cat}, ${2:Rectangle})"
+        ],
+        "description": "Checks if units of Cat are within the provided rectangle\r\nChecks the <Rectangle> to see if any units of <Cat> category are in it"
+    },
+    "SetUEFAlly2Color": {
+        "prefix": [
+            "SetUEFAlly2Color"
+        ],
+        "body": [
+            "ScenarioFramework.SetUEFAlly2Color(${1:number})"
+        ],
+        "description": ""
+    },
+    "ClearIntel": {
+        "prefix": [
+            "ClearIntel"
+        ],
+        "body": [
+            "ScenarioFramework.ClearIntel(${1:position}, ${2:radius})"
+        ],
+        "description": ""
+    },
+    "IsHumanUnit": {
+        "prefix": [
+            "IsHumanUnit"
+        ],
+        "body": [
+            "ScenarioFramework.IsHumanUnit(${1:self})"
+        ],
+        "description": ""
+    },
+    "GroupMoveChain": {
+        "prefix": [
+            "GroupMoveChain"
+        ],
+        "body": [
+            "ScenarioFramework.GroupMoveChain(${1:group}, ${2:chain})"
+        ],
+        "description": ""
+    },
+    "GroupProgressTimerThread": {
+        "prefix": [
+            "GroupProgressTimerThread"
+        ],
+        "body": [
+            "ScenarioFramework.GroupProgressTimerThread(${1:group}, ${2:time})"
+        ],
+        "description": ""
+    },
+    "SetAeonAlly1Color": {
+        "prefix": [
+            "SetAeonAlly1Color"
+        ],
+        "body": [
+            "ScenarioFramework.SetAeonAlly1Color(${1:number})"
+        ],
+        "description": ""
+    },
+    "EndOperationCameraLocation": {
+        "prefix": [
+            "EndOperationCameraLocation"
+        ],
+        "body": [
+            "ScenarioFramework.EndOperationCameraLocation(${1:location})"
+        ],
+        "description": ""
+    },
+    "EndOperationSafety": {
+        "prefix": [
+            "EndOperationSafety"
+        ],
+        "body": [
+            "ScenarioFramework.EndOperationSafety(${1:units})"
+        ],
+        "description": ""
+    },
+    "ResetUITimer": {
+        "prefix": [
+            "ResetUITimer"
+        ],
+        "body": [
+            "ScenarioFramework.ResetUITimer()"
+        ],
+        "description": ""
+    },
+    "AddObjective": {
+        "prefix": [
+            "AddObjective"
+        ],
+        "body": [
+            "ScenarioFramework.AddObjective(${1:Type}, ${2:Complete}, ${3:Title}, ${4:Description}, ${5:Image}, ${6:Progress}, ${7:Target})"
+        ],
+        "description": "TODO: Stop mission scripts from using this function, then remove it."
+    },
+    "ExitGame": {
+        "prefix": [
+            "ExitGame"
+        ],
+        "body": [
+            "ScenarioFramework.ExitGame()"
+        ],
+        "description": "Cause the game to exit immediately"
+    },
+    "CreateUnitDeathTrigger": {
+        "prefix": [
+            "CreateUnitDeathTrigger"
+        ],
+        "body": [
+            "ScenarioFramework.CreateUnitDeathTrigger(${1:cb}, ${2:unit}, ${3:camera})"
+        ],
+        "description": "Single Line unit death trigger creation\r\nWhen <unit> dies it will call the <cb> function provided"
+    },
+    "CreateUnitReclaimedTrigger": {
+        "prefix": [
+            "CreateUnitReclaimedTrigger"
+        ],
+        "body": [
+            "ScenarioFramework.CreateUnitReclaimedTrigger(${1:cb}, ${2:unit})"
+        ],
+        "description": "Single line unit has been reclaimed trigger creation\r\nWhen <unit> has been reclaimed the <cb> function provided is called"
+    },
+    "EndOperationT": {
+        "prefix": [
+            "EndOperationT"
+        ],
+        "body": [
+            "ScenarioFramework.EndOperationT(${1:opData})"
+        ],
+        "description": "Call to end an operation where the data is already provided in table form (just a wrapper for sync"
+    },
+    "PlayTaunt": {
+        "prefix": [
+            "PlayTaunt"
+        ],
+        "body": [
+            "ScenarioFramework.PlayTaunt(${1:head}, ${2:taunt})"
+        ],
+        "description": "Given a head and taunt number, tells the UI to play the relating taunt"
+    },
+    "CreateUnitStopCaptureTrigger": {
+        "prefix": [
+            "CreateUnitStopCaptureTrigger"
+        ],
+        "body": [
+            "ScenarioFramework.CreateUnitStopCaptureTrigger(${1:cb}, ${2:unit})"
+        ],
+        "description": "Single line unit finished capturing trigger creation\r\nWhen <unit> finishes capturing the <cb> function provided is called"
+    },
+    "IAmOffMap": {
+        "prefix": [
+            "IAmOffMap"
+        ],
+        "body": [
+            "ScenarioFramework.IAmOffMap(${1:self})"
+        ],
+        "description": "This is for bad units who choose to go off map, shame on them"
+    },
+    "PlatoonPatrolChain": {
+        "prefix": [
+            "PlatoonPatrolChain"
+        ],
+        "body": [
+            "ScenarioFramework.PlatoonPatrolChain(${1:platoon}, ${2:chain}, ${3:squad})"
+        ],
+        "description": "orders a platoon to patrol all the points in a chain"
+    },
+    "GetRandomEntry": {
+        "prefix": [
+            "GetRandomEntry"
+        ],
+        "body": [
+            "ScenarioFramework.GetRandomEntry(${1:tableOfData})"
+        ],
+        "description": "Returns a random entry from a table.\r\nex: takeoff_Spot = ScenarioFramework.GetRandomEntry(ScenarioUtils.ChainToPositions('Offscreen_Launch_Points'))"
+    },
+    "UnlockAndKillUnitThread": {
+        "prefix": [
+            "UnlockAndKillUnitThread"
+        ],
+        "body": [
+            "ScenarioFramework.UnlockAndKillUnitThread(${1:self}, ${2:instigator}, ${3:damageType}, ${4:excessDamageRatio})"
+        ],
+        "description": ""
+    },
+    "CreateUnitGivenTrigger": {
+        "prefix": [
+            "CreateUnitGivenTrigger"
+        ],
+        "body": [
+            "ScenarioFramework.CreateUnitGivenTrigger(${1:cb}, ${2:unit})"
+        ],
+        "description": "Single Line unit given trigger creation\r\nWhen <unit> is given it will call the <cb> function provided"
+    },
+    "MissionNISCamera": {
+        "prefix": [
+            "MissionNISCamera"
+        ],
+        "body": [
+            "ScenarioFramework.MissionNISCamera(${1:unit}, ${2:blendtime}, ${3:holdtime}, ${4:orientationoffset}, ${5:positionoffset}, ${6:zoomval})"
+        ],
+        "description": "For mid-operation NISs"
+    },
+    "GetTimeIAmAllowedToBeOffMap": {
+        "prefix": [
+            "GetTimeIAmAllowedToBeOffMap"
+        ],
+        "body": [
+            "ScenarioFramework.GetTimeIAmAllowedToBeOffMap(${1:self})"
+        ],
+        "description": ""
+    },
+    "SetCybranPlayerColor": {
+        "prefix": [
+            "SetCybranPlayerColor"
+        ],
+        "body": [
+            "ScenarioFramework.SetCybranPlayerColor(${1:number})"
+        ],
+        "description": "Cybran"
+    },
+    "SetAeonPlayerColor": {
+        "prefix": [
+            "SetAeonPlayerColor"
+        ],
+        "body": [
+            "ScenarioFramework.SetAeonPlayerColor(${1:number})"
+        ],
+        "description": "SC:FA colors\r\nAeon"
+    },
+    "OnFactionSelect": {
+        "prefix": [
+            "OnFactionSelect"
+        ],
+        "body": [
+            "ScenarioFramework.OnFactionSelect(${1:data})"
+        ],
+        "description": "Hook for player requested faction\r\n\"data\" is a table containing field \"Faction\" which can be \"cybran\", \"uef\", or \"aeon\""
+    },
+    "CreateArmyStatTrigger": {
+        "prefix": [
+            "CreateArmyStatTrigger"
+        ],
+        "body": [
+            "ScenarioFramework.CreateArmyStatTrigger(${1:callbackFunction}, ${2:aiBrain}, ${3:name}, ${4:triggerTable})"
+        ],
+        "description": "Stat trigger creation\r\ntriggerTable spec\r\n{\r\n{StatType = string, -- Examples: Units_Active, Units_Killed, Enemies_Killed, Economy_Trend_Mass, Economy_TotalConsumed_Energy\r\nCompareType = string, -- GreaterThan, GreaterThanOrEqual, LessThan, LessThanOrEqual\r\nValue = integer,\r\nCategory = category, -- Only used with \"Units\" triggers\r\n},\r\n}\r\nCOMPLETE LIST OF STAT TYPES\r\n\"Units_Active\",\r\n\"Units_Killed\",\r\n\"Units_History\",\r\n\"Enemies_Killed\",\r\n\"Economy_TotalProduced_Energy\",\r\n\"Economy_TotalConsumed_Energy\",\r\n\"Economy_Income_Energy\",\r\n\"Economy_Output_Energy\",\r\n\"Economy_Stored_Energy\",\r\n\"Economy_Reclaimed_Energy\",\r\n\"Economy_MaxStorage_Energy\",\r\n\"Economy_PeakStorage_Energy\",\r\n\"Economy_TotalProduced_Mass\",\r\n\"Economy_TotalConsumed_Mass\",\r\n\"Economy_Income_Mass\",\r\n\"Economy_Output_Mass\",\r\n\"Economy_Stored_Mass\",\r\n\"Economy_Reclaimed_Mass\",\r\n\"Economy_MaxStorage_Mass\",\r\n\"Economy_PeakStorage_Mass\","
+    },
+    "OverrideDoDamage": {
+        "prefix": [
+            "OverrideDoDamage"
+        ],
+        "body": [
+            "ScenarioFramework.OverrideDoDamage(${1:self}, ${2:instigator}, ${3:amount}, ${4:vector}, ${5:damageType})"
+        ],
+        "description": ""
+    },
+    "AntiOffMapMainThread": {
+        "prefix": [
+            "AntiOffMapMainThread"
+        ],
+        "body": [
+            "ScenarioFramework.AntiOffMapMainThread()"
+        ],
+        "description": ""
+    },
+    "CreateUnitBuiltTrigger": {
+        "prefix": [
+            "CreateUnitBuiltTrigger"
+        ],
+        "body": [
+            "ScenarioFramework.CreateUnitBuiltTrigger(${1:cb}, ${2:unit}, ${3:category})"
+        ],
+        "description": "Single Line Unit built trigger\r\nTests when <unit> builds a unit of type <category> calls <cb>"
+    },
+    "PlayVoiceOver": {
+        "prefix": [
+            "PlayVoiceOver"
+        ],
+        "body": [
+            "ScenarioFramework.PlayVoiceOver(${1:voSound})"
+        ],
+        "description": "Plays an XACT sound if needed - currently all VOs are videos"
+    },
+    "CDRDeathNISCamera": {
+        "prefix": [
+            "CDRDeathNISCamera"
+        ],
+        "body": [
+            "ScenarioFramework.CDRDeathNISCamera(${1:unit}, ${2:hold})"
+        ],
+        "description": "CDR Death (pass hold only if it's a mid-operation death)"
+    },
+    "SetUEFNeutralColor": {
+        "prefix": [
+            "SetUEFNeutralColor"
+        ],
+        "body": [
+            "ScenarioFramework.SetUEFNeutralColor(${1:number})"
+        ],
+        "description": ""
+    },
+    "SetAeonNeutralColor": {
+        "prefix": [
+            "SetAeonNeutralColor"
+        ],
+        "body": [
+            "ScenarioFramework.SetAeonNeutralColor(${1:number})"
+        ],
+        "description": ""
+    },
+    "CreateThreatTriggerAroundUnit": {
+        "prefix": [
+            "CreateThreatTriggerAroundUnit"
+        ],
+        "body": [
+            "ScenarioFramework.CreateThreatTriggerAroundUnit(${1:callbackFunction}, ${2:aiBrain}, ${3:unit}, ${4:rings}, ${5:onceOnly}, ${6:value}, ${7:greater})"
+        ],
+        "description": "Fires when the threat level of <unit> of size <rings> is related to <value>"
+    },
+    "AddTransmissionData": {
+        "prefix": [
+            "AddTransmissionData"
+        ],
+        "body": [
+            "ScenarioFramework.AddTransmissionData(${1:entryData})"
+        ],
+        "description": ""
+    },
+    "IgnoreRestrictions": {
+        "prefix": [
+            "IgnoreRestrictions"
+        ],
+        "body": [
+            "ScenarioFramework.IgnoreRestrictions(${1:isIgnored})"
+        ],
+        "description": "Toggles whether or not to ignore all restrictions\r\nthis function is useful when trying to transfer restricted units between armies\r\ne.g.\r\nScenarioFramework.IgnoreRestrictions(true)\r\nScenarioFramework.GiveUnitToArmy(unit, armyIndex)\r\nScenarioFramework.IgnoreRestrictions(false)"
+    },
+    "SetupMFDSync": {
+        "prefix": [
+            "SetupMFDSync"
+        ],
+        "body": [
+            "ScenarioFramework.SetupMFDSync(${1:movieTable}, ${2:text})"
+        ],
+        "description": "This function sends movie data to the sync table and saves it off for reloading in save games"
+    },
+    "CreateUnitStartReclaimTrigger": {
+        "prefix": [
+            "CreateUnitStartReclaimTrigger"
+        ],
+        "body": [
+            "ScenarioFramework.CreateUnitStartReclaimTrigger(${1:cb}, ${2:unit})"
+        ],
+        "description": "Single line unit started reclaiming trigger creation\r\nWhen <unit> starts reclaiming the <cb> function provided is called"
+    },
+    "GiveUnitToArmy": {
+        "prefix": [
+            "GiveUnitToArmy"
+        ],
+        "body": [
+            "ScenarioFramework.GiveUnitToArmy(${1:unit}, ${2:newArmyIndex}, ${3:triggerOnGiven})"
+        ],
+        "description": ""
+    },
+    "FlagUnkillable": {
+        "prefix": [
+            "FlagUnkillable"
+        ],
+        "body": [
+            "ScenarioFramework.FlagUnkillable(${1:armyNumber}, ${2:exceptions})"
+        ],
+        "description": ""
+    },
+    "KillBaseInArea": {
+        "prefix": [
+            "KillBaseInArea"
+        ],
+        "body": [
+            "ScenarioFramework.KillBaseInArea(${1:brain}, ${2:area}, ${3:category})"
+        ],
+        "description": ""
+    },
+    "SetCybranNeutralColor": {
+        "prefix": [
+            "SetCybranNeutralColor"
+        ],
+        "body": [
+            "ScenarioFramework.SetCybranNeutralColor(${1:number})"
+        ],
+        "description": ""
+    },
+    "RestrictEnhancements": {
+        "prefix": [
+            "RestrictEnhancements"
+        ],
+        "body": [
+            "ScenarioFramework.RestrictEnhancements(${1:table})"
+        ],
+        "description": "Set enhancement restrictions\r\nSupply a table of  the names of enhancements you do not want the player to build\r\nExample: {\"Teleport\", \"ResourceAllocation\"}"
+    },
+    "CreateGroupDeathTrigger": {
+        "prefix": [
+            "CreateGroupDeathTrigger"
+        ],
+        "body": [
+            "ScenarioFramework.CreateGroupDeathTrigger(${1:cb}, ${2:group})"
+        ],
+        "description": "Single line Group Death Trigger creation\r\nWhen all units in <group> are destroyed, <cb> function will be called"
+    },
+    "IsUnitInPlayableArea": {
+        "prefix": [
+            "IsUnitInPlayableArea"
+        ],
+        "body": [
+            "ScenarioFramework.IsUnitInPlayableArea(${1:unit})"
+        ],
+        "description": ""
+    },
+    "SetUEFPlayerColor": {
+        "prefix": [
+            "SetUEFPlayerColor"
+        ],
+        "body": [
+            "ScenarioFramework.SetUEFPlayerColor(${1:number})"
+        ],
+        "description": "UEF"
+    },
+    "KillIAmOffMapThread": {
+        "prefix": [
+            "KillIAmOffMapThread"
+        ],
+        "body": [
+            "ScenarioFramework.KillIAmOffMapThread(${1:self})"
+        ],
+        "description": ""
+    },
+    "GroupPatrolRoute": {
+        "prefix": [
+            "GroupPatrolRoute"
+        ],
+        "body": [
+            "ScenarioFramework.GroupPatrolRoute(${1:group}, ${2:route})"
+        ],
+        "description": "orders group to patrol a route"
+    },
+    "CheckObjectives": {
+        "prefix": [
+            "CheckObjectives"
+        ],
+        "body": [
+            "ScenarioFramework.CheckObjectives(${1:list})"
+        ],
+        "description": "Iterates through objects in list.  if any in list are not true ... returns false"
+    },
+    "CreateUnitNearTypeTrigger": {
+        "prefix": [
+            "CreateUnitNearTypeTrigger"
+        ],
+        "body": [
+            "ScenarioFramework.CreateUnitNearTypeTrigger(${1:callbackFunction}, ${2:unit}, ${3:brain}, ${4:category}, ${5:distance})"
+        ],
+        "description": "Function that fires when <unit> is near any unit of type <category> belonging to <brain> withing <distance>"
+    },
+    "GroupAttackChain": {
+        "prefix": [
+            "GroupAttackChain"
+        ],
+        "body": [
+            "ScenarioFramework.GroupAttackChain(${1:group}, ${2:chain})"
+        ],
+        "description": "order group to attack a chain"
+    },
+    "CreateUnitCapturedTrigger": {
+        "prefix": [
+            "CreateUnitCapturedTrigger"
+        ],
+        "body": [
+            "ScenarioFramework.CreateUnitCapturedTrigger(${1:cbOldUnit}, ${2:cbNewUnit}, ${3:unit})"
+        ],
+        "description": "Single line unit captured trigger creation\r\nWhen <unit> is captured cbOldUnit is called passing the old unit BEFORE it has switched armies,\r\ncbNewUnit is called passing in the unit AFTER it has switched armies"
+    },
+    "RequestPlayerFaction": {
+        "prefix": [
+            "RequestPlayerFaction"
+        ],
+        "body": [
+            "ScenarioFramework.RequestPlayerFaction(${1:callback})"
+        ],
+        "description": ""
+    },
+    "RemoveRestriction": {
+        "prefix": [
+            "RemoveRestriction"
+        ],
+        "body": [
+            "ScenarioFramework.RemoveRestriction(${1:army}, ${2:categories}, ${3:isSilent})"
+        ],
+        "description": "Removes scenario restriction for specified army and notify the UI/sim\r\ne.g. RemoveRestriction('ARMY_1', categories.TECH2) -> removes T2 units restriction for army 1"
+    },
+    "OperationCameraThread": {
+        "prefix": [
+            "OperationCameraThread"
+        ],
+        "body": [
+            "ScenarioFramework.OperationCameraThread(${1:location}, ${2:heading}, ${3:faction}, ${4:track}, ${5:unit}, ${6:unlock}, ${7:time})"
+        ],
+        "description": ""
+    },
+    "AddRestriction": {
+        "prefix": [
+            "AddRestriction"
+        ],
+        "body": [
+            "ScenarioFramework.AddRestriction(${1:army}, ${2:categories})"
+        ],
+        "description": "Adds scenario restriction for specified army and notify the UI/sim\r\ne.g. AddRestriction(1, categories.TECH2) -> restricts all T2 units for army 1\r\ne.g. AddRestriction('ARMY_1', categories.TECH2) -> restricts all T2 units for army 1"
+    },
+    "PlatoonAttackWithTransports": {
+        "prefix": [
+            "PlatoonAttackWithTransports"
+        ],
+        "body": [
+            "ScenarioFramework.PlatoonAttackWithTransports(${1:platoon}, ${2:landingChain}, ${3:attackChain}, ${4:instant}, ${5:moveChain})"
+        ],
+        "description": ""
+    },
+    "DestroyGroup": {
+        "prefix": [
+            "DestroyGroup"
+        ],
+        "body": [
+            "ScenarioFramework.DestroyGroup(${1:group})"
+        ],
+        "description": "Destroys a group\r\nGoes through every unit in <group> and destroys them without explosions"
+    },
+    "IntroductionNISCamera": {
+        "prefix": [
+            "IntroductionNISCamera"
+        ],
+        "body": [
+            "ScenarioFramework.IntroductionNISCamera(${1:unit})"
+        ],
+        "description": "For op intro (currently not used)"
+    },
+    "CreateUnitDamagedTrigger": {
+        "prefix": [
+            "CreateUnitDamagedTrigger"
+        ],
+        "body": [
+            "ScenarioFramework.CreateUnitDamagedTrigger(${1:callbackFunction}, ${2:unit}, ${3:amount}, ${4:repeatNum})"
+        ],
+        "description": "Single Line unit damaged trigger creation\r\nWhen <unit> is damaged it will call the <callbackFunction> provided\r\nIf <percent> provided, will check if damaged percent EXCEEDS number provided before callback\r\nfunction repeats up to repeatNum ... or once if not declared"
+    },
+    "AttachUnitsToTransports": {
+        "prefix": [
+            "AttachUnitsToTransports"
+        ],
+        "body": [
+            "ScenarioFramework.AttachUnitsToTransports(${1:units}, ${2:transports})"
+        ],
+        "description": "Automatically attaches <units> to attach points on <transports>"
+    },
+    "StartOperationJessZoom": {
+        "prefix": [
+            "StartOperationJessZoom"
+        ],
+        "body": [
+            "ScenarioFramework.StartOperationJessZoom(${1:areaName}, ${2:callbackFunction}, ${3:duration})"
+        ],
+        "description": ""
+    },
+    "CreateUnitFailedCaptureTrigger": {
+        "prefix": [
+            "CreateUnitFailedCaptureTrigger"
+        ],
+        "body": [
+            "ScenarioFramework.CreateUnitFailedCaptureTrigger(${1:cb}, ${2:unit})"
+        ],
+        "description": "Single line failed capturing trigger creation\r\nWhen <unit> fails to capture a unit, the <cb> function is called"
+    },
+    "CreateUnitStartBeingCapturedTrigger": {
+        "prefix": [
+            "CreateUnitStartBeingCapturedTrigger"
+        ],
+        "body": [
+            "ScenarioFramework.CreateUnitStartBeingCapturedTrigger(${1:cb}, ${2:unit})"
+        ],
+        "description": "Single line unit start being captured trigger\r\nwhen <unit> begins to be captured function is called"
+    },
+    "CreateUnitToMarkerDistanceTrigger": {
+        "prefix": [
+            "CreateUnitToMarkerDistanceTrigger"
+        ],
+        "body": [
+            "ScenarioFramework.CreateUnitToMarkerDistanceTrigger(${1:callbackFunction}, ${2:unit}, ${3:marker}, ${4:distance})"
+        ],
+        "description": "Fires when <unit> and <marker> are less than or equal to <distance> apart"
+    },
+    "DetermineBestAttackLocation": {
+        "prefix": [
+            "DetermineBestAttackLocation"
+        ],
+        "body": [
+            "ScenarioFramework.DetermineBestAttackLocation(${1:attackingBrain}, ${2:targetBrain}, ${3:relationship}, ${4:tableOfAttackLocations}, ${5:pointRadius})"
+        ],
+        "description": "Take a table of markers, and return the marker with the largest number of target units in a specified radius around it.\r\nex: attackLocation = ScenarioFramework.DetermineBestAttackLocation(ArmyBrains[Aeon], ArmyBrains[Player], 'enemy', ScenarioUtils.ChainToPositions('Attack_Grid'), 64)"
+    },
+    "PlatoonAttackWithTransportsThread": {
+        "prefix": [
+            "PlatoonAttackWithTransportsThread"
+        ],
+        "body": [
+            "ScenarioFramework.PlatoonAttackWithTransportsThread(${1:platoon}, ${2:landingChain}, ${3:attackChain}, ${4:instant}, ${5:moveChain})"
+        ],
+        "description": ""
+    },
+    "CreateTimerTrigger": {
+        "prefix": [
+            "CreateTimerTrigger"
+        ],
+        "body": [
+            "ScenarioFramework.CreateTimerTrigger(${1:cb}, ${2:seconds}, ${3:displayBool})"
+        ],
+        "description": ""
+    },
+    "DisplayMissionText": {
+        "prefix": [
+            "DisplayMissionText"
+        ],
+        "body": [
+            "ScenarioFramework.DisplayMissionText(${1:string})"
+        ],
+        "description": "Mission Text"
+    },
+    "SpawnCommander": {
+        "prefix": [
+            "SpawnCommander"
+        ],
+        "body": [
+            "ScenarioFramework.SpawnCommander(${1:brain}, ${2:unit}, ${3:effect}, ${4:name}, ${5:PauseAtDeath}, ${6:DeathTrigger}, ${7:enhancements})"
+        ],
+        "description": ""
+    },
+    "CreateMultipleAreaTrigger": {
+        "prefix": [
+            "CreateMultipleAreaTrigger"
+        ],
+        "body": [
+            "ScenarioFramework.CreateMultipleAreaTrigger(${1:callbackFunction}, ${2:rectangleTable}, ${3:category}, ${4:onceOnly}, ${5:invert}, ${6:aiBrain}, ${7:number}, ${8:requireBuilt})"
+        ],
+        "description": "Table of Areas Trigger Creations\r\nsame as above except you can supply the function with a table of Rects.\r\nIf you have an odd shaped area for an area trigger"
+    },
+    "CreateSubGroupDeathTrigger": {
+        "prefix": [
+            "CreateSubGroupDeathTrigger"
+        ],
+        "body": [
+            "ScenarioFramework.CreateSubGroupDeathTrigger(${1:cb}, ${2:group}, ${3:num})"
+        ],
+        "description": "Single line Sub Group Death Trigger creation\r\nWhen <num> <cat> units in <group> are destroyed, <cb> function will be called"
+    },
+    "CreateAreaTrigger": {
+        "prefix": [
+            "CreateAreaTrigger"
+        ],
+        "body": [
+            "ScenarioFramework.CreateAreaTrigger(${1:callbackFunction}, ${2:rectangle}, ${3:category}, ${4:onceOnly}, ${5:invert}, ${6:aiBrain}, ${7:number}, ${8:requireBuilt})"
+        ],
+        "description": "Single Area Trigger Creation\r\nThis will create an area trigger around <rectangle>.  It will fire when <categoy> is met of <aiBrain>.\r\nonceOnly means it will not continue to run after the first time it fires.\r\ninvert means it will fire when units are NOT in the area.  Useful for testing if someone has defeated a base.\r\nnumber refers to the number of units it will take to fire.  If not inverted.  It will fire when that many are in the area-- If inverted, it will fire when less than that many are in the area"
+    },
+    "PlatoonMoveChain": {
+        "prefix": [
+            "PlatoonMoveChain"
+        ],
+        "body": [
+            "ScenarioFramework.PlatoonMoveChain(${1:platoon}, ${2:chain}, ${3:squad})"
+        ],
+        "description": ""
+    },
+    "SetCoalitionColor": {
+        "prefix": [
+            "SetCoalitionColor"
+        ],
+        "body": [
+            "ScenarioFramework.SetCoalitionColor(${1:number})"
+        ],
+        "description": ""
+    },
+    "EndOperationCamera": {
+        "prefix": [
+            "EndOperationCamera"
+        ],
+        "body": [
+            "ScenarioFramework.EndOperationCamera(${1:unit}, ${2:track})"
+        ],
+        "description": ""
+    },
+    "StartOperationJessZoomThread": {
+        "prefix": [
+            "StartOperationJessZoomThread"
+        ],
+        "body": [
+            "ScenarioFramework.StartOperationJessZoomThread(${1:areaName}, ${2:callbackFunction}, ${3:duration})"
+        ],
+        "description": ""
+    },
+    "SetPlayableArea": {
+        "prefix": [
+            "SetPlayableArea"
+        ],
+        "body": [
+            "ScenarioFramework.SetPlayableArea(${1:rect}, ${2:voFlag})"
+        ],
+        "description": "Sets the playable area for an operation to rect size.\r\nthis function allows you to use ScenarioUtilities function AreaToRect for the rectangle."
+    },
+    "CreateUnitStartCaptureTrigger": {
+        "prefix": [
+            "CreateUnitStartCaptureTrigger"
+        ],
+        "body": [
+            "ScenarioFramework.CreateUnitStartCaptureTrigger(${1:cb}, ${2:unit})"
+        ],
+        "description": "Single line unit started capturing trigger creation\r\nWhen <unit> starts capturing the <cb> function provided is called"
+    },
+    "DisplayVideoText": {
+        "prefix": [
+            "DisplayVideoText"
+        ],
+        "body": [
+            "ScenarioFramework.DisplayVideoText(${1:string})"
+        ],
+        "description": "Video Text"
+    },
+    "OperationNISCameraThread": {
+        "prefix": [
+            "OperationNISCameraThread"
+        ],
+        "body": [
+            "ScenarioFramework.OperationNISCameraThread(${1:unitInfo}, ${2:camInfo})"
+        ],
+        "description": "NIS Thread\r\ncamInfo {\r\nblendTime(seconds) - how long the camera will spend interpolating from play camera to the NIS destination\r\nholdTime(seconds) - NIS duration after blendTime. if \"nil\", signals an \"end of op\" camera\r\norientationOffset(radians) - offsets the orientation of the camera in radians (x = heading, y = pitch, z = roll)\r\npositionOffset(ogrids) - offsets the camera from the marker (y = up)\r\nzoomVal(?) - sets the distance from the marker\r\nspinSpeed(ogrids/sec?) - sets a rate the camera will rotate around it's marker (positive = counterclockwise)\r\nmarkerCam(bool) - allows the NIS to use a marker rather than a unit\r\nresetCam(bool) - disables the interpolation at the end of the NIS, needed for NISs that appear outside of the playable area.\r\noverrideCam(bool) - allows an NIS to interrupt an NIS that is currently playing (typically used for end of operation cameras)\r\nplayableAreaIn(area marker\r\nplayableAreaOut(area marker)\r\nvizRadius(ogrids)\r\n}"
+    },
+    "GroupPatrolChain": {
+        "prefix": [
+            "GroupPatrolChain"
+        ],
+        "body": [
+            "ScenarioFramework.GroupPatrolChain(${1:group}, ${2:chain})"
+        ],
+        "description": "orders group to patrol a chain"
+    },
+    "UpdateObjective": {
+        "prefix": [
+            "UpdateObjective"
+        ],
+        "body": [
+            "ScenarioFramework.UpdateObjective(${1:Title}, ${2:UpdateField}, ${3:NewData}, ${4:objTag})"
+        ],
+        "description": "TODO: Stop mission scripts from using this function, then remove it."
+    },
+    "SetLoyalistColor": {
+        "prefix": [
+            "SetLoyalistColor"
+        ],
+        "body": [
+            "ScenarioFramework.SetLoyalistColor(${1:number})"
+        ],
+        "description": "Loyalist"
+    },
+    "CreateVisibleAreaAtUnit": {
+        "prefix": [
+            "CreateVisibleAreaAtUnit"
+        ],
+        "body": [
+            "ScenarioFramework.CreateVisibleAreaAtUnit(${1:vizRadius}, ${2:vizUnit}, ${3:vizLifetime}, ${4:vizArmy})"
+        ],
+        "description": ""
+    },
+    "SetSeraphimColor": {
+        "prefix": [
+            "SetSeraphimColor"
+        ],
+        "body": [
+            "ScenarioFramework.SetSeraphimColor(${1:number})"
+        ],
+        "description": "Seraphim"
+    },
+    "FakeTeleportUnit": {
+        "prefix": [
+            "FakeTeleportUnit"
+        ],
+        "body": [
+            "ScenarioFramework.FakeTeleportUnit(${1:unit}, ${2:killUnit})"
+        ],
+        "description": "FakeTeleportUnitThread\r\nRun teleport effect then delete unit"
+    },
+    "UpgradeUnit": {
+        "prefix": [
+            "UpgradeUnit"
+        ],
+        "body": [
+            "ScenarioFramework.UpgradeUnit(${1:unit})"
+        ],
+        "description": "Upgrades unit - for use with engineers, factories, radar, and other single upgrade path units.\r\nCommander upgrades are too complicated for this"
+    },
+    "CreateUnitFailedBeingCapturedTrigger": {
+        "prefix": [
+            "CreateUnitFailedBeingCapturedTrigger"
+        ],
+        "body": [
+            "ScenarioFramework.CreateUnitFailedBeingCapturedTrigger(${1:cb}, ${2:unit})"
+        ],
+        "description": "Single line unit failed being captured trigger\r\nwhen capture of <unit> fails, the function is called"
+    },
+    "CreateArmyIntelTrigger": {
+        "prefix": [
+            "CreateArmyIntelTrigger"
+        ],
+        "body": [
+            "ScenarioFramework.CreateArmyIntelTrigger(${1:callbackFunction}, ${2:aiBrain}, ${3:reconType}, ${4:blip}, ${5:value}, ${6:category}, ${7:onceOnly}, ${8:targetAIBrain})"
+        ],
+        "description": "Type = 'LOSNow'/'Radar'/'Sonar'/'Omni',\r\nBlip = blip handle or false if you don't care,\r\nCategory = category of unit to trigger off of\r\nOnceOnly = run it once\r\nValue = true/false, true = when you get it, false = when you first don't have it\r\n<aiBrain> refers to the intelligence you are monitoring.\r\n<targetAIBrain> requires that the intelligence fires on seeing a specific brain's units"
+    },
+    "KillBaseInAreaThread": {
+        "prefix": [
+            "KillBaseInAreaThread"
+        ],
+        "body": [
+            "ScenarioFramework.KillBaseInAreaThread(${1:unitTable})"
+        ],
+        "description": ""
+    },
+    "CreateUnitDestroyedTrigger": {
+        "prefix": [
+            "CreateUnitDestroyedTrigger"
+        ],
+        "body": [
+            "ScenarioFramework.CreateUnitDestroyedTrigger(${1:cb}, ${2:unit})"
+        ],
+        "description": "Single Line unit death trigger creation\r\nWhen <unit> is killed, reclaimed, or captured it will call the <cb> function provided"
+    },
+    "PlayableRectCameraThread": {
+        "prefix": [
+            "PlayableRectCameraThread"
+        ],
+        "body": [
+            "ScenarioFramework.PlayableRectCameraThread(${1:rect})"
+        ],
+        "description": ""
+    },
+    "SetUEFAllyColor": {
+        "prefix": [
+            "SetUEFAllyColor"
+        ],
+        "body": [
+            "ScenarioFramework.SetUEFAllyColor(${1:number})"
+        ],
+        "description": ""
+    },
+    "CreateUnitDistanceTrigger": {
+        "prefix": [
+            "CreateUnitDistanceTrigger"
+        ],
+        "body": [
+            "ScenarioFramework.CreateUnitDistanceTrigger(${1:callbackFunction}, ${2:unitOne}, ${3:unitTwo}, ${4:distance})"
+        ],
+        "description": "Checks if <unitOne> and <unitTwo> are less than <distance> from each other\r\nif true calls <callbackFunction>"
+    },
+    "SetUEFColor": {
+        "prefix": [
+            "SetUEFColor"
+        ],
+        "body": [
+            "ScenarioFramework.SetUEFColor(${1:number})"
+        ],
+        "description": "UEF"
+    },
+    "BuildOnce": {
+        "prefix": [
+            "BuildOnce"
+        ],
+        "body": [
+            "ScenarioFramework.BuildOnce(${1:platoon})"
+        ],
+        "description": "Sets platoon to only be built once"
+    },
+    "StartCamera": {
+        "prefix": [
+            "StartCamera"
+        ],
+        "body": [
+            "ScenarioFramework.StartCamera(${1:area})"
+        ],
+        "description": "Moves the camera to the specified area in 1 second"
+    }
+}

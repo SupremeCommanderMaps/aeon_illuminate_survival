@@ -1,0 +1,281 @@
+{
+    "SetContentsVulnerable": {
+        "prefix": [
+            "SetContentsVulnerable"
+        ],
+        "body": [
+            "${1:shield}:SetContentsVulnerable(${2:canTakeDamage})"
+        ],
+        "description": "Yes it says contents, but this includes the generating transport too"
+    },
+    "SetSize": {
+        "prefix": [
+            "SetSize"
+        ],
+        "body": [
+            "${1:shield}:SetSize(${2:size})"
+        ],
+        "description": ""
+    },
+    "UpdateShieldRatio": {
+        "prefix": [
+            "UpdateShieldRatio"
+        ],
+        "body": [
+            "${1:shield}:UpdateShieldRatio(${2:value})"
+        ],
+        "description": ""
+    },
+    "TurnOff": {
+        "prefix": [
+            "TurnOff"
+        ],
+        "body": [
+            "${1:shield}:TurnOff()"
+        ],
+        "description": ""
+    },
+    "init": {
+        "prefix": [
+            "init"
+        ],
+        "body": [
+            "${1:shield}:init(${2:spec}, ${3:owner})"
+        ],
+        "description": ""
+    },
+    "ChargingUp": {
+        "prefix": [
+            "ChargingUp"
+        ],
+        "body": [
+            "${1:shield}:ChargingUp(${2:curProgress}, ${3:time})"
+        ],
+        "description": "Basically run a timer, but with visual bar movement"
+    },
+    "GetOverkill": {
+        "prefix": [
+            "GetOverkill"
+        ],
+        "body": [
+            "${1:shield}:GetOverkill(${2:instigator}, ${3:amount}, ${4:type})"
+        ],
+        "description": ""
+    },
+    "OnCreate": {
+        "prefix": [
+            "OnCreate"
+        ],
+        "body": [
+            "${1:shield}:OnCreate(${2:spec})"
+        ],
+        "description": ""
+    },
+    "OnGetDamageAbsorption": {
+        "prefix": [
+            "OnGetDamageAbsorption"
+        ],
+        "body": [
+            "${1:shield}:OnGetDamageAbsorption(${2:instigator}, ${3:amount}, ${4:type})"
+        ],
+        "description": "Note, this is called by native code to calculate spillover damage. The\r\ndamage logic will subtract this value from any damage it does to units\r\nunder the shield. The default is to always absorb as much as possible\r\nbut the reason this function exists is to allow flexible implementations\r\nlike shields that only absorb partial damage (like armor)."
+    },
+    "IsOn": {
+        "prefix": [
+            "IsOn"
+        ],
+        "body": [
+            "${1:shield}:IsOn()"
+        ],
+        "description": ""
+    },
+    "SetShieldRegenStartTime": {
+        "prefix": [
+            "SetShieldRegenStartTime"
+        ],
+        "body": [
+            "${1:shield}:SetShieldRegenStartTime(${2:time})"
+        ],
+        "description": ""
+    },
+    "ValidateAssistersThread": {
+        "prefix": [
+            "ValidateAssistersThread"
+        ],
+        "body": [
+            "${1:shield}:ValidateAssistersThread()"
+        ],
+        "description": "Fix \"free\" shield regen. Assist efficiency never drops, no matter what mass income you have\r\nWe have to compensate it in this thread."
+    },
+    "Main": {
+        "prefix": [
+            "Main"
+        ],
+        "body": [
+            "${1:shield}:Main()"
+        ],
+        "description": ""
+    },
+    "OnCollisionCheckWeapon": {
+        "prefix": [
+            "OnCollisionCheckWeapon"
+        ],
+        "body": [
+            "${1:shield}:OnCollisionCheckWeapon(${2:firingWeapon})"
+        ],
+        "description": ""
+    },
+    "RemoveShield": {
+        "prefix": [
+            "RemoveShield"
+        ],
+        "body": [
+            "${1:shield}:RemoveShield()"
+        ],
+        "description": ""
+    },
+    "OnCollisionCheck": {
+        "prefix": [
+            "OnCollisionCheck"
+        ],
+        "body": [
+            "${1:shield}:OnCollisionCheck(${2:other})"
+        ],
+        "description": "Return true to process this collision, false to ignore it."
+    },
+    "CreateImpactEffect": {
+        "prefix": [
+            "CreateImpactEffect"
+        ],
+        "body": [
+            "${1:shield}:CreateImpactEffect(${2:vector})"
+        ],
+        "description": ""
+    },
+    "TurnOn": {
+        "prefix": [
+            "TurnOn"
+        ],
+        "body": [
+            "${1:shield}:TurnOn()"
+        ],
+        "description": ""
+    },
+    "SetShieldRegenRate": {
+        "prefix": [
+            "SetShieldRegenRate"
+        ],
+        "body": [
+            "${1:shield}:SetShieldRegenRate(${2:rate})"
+        ],
+        "description": ""
+    },
+    "ApplyDamage": {
+        "prefix": [
+            "ApplyDamage"
+        ],
+        "body": [
+            "${1:shield}:ApplyDamage(${2:instigator}, ${3:amount}, ${4:vector}, ${5:dmgType}, ${6:doOverspill})"
+        ],
+        "description": ""
+    },
+    "IsUp": {
+        "prefix": [
+            "IsUp"
+        ],
+        "body": [
+            "${1:shield}:IsUp()"
+        ],
+        "description": ""
+    },
+    "SetType": {
+        "prefix": [
+            "SetType"
+        ],
+        "body": [
+            "${1:shield}:SetType(${2:type})"
+        ],
+        "description": ""
+    },
+    "OnDamage": {
+        "prefix": [
+            "OnDamage"
+        ],
+        "body": [
+            "${1:shield}:OnDamage(${2:instigator}, ${3:amount}, ${4:vector}, ${5:dmgType})"
+        ],
+        "description": ""
+    },
+    "RemoveProtectedUnit": {
+        "prefix": [
+            "RemoveProtectedUnit"
+        ],
+        "body": [
+            "${1:shield}:RemoveProtectedUnit(${2:unit})"
+        ],
+        "description": ""
+    },
+    "SetRechargeTime": {
+        "prefix": [
+            "SetRechargeTime"
+        ],
+        "body": [
+            "${1:shield}:SetRechargeTime(${2:rechargeTime}, ${3:energyRechargeTime})"
+        ],
+        "description": ""
+    },
+    "SetVerticalOffset": {
+        "prefix": [
+            "SetVerticalOffset"
+        ],
+        "body": [
+            "${1:shield}:SetVerticalOffset(${2:offset})"
+        ],
+        "description": ""
+    },
+    "AddProtectedUnit": {
+        "prefix": [
+            "AddProtectedUnit"
+        ],
+        "body": [
+            "${1:shield}:AddProtectedUnit(${2:unit})"
+        ],
+        "description": ""
+    },
+    "RegenStartThread": {
+        "prefix": [
+            "RegenStartThread"
+        ],
+        "body": [
+            "${1:shield}:RegenStartThread()"
+        ],
+        "description": ""
+    },
+    "CreateShieldMesh": {
+        "prefix": [
+            "CreateShieldMesh"
+        ],
+        "body": [
+            "${1:shield}:CreateShieldMesh()"
+        ],
+        "description": ""
+    },
+    "GetCachePosition": {
+        "prefix": [
+            "GetCachePosition"
+        ],
+        "body": [
+            "${1:shield}:GetCachePosition()"
+        ],
+        "description": ""
+    },
+    "OnDestroy": {
+        "prefix": [
+            "OnDestroy"
+        ],
+        "body": [
+            "${1:shield}:OnDestroy()"
+        ],
+        "description": ""
+    }
+}

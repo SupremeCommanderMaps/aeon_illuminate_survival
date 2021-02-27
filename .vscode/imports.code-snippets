@@ -1,0 +1,52 @@
+{
+    "ScenarioFramework": {
+        "prefix": [
+            "ScenarioFramework",
+            "import ScenarioFramework"
+        ],
+        "body": [
+            "local ScenarioFramework = import('/lua/ScenarioFramework.lua')"
+        ],
+        "description": "Adds the designated import. Should be at the top of the file."
+    },
+    "ScenarioUtils": {
+        "prefix": [
+            "ScenarioUtils",
+            "import ScenarioUtils"
+        ],
+        "body": [
+            "local ScenarioUtils = import('/lua/ScenarioUtils.lua')"
+        ],
+        "description": "Adds the designated import. Should be at the top of the file."
+    },
+    "AIAttackUtils": {
+        "prefix": [
+            "AIAttackUtils",
+            "import AIAttackUtils"
+        ],
+        "body": [
+            "local AIAttackUtils = import('/lua/ai/aiattackutilities.lua')"
+        ],
+        "description": "Adds the designated import. Should be at the top of the file."
+    },
+    "TriggerFile": {
+        "prefix": [
+            "TriggerFile",
+            "import TriggerFile"
+        ],
+        "body": [
+            "local TriggerFile = import('/lua/scenariotriggers.lua')"
+        ],
+        "description": "Adds the designated import. Should be at the top of the file."
+    },
+    "ScenarioPlatoonAI": {
+        "prefix": [
+            "ScenarioPlatoonAI",
+            "import ScenarioPlatoonAI"
+        ],
+        "body": [
+            "local ScenarioPlatoonAI = import('/lua/ScenarioPlatoonAI.lua')"
+        ],
+        "description": "Adds the designated import. Should be at the top of the file."
+    },
+}

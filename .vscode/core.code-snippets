@@ -1,0 +1,479 @@
+{
+    "LOG": {
+        "prefix": [
+            "LOG"
+        ],
+        "body": [
+            "LOG(${1:TextOne}, ${2:TextTwo})"
+        ],
+        "description": "Print a log message\r\n@param TextOne Log message\r\n@param TextTwo Optional text\r\nOutput: \"INFO: TextOne\\000TextTwo\""
+    },
+    "VDist2Sq": {
+        "prefix": [
+            "VDist2Sq"
+        ],
+        "body": [
+            "VDist2Sq()"
+        ],
+        "description": "Square of Distance between two 2d points (x1,y1,x2,y2)"
+    },
+    "KillThread": {
+        "prefix": [
+            "KillThread"
+        ],
+        "body": [
+            "KillThread(${1:thread})"
+        ],
+        "description": "KillThread(thread) -- destroy a thread started with ForkThread()"
+    },
+    "doscript": {
+        "prefix": [
+            "doscript"
+        ],
+        "body": [
+            "doscript(${1:script}, ${2:env})"
+        ],
+        "description": "doscript(script, [env]) -- run another script. The environment table, if given, will be used for the script's global variables."
+    },
+    "GetVersion": {
+        "prefix": [
+            "GetVersion"
+        ],
+        "body": [
+            "GetVersion()"
+        ],
+        "description": "GetVersion() -> string"
+    },
+    "VDist3": {
+        "prefix": [
+            "VDist3"
+        ],
+        "body": [
+            "VDist3()"
+        ],
+        "description": "Distance between two 3d points (v1,v2)"
+    },
+    "CurrentThread": {
+        "prefix": [
+            "CurrentThread"
+        ],
+        "body": [
+            "CurrentThread()"
+        ],
+        "description": "thread=CurrentThread() -- get a handle to the running thread for later use with ResumeThread() or KillThread()"
+    },
+    "VAdd": {
+        "prefix": [
+            "VAdd"
+        ],
+        "body": [
+            "VAdd()"
+        ],
+        "description": "Addition of two vectors"
+    },
+    "OrientFromDir": {
+        "prefix": [
+            "OrientFromDir"
+        ],
+        "body": [
+            "OrientFromDir(${1:vector})"
+        ],
+        "description": "quaternion OrientFromDir(vector)"
+    },
+    "VDist3Sq": {
+        "prefix": [
+            "VDist3Sq"
+        ],
+        "body": [
+            "VDist3Sq()"
+        ],
+        "description": "Square of Distance between two 3d points (v1,v2)"
+    },
+    "BeginLoggingStats": {
+        "prefix": [
+            "BeginLoggingStats"
+        ],
+        "body": [
+            "BeginLoggingStats()"
+        ],
+        "description": "Begin logging stats"
+    },
+    "PointVector": {
+        "prefix": [
+            "PointVector"
+        ],
+        "body": [
+            "PointVector()"
+        ],
+        "description": "Create a point vector(px,py,pz, vx,vy,vz)"
+    },
+    "DiskFindFiles": {
+        "prefix": [
+            "DiskFindFiles"
+        ],
+        "body": [
+            "DiskFindFiles(${1:directory}, ${2:pattern})"
+        ],
+        "description": "files = DiskFindFiles(directory, pattern)returns a list of files in a directory"
+    },
+    "GetMovieDuration": {
+        "prefix": [
+            "GetMovieDuration"
+        ],
+        "body": [
+            "GetMovieDuration(${1:localFileName})"
+        ],
+        "description": "GetMovieDuration(localFileName)"
+    },
+    "RegisterEmitterBlueprint": {
+        "prefix": [
+            "RegisterEmitterBlueprint"
+        ],
+        "body": [
+            "RegisterEmitterBlueprint()"
+        ],
+        "description": "EmitterBlueprint { spec } - define a particle emitter"
+    },
+    "WaitFor": {
+        "prefix": [
+            "WaitFor"
+        ],
+        "body": [
+            "WaitFor(${1:event})"
+        ],
+        "description": "WaitFor(event) -- suspend this thread until the event is set"
+    },
+    "exists": {
+        "prefix": [
+            "exists"
+        ],
+        "body": [
+            "exists(${1:name})"
+        ],
+        "description": "exists(name) -> bool -- returns true if the given resource file exists"
+    },
+    "DiskGetFileInfo": {
+        "prefix": [
+            "DiskGetFileInfo"
+        ],
+        "body": [
+            "DiskGetFileInfo(${1:filename})"
+        ],
+        "description": "info = DiskGetFileInfo(filename)returns a table describing the given file, or false if the file doesn't exist."
+    },
+    "Sound": {
+        "prefix": [
+            "Sound"
+        ],
+        "body": [
+            "Sound(${1:cue}, ${2:bank}, ${3:cutoff})"
+        ],
+        "description": "Sound({cue,bank,cutoff}) - Make a sound parameters object"
+    },
+    "DiskToLocal": {
+        "prefix": [
+            "DiskToLocal"
+        ],
+        "body": [
+            "DiskToLocal(${1:SysOrLocalPath})"
+        ],
+        "description": "localPath = DiskToLocal(SysOrLocalPath)Converts a system path to a local path. Leaves path alone if already local."
+    },
+    "VDiff": {
+        "prefix": [
+            "VDiff"
+        ],
+        "body": [
+            "VDiff()"
+        ],
+        "description": "Difference of two vectors"
+    },
+    "VPerpDot": {
+        "prefix": [
+            "VPerpDot"
+        ],
+        "body": [
+            "VPerpDot()"
+        ],
+        "description": "Perp dot product of two vectors"
+    },
+    "VMult": {
+        "prefix": [
+            "VMult"
+        ],
+        "body": [
+            "VMult()"
+        ],
+        "description": "Multiplication of vector with scalar"
+    },
+    "VDot": {
+        "prefix": [
+            "VDot"
+        ],
+        "body": [
+            "VDot()"
+        ],
+        "description": "Dot product of two vectors"
+    },
+    "SPEW": {
+        "prefix": [
+            "SPEW"
+        ],
+        "body": [
+            "SPEW(${1:TextOne}, ${2:TextTwo})"
+        ],
+        "description": "Print a debug message\r\n@param TextOne Debug message\r\n@param TextTwo Optional text\r\nOutput: \"DEBUG: TextOne\\000TextTwo\""
+    },
+    "ResumeThread": {
+        "prefix": [
+            "ResumeThread"
+        ],
+        "body": [
+            "ResumeThread(${1:thread})"
+        ],
+        "description": "ResumeThread(thread) -- resume a thread that had been suspended with SuspendCurrentThread(). Does nothing if the thread wasn't suspended."
+    },
+    "WARN": {
+        "prefix": [
+            "WARN"
+        ],
+        "body": [
+            "WARN(${1:TextOne}, ${2:TextTwo})"
+        ],
+        "description": "Print a warning message\r\n@param TextOne Warning message\r\n@param TextTwo Optional text\r\nOutput: \"WARNING: TextOne\\000TextTwo\""
+    },
+    "RegisterTrailEmitterBlueprint": {
+        "prefix": [
+            "RegisterTrailEmitterBlueprint"
+        ],
+        "body": [
+            "RegisterTrailEmitterBlueprint()"
+        ],
+        "description": "TrailEmitterBlueprint { spec } - define a polytrail emitter"
+    },
+    "RPCSound": {
+        "prefix": [
+            "RPCSound"
+        ],
+        "body": [
+            "RPCSound(${1:cue}, ${2:bank}, ${3:cutoff})"
+        ],
+        "description": "RPCSound({cue,bank,cutoff}) - Make a sound parameters object"
+    },
+    "EnumColorNames": {
+        "prefix": [
+            "EnumColorNames"
+        ],
+        "body": [
+            "EnumColorNames()"
+        ],
+        "description": "table EnumColorNames() - returns a table containing strings of all the color names"
+    },
+    "Basename": {
+        "prefix": [
+            "Basename"
+        ],
+        "body": [
+            "Basename(${1:fullPath}, ${2:stripExtension})"
+        ],
+        "description": "base = Basename(fullPath,stripExtension?) -- return the last component of a path"
+    },
+    "BlueprintLoaderUpdateProgress": {
+        "prefix": [
+            "BlueprintLoaderUpdateProgress"
+        ],
+        "body": [
+            "BlueprintLoaderUpdateProgress()"
+        ],
+        "description": ""
+    },
+    "SuspendCurrentThread": {
+        "prefix": [
+            "SuspendCurrentThread"
+        ],
+        "body": [
+            "SuspendCurrentThread()"
+        ],
+        "description": "SuspendCurrentThread() -- suspend this thread indefinitely. Some external event must eventually call ResumeThread() to resume it."
+    },
+    "RegisterMeshBlueprint": {
+        "prefix": [
+            "RegisterMeshBlueprint"
+        ],
+        "body": [
+            "RegisterMeshBlueprint()"
+        ],
+        "description": "MeshBlueprint { spec } - define mesh properties"
+    },
+    "CreatePrefetchSet": {
+        "prefix": [
+            "CreatePrefetchSet"
+        ],
+        "body": [
+            "CreatePrefetchSet()"
+        ],
+        "description": "create an empty prefetch set"
+    },
+    "RegisterBeamBlueprint": {
+        "prefix": [
+            "RegisterBeamBlueprint"
+        ],
+        "body": [
+            "RegisterBeamBlueprint()"
+        ],
+        "description": "BeamBlueprint { spec } - define a beam effect"
+    },
+    "SpecFootprints": {
+        "prefix": [
+            "SpecFootprints"
+        ],
+        "body": [
+            "SpecFootprints()"
+        ],
+        "description": "SpecFootprints { spec } -- define the footprint types for pathfinding"
+    },
+    "Rect": {
+        "prefix": [
+            "Rect"
+        ],
+        "body": [
+            "Rect()"
+        ],
+        "description": "Create a 2d Rectangle (x0,y0,x1,y1)"
+    },
+    "Dirname": {
+        "prefix": [
+            "Dirname"
+        ],
+        "body": [
+            "Dirname(${1:fullPath})"
+        ],
+        "description": "base = Dirname(fullPath) -- return a path with trailing filename removed"
+    },
+    "FileCollapsePath": {
+        "prefix": [
+            "FileCollapsePath"
+        ],
+        "body": [
+            "FileCollapsePath(${1:fullPath})"
+        ],
+        "description": "path = FileCollapsePath(fullPath) -- collapse out any intermediate /./ or /../ directory names from a path"
+    },
+    "RegisterUnitBlueprint": {
+        "prefix": [
+            "RegisterUnitBlueprint"
+        ],
+        "body": [
+            "RegisterUnitBlueprint()"
+        ],
+        "description": "UnitBlueprint { spec } - define a type of unit"
+    },
+    "Vector2": {
+        "prefix": [
+            "Vector2"
+        ],
+        "body": [
+            "Vector2()"
+        ],
+        "description": "Create a vector (x,y)"
+    },
+    "GetCueBank": {
+        "prefix": [
+            "GetCueBank"
+        ],
+        "body": [
+            "GetCueBank(${1:params})"
+        ],
+        "description": "cue,bank = GetCueBank(params)"
+    },
+    "RegisterPropBlueprint": {
+        "prefix": [
+            "RegisterPropBlueprint"
+        ],
+        "body": [
+            "RegisterPropBlueprint()"
+        ],
+        "description": "PropBlueprint { spec } - define a type of prop"
+    },
+    "RegisterProjectileBlueprint": {
+        "prefix": [
+            "RegisterProjectileBlueprint"
+        ],
+        "body": [
+            "RegisterProjectileBlueprint()"
+        ],
+        "description": "ProjectileBlueprint { spec } - define a type of projectile"
+    },
+    "VDist2": {
+        "prefix": [
+            "VDist2"
+        ],
+        "body": [
+            "VDist2()"
+        ],
+        "description": "Distance between two 2d points (x1,y1,x2,y2)"
+    },
+    "EntityCategoryEmpty": {
+        "prefix": [
+            "EntityCategoryEmpty"
+        ],
+        "body": [
+            "EntityCategoryEmpty()"
+        ],
+        "description": "Test for an empty category"
+    },
+    "Vector": {
+        "prefix": [
+            "Vector"
+        ],
+        "body": [
+            "Vector()"
+        ],
+        "description": "Create a vector (x,y,z)"
+    },
+    "AITarget": {
+        "prefix": [
+            "AITarget"
+        ],
+        "body": [
+            "AITarget()"
+        ],
+        "description": "Module: Core\r\n@module Core\r\nCreate a target object"
+    },
+    "IsDestroyed": {
+        "prefix": [
+            "IsDestroyed"
+        ],
+        "body": [
+            "IsDestroyed()"
+        ],
+        "description": "Has the c++ object been destroyed?"
+    },
+    "SecondsPerTick": {
+        "prefix": [
+            "SecondsPerTick"
+        ],
+        "body": [
+            "SecondsPerTick()"
+        ],
+        "description": "SecondsPerTick() - Return how many seconds in a tick"
+    },
+    "EntityCategoryGetUnitList": {
+        "prefix": [
+            "EntityCategoryGetUnitList"
+        ],
+        "body": [
+            "EntityCategoryGetUnitList()"
+        ],
+        "description": "Get a list of units blueprint names from a category"
+    },
+    "Trace": {
+        "prefix": [
+            "Trace"
+        ],
+        "body": [
+            "Trace(${1:true})"
+        ],
+        "description": "Trace(true) -- turns on debug tracingTrace(false) -- turns it off again"
+    }
+}
